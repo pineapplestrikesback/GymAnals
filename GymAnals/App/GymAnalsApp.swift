@@ -6,12 +6,24 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct GymAnalsApp: App {
+    let container: ModelContainer
+
+    init() {
+        do {
+            container = try PersistenceController.shared.createContainer()
+        } catch {
+            fatalError("Failed to initialize SwiftData: \(error.localizedDescription)")
+        }
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(container)
     }
 }

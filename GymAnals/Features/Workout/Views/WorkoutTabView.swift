@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct WorkoutTabView: View {
     var body: some View {
@@ -47,4 +48,5 @@ struct WorkoutTabView: View {
 
 #Preview {
     WorkoutTabView()
+        .modelContainer(PersistenceController.preview)
 }

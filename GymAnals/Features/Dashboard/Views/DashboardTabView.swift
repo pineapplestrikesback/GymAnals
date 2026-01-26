@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct DashboardTabView: View {
     var body: some View {
@@ -72,4 +73,5 @@ struct DashboardButton: View {
 
 #Preview {
     DashboardTabView()
+        .modelContainer(PersistenceController.preview)
 }

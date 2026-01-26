@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
     @State private var selectedTab: Tab = .workout
@@ -35,4 +36,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .modelContainer(PersistenceController.preview)
 }
