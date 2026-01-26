@@ -12,7 +12,7 @@ This roadmap delivers a native iOS workout tracker with precise per-muscle volum
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - SwiftData models, app shell, and offline persistence
+- [x] **Phase 1: Foundation** - SwiftData models, app shell, and offline persistence
 - [ ] **Phase 2: Exercise Library** - Pre-populated exercises with weighted muscle contributions
 - [ ] **Phase 3: Gyms** - Gym definitions and exercise branching per location
 - [ ] **Phase 4: Workout Logging** - Active workout session with fast set logging
@@ -27,14 +27,14 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Success Criteria** (what must be TRUE):
   1. App launches to a tab-based navigation shell with placeholder tabs
   2. SwiftData ModelContainer initializes without errors
-  3. All core models (Muscle, Exercise, ExerciseMuscle, Gym, ExerciseBranch, Workout, WorkoutSet) exist with proper relationships
+  3. All core models (Movement, Variant, VariantMuscle, Equipment, Exercise, Gym, Workout, WorkoutSet, ExerciseWeightHistory) exist with proper relationships
   4. App works fully offline with local persistence
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Create SwiftData models and muscle taxonomy enums
-- [ ] 01-02-PLAN.md — Create tab-based navigation shell with placeholder views
-- [ ] 01-03-PLAN.md — Configure SwiftData persistence and inject into app
+- [x] 01-01-PLAN.md — Create SwiftData models and muscle taxonomy enums
+- [x] 01-02-PLAN.md — Create tab-based navigation shell with placeholder views
+- [x] 01-03-PLAN.md — Configure SwiftData persistence and inject into app
 
 ### Phase 2: Exercise Library
 **Goal**: Users can browse, search, and create exercises with weighted muscle contributions
@@ -109,7 +109,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/3 | Not started | - |
+| 1. Foundation | 3/3 | ✓ Complete | 2026-01-26 |
 | 2. Exercise Library | 0/TBD | Not started | - |
 | 3. Gyms | 0/TBD | Not started | - |
 | 4. Workout Logging | 0/TBD | Not started | - |
@@ -117,4 +117,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 ---
 *Roadmap created: 2026-01-26*
-*Last updated: 2026-01-26*
+*Last updated: 2026-01-26 — Phase 1 complete*

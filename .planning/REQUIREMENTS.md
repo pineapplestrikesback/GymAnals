@@ -90,7 +90,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DATA-01 | Phase 1 | Pending |
+| DATA-01 | Phase 1 | Complete |
 | EXER-01 | Phase 2 | Pending |
 | EXER-02 | Phase 2 | Pending |
 | EXER-03 | Phase 2 | Pending |
