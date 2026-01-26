@@ -90,30 +90,30 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| EXER-01 | TBD | Pending |
-| EXER-02 | TBD | Pending |
-| EXER-03 | TBD | Pending |
-| EXER-04 | TBD | Pending |
-| EXER-05 | TBD | Pending |
-| GYM-01 | TBD | Pending |
-| GYM-02 | TBD | Pending |
-| LOG-01 | TBD | Pending |
-| LOG-02 | TBD | Pending |
-| LOG-03 | TBD | Pending |
-| LOG-04 | TBD | Pending |
-| LOG-05 | TBD | Pending |
-| LOG-06 | TBD | Pending |
-| LOG-07 | TBD | Pending |
-| LOG-08 | TBD | Pending |
-| ANAL-01 | TBD | Pending |
-| ANAL-02 | TBD | Pending |
-| DATA-01 | TBD | Pending |
+| DATA-01 | Phase 1 | Pending |
+| EXER-01 | Phase 2 | Pending |
+| EXER-02 | Phase 2 | Pending |
+| EXER-03 | Phase 2 | Pending |
+| EXER-04 | Phase 2 | Pending |
+| EXER-05 | Phase 2 | Pending |
+| GYM-01 | Phase 3 | Pending |
+| GYM-02 | Phase 3 | Pending |
+| LOG-01 | Phase 4 | Pending |
+| LOG-02 | Phase 4 | Pending |
+| LOG-03 | Phase 4 | Pending |
+| LOG-04 | Phase 4 | Pending |
+| LOG-05 | Phase 4 | Pending |
+| LOG-06 | Phase 4 | Pending |
+| LOG-07 | Phase 4 | Pending |
+| LOG-08 | Phase 4 | Pending |
+| ANAL-01 | Phase 5 | Pending |
+| ANAL-02 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 18 total
-- Mapped to phases: 0
-- Unmapped: 18 (pending roadmap)
+- Mapped to phases: 18
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-01-26*
-*Last updated: 2026-01-26 after initial definition*
+*Last updated: 2026-01-26 after roadmap creation*
