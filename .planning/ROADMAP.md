@@ -29,11 +29,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. SwiftData ModelContainer initializes without errors
   3. All core models (Muscle, Exercise, ExerciseMuscle, Gym, ExerciseBranch, Workout, WorkoutSet) exist with proper relationships
   4. App works fully offline with local persistence
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md — Create SwiftData models and muscle taxonomy enums
+- [ ] 01-02-PLAN.md — Create tab-based navigation shell with placeholder views
+- [ ] 01-03-PLAN.md — Configure SwiftData persistence and inject into app
 
 ### Phase 2: Exercise Library
 **Goal**: Users can browse, search, and create exercises with weighted muscle contributions
@@ -108,7 +109,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/3 | Not started | - |
 | 2. Exercise Library | 0/TBD | Not started | - |
 | 3. Gyms | 0/TBD | Not started | - |
 | 4. Workout Logging | 0/TBD | Not started | - |
