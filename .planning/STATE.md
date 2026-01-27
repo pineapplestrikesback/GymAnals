@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-01-26)
 ## Current Position
 
 Phase: 3 of 5 (Gyms)
-Plan: 3 of 4 in current phase
+Plan: 3 of 4 in current phase (03-02, 03-03 complete, 03-04 pending)
 Status: In progress
-Last activity: 2026-01-27 - Completed 03-03-PLAN.md (Gym Management UI)
+Last activity: 2026-01-27 - Completed 03-02-PLAN.md (Gym Selector)
 
-Progress: [██████████░] ~55% (10/~18 total plans estimate)
+Progress: [███████████░] ~61% (11/~18 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 10
-- Average duration: 8.7 min
-- Total execution time: 87 min
+- Total plans completed: 11
+- Average duration: 8.5 min
+- Total execution time: 94 min
 
 **By Phase:**
 
@@ -29,10 +29,10 @@ Progress: [██████████░] ~55% (10/~18 total plans estimate)
 |-------|-------|-------|----------|
 | 01-foundation | 3 | 13 min | 4.3 min |
 | 02-exercise-library | 5 | 61 min | 12.2 min |
-| 03-gyms | 2 | 13 min | 6.5 min |
+| 03-gyms | 3 | 20 min | 6.7 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-03 (14 min), 02-04 (9 min), 02-05 (27 min), 03-01 (6 min), 03-03 (7 min)
+- Last 5 plans: 02-04 (9 min), 02-05 (27 min), 03-01 (6 min), 03-03 (7 min), 03-02 (7 min)
 - Trend: Gym plans running fast (model and UI patterns established)
 
 *Updated after each plan completion*
@@ -77,6 +77,9 @@ Recent decisions affecting current work:
 - [03-03]: GymColorPicker uses .palette picker style for compact color display
 - [03-03]: Deletion options via confirmationDialog with three choices
 - [03-03]: Subview extraction pattern for ForEach SwiftData iteration
+- [03-02]: @ObservationIgnored on @AppStorage prevents double-triggering in @Observable
+- [03-02]: Subview pattern (GymSelectorRow) for ForEach closure isolation in Swift 6
+- [03-02]: Computed selectedGym with fetch-on-access for consistency
 
 ### Pending Todos
 
@@ -84,10 +87,10 @@ None yet.
 
 ### Blockers/Concerns
 
-- Plan 03-02 has uncommitted Task 2 files (GymSelectorHeader, GymSelectorSheet, WorkoutTabView) that should be committed
+None.
 
 ## Session Continuity
 
 Last session: 2026-01-27
-Stopped at: Completed 03-03-PLAN.md (Gym Management UI)
+Stopped at: Completed 03-02-PLAN.md (Gym Selector)
 Resume file: None
