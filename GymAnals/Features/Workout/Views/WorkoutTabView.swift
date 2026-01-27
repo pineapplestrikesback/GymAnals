@@ -68,11 +68,20 @@ struct WorkoutTabView: View {
                         set: { viewModel?.selectedGym = $0 }
                     ),
                     onManageGyms: {
-                        showingGymManagement = true
+                        // Delay to prevent sheet transition conflicts
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            showingGymManagement = true
+                        }
                     }
                 )
                 .presentationDetents([.medium])
                 .presentationDragIndicator(.visible)
+            }
+            .sheet(isPresented: $showingGymManagement) {
+                NavigationStack {
+                    GymManagementView()
+                }
+                .presentationDetents([.large])
             }
         }
     }
