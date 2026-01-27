@@ -15,6 +15,8 @@ struct GymAnalsApp: App {
     init() {
         do {
             container = try PersistenceController.shared.createContainer()
+            // Seed database with exercise data on first launch
+            ExerciseSeedService.seedIfNeeded(context: container.mainContext)
         } catch {
             fatalError("Failed to initialize SwiftData: \(error.localizedDescription)")
         }
