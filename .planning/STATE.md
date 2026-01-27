@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-26)
 
 **Core value:** Precise per-muscle volume tracking with user-defined muscles and weighted set contributions
-**Current focus:** Phase 2 - Exercise Library (COMPLETE)
+**Current focus:** Phase 3 - Gyms (IN PROGRESS)
 
 ## Current Position
 
-Phase: 2 of 5 (Exercise Library) - COMPLETE
-Plan: 5 of 5 in current phase
-Status: Phase complete, ready for Phase 3
-Last activity: 2026-01-27 - Completed 02-05-PLAN.md (Exercise Creation Wizard)
+Phase: 3 of 5 (Gyms)
+Plan: 1 of 3 in current phase
+Status: In progress
+Last activity: 2026-01-27 - Completed 03-01-PLAN.md (Gym Model Enhancement)
 
-Progress: [████████░░] ~44% (8/~18 total plans estimate)
+Progress: [█████████░] ~50% (9/~18 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
-- Average duration: 9.3 min
-- Total execution time: 74 min
+- Total plans completed: 9
+- Average duration: 8.9 min
+- Total execution time: 80 min
 
 **By Phase:**
 
@@ -29,10 +29,11 @@ Progress: [████████░░] ~44% (8/~18 total plans estimate)
 |-------|-------|-------|----------|
 | 01-foundation | 3 | 13 min | 4.3 min |
 | 02-exercise-library | 5 | 61 min | 12.2 min |
+| 03-gyms | 1 | 6 min | 6.0 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (3 min), 02-02 (8 min), 02-03 (14 min), 02-04 (9 min), 02-05 (27 min)
-- Trend: Larger plans as feature complexity increases
+- Last 5 plans: 02-02 (8 min), 02-03 (14 min), 02-04 (9 min), 02-05 (27 min), 03-01 (6 min)
+- Trend: Fast plan due to focused scope (model enhancement only)
 
 *Updated after each plan completion*
 
@@ -70,6 +71,9 @@ Recent decisions affecting current work:
 - [02-05]: List/ForEach pattern for SwiftUI Binding initializer disambiguation
 - [02-05]: Wizard ViewModel holds all step state, steps are pure views
 - [02-05]: FlowLayout custom Layout for suggestion chips
+- [03-01]: GymColor rawValue storage pattern for SwiftData predicate compatibility
+- [03-01]: Default gym marked with isDefault=true to prevent deletion
+- [03-01]: GymSeedService called before ExerciseSeedService in app init
 
 ### Pending Todos
 
@@ -82,5 +86,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-01-27
-Stopped at: Completed 02-05-PLAN.md (Exercise Creation Wizard)
-Resume file: None (Phase 2 complete, ready for Phase 3)
+Stopped at: Completed 03-01-PLAN.md (Gym Model Enhancement)
+Resume file: None
