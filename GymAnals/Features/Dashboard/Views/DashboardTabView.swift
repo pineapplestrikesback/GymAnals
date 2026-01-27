@@ -28,12 +28,18 @@ struct DashboardTabView: View {
                     }
                     .padding(.horizontal)
 
-                    // Navigation buttons placeholder
+                    // Navigation buttons
                     LazyVGrid(columns: [
                         GridItem(.flexible()),
                         GridItem(.flexible())
                     ], spacing: 16) {
-                        DashboardButton(title: "Exercises", icon: "dumbbell.fill")
+                        NavigationLink {
+                            ExerciseLibraryView()
+                        } label: {
+                            DashboardButtonLabel(title: "Exercises", icon: "dumbbell.fill")
+                        }
+                        .buttonStyle(.plain)
+
                         DashboardButton(title: "Gyms", icon: "building.2.fill")
                         DashboardButton(title: "Muscles", icon: "figure.arms.open")
                         DashboardButton(title: "Progress", icon: "chart.line.uptrend.xyaxis")
@@ -50,22 +56,33 @@ struct DashboardTabView: View {
     }
 }
 
+/// Reusable label content for dashboard buttons
+struct DashboardButtonLabel: View {
+    let title: String
+    let icon: String
+
+    var body: some View {
+        VStack(spacing: 8) {
+            Image(systemName: icon)
+                .font(.title2)
+            Text(title)
+                .font(.subheadline)
+        }
+        .frame(maxWidth: .infinity)
+        .padding()
+        .background(Color.secondary.opacity(0.1))
+        .cornerRadius(12)
+    }
+}
+
+/// Dashboard button for placeholder items (no navigation yet)
 struct DashboardButton: View {
     let title: String
     let icon: String
 
     var body: some View {
         Button(action: {}) {
-            VStack(spacing: 8) {
-                Image(systemName: icon)
-                    .font(.title2)
-                Text(title)
-                    .font(.subheadline)
-            }
-            .frame(maxWidth: .infinity)
-            .padding()
-            .background(Color.secondary.opacity(0.1))
-            .cornerRadius(12)
+            DashboardButtonLabel(title: title, icon: icon)
         }
         .buttonStyle(.plain)
     }
