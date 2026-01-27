@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-01-26)
 ## Current Position
 
 Phase: 2 of 5 (Exercise Library)
-Plan: 2 of 2+ in current phase
+Plan: 4 of 5 in current phase
 Status: In progress
-Last activity: 2026-01-27 — Completed 02-02-PLAN.md (Seed Data Infrastructure)
+Last activity: 2026-01-27 — Completed 02-04-PLAN.md (Exercise Detail View)
 
-Progress: [█████░░░░░] ~33% (5/~15 total plans estimate)
+Progress: [██████░░░░] ~40% (6/~15 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5
-- Average duration: 4.8 min
-- Total execution time: 24 min
+- Total plans completed: 6
+- Average duration: 5.2 min
+- Total execution time: 33 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation | 3 | 13 min | 4.3 min |
-| 02-exercise-library | 2 | 11 min | 5.5 min |
+| 02-exercise-library | 3 | 20 min | 6.7 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (3 min), 01-03 (6 min), 02-01 (3 min), 02-02 (8 min)
+- Last 5 plans: 01-03 (6 min), 02-01 (3 min), 02-02 (8 min), 02-04 (9 min)
 - Trend: Consistent execution pace
 
 *Updated after each plan completion*
@@ -61,6 +61,9 @@ Recent decisions affecting current work:
 - [02-02]: First-launch detection via Movement fetchCount == 0
 - [02-02]: Primary muscle group derived from highest weighted muscle in variant
 - [02-02]: Seed service pattern: static seedIfNeeded(context:) called from App init
+- [02-04]: In-memory sorting for favorites (SortDescriptor<Bool> requires NSObject)
+- [02-04]: @Observable ViewModel with change tracking for SwiftData edits
+- [02-04]: sensoryFeedback(.impact) triggered by state change for slider haptics
 
 ### Pending Todos
 
@@ -73,5 +76,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-01-27
-Stopped at: Completed 02-02-PLAN.md (Seed Data Infrastructure)
+Stopped at: Completed 02-04-PLAN.md (Exercise Detail View)
 Resume file: None (ready for next plan)
