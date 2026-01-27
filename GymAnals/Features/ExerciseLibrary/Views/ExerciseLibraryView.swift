@@ -11,6 +11,7 @@ import SwiftData
 /// Main view for browsing the exercise library with search and filter
 struct ExerciseLibraryView: View {
     @State private var viewModel = ExerciseLibraryViewModel()
+    @State private var showingCreationWizard = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -31,11 +32,14 @@ struct ExerciseLibraryView: View {
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button {
-                    // TODO: Navigate to create exercise (Plan 02-05)
+                    showingCreationWizard = true
                 } label: {
                     Image(systemName: "plus")
                 }
             }
+        }
+        .sheet(isPresented: $showingCreationWizard) {
+            ExerciseCreationWizard()
         }
     }
 }
