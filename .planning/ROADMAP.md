@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - SwiftData models, app shell, and offline persistence
 - [x] **Phase 2: Exercise Library** - Pre-populated exercises with weighted muscle contributions
-- [ ] **Phase 3: Gyms** - Gym definitions and exercise branching per location
+- [x] **Phase 3: Gyms** - Gym definitions and exercise branching per location
 - [ ] **Phase 4: Workout Logging** - Active workout session with fast set logging
 - [ ] **Phase 5: Analytics** - Volume dashboard with weighted muscle calculations
 
@@ -66,10 +66,10 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — Add GymColor enum, update Gym model, create GymSeedService
-- [ ] 03-02-PLAN.md — Gym selector UI in workout tab with persistent selection
-- [ ] 03-03-PLAN.md — Gym management CRUD with deletion options
-- [ ] 03-04-PLAN.md — Wire gym management flow and add gym branches to exercise detail
+- [x] 03-01-PLAN.md — Add GymColor enum, update Gym model, create GymSeedService
+- [x] 03-02-PLAN.md — Gym selector UI in workout tab with persistent selection
+- [x] 03-03-PLAN.md — Gym management CRUD with deletion options
+- [x] 03-04-PLAN.md — Wire gym management flow and add gym branches to exercise detail
 
 ### Phase 4: Workout Logging
 **Goal**: Users can log complete workouts with fast set entry and crash recovery
@@ -116,10 +116,10 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | ✓ Complete | 2026-01-26 |
 | 2. Exercise Library | 5/5 | ✓ Complete | 2026-01-27 |
-| 3. Gyms | 0/4 | Not started | - |
+| 3. Gyms | 4/4 | ✓ Complete | 2026-01-27 |
 | 4. Workout Logging | 0/TBD | Not started | - |
 | 5. Analytics | 0/TBD | Not started | - |
 
 ---
 *Roadmap created: 2026-01-26*
-*Last updated: 2026-01-27 — Phase 3 planned (4 plans in 3 waves)*
+*Last updated: 2026-01-27 — Phase 3 complete (4 plans executed)*
