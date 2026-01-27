@@ -17,11 +17,23 @@ final class Movement {
     var isBuiltIn: Bool = true
     var isHidden: Bool = false
 
+    /// Raw value storage for SwiftData predicate filtering
+    /// Use `exerciseType` computed property for type-safe access
+    var exerciseTypeRaw: Int = ExerciseType.weightReps.rawValue
+
     @Relationship(deleteRule: .cascade, inverse: \Variant.movement)
     var variants: [Variant] = []
 
-    init(name: String, isBuiltIn: Bool = true) {
+    /// Type-safe access to exercise type
+    /// Determines which fields are shown during workout logging
+    var exerciseType: ExerciseType {
+        get { ExerciseType(rawValue: exerciseTypeRaw) ?? .weightReps }
+        set { exerciseTypeRaw = newValue.rawValue }
+    }
+
+    init(name: String, isBuiltIn: Bool = true, exerciseType: ExerciseType = .weightReps) {
         self.name = name
         self.isBuiltIn = isBuiltIn
+        self.exerciseTypeRaw = exerciseType.rawValue
     }
 }

@@ -16,6 +16,11 @@ final class Variant {
     var name: String = ""
     var isBuiltIn: Bool = true
 
+    /// Raw value storage for SwiftData predicate filtering
+    /// nil = not set, will derive from first muscle weight's group
+    /// Use `primaryMuscleGroup` computed property for type-safe access
+    var primaryMuscleGroupRaw: String? = nil
+
     var movement: Movement?
 
     @Relationship(deleteRule: .cascade, inverse: \VariantMuscle.variant)
@@ -24,8 +29,22 @@ final class Variant {
     @Relationship(deleteRule: .cascade, inverse: \Exercise.variant)
     var exercises: [Exercise] = []
 
-    init(name: String, isBuiltIn: Bool = true) {
+    /// Type-safe access to primary muscle group for filtering
+    /// Falls back to first muscle weight's group if not explicitly set
+    var primaryMuscleGroup: MuscleGroup? {
+        get {
+            if let raw = primaryMuscleGroupRaw {
+                return MuscleGroup(rawValue: raw)
+            }
+            // Fallback: derive from first muscle weight
+            return muscleWeights.first?.muscle.group
+        }
+        set { primaryMuscleGroupRaw = newValue?.rawValue }
+    }
+
+    init(name: String, isBuiltIn: Bool = true, primaryMuscleGroup: MuscleGroup? = nil) {
         self.name = name
         self.isBuiltIn = isBuiltIn
+        self.primaryMuscleGroupRaw = primaryMuscleGroup?.rawValue
     }
 }
