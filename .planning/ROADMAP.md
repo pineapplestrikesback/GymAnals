@@ -46,12 +46,14 @@ Plans:
   3. User can create custom exercises with name and category
   4. User can view and edit weighted muscle contributions for any exercise (e.g., bench: chest 1.0, front delt 0.5, triceps 0.3)
   5. Pre-defined muscle taxonomy exists with granular options (anterior/lateral/posterior delt, upper/lower chest, etc.)
-**Plans**: TBD
+**Plans**: 5 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
-- [ ] 02-03: TBD
+- [ ] 02-01-PLAN.md — Add ExerciseType enum and update models for SwiftData predicate filtering
+- [ ] 02-02-PLAN.md — Create JSON seed data and first-launch exercise seeding
+- [ ] 02-03-PLAN.md — Exercise library browse UI with search, filter, and muscle group tabs
+- [ ] 02-04-PLAN.md — Exercise detail view and muscle weight editor
+- [ ] 02-05-PLAN.md — Custom exercise creation wizard
 
 ### Phase 3: Gyms
 **Goal**: Users can define gyms and track exercises with gym-specific weights
@@ -110,11 +112,11 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | ✓ Complete | 2026-01-26 |
-| 2. Exercise Library | 0/TBD | Not started | - |
+| 2. Exercise Library | 0/5 | Planned | - |
 | 3. Gyms | 0/TBD | Not started | - |
 | 4. Workout Logging | 0/TBD | Not started | - |
 | 5. Analytics | 0/TBD | Not started | - |
 
 ---
 *Roadmap created: 2026-01-26*
-*Last updated: 2026-01-26 — Phase 1 complete*
+*Last updated: 2026-01-27 — Phase 2 planned (5 plans in 3 waves)*
