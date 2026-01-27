@@ -78,7 +78,11 @@ struct ExerciseSearchResultsView: View {
                 if !featured.isEmpty {
                     Section("Starred & Recent") {
                         ForEach(featured.prefix(10)) { exercise in
-                            ExerciseRow(exercise: exercise)
+                            NavigationLink {
+                                ExerciseDetailView(exercise: exercise)
+                            } label: {
+                                ExerciseRow(exercise: exercise)
+                            }
                         }
                     }
                 }
@@ -86,7 +90,11 @@ struct ExerciseSearchResultsView: View {
                 // All exercises
                 Section("All Exercises") {
                     ForEach(results) { exercise in
-                        ExerciseRow(exercise: exercise)
+                        NavigationLink {
+                            ExerciseDetailView(exercise: exercise)
+                        } label: {
+                            ExerciseRow(exercise: exercise)
+                        }
                     }
                 }
             }
