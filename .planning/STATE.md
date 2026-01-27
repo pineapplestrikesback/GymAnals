@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-01-26)
 ## Current Position
 
 Phase: 2 of 5 (Exercise Library)
-Plan: 1 of 2+ in current phase
+Plan: 2 of 2+ in current phase
 Status: In progress
-Last activity: 2026-01-27 — Completed 02-01-PLAN.md (Exercise Type and Predicate Filtering)
+Last activity: 2026-01-27 — Completed 02-02-PLAN.md (Seed Data Infrastructure)
 
-Progress: [████░░░░░░] ~27% (4/~15 total plans estimate)
+Progress: [█████░░░░░] ~33% (5/~15 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: 4.0 min
-- Total execution time: 16 min
+- Total plans completed: 5
+- Average duration: 4.8 min
+- Total execution time: 24 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation | 3 | 13 min | 4.3 min |
-| 02-exercise-library | 1 | 3 min | 3.0 min |
+| 02-exercise-library | 2 | 11 min | 5.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (4 min), 01-02 (3 min), 01-03 (6 min), 02-01 (3 min)
+- Last 5 plans: 01-02 (3 min), 01-03 (6 min), 02-01 (3 min), 02-02 (8 min)
 - Trend: Consistent execution pace
 
 *Updated after each plan completion*
@@ -58,6 +58,9 @@ Recent decisions affecting current work:
 - [02-01]: RawValue storage pattern for SwiftData enum predicate filtering
 - [02-01]: Computed properties maintain type-safe enum API over rawValue storage
 - [02-01]: Optional enum with fallback pattern (primaryMuscleGroup derives from muscle weights if nil)
+- [02-02]: First-launch detection via Movement fetchCount == 0
+- [02-02]: Primary muscle group derived from highest weighted muscle in variant
+- [02-02]: Seed service pattern: static seedIfNeeded(context:) called from App init
 
 ### Pending Todos
 
@@ -70,5 +73,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-01-27
-Stopped at: Completed 02-01-PLAN.md (Exercise Type and Predicate Filtering)
-Resume file: None (ready for 02-02-PLAN.md)
+Stopped at: Completed 02-02-PLAN.md (Seed Data Infrastructure)
+Resume file: None (ready for next plan)
