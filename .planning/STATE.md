@@ -5,34 +5,34 @@
 See: .planning/PROJECT.md (updated 2026-01-26)
 
 **Core value:** Precise per-muscle volume tracking with user-defined muscles and weighted set contributions
-**Current focus:** Phase 2 - Exercise Library (In progress)
+**Current focus:** Phase 2 - Exercise Library (COMPLETE)
 
 ## Current Position
 
-Phase: 2 of 5 (Exercise Library)
-Plan: 4 of 5 in current phase
-Status: In progress
-Last activity: 2026-01-27 — Completed 02-04-PLAN.md (Exercise Detail View)
+Phase: 2 of 5 (Exercise Library) - COMPLETE
+Plan: 5 of 5 in current phase
+Status: Phase complete, ready for Phase 3
+Last activity: 2026-01-27 - Completed 02-05-PLAN.md (Exercise Creation Wizard)
 
-Progress: [██████░░░░] ~40% (6/~15 total plans estimate)
+Progress: [███████░░░] ~47% (7/~15 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
-- Average duration: 5.2 min
-- Total execution time: 33 min
+- Total plans completed: 7
+- Average duration: 8.6 min
+- Total execution time: 60 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation | 3 | 13 min | 4.3 min |
-| 02-exercise-library | 3 | 20 min | 6.7 min |
+| 02-exercise-library | 4 | 47 min | 11.8 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-03 (6 min), 02-01 (3 min), 02-02 (8 min), 02-04 (9 min)
-- Trend: Consistent execution pace
+- Last 5 plans: 02-01 (3 min), 02-02 (8 min), 02-04 (9 min), 02-05 (27 min)
+- Trend: Wizard plan took longer due to SwiftUI type inference issues
 
 *Updated after each plan completion*
 
@@ -67,6 +67,9 @@ Recent decisions affecting current work:
 - [02-04]: In-memory sorting for favorites (SortDescriptor<Bool> requires NSObject)
 - [02-04]: @Observable ViewModel with change tracking for SwiftData edits
 - [02-04]: sensoryFeedback(.impact) triggered by state change for slider haptics
+- [02-05]: List/ForEach pattern for SwiftUI Binding initializer disambiguation
+- [02-05]: Wizard ViewModel holds all step state, steps are pure views
+- [02-05]: FlowLayout custom Layout for suggestion chips
 
 ### Pending Todos
 
@@ -79,5 +82,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-01-27
-Stopped at: Completed 02-04-PLAN.md (Exercise Detail View)
-Resume file: None (ready for next plan)
+Stopped at: Completed 02-05-PLAN.md (Exercise Creation Wizard)
+Resume file: None (Phase 2 complete, ready for Phase 3)
