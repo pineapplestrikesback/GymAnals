@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-26)
 
 **Core value:** Precise per-muscle volume tracking with user-defined muscles and weighted set contributions
-**Current focus:** Phase 2 - Exercise Library (COMPLETE)
+**Current focus:** Phase 3 - Gyms (COMPLETE)
 
 ## Current Position
 
-Phase: 2 of 5 (Exercise Library) - COMPLETE
-Plan: 5 of 5 in current phase
-Status: Phase complete, ready for Phase 3
-Last activity: 2026-01-27 - Completed 02-05-PLAN.md (Exercise Creation Wizard)
+Phase: 3 of 5 (Gyms)
+Plan: 4 of 4 in current phase (all complete)
+Status: Phase complete
+Last activity: 2026-01-27 - Completed 03-04-PLAN.md (Selector-Management Flow)
 
-Progress: [████████░░] ~44% (8/~18 total plans estimate)
+Progress: [████████████░] ~67% (12/~18 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
-- Average duration: 9.3 min
-- Total execution time: 74 min
+- Total plans completed: 12
+- Average duration: 8.2 min
+- Total execution time: 98 min
 
 **By Phase:**
 
@@ -29,10 +29,11 @@ Progress: [████████░░] ~44% (8/~18 total plans estimate)
 |-------|-------|-------|----------|
 | 01-foundation | 3 | 13 min | 4.3 min |
 | 02-exercise-library | 5 | 61 min | 12.2 min |
+| 03-gyms | 4 | 24 min | 6.0 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (3 min), 02-02 (8 min), 02-03 (14 min), 02-04 (9 min), 02-05 (27 min)
-- Trend: Larger plans as feature complexity increases
+- Last 5 plans: 02-05 (27 min), 03-01 (6 min), 03-03 (7 min), 03-02 (7 min), 03-04 (4 min)
+- Trend: Gym plans consistently fast (patterns well-established)
 
 *Updated after each plan completion*
 
@@ -70,6 +71,18 @@ Recent decisions affecting current work:
 - [02-05]: List/ForEach pattern for SwiftUI Binding initializer disambiguation
 - [02-05]: Wizard ViewModel holds all step state, steps are pure views
 - [02-05]: FlowLayout custom Layout for suggestion chips
+- [03-01]: GymColor rawValue storage pattern for SwiftData predicate compatibility
+- [03-01]: Default gym marked with isDefault=true to prevent deletion
+- [03-01]: GymSeedService called before ExerciseSeedService in app init
+- [03-03]: GymColorPicker uses .palette picker style for compact color display
+- [03-03]: Deletion options via confirmationDialog with three choices
+- [03-03]: Subview extraction pattern for ForEach SwiftData iteration
+- [03-02]: @ObservationIgnored on @AppStorage prevents double-triggering in @Observable
+- [03-02]: Subview pattern (GymSelectorRow) for ForEach closure isolation in Swift 6
+- [03-02]: Computed selectedGym with fetch-on-access for consistency
+- [03-04]: Delayed sheet transition (0.3s) via DispatchQueue.main.asyncAfter
+- [03-04]: Dictionary grouping with compactMap for nil filtering in gymBranches
+- [03-04]: Gym branches sorted by lastUsedDate for relevance ordering
 
 ### Pending Todos
 
@@ -77,10 +90,20 @@ None yet.
 
 ### Blockers/Concerns
 
-None yet.
+None.
 
 ## Session Continuity
 
 Last session: 2026-01-27
-Stopped at: Completed 02-05-PLAN.md (Exercise Creation Wizard)
-Resume file: None (Phase 2 complete, ready for Phase 3)
+Stopped at: Completed 03-04-PLAN.md (Selector-Management Flow)
+Resume file: None
+
+## Phase 3 Summary
+
+Phase 3 (Gyms) is now complete with all 4 plans executed:
+- 03-01: Gym model with color tags and relationships
+- 03-02: Gym selector UI with header and sheet
+- 03-03: Gym management view with CRUD operations
+- 03-04: Selector-management flow and exercise detail gym branches
+
+Ready for Phase 4: Workout Logging

@@ -14,8 +14,17 @@ import SwiftData
 final class Gym {
     var id: UUID = UUID()
     var name: String = ""
-    var location: String?
     var createdDate: Date = Date.now
+
+    /// Marks system default gym that cannot be deleted
+    var isDefault: Bool = false
+
+    /// Raw value storage for color tag (SwiftData predicate filtering)
+    /// Use `colorTag` computed property for type-safe access
+    var colorTagRaw: String = GymColor.blue.rawValue
+
+    /// Date this gym was last used for a workout
+    var lastUsedDate: Date?
 
     @Relationship(deleteRule: .cascade, inverse: \Workout.gym)
     var workouts: [Workout] = []
@@ -23,8 +32,15 @@ final class Gym {
     @Relationship(deleteRule: .cascade, inverse: \ExerciseWeightHistory.gym)
     var weightHistory: [ExerciseWeightHistory] = []
 
-    init(name: String, location: String? = nil) {
+    /// Type-safe access to gym color tag
+    var colorTag: GymColor {
+        get { GymColor(rawValue: colorTagRaw) ?? .blue }
+        set { colorTagRaw = newValue.rawValue }
+    }
+
+    init(name: String, colorTag: GymColor = .blue, isDefault: Bool = false) {
         self.name = name
-        self.location = location
+        self.colorTagRaw = colorTag.rawValue
+        self.isDefault = isDefault
     }
 }

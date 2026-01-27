@@ -15,6 +15,24 @@ struct ExerciseDetailView: View {
 
     @State private var muscleViewModel: MuscleWeightViewModel?
 
+    /// Groups weight history by gym for branch display
+    private var gymBranches: [(gym: Gym, entryCount: Int)] {
+        // Group weight history by gym
+        let grouped = Dictionary(grouping: exercise.weightHistory) { $0.gym }
+
+        // Filter out entries with nil gym using compactMap.
+        // nil gym records exist when user chose "Delete Gym, Keep History" -
+        // this is valid orphaned history but should NOT appear as a "branch"
+        // since there's no gym to display it under.
+        return grouped.compactMap { gym, entries in
+            guard let gym = gym else { return nil }
+            return (gym: gym, entryCount: entries.count)
+        }
+        .sorted {
+            ($0.gym.lastUsedDate ?? .distantPast) > ($1.gym.lastUsedDate ?? .distantPast)
+        }
+    }
+
     var body: some View {
         List {
             // Basic info section
@@ -74,6 +92,23 @@ struct ExerciseDetailView: View {
                 Section {
                     Label("Custom Exercise", systemImage: "person.fill")
                         .foregroundStyle(.secondary)
+                }
+            }
+
+            // Gym branches section - shows which gyms have weight history for this exercise
+            if !gymBranches.isEmpty {
+                Section("Weight History by Gym") {
+                    ForEach(gymBranches, id: \.gym.id) { branch in
+                        HStack {
+                            Circle()
+                                .fill(branch.gym.colorTag.color)
+                                .frame(width: 12, height: 12)
+                            Text(branch.gym.name)
+                            Spacer()
+                            Text("\(branch.entryCount) \(branch.entryCount == 1 ? "entry" : "entries")")
+                                .foregroundStyle(.secondary)
+                        }
+                    }
                 }
             }
         }

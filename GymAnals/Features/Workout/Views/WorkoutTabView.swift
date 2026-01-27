@@ -9,10 +9,25 @@ import SwiftUI
 import SwiftData
 
 struct WorkoutTabView: View {
+    @Environment(\.modelContext) private var modelContext
+    @State private var viewModel: GymSelectionViewModel?
+    @State private var showingGymSelector = false
+    @State private var showingGymManagement = false
+
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 24) {
+                    // Gym selector header
+                    HStack {
+                        Spacer()
+                        GymSelectorHeader(gym: viewModel?.selectedGym) {
+                            showingGymSelector = true
+                        }
+                        Spacer()
+                    }
+                    .padding(.top, 8)
+
                     // Placeholder for "Start Workout" button
                     Button(action: {}) {
                         Label("Start Workout", systemImage: "plus.circle.fill")
@@ -24,7 +39,6 @@ struct WorkoutTabView: View {
                             .cornerRadius(12)
                     }
                     .padding(.horizontal)
-                    .padding(.top)
 
                     // Placeholder for recent workouts
                     VStack(alignment: .leading, spacing: 12) {
@@ -42,6 +56,33 @@ struct WorkoutTabView: View {
             }
             .navigationTitle("Workout")
             .navigationBarTitleDisplayMode(.large)
+            .onAppear {
+                if viewModel == nil {
+                    viewModel = GymSelectionViewModel(modelContext: modelContext)
+                }
+            }
+            .sheet(isPresented: $showingGymSelector) {
+                GymSelectorSheet(
+                    selectedGym: Binding(
+                        get: { viewModel?.selectedGym },
+                        set: { viewModel?.selectedGym = $0 }
+                    ),
+                    onManageGyms: {
+                        // Delay to prevent sheet transition conflicts
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            showingGymManagement = true
+                        }
+                    }
+                )
+                .presentationDetents([.medium])
+                .presentationDragIndicator(.visible)
+            }
+            .sheet(isPresented: $showingGymManagement) {
+                NavigationStack {
+                    GymManagementView()
+                }
+                .presentationDetents([.large])
+            }
         }
     }
 }
