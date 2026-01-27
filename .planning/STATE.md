@@ -61,6 +61,9 @@ Recent decisions affecting current work:
 - [02-02]: First-launch detection via Movement fetchCount == 0
 - [02-02]: Primary muscle group derived from highest weighted muscle in variant
 - [02-02]: Seed service pattern: static seedIfNeeded(context:) called from App init
+- [02-03]: Task-based debounce pattern for @Observable (no Combine publishers)
+- [02-03]: Subview @Query pattern for dynamic filtering
+- [02-03]: In-memory search filter (SwiftData predicate expression limits)
 - [02-04]: In-memory sorting for favorites (SortDescriptor<Bool> requires NSObject)
 - [02-04]: @Observable ViewModel with change tracking for SwiftData edits
 - [02-04]: sensoryFeedback(.impact) triggered by state change for slider haptics
