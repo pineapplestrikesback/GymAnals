@@ -13,7 +13,7 @@ This roadmap delivers a native iOS workout tracker with precise per-muscle volum
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - SwiftData models, app shell, and offline persistence
-- [ ] **Phase 2: Exercise Library** - Pre-populated exercises with weighted muscle contributions
+- [x] **Phase 2: Exercise Library** - Pre-populated exercises with weighted muscle contributions
 - [ ] **Phase 3: Gyms** - Gym definitions and exercise branching per location
 - [ ] **Phase 4: Workout Logging** - Active workout session with fast set logging
 - [ ] **Phase 5: Analytics** - Volume dashboard with weighted muscle calculations
@@ -49,11 +49,11 @@ Plans:
 **Plans**: 5 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Add ExerciseType enum and update models for SwiftData predicate filtering
-- [ ] 02-02-PLAN.md — Create JSON seed data and first-launch exercise seeding
-- [ ] 02-03-PLAN.md — Exercise library browse UI with search, filter, and muscle group tabs
-- [ ] 02-04-PLAN.md — Exercise detail view and muscle weight editor
-- [ ] 02-05-PLAN.md — Custom exercise creation wizard
+- [x] 02-01-PLAN.md — Add ExerciseType enum and update models for SwiftData predicate filtering
+- [x] 02-02-PLAN.md — Create JSON seed data and first-launch exercise seeding
+- [x] 02-03-PLAN.md — Exercise library browse UI with search, filter, and muscle group tabs
+- [x] 02-04-PLAN.md — Exercise detail view and muscle weight editor
+- [x] 02-05-PLAN.md — Custom exercise creation wizard
 
 ### Phase 3: Gyms
 **Goal**: Users can define gyms and track exercises with gym-specific weights
@@ -112,11 +112,11 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | ✓ Complete | 2026-01-26 |
-| 2. Exercise Library | 0/5 | Planned | - |
+| 2. Exercise Library | 5/5 | ✓ Complete | 2026-01-27 |
 | 3. Gyms | 0/TBD | Not started | - |
 | 4. Workout Logging | 0/TBD | Not started | - |
 | 5. Analytics | 0/TBD | Not started | - |
 
 ---
 *Roadmap created: 2026-01-26*
-*Last updated: 2026-01-27 — Phase 2 planned (5 plans in 3 waves)*
+*Last updated: 2026-01-27 — Phase 2 complete (5 plans executed)*

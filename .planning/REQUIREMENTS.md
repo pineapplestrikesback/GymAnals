@@ -91,11 +91,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | DATA-01 | Phase 1 | Complete |
-| EXER-01 | Phase 2 | Pending |
-| EXER-02 | Phase 2 | Pending |
-| EXER-03 | Phase 2 | Pending |
-| EXER-04 | Phase 2 | Pending |
-| EXER-05 | Phase 2 | Pending |
+| EXER-01 | Phase 2 | Complete |
+| EXER-02 | Phase 2 | Complete |
+| EXER-03 | Phase 2 | Complete |
+| EXER-04 | Phase 2 | Complete |
+| EXER-05 | Phase 2 | Complete |
 | GYM-01 | Phase 3 | Pending |
 | GYM-02 | Phase 3 | Pending |
 | LOG-01 | Phase 4 | Pending |
@@ -116,4 +116,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-01-26*
-*Last updated: 2026-01-26 after roadmap creation*
+*Last updated: 2026-01-27 — Phase 2 requirements complete (EXER-01 through EXER-05)*
