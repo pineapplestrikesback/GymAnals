@@ -97,10 +97,14 @@ struct ActiveWorkoutView: View {
             }
         }
         .sheet(isPresented: $showingExercisePicker) {
-            ExercisePickerSheet { exercise in
-                viewModel.addExercise(exercise)
-                // Auto-add first set
-                viewModel.addSet(for: exercise)
+            ExercisePickerSheet { exercises in
+                withAnimation {
+                    for exercise in exercises {
+                        viewModel.addExercise(exercise)
+                        // Auto-add first set for each exercise
+                        viewModel.addSet(for: exercise)
+                    }
+                }
             }
         }
         .popover(isPresented: $showingTimerControls) {

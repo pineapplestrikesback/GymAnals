@@ -9,41 +9,68 @@ import SwiftData
 import SwiftUI
 
 /// Sheet for selecting exercises to add to a workout.
-/// Shows recently used exercises first, with search capability.
+/// Supports multi-select with checkboxes, muscle group filter tabs, and search.
 struct ExercisePickerSheet: View {
     @Environment(\.dismiss) private var dismiss
     @Query(sort: \Exercise.lastUsedDate, order: .reverse) private var exercises: [Exercise]
     @State private var searchText = ""
+    @State private var selectedExerciseIDs: Set<String> = []
+    @State private var selectedMuscleGroup: MuscleGroup? = nil
 
-    let onSelectExercise: (Exercise) -> Void
+    let onSelectExercises: ([Exercise]) -> Void
 
     private var filteredExercises: [Exercise] {
-        if searchText.isEmpty {
-            // Return first 50 recently used exercises
-            return Array(exercises.prefix(50))
-        } else {
-            // Filter by displayName, searchTerms, and movement name (in-memory)
+        var result = exercises
+
+        // Filter by muscle group if selected
+        if let group = selectedMuscleGroup {
+            result = result.filter { $0.primaryMuscleGroup == group }
+        }
+
+        // Filter by search text
+        if !searchText.isEmpty {
             let lowered = searchText.lowercased()
-            return exercises.filter { exercise in
+            result = result.filter { exercise in
                 exercise.displayName.localizedCaseInsensitiveContains(searchText) ||
                 exercise.searchTerms.contains { $0.lowercased().contains(lowered) } ||
                 exercise.movement?.displayName.localizedCaseInsensitiveContains(searchText) == true
             }
         }
+
+        // Only limit to 50 when no filters are active
+        if searchText.isEmpty && selectedMuscleGroup == nil {
+            return Array(result.prefix(50))
+        }
+
+        return result
     }
 
     var body: some View {
         NavigationStack {
-            List(filteredExercises) { exercise in
-                Button {
-                    onSelectExercise(exercise)
-                    dismiss()
-                } label: {
-                    ExerciseRow(exercise: exercise)
+            VStack(spacing: 0) {
+                // Muscle group filter tabs
+                MuscleGroupFilterTabs(selectedGroup: $selectedMuscleGroup)
+                    .padding(.vertical, 8)
+
+                List(filteredExercises) { exercise in
+                    Button {
+                        toggleSelection(exercise)
+                    } label: {
+                        HStack {
+                            ExerciseRow(exercise: exercise)
+
+                            Spacer()
+
+                            Image(systemName: selectedExerciseIDs.contains(exercise.id) ? "checkmark.circle.fill" : "circle")
+                                .font(.title3)
+                                .foregroundStyle(selectedExerciseIDs.contains(exercise.id) ? Color.accentColor : .secondary)
+                        }
+                    }
+                    .tint(.primary)
                 }
-                .tint(.primary)
+                .listStyle(.plain)
             }
-            .navigationTitle("Add Exercise")
+            .navigationTitle("Add Exercises")
             .navigationBarTitleDisplayMode(.inline)
             .searchable(text: $searchText, prompt: "Search exercises")
             .toolbar {
@@ -52,7 +79,27 @@ struct ExercisePickerSheet: View {
                         dismiss()
                     }
                 }
+
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Add (\(selectedExerciseIDs.count))") {
+                        let selected = exercises.filter { selectedExerciseIDs.contains($0.id) }
+                        onSelectExercises(selected)
+                        dismiss()
+                    }
+                    .disabled(selectedExerciseIDs.isEmpty)
+                    .fontWeight(.semibold)
+                }
             }
+        }
+    }
+
+    // MARK: - Helpers
+
+    private func toggleSelection(_ exercise: Exercise) {
+        if selectedExerciseIDs.contains(exercise.id) {
+            selectedExerciseIDs.remove(exercise.id)
+        } else {
+            selectedExerciseIDs.insert(exercise.id)
         }
     }
 }
