@@ -9,5 +9,11 @@ import Foundation
 
 enum AppConstants {
     static let appName = "GymAnals"
-    static let defaultRestTimerSeconds = 90
+
+    // Rest timer defaults
+    static let defaultRestDuration: TimeInterval = 120  // 2 minutes
+
+    // Weight increments for stepper controls
+    static let weightIncrementKg: Double = 1.0
+    static let weightIncrementLbs: Double = 2.5  // Matches standard plate availability
 }

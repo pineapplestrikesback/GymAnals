@@ -17,6 +17,12 @@ final class Exercise {
     var isFavorite: Bool = false
     var lastUsedDate: Date?
 
+    /// Rest duration in seconds between sets for this exercise
+    var restDuration: TimeInterval = 120  // Default 2 minutes, adjustable per exercise
+
+    /// Whether to auto-start timer when a set is completed
+    var autoStartTimer: Bool = true
+
     var variant: Variant?
     var equipment: Equipment?
 
