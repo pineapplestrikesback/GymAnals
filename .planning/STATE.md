@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-01-26)
 ## Current Position
 
 Phase: 4 of 5 (Workout Logging)
-Plan: 3 of 5 in current phase
+Plan: 4 of 5 in current phase
 Status: In progress
-Last activity: 2026-01-28 - Completed 04-03-PLAN.md (Set Logging & Previous Values)
+Last activity: 2026-01-28 - Completed 04-04-PLAN.md (Exercise Section & Picker)
 
-Progress: [███████████████░░░] ~83% (15/~18 total plans estimate)
+Progress: [████████████████░░] ~89% (16/~18 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 15
-- Average duration: 7.9 min
-- Total execution time: 119 min
+- Total plans completed: 16
+- Average duration: 7.7 min
+- Total execution time: 123 min
 
 **By Phase:**
 
@@ -30,10 +30,10 @@ Progress: [███████████████░░░] ~83% (15/~18 
 | 01-foundation | 3 | 13 min | 4.3 min |
 | 02-exercise-library | 5 | 61 min | 12.2 min |
 | 03-gyms | 4 | 24 min | 6.0 min |
-| 04-workout-logging | 3 | 21 min | 7.0 min |
+| 04-workout-logging | 4 | 25 min | 6.3 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-02 (7 min), 03-04 (4 min), 04-01 (6 min), 04-02 (7 min), 04-03 (8 min)
+- Last 5 plans: 03-04 (4 min), 04-01 (6 min), 04-02 (7 min), 04-03 (8 min), 04-04 (4 min)
 - Trend: Consistent execution pace
 
 *Updated after each plan completion*
@@ -93,6 +93,9 @@ Recent decisions affecting current work:
 - [04-03]: @FocusState.Binding pattern for cross-view focus control
 - [04-03]: Timer.publish(every: 1) for countdown UI updates
 - [04-03]: Stepper input pattern: +/- buttons with keyboard fallback
+- [04-04]: Closure-based binding pattern: (WorkoutSet) -> Binding<T> for ForEach scenarios
+- [04-04]: Exercise picker limits to 50 recent when not searching (performance)
+- [04-04]: FAB 56x56 size per Material Design guidelines
 
 ### Pending Todos
 
@@ -105,7 +108,7 @@ None.
 ## Session Continuity
 
 Last session: 2026-01-28
-Stopped at: Completed 04-03-PLAN.md (Set Logging & Previous Values)
+Stopped at: Completed 04-04-PLAN.md (Exercise Section & Picker)
 Resume file: None
 
 ## Phase 4 Progress
@@ -114,5 +117,5 @@ Phase 4 (Workout Logging) in progress:
 - 04-01: Timer Infrastructure (COMPLETE)
 - 04-02: Active Workout ViewModel (COMPLETE)
 - 04-03: Set Logging & Previous Values (COMPLETE)
-- 04-04: Timer UI & Controls (pending)
-- 04-05: Exercise Picker & Reordering (pending)
+- 04-04: Exercise Section & Picker (COMPLETE)
+- 04-05: Active Workout UI (pending)
