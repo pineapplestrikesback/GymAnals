@@ -13,7 +13,7 @@ struct ExerciseDetailView: View {
     @Environment(\.modelContext) private var modelContext
     let exercise: Exercise
 
-    @State private var muscleViewModel: MuscleWeightViewModel?
+    @State private var showingMuscleEditor = false
 
     /// Groups weight history by gym for branch display
     private var gymBranches: [(gym: Gym, entryCount: Int)] {
@@ -33,6 +33,18 @@ struct ExerciseDetailView: View {
         }
     }
 
+    /// Non-empty dimensions for display
+    private var activeDimensions: [(label: String, value: String)] {
+        var dims: [(String, String)] = []
+        let d = exercise.dimensions
+        if !d.angle.isEmpty { dims.append(("Angle", d.angle.replacingOccurrences(of: "_", with: " ").capitalized)) }
+        if !d.gripWidth.isEmpty { dims.append(("Grip Width", d.gripWidth.capitalized)) }
+        if !d.gripOrientation.isEmpty { dims.append(("Grip", d.gripOrientation.capitalized)) }
+        if !d.stance.isEmpty { dims.append(("Stance", d.stance.replacingOccurrences(of: "_", with: " ").capitalized)) }
+        if !d.laterality.isEmpty { dims.append(("Laterality", d.laterality.capitalized)) }
+        return dims
+    }
+
     var body: some View {
         List {
             // Basic info section
@@ -44,19 +56,46 @@ struct ExerciseDetailView: View {
                 }
 
                 if let movement = exercise.movement {
+                    LabeledContent("Movement", value: movement.displayName)
+                    LabeledContent("Category", value: movement.category.displayName)
                     LabeledContent("Type", value: movement.exerciseType.displayName)
                 }
 
-                Toggle("Favorite", isOn: favoriteBinding)
+                LabeledContent("Popularity", value: exercise.popularity.displayName)
+
+                if exercise.isUnilateral {
+                    LabeledContent("Unilateral", value: "Yes")
+                }
+            }
+
+            // Dimensions section (only show if exercise has non-empty dimensions)
+            if !exercise.dimensions.isEmpty {
+                Section("Dimensions") {
+                    ForEach(activeDimensions, id: \.label) { dim in
+                        LabeledContent(dim.label, value: dim.value)
+                    }
+                }
             }
 
             // Muscle targeting section
             Section {
-                NavigationLink {
-                    if let viewModel = muscleViewModel {
-                        MuscleWeightEditorView(viewModel: viewModel)
+                if !exercise.isBuiltIn {
+                    Button {
+                        showingMuscleEditor = true
+                    } label: {
+                        HStack {
+                            Text("Edit Muscle Weights")
+                            Spacer()
+                            let count = exercise.muscleWeights.count
+                            Text("\(count) muscles")
+                                .foregroundStyle(.secondary)
+                            Image(systemName: "chevron.right")
+                                .font(.caption)
+                                .foregroundStyle(.tertiary)
+                        }
                     }
-                } label: {
+                    .tint(.primary)
+                } else {
                     HStack {
                         Text("Muscle Weights")
                         Spacer()
@@ -67,7 +106,7 @@ struct ExerciseDetailView: View {
                 }
 
                 // Quick preview of top muscles
-                let topMuscles = exercise.sortedMuscleWeights.prefix(3)
+                let topMuscles = exercise.sortedMuscleWeights.prefix(5)
 
                 ForEach(Array(topMuscles), id: \.muscle) { entry in
                     HStack {
@@ -83,11 +122,44 @@ struct ExerciseDetailView: View {
                 Text("Muscle Targeting")
             }
 
+            // Timer settings section
+            Section("Timer Settings") {
+                LabeledContent("Rest Duration", value: "\(Int(exercise.restDuration))s")
+                LabeledContent("Auto-start Timer", value: exercise.autoStartTimer ? "On" : "Off")
+            }
+
+            // Notes section
+            if !exercise.notes.isEmpty {
+                Section("Notes") {
+                    Text(exercise.notes)
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                }
+            }
+
+            // Sources section
+            if !exercise.sources.isEmpty {
+                Section("Sources") {
+                    ForEach(exercise.sources, id: \.self) { source in
+                        Text(source)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
+
             // Info section for built-in vs custom
-            if !exercise.isBuiltIn {
+            if exercise.isBuiltIn {
+                Section {
+                    Label("Built-in Exercise (read-only)", systemImage: "lock.fill")
+                        .foregroundStyle(.secondary)
+                        .font(.subheadline)
+                }
+            } else {
                 Section {
                     Label("Custom Exercise", systemImage: "person.fill")
                         .foregroundStyle(.secondary)
+                        .font(.subheadline)
                 }
             }
 
@@ -110,19 +182,22 @@ struct ExerciseDetailView: View {
         }
         .navigationTitle(exercise.displayName)
         .navigationBarTitleDisplayMode(.inline)
-        .onAppear {
-            muscleViewModel = MuscleWeightViewModel(exercise: exercise)
-        }
-    }
-
-    private var favoriteBinding: Binding<Bool> {
-        Binding(
-            get: { exercise.isFavorite },
-            set: { newValue in
-                exercise.isFavorite = newValue
-                try? modelContext.save()
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button {
+                    exercise.isFavorite.toggle()
+                    try? modelContext.save()
+                } label: {
+                    Image(systemName: exercise.isFavorite ? "star.fill" : "star")
+                        .foregroundStyle(exercise.isFavorite ? .yellow : .gray)
+                }
             }
-        )
+        }
+        .sheet(isPresented: $showingMuscleEditor) {
+            NavigationStack {
+                MuscleWeightEditorView(viewModel: MuscleWeightViewModel(exercise: exercise))
+            }
+        }
     }
 }
 
