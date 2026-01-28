@@ -1,5 +1,5 @@
 //
-//  VariationStepView.swift
+//  ExerciseNameStepView.swift
 //  GymAnals
 //
 //  Created on 27/01/2026.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-/// Step 2: Exercise naming with suggestions
-struct NameStepView: View {
+/// Step 2: Exercise naming with suggested name from equipment + movement
+struct ExerciseNameStepView: View {
     @Bindable var viewModel: ExerciseCreationViewModel
 
-    /// Common name suggestions
-    private let suggestions = [
+    /// Common modifier suggestions
+    private let modifiers = [
         "Standard", "Incline", "Decline",
         "Wide Grip", "Close Grip", "Neutral Grip", "Reverse Grip",
         "Single Arm", "Seated", "Standing"
@@ -26,17 +26,28 @@ struct NameStepView: View {
             TextField("e.g., Incline Bench Press", text: $viewModel.exerciseName)
                 .textFieldStyle(.roundedBorder)
 
-            Text("Suggestions")
+            // Suggested name button based on equipment + movement
+            if let suggested = viewModel.suggestedName, viewModel.exerciseName != suggested {
+                Button {
+                    viewModel.exerciseName = suggested
+                } label: {
+                    Label("Use: \(suggested)", systemImage: "sparkles")
+                }
+                .buttonStyle(.borderedProminent)
+                .controlSize(.small)
+            }
+
+            Text("Modifiers")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
 
             FlowLayout(spacing: 8) {
-                ForEach(suggestions, id: \.self) { suggestion in
-                    Button(suggestion) {
+                ForEach(modifiers, id: \.self) { modifier in
+                    Button(modifier) {
                         if viewModel.exerciseName.isEmpty {
-                            viewModel.exerciseName = suggestion
+                            viewModel.exerciseName = modifier
                         } else {
-                            viewModel.exerciseName += " \(suggestion)"
+                            viewModel.exerciseName += " \(modifier)"
                         }
                     }
                     .buttonStyle(.bordered)
@@ -47,6 +58,12 @@ struct NameStepView: View {
             Spacer()
         }
         .padding()
+        .onAppear {
+            // Pre-fill with suggested name if empty
+            if viewModel.exerciseName.isEmpty, let suggested = viewModel.suggestedName {
+                viewModel.exerciseName = suggested
+            }
+        }
     }
 }
 
@@ -97,5 +114,5 @@ struct FlowLayout: Layout {
 }
 
 #Preview {
-    NameStepView(viewModel: ExerciseCreationViewModel())
+    ExerciseNameStepView(viewModel: ExerciseCreationViewModel())
 }

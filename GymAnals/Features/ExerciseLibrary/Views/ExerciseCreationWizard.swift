@@ -42,7 +42,7 @@ struct ExerciseCreationWizard: View {
                     case 0:
                         MovementStepView(viewModel: viewModel)
                     case 1:
-                        NameStepView(viewModel: viewModel)
+                        ExerciseNameStepView(viewModel: viewModel)
                     case 2:
                         EquipmentStepView(viewModel: viewModel)
                     case 3:
