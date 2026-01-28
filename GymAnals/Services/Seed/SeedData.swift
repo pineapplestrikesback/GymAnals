@@ -7,33 +7,88 @@
 
 import Foundation
 
-/// Root container for exercise seed data
-struct SeedData: Decodable {
+// MARK: - Equipment JSON Structure
+
+struct EquipmentSeedData: Decodable {
     let equipment: [SeedEquipment]
+}
+
+struct SeedEquipment: Decodable {
+    let id: String
+    let displayName: String
+    let category: String
+    let properties: SeedEquipmentProperties
+    let notes: String
+}
+
+struct SeedEquipmentProperties: Decodable {
+    let bilateralOnly: Bool
+    let resistanceCurve: String
+    let stabilizationDemand: String
+    let commonInGyms: Bool
+}
+
+// MARK: - Movement JSON Structure
+
+struct MovementSeedData: Decodable {
     let movements: [SeedMovement]
 }
 
-/// Equipment definition for seeding
-struct SeedEquipment: Decodable {
-    let name: String
-}
-
-/// Movement definition with exercise type and variants
 struct SeedMovement: Decodable {
-    let name: String
-    let exerciseType: Int  // Maps to ExerciseType.rawValue
-    let variants: [SeedVariant]
+    let id: String
+    let displayName: String
+    let category: String
+    let subcategory: String
+    let applicableDimensions: SeedApplicableDimensions
+    let applicableEquipment: [String]
+    let defaultMuscleWeights: [String: Double]
+    let defaultDescription: String
+    let notes: String
+    let sources: [String]
 }
 
-/// Variant definition with muscle weights and equipment options
-struct SeedVariant: Decodable {
-    let name: String
-    let muscleWeights: [SeedMuscleWeight]
-    let equipment: [String]  // Equipment names to create Exercise combos
+struct SeedApplicableDimensions: Decodable {
+    let angle: [String]?
+    let gripWidth: [String]?
+    let gripOrientation: [String]?
+    let stance: [String]?
+    let laterality: [String]?
+
+    /// Convert to dictionary format for Movement model
+    func toDictionary() -> [String: [String]] {
+        var result: [String: [String]] = [:]
+        if let angle = angle { result["angle"] = angle }
+        if let gripWidth = gripWidth { result["gripWidth"] = gripWidth }
+        if let gripOrientation = gripOrientation { result["gripOrientation"] = gripOrientation }
+        if let stance = stance { result["stance"] = stance }
+        if let laterality = laterality { result["laterality"] = laterality }
+        return result
+    }
 }
 
-/// Muscle weight pairing for variant muscle targeting
-struct SeedMuscleWeight: Decodable {
-    let muscle: String  // Muscle.rawValue
-    let weight: Double  // 0.0 to 1.0
+// MARK: - Preset JSON Structure
+
+struct PresetSeedData: Decodable {
+    let presets: [SeedPreset]
+}
+
+struct SeedPreset: Decodable {
+    let id: String
+    let displayName: String
+    let searchTerms: [String]
+    let movementID: String
+    let dimensions: SeedDimensions
+    let equipmentID: String
+    let muscleWeights: [String: Double]
+    let popularity: String
+    let notes: String
+    let sources: [String]
+}
+
+struct SeedDimensions: Decodable {
+    let angle: String?
+    let gripWidth: String?
+    let gripOrientation: String?
+    let stance: String?
+    let laterality: String?
 }
