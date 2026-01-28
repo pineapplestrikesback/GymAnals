@@ -173,8 +173,9 @@ private struct SwipeActionRow<Content: View>: View {
             }
             .buttonStyle(.plain)
 
-            // Main content
+            // Main content (with background to cover delete button when not swiped)
             content
+                .background(Color(.systemBackground))
                 .offset(x: offset)
                 .highPriorityGesture(
                     DragGesture(minimumDistance: 20)
