@@ -16,17 +16,19 @@ final class MuscleWeightViewModel {
     var hasChanges: Bool = false
 
     private var originalWeights: [Muscle: Double] = [:]
-    private let variant: Variant?
+    private let exercise: Exercise?
 
-    init(variant: Variant?) {
-        self.variant = variant
+    init(exercise: Exercise?) {
+        self.exercise = exercise
         loadWeights()
     }
 
     private func loadWeights() {
-        guard let variant else { return }
-        for vm in variant.muscleWeights {
-            weights[vm.muscle] = vm.weight
+        guard let exercise else { return }
+        for (key, value) in exercise.muscleWeights {
+            if let muscle = Muscle(rawValue: key) {
+                weights[muscle] = value
+            }
         }
         originalWeights = weights
     }
@@ -37,24 +39,14 @@ final class MuscleWeightViewModel {
     }
 
     func saveChanges(context: ModelContext) {
-        guard let variant, hasChanges else { return }
+        guard let exercise, hasChanges else { return }
 
-        // Remove existing weights
-        for vm in variant.muscleWeights {
-            context.delete(vm)
-        }
-
-        // Create new weights
+        // Update the exercise's muscleWeights dictionary
+        var newWeights: [String: Double] = [:]
         for (muscle, weight) in weights where weight > 0 {
-            let vm = VariantMuscle(muscle: muscle, weight: weight)
-            vm.variant = variant
-            context.insert(vm)
+            newWeights[muscle.rawValue] = weight
         }
-
-        // Update primary muscle group based on highest weighted muscle
-        if let primary = weights.max(by: { $0.value < $1.value }) {
-            variant.primaryMuscleGroupRaw = primary.key.group.rawValue
-        }
+        exercise.muscleWeights = newWeights
 
         try? context.save()
         originalWeights = weights

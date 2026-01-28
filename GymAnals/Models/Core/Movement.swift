@@ -57,9 +57,8 @@ final class Movement {
     // MARK: - Relationships
 
     /// Exercises using this movement pattern
-    /// NOTE: Temporarily commented - Exercise.movement will be added in plan 05-05
-    // @Relationship(deleteRule: .cascade, inverse: \Exercise.movement)
-    // var exercises: [Exercise] = []
+    @Relationship(deleteRule: .cascade, inverse: \Exercise.movement)
+    var exercises: [Exercise] = []
 
     // MARK: - Computed Properties
 

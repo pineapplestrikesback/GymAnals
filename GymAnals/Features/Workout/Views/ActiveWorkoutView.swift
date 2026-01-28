@@ -208,9 +208,9 @@ struct ActiveWorkoutView: View {
 // MARK: - Exercise Section Helper View
 
 /// Wrapper view to fetch Exercise by ID and display ExerciseSectionView.
-/// Uses @Query with SwiftData cannot filter by UUID directly in View, so we use modelContext.
+/// Uses modelContext fetch since SwiftData @Query can't dynamically filter by ID.
 private struct ExerciseSectionForID: View {
-    let exerciseID: UUID
+    let exerciseID: String
     let viewModel: ActiveWorkoutViewModel
     let timerManager: SetTimerManager
     let weightUnit: WeightUnit

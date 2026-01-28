@@ -87,7 +87,7 @@ struct ExerciseSectionView: View {
                             .font(.headline)
                             .foregroundStyle(.primary)
 
-                        if let muscle = exercise.variant?.primaryMuscleGroup {
+                        if let muscle = exercise.primaryMuscleGroup {
                             Text(muscle.displayName)
                                 .font(.caption)
                                 .foregroundStyle(.secondary)

@@ -43,7 +43,7 @@ struct ExerciseDetailView: View {
                     LabeledContent("Equipment", value: equipment)
                 }
 
-                if let movement = exercise.variant?.movement {
+                if let movement = exercise.movement {
                     LabeledContent("Type", value: movement.exerciseType.displayName)
                 }
 
@@ -60,27 +60,23 @@ struct ExerciseDetailView: View {
                     HStack {
                         Text("Muscle Weights")
                         Spacer()
-                        let count = exercise.variant?.muscleWeights.count ?? 0
+                        let count = exercise.muscleWeights.count
                         Text("\(count) muscles")
                             .foregroundStyle(.secondary)
                     }
                 }
 
                 // Quick preview of top muscles
-                if let variant = exercise.variant {
-                    let topMuscles = variant.muscleWeights
-                        .sorted { $0.weight > $1.weight }
-                        .prefix(3)
+                let topMuscles = exercise.sortedMuscleWeights.prefix(3)
 
-                    ForEach(Array(topMuscles)) { vm in
-                        HStack {
-                            Text(vm.muscle.displayName)
-                                .font(.subheadline)
-                            Spacer()
-                            Text(String(format: "%.0f%%", vm.weight * 100))
-                                .font(.subheadline)
-                                .foregroundStyle(.secondary)
-                        }
+                ForEach(Array(topMuscles), id: \.muscle) { entry in
+                    HStack {
+                        Text(entry.muscle.displayName)
+                            .font(.subheadline)
+                        Spacer()
+                        Text(String(format: "%.0f%%", entry.weight * 100))
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
                     }
                 }
             } header: {
@@ -88,7 +84,7 @@ struct ExerciseDetailView: View {
             }
 
             // Info section for built-in vs custom
-            if !(exercise.variant?.isBuiltIn ?? true) {
+            if !exercise.isBuiltIn {
                 Section {
                     Label("Custom Exercise", systemImage: "person.fill")
                         .foregroundStyle(.secondary)
@@ -115,7 +111,7 @@ struct ExerciseDetailView: View {
         .navigationTitle(exercise.displayName)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
-            muscleViewModel = MuscleWeightViewModel(variant: exercise.variant)
+            muscleViewModel = MuscleWeightViewModel(exercise: exercise)
         }
     }
 

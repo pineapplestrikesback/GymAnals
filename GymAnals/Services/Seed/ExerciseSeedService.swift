@@ -38,7 +38,7 @@ final class ExerciseSeedService {
             equipmentMap[item.name] = equipment
         }
 
-        // Create Movements, Variants, VariantMuscles, and Exercises
+        // Create Movements and Exercises (no longer uses Variant intermediary)
         var exerciseCount = 0
         for seedMovement in seedData.movements {
             // Create Movement with exercise type
@@ -47,30 +47,24 @@ final class ExerciseSeedService {
             context.insert(movement)
 
             for seedVariant in seedMovement.variants {
-                // Create Variant
-                let variant = Variant(name: seedVariant.name, isBuiltIn: true)
-                variant.movement = movement
-                context.insert(variant)
-
-                // Add muscle weights to variant
+                // Build muscleWeights dictionary from seed data
+                var muscleWeights: [String: Double] = [:]
                 for seedWeight in seedVariant.muscleWeights {
-                    if let muscle = Muscle(rawValue: seedWeight.muscle) {
-                        let variantMuscle = VariantMuscle(muscle: muscle, weight: seedWeight.weight)
-                        variantMuscle.variant = variant
-                        context.insert(variantMuscle)
+                    if Muscle(rawValue: seedWeight.muscle) != nil {
+                        muscleWeights[seedWeight.muscle] = seedWeight.weight
                     }
-                }
-
-                // Set primary muscle group from highest weighted muscle
-                if let primaryMuscle = seedVariant.muscleWeights.max(by: { $0.weight < $1.weight }),
-                   let muscle = Muscle(rawValue: primaryMuscle.muscle) {
-                    variant.primaryMuscleGroupRaw = muscle.group.rawValue
                 }
 
                 // Create Exercise for each equipment option
                 for equipmentName in seedVariant.equipment {
                     if let equipment = equipmentMap[equipmentName] {
-                        let exercise = Exercise(variant: variant, equipment: equipment)
+                        let exercise = Exercise(
+                            displayName: "\(equipment.displayName) \(seedVariant.name)",
+                            movement: movement,
+                            equipment: equipment,
+                            muscleWeights: muscleWeights,
+                            isBuiltIn: true
+                        )
                         context.insert(exercise)
                         exerciseCount += 1
                     }

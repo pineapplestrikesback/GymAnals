@@ -20,10 +20,10 @@ final class ActiveWorkoutViewModel {
     var activeWorkout: Workout?
 
     /// Exercise IDs in display order (tracks user-arranged sequence)
-    var exerciseOrder: [UUID] = []
+    var exerciseOrder: [String] = []
 
     /// Tracks which exercises are expanded vs collapsed in UI
-    var expandedExercises: Set<UUID> = []
+    var expandedExercises: Set<String> = []
 
     init(modelContext: ModelContext) {
         self.modelContext = modelContext
@@ -131,7 +131,7 @@ final class ActiveWorkoutViewModel {
 
     /// Toggles whether an exercise is expanded or collapsed in the UI
     /// - Parameter exerciseID: The ID of the exercise to toggle
-    func toggleExerciseExpanded(_ exerciseID: UUID) {
+    func toggleExerciseExpanded(_ exerciseID: String) {
         if expandedExercises.contains(exerciseID) {
             expandedExercises.remove(exerciseID)
         } else {
@@ -273,12 +273,12 @@ final class ActiveWorkoutViewModel {
     /// Extracts unique exercise IDs from sets preserving first-appearance order
     /// - Parameter sets: Array of workout sets
     /// - Returns: Ordered array of unique exercise IDs
-    private func uniqueExerciseIDs(from sets: [WorkoutSet]) -> [UUID] {
+    private func uniqueExerciseIDs(from sets: [WorkoutSet]) -> [String] {
         // Sort by completedDate to get chronological order
         let sortedSets = sets.sorted { $0.completedDate < $1.completedDate }
 
-        var seen = Set<UUID>()
-        var result: [UUID] = []
+        var seen = Set<String>()
+        var result: [String] = []
 
         for set in sortedSets {
             guard let exerciseID = set.exercise?.id else { continue }

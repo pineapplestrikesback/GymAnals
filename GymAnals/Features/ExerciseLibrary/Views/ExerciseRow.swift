@@ -17,7 +17,7 @@ struct ExerciseRow: View {
                 Text(exercise.displayName)
                     .font(.body)
 
-                if let muscles = exercise.variant?.primaryMuscleGroup?.displayName {
+                if let muscles = exercise.primaryMuscleGroup?.displayName {
                     Text(muscles)
                         .font(.caption)
                         .foregroundStyle(.secondary)
@@ -32,7 +32,7 @@ struct ExerciseRow: View {
                     .font(.caption)
             }
 
-            if !(exercise.variant?.isBuiltIn ?? true) {
+            if !exercise.isBuiltIn {
                 Text("Custom")
                     .font(.caption2)
                     .padding(.horizontal, 6)

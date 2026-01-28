@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-/// Step 2: Variation naming with suggestions
-struct VariationStepView: View {
+/// Step 2: Exercise naming with suggestions
+struct NameStepView: View {
     @Bindable var viewModel: ExerciseCreationViewModel
 
-    /// Common variation suggestions
+    /// Common name suggestions
     private let suggestions = [
         "Standard", "Incline", "Decline",
         "Wide Grip", "Close Grip", "Neutral Grip", "Reverse Grip",
@@ -20,10 +20,10 @@ struct VariationStepView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Name this variation")
+            Text("Name this exercise")
                 .font(.headline)
 
-            TextField("e.g., Incline, Wide Grip", text: $viewModel.variationName)
+            TextField("e.g., Incline Bench Press", text: $viewModel.exerciseName)
                 .textFieldStyle(.roundedBorder)
 
             Text("Suggestions")
@@ -33,10 +33,10 @@ struct VariationStepView: View {
             FlowLayout(spacing: 8) {
                 ForEach(suggestions, id: \.self) { suggestion in
                     Button(suggestion) {
-                        if viewModel.variationName.isEmpty {
-                            viewModel.variationName = suggestion
+                        if viewModel.exerciseName.isEmpty {
+                            viewModel.exerciseName = suggestion
                         } else {
-                            viewModel.variationName += " \(suggestion)"
+                            viewModel.exerciseName += " \(suggestion)"
                         }
                     }
                     .buttonStyle(.bordered)
@@ -52,7 +52,7 @@ struct VariationStepView: View {
 
 // MARK: - FlowLayout
 
-/// Simple horizontal flow layout for variation suggestions
+/// Simple horizontal flow layout for suggestion chips
 struct FlowLayout: Layout {
     var spacing: CGFloat = 8
 
@@ -97,5 +97,5 @@ struct FlowLayout: Layout {
 }
 
 #Preview {
-    VariationStepView(viewModel: ExerciseCreationViewModel())
+    NameStepView(viewModel: ExerciseCreationViewModel())
 }

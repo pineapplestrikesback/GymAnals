@@ -26,8 +26,9 @@ final class Variant {
     @Relationship(deleteRule: .cascade, inverse: \VariantMuscle.variant)
     var muscleWeights: [VariantMuscle] = []
 
-    @Relationship(deleteRule: .cascade, inverse: \Exercise.variant)
-    var exercises: [Exercise] = []
+    /// NOTE: Exercise.variant removed in 05-05 refactor. Exercises now reference Movement directly.
+    // @Relationship(deleteRule: .cascade, inverse: \Exercise.variant)
+    // var exercises: [Exercise] = []
 
     /// Type-safe access to primary muscle group for filtering
     /// Falls back to first muscle weight's group if not explicitly set
