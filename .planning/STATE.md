@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-26)
 
 **Core value:** Precise per-muscle volume tracking with user-defined muscles and weighted set contributions
-**Current focus:** Phase 5 (Exercise Library Rework) - Plan 05 Complete
+**Current focus:** Phase 5 (Exercise Library Rework) - Plan 06 Complete
 
 ## Current Position
 
 Phase: 5 of 6 (Exercise Library Rework)
-Plan: 5 of 10 in current phase
+Plan: 6 of 10 in current phase
 Status: In progress
-Last activity: 2026-01-28 - Completed 05-05-PLAN.md (Exercise Model Refactor)
+Last activity: 2026-01-28 - Completed 05-06-PLAN.md (Remove Variant/VariantMuscle Models)
 
-Progress: [████████████████████░] ~82% (23/~28 total plans estimate)
+Progress: [█████████████████████░] ~86% (24/~28 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 23
-- Average duration: 8.5 min
-- Total execution time: 196 min
+- Total plans completed: 24
+- Average duration: 8.3 min
+- Total execution time: 200 min
 
 **By Phase:**
 
@@ -31,11 +31,11 @@ Progress: [████████████████████░] ~82%
 | 02-exercise-library | 5 | 61 min | 12.2 min |
 | 03-gyms | 4 | 24 min | 6.0 min |
 | 04-workout-logging | 6 | 55 min | 9.2 min |
-| 05-exercise-library-rework | 5 | 43 min | 8.6 min |
+| 05-exercise-library-rework | 6 | 47 min | 7.8 min |
 
 **Recent Trend:**
-- Last 5 plans: 05-01 (4 min), 05-02 (3 min), 05-03 (10 min), 05-04 (11 min), 05-05 (15 min)
-- Trend: Wave 3 Exercise refactor larger due to downstream updates
+- Last 5 plans: 05-02 (3 min), 05-03 (10 min), 05-04 (11 min), 05-05 (15 min), 05-06 (4 min)
+- Trend: Wave 4 cleanup fast (file deletion + schema update)
 
 *Updated after each plan completion*
 
@@ -126,7 +126,7 @@ None yet.
 
 ### Blockers/Concerns
 
-- Variant and VariantMuscle models still exist in codebase/PersistenceController - remove in 05-10 final integration.
+- Variant/VariantMuscle references remain in ExerciseSeedService.swift and SeedData.swift (addressed by 05-07 through 05-10).
 
 ### Roadmap Evolution
 
@@ -136,7 +136,7 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-01-28
-Stopped at: Completed 05-05-PLAN.md (Exercise Model Refactor)
+Stopped at: Completed 05-06-PLAN.md (Remove Variant/VariantMuscle Models)
 Resume file: None
 
 ## Phase 5 Progress
@@ -147,7 +147,7 @@ Phase 5 (Exercise Library Rework) in progress:
 - 05-03: Equipment Model Updates (COMPLETE)
 - 05-04: Movement Model Updates (COMPLETE)
 - 05-05: Exercise Model Refactor (COMPLETE)
-- 05-06: Movement Seed Service (pending)
+- 05-06: Remove Variant/VariantMuscle Models (COMPLETE)
 - 05-07: Equipment Seed Service (pending)
 - 05-08: Exercise Preset Seeding (pending)
 - 05-09: Exercise Browser Updates (pending)
@@ -184,3 +184,9 @@ Phase 5 (Exercise Library Rework) in progress:
 - Updated 15 downstream files for new Exercise API
 - Movement.exercises relationship uncommented
 - Variant.exercises inverse commented out
+
+**Completed in 05-06:**
+- Deleted Variant.swift and VariantMuscle.swift from Models/Core
+- Removed Variant.self and VariantMuscle.self from PersistenceController schema
+- Schema pruned from 9 to 7 models
+- Build verified successful
