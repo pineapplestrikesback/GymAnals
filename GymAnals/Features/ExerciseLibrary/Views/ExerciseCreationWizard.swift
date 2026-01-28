@@ -42,15 +42,15 @@ struct ExerciseCreationWizard: View {
                     case 0:
                         MovementStepView(viewModel: viewModel)
                     case 1:
-                        VariationStepView(viewModel: viewModel)
+                        ExerciseNameStepView(viewModel: viewModel)
                     case 2:
                         EquipmentStepView(viewModel: viewModel)
                     case 3:
                         ExerciseTypeStepView(viewModel: viewModel)
                     case 4:
                         // Final step: create and show muscle editor
-                        if let variant = viewModel.createdVariant {
-                            MuscleWeightEditorView(viewModel: MuscleWeightViewModel(variant: variant))
+                        if let exercise = viewModel.createdExercise {
+                            MuscleWeightEditorView(viewModel: MuscleWeightViewModel(exercise: exercise))
                         } else {
                             ProgressView("Creating exercise...")
                                 .onAppear {

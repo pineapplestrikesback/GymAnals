@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-26)
 
 **Core value:** Precise per-muscle volume tracking with user-defined muscles and weighted set contributions
-**Current focus:** Phase 3 - Gyms (COMPLETE)
+**Current focus:** Phase 5 Complete - Ready for Phase 6 (Analytics)
 
 ## Current Position
 
-Phase: 3 of 5 (Gyms)
-Plan: 4 of 4 in current phase (all complete)
+Phase: 5 of 6 (Exercise Library Rework)
+Plan: 10 of 10 in current phase
 Status: Phase complete
-Last activity: 2026-01-27 - Completed 03-04-PLAN.md (Selector-Management Flow)
+Last activity: 2026-01-28 - Completed 05-10-PLAN.md (Exercise Library View Updates)
 
-Progress: [████████████░] ~67% (12/~18 total plans estimate)
+Progress: [█████████████████████████] 100% (28/28 total plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 12
-- Average duration: 8.2 min
-- Total execution time: 98 min
+- Total plans completed: 28
+- Average duration: 8.4 min
+- Total execution time: 234 min
 
 **By Phase:**
 
@@ -30,10 +30,12 @@ Progress: [████████████░] ~67% (12/~18 total plans est
 | 01-foundation | 3 | 13 min | 4.3 min |
 | 02-exercise-library | 5 | 61 min | 12.2 min |
 | 03-gyms | 4 | 24 min | 6.0 min |
+| 04-workout-logging | 6 | 55 min | 9.2 min |
+| 05-exercise-library-rework | 10 | 81 min | 8.1 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-05 (27 min), 03-01 (6 min), 03-03 (7 min), 03-02 (7 min), 03-04 (4 min)
-- Trend: Gym plans consistently fast (patterns well-established)
+- Last 5 plans: 05-06 (4 min), 05-07 (5 min), 05-08 (9 min), 05-09 (8 min), 05-10 (8 min)
+- Trend: Wave 6 UI updates quick (most model files pre-updated in 05-05)
 
 *Updated after each plan completion*
 
@@ -83,6 +85,52 @@ Recent decisions affecting current work:
 - [03-04]: Delayed sheet transition (0.3s) via DispatchQueue.main.asyncAfter
 - [03-04]: Dictionary grouping with compactMap for nil filtering in gymBranches
 - [03-04]: Gym branches sorted by lastUsedDate for relevance ordering
+- [04-01]: Date-based endTime for timer background persistence (iOS suspends countdown timers)
+- [04-01]: Only header timer (most recent) triggers notifications to avoid spam
+- [04-01]: 2.5 lbs weight increment matches standard plate availability
+- [04-02]: Exercise order tracked as [UUID] array for display sequence
+- [04-02]: Pre-fill new sets from previous workout values at same gym
+- [04-02]: Crash recovery via isActive == true query on init
+- [04-03]: @FocusState.Binding pattern for cross-view focus control
+- [04-03]: Timer.publish(every: 1) for countdown UI updates
+- [04-03]: Stepper input pattern: +/- buttons with keyboard fallback
+- [04-04]: Closure-based binding pattern: (WorkoutSet) -> Binding<T> for ForEach scenarios
+- [04-04]: Exercise picker limits to 50 recent when not searching (performance)
+- [04-04]: FAB 56x56 size per Material Design guidelines
+- [04-05]: LazyVStack with pinnedViews for sticky section headers
+- [04-05]: ExerciseSectionForID helper view for SwiftData UUID fetching in ForEach
+- [04-05]: Popover for timer controls (vs sheet) for inline editing
+- [04-06]: StepperTextField for quick +/- adjustment with focus-aware button visibility
+- [04-06]: Custom SwipeActionRow for swipe-to-delete outside List context
+- [04-06]: highPriorityGesture for swipe to take precedence over scroll
+- [04-06]: Checkmark toggle allows un-confirming sets and canceling timers
+- [04-06]: Opaque background on swipe content to hide delete button at rest
+- [05-01]: Empty string defaults in embedded Codable structs to avoid SwiftData optional decoding issues
+- [05-01]: Popularity.sortOrder returns 1/2/3 (lower = more popular) for sorting
+- [05-02]: serratusAnterior grouped under back (scapular movement assist)
+- [05-02]: gluteusMinimus and adductors grouped under legs (hip stabilization/adduction)
+- [05-03]: String id allows snake_case identifiers for built-in equipment, UUID strings for custom
+- [05-03]: Convenience init preserves backward compatibility with existing seed service
+- [05-03]: displayName replaces name for consistency with Movement model naming
+- [05-04]: String id allows snake_case identifiers for built-in movements
+- [05-04]: exercises relationship temporarily commented until Exercise.movement exists
+- [05-05]: Exercise.id changed from UUID to String for snake_case preset identifiers
+- [05-05]: displayName changed from computed to stored property (presets have curated names)
+- [05-05]: muscleWeights stored as [String: Double] dictionary (replaces VariantMuscle relationship)
+- [05-05]: isUnilateral computed from dimensions.laterality (single source of truth)
+- [05-05]: exerciseOrder/expandedExercises changed from UUID to String types
+- [05-07]: Seed order: GymSeedService -> EquipmentSeedService -> MovementSeedService -> PresetSeedService
+- [05-07]: Entity-specific seed services (one per model type) replace monolithic ExerciseSeedService
+- [05-07]: PresetSeedService builds lookup maps from fetched entities for O(1) relationship linking
+- [05-07]: Muscle key validation with warning (not failure) for graceful degradation
+- [05-08]: JSON resources in app bundle (movements.json, equipment.json, presets_all.json)
+- [05-08]: GymAnalsApp calls 4 seed services in dependency order on first launch
+- [05-09]: ExerciseNameStepView pre-fills name from equipment + movement display names
+- [05-09]: resetToDefault restores movement.defaultMuscleWeights (not just clearing)
+- [05-10]: searchTerms matched in-memory (SwiftData can't query array contents)
+- [05-10]: ExerciseRow shows equipment + category badge for richer context
+- [05-10]: ExerciseDetailView shows dimensions, notes, sources, popularity, timer settings
+- [05-10]: Built-in exercises read-only; custom exercises get muscle weight editor
 
 ### Pending Todos
 
@@ -90,20 +138,97 @@ None yet.
 
 ### Blockers/Concerns
 
-None.
+None - Phase 5 complete. All Variant/VariantMuscle references cleared. Exercise library fully functional.
+
+### Roadmap Evolution
+
+- Phase 5: Exercise Library Rework (inserted before Analytics) - COMPLETE
+- Phase 6: Analytics (moved from Phase 5) - NEXT
 
 ## Session Continuity
 
-Last session: 2026-01-27
-Stopped at: Completed 03-04-PLAN.md (Selector-Management Flow)
+Last session: 2026-01-28
+Stopped at: Completed 05-10-PLAN.md (Exercise Library View Updates) - Phase 5 COMPLETE
 Resume file: None
 
-## Phase 3 Summary
+## Phase 5 Progress
 
-Phase 3 (Gyms) is now complete with all 4 plans executed:
-- 03-01: Gym model with color tags and relationships
-- 03-02: Gym selector UI with header and sheet
-- 03-03: Gym management view with CRUD operations
-- 03-04: Selector-management flow and exercise detail gym branches
+Phase 5 (Exercise Library Rework) COMPLETE:
+- 05-01: Supporting Types (COMPLETE)
+- 05-02: Muscle Taxonomy Expansion (COMPLETE)
+- 05-03: Equipment Model Updates (COMPLETE)
+- 05-04: Movement Model Updates (COMPLETE)
+- 05-05: Exercise Model Refactor (COMPLETE)
+- 05-06: Remove Variant/VariantMuscle Models (COMPLETE)
+- 05-07: Seed Services (COMPLETE)
+- 05-08: JSON Resources and App Seeding (COMPLETE)
+- 05-09: Exercise Creation Wizard Updates (COMPLETE)
+- 05-10: Exercise Library View Updates (COMPLETE)
 
-Ready for Phase 4: Workout Logging
+**Completed in 05-01:**
+- MovementCategory enum (7 cases)
+- EquipmentCategory enum (6 cases)
+- Popularity enum (3 cases with sortOrder)
+- Dimensions embedded struct (5 properties)
+- EquipmentProperties embedded struct (4 properties)
+
+**Completed in 05-02:**
+- Muscle enum expanded to 34 cases (verified, already done in 05-01)
+- serratusAnterior, gluteusMinimus, adductors added
+- MuscleGroup auto-includes via filter pattern
+
+**Completed in 05-03:**
+- Equipment model: String id, displayName, categoryRaw, properties, notes
+- Convenience init for backward compatibility
+- Updated views to use equipment.displayName
+
+**Completed in 05-04:**
+- Movement model: String id, displayName, categoryRaw, subcategory
+- applicableDimensions and applicableEquipment constraint arrays
+- defaultMuscleWeights dictionary for inherited targeting
+- Removed variants relationship (Variant being phased out)
+- Updated MovementStepView to use displayName
+
+**Completed in 05-05:**
+- Exercise model: String id, displayName (stored), dimensions, muscleWeights dict
+- Direct movement relationship (replaces variant->movement chain)
+- Computed isUnilateral, primaryMuscleGroup, sortedMuscleWeights
+- Updated 15 downstream files for new Exercise API
+- Movement.exercises relationship uncommented
+- Variant.exercises inverse commented out
+
+**Completed in 05-06:**
+- Deleted Variant.swift and VariantMuscle.swift from Models/Core
+- Removed Variant.self and VariantMuscle.self from PersistenceController schema
+- Schema pruned from 9 to 7 models
+- Build verified successful
+
+**Completed in 05-07:**
+- SeedData.swift: New Decodable types (EquipmentSeedData, MovementSeedData, PresetSeedData)
+- EquipmentSeedService: Seeds 22 equipment types from equipment.json
+- MovementSeedService: Seeds 30 movements from movements.json with muscle key validation
+- PresetSeedService: Seeds 237 exercise presets from presets_all.json with lookup maps
+- Deleted ExerciseSeedService.swift (deprecated Variant-based seeding)
+- JSON resources: equipment.json, movements.json, presets_all.json added to bundle
+- GymAnalsApp.init: Updated seeding order (Gym -> Equipment -> Movement -> Preset)
+
+**Completed in 05-08:**
+- JSON resources verified in app bundle (movements.json, equipment.json, presets_all.json)
+- Old exercises.json deleted from Resources
+- GymAnalsApp seeding wired and build verified
+- Note: 05-07 and 05-08 ran in parallel; both created seed services (converged on same implementation)
+
+**Completed in 05-09:**
+- ExerciseCreationViewModel: dimensions property, suggestedName helper, Exercise.custom() with dimensions
+- VariationStepView replaced with ExerciseNameStepView (equipment+movement suggested name, pre-fill)
+- MuscleWeightViewModel: activeMuscles computed property, movement-aware resetToDefault
+- All wizard views verified free of Variant/VariantMuscle references
+- ExerciseCreationWizard updated to use ExerciseNameStepView
+
+**Completed in 05-10:**
+- ExerciseSearchResultsView: searchTerms in-memory filtering added
+- ExerciseRow: equipment + category badges, muscle group subtitle
+- ExerciseDetailView: dimensions, notes, sources, popularity, timer settings, toolbar favorite
+- ExercisePickerSheet: searchTerms + movement name search
+- Zero Variant references in codebase verified
+- Full clean build passes

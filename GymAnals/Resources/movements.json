@@ -1,0 +1,1266 @@
+{
+  "movements": [
+    {
+      "id": "bench_press",
+      "displayName": "Bench Press / Push-Up",
+      "category": "push",
+      "subcategory": "horizontal_push",
+      "applicableDimensions": {
+        "angle": [
+          "decline",
+          "flat",
+          "incline_15",
+          "incline_30",
+          "incline_45"
+        ],
+        "gripWidth": [
+          "narrow",
+          "standard",
+          "wide"
+        ],
+        "gripOrientation": [
+          "pronated",
+          "neutral"
+        ],
+        "stance": null,
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "barbell",
+        "dumbbell",
+        "machine",
+        "smith_machine",
+        "cable",
+        "bodyweight"
+      ],
+      "defaultMuscleWeights": {
+        "pectoralisMajorUpper": 0.8,
+        "pectoralisMajorLower": 1.0,
+        "pectoralisMinor": 0.2,
+        "deltoidAnterior": 0.7,
+        "deltoidLateral": 0.1,
+        "tricepsLongHead": 0.6,
+        "tricepsLateralHead": 0.7,
+        "tricepsMedialHead": 0.7,
+        "rotatorCuff": 0.2,
+        "erectorSpinae": 0.1
+      },
+      "defaultDescription": "Horizontal pushing pattern. Includes bench press, push-up, and machine chest press variations.",
+      "notes": "Default assumes flat angle, standard grip. Incline shifts to upper pec; decline to lower pec.",
+      "sources": [
+        "Rodr\u00c3\u00adguez-Ridao 2020",
+        "Lauver 2016",
+        "Barnett 1995",
+        "Saeterbakken 2017"
+      ]
+    },
+    {
+      "id": "overhead_press",
+      "displayName": "Overhead Press",
+      "category": "push",
+      "subcategory": "vertical_push",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": [
+          "narrow",
+          "standard",
+          "wide"
+        ],
+        "gripOrientation": [
+          "pronated",
+          "neutral"
+        ],
+        "stance": [
+          "standing",
+          "seated"
+        ],
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "barbell",
+        "dumbbell",
+        "machine",
+        "smith_machine",
+        "kettlebell",
+        "landmine"
+      ],
+      "defaultMuscleWeights": {
+        "pectoralisMajorUpper": 0.4,
+        "deltoidAnterior": 1.0,
+        "deltoidLateral": 0.7,
+        "deltoidPosterior": 0.2,
+        "tricepsLongHead": 0.4,
+        "tricepsLateralHead": 0.7,
+        "tricepsMedialHead": 0.8,
+        "rotatorCuff": 0.4,
+        "rectusAbdominis": 0.3,
+        "erectorSpinae": 0.3
+      },
+      "defaultDescription": "Vertical pushing pattern. Standing barbell press assumed for defaults.",
+      "notes": "Standing increases core demand. Dumbbells increase ROM and stabilization.",
+      "sources": [
+        "Saeterbakken 2013",
+        "Coratella 2022",
+        "Paoli 2010"
+      ]
+    },
+    {
+      "id": "dip",
+      "displayName": "Dip",
+      "category": "push",
+      "subcategory": "vertical_push",
+      "applicableDimensions": {
+        "angle": [
+          "upright",
+          "forward_lean"
+        ],
+        "gripWidth": [
+          "narrow",
+          "standard",
+          "wide"
+        ],
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": [
+          "bilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "parallel_bars",
+        "gymnastics_rings",
+        "machine",
+        "bodyweight",
+        "weighted_bodyweight"
+      ],
+      "defaultMuscleWeights": {
+        "pectoralisMajorUpper": 0.5,
+        "pectoralisMajorLower": 0.9,
+        "pectoralisMinor": 0.3,
+        "deltoidAnterior": 0.7,
+        "tricepsLongHead": 0.9,
+        "tricepsLateralHead": 0.8,
+        "tricepsMedialHead": 0.8,
+        "rotatorCuff": 0.3,
+        "rectusAbdominis": 0.3
+      },
+      "defaultDescription": "Parallel bar dip with moderate forward lean.",
+      "notes": "Upright = triceps dominant. Forward lean = chest dominant.",
+      "sources": [
+        "Boeckh-Behrens 2000",
+        "Welsch 2005",
+        "ACE Triceps Study"
+      ]
+    },
+    {
+      "id": "chest_fly",
+      "displayName": "Chest Fly",
+      "category": "isolation",
+      "subcategory": "chest",
+      "applicableDimensions": {
+        "angle": [
+          "decline",
+          "flat",
+          "incline_15",
+          "incline_30",
+          "incline_45"
+        ],
+        "gripWidth": null,
+        "gripOrientation": [
+          "neutral",
+          "pronated"
+        ],
+        "stance": null,
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "dumbbell",
+        "cable",
+        "machine"
+      ],
+      "defaultMuscleWeights": {
+        "pectoralisMajorUpper": 0.7,
+        "pectoralisMajorLower": 1.0,
+        "pectoralisMinor": 0.4,
+        "deltoidAnterior": 0.4,
+        "rotatorCuff": 0.2
+      },
+      "defaultDescription": "Horizontal adduction movement isolating pectoralis major.",
+      "notes": "Dumbbells maximize stretch. Cables provide constant tension.",
+      "sources": [
+        "Solstad 2020",
+        "Trebs 2010",
+        "Maeo 2022"
+      ]
+    },
+    {
+      "id": "lateral_raise",
+      "displayName": "Lateral Raise",
+      "category": "isolation",
+      "subcategory": "shoulder",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": [
+          "neutral",
+          "pronated"
+        ],
+        "stance": [
+          "standing",
+          "seated"
+        ],
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "dumbbell",
+        "cable",
+        "machine",
+        "resistance_band"
+      ],
+      "defaultMuscleWeights": {
+        "deltoidAnterior": 0.3,
+        "deltoidLateral": 1.0,
+        "deltoidPosterior": 0.2,
+        "rotatorCuff": 0.4
+      },
+      "defaultDescription": "Shoulder abduction isolating lateral deltoid.",
+      "notes": "Cables provide constant tension through ROM.",
+      "sources": [
+        "Coratella 2020",
+        "Larsen 2024",
+        "Pinto 2020"
+      ]
+    },
+    {
+      "id": "front_raise",
+      "displayName": "Front Raise",
+      "category": "isolation",
+      "subcategory": "shoulder",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": [
+          "pronated",
+          "neutral"
+        ],
+        "stance": [
+          "standing",
+          "seated"
+        ],
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "dumbbell",
+        "cable",
+        "barbell",
+        "resistance_band",
+        "weight_plate"
+      ],
+      "defaultMuscleWeights": {
+        "pectoralisMajorUpper": 0.5,
+        "deltoidAnterior": 1.0,
+        "deltoidLateral": 0.2,
+        "rotatorCuff": 0.3
+      },
+      "defaultDescription": "Shoulder flexion isolating anterior deltoid.",
+      "notes": "Often redundant if pressing volume is adequate.",
+      "sources": [
+        "Coratella 2020",
+        "Sweeney 2015"
+      ]
+    },
+    {
+      "id": "vertical_pull",
+      "displayName": "Vertical Pull (Pull-up/Pulldown)",
+      "category": "pull",
+      "subcategory": "vertical_pull",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": [
+          "narrow",
+          "standard",
+          "wide"
+        ],
+        "gripOrientation": [
+          "pronated",
+          "supinated",
+          "neutral"
+        ],
+        "stance": null,
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "bodyweight",
+        "cable",
+        "machine",
+        "assisted",
+        "weighted_bodyweight"
+      ],
+      "defaultMuscleWeights": {
+        "latissimusDorsi": 1.0,
+        "teresMajor": 0.7,
+        "bicepsBrachii": 0.7,
+        "bicepsBrachialis": 0.5,
+        "trapeziusLower": 0.5,
+        "trapeziusMiddle": 0.3,
+        "rhomboids": 0.4,
+        "deltoidPosterior": 0.3,
+        "forearms": 0.4,
+        "erectorSpinae": 0.2
+      },
+      "defaultDescription": "Pull-up/lat pulldown movement pattern.",
+      "notes": "Supinated grip increases biceps. Wide grip emphasizes teres major.",
+      "sources": [
+        "Lusk 2010",
+        "Andersen 2014",
+        "Youdas 2010",
+        "Signorile 2002"
+      ]
+    },
+    {
+      "id": "horizontal_pull",
+      "displayName": "Horizontal Pull (Row)",
+      "category": "pull",
+      "subcategory": "horizontal_pull",
+      "applicableDimensions": {
+        "angle": [
+          "flat",
+          "incline_15",
+          "incline_30",
+          "incline_45"
+        ],
+        "gripWidth": [
+          "narrow",
+          "standard",
+          "wide"
+        ],
+        "gripOrientation": [
+          "pronated",
+          "supinated",
+          "neutral"
+        ],
+        "stance": [
+          "standing",
+          "seated",
+          "chest_supported"
+        ],
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "barbell",
+        "dumbbell",
+        "cable",
+        "machine",
+        "bodyweight"
+      ],
+      "defaultMuscleWeights": {
+        "latissimusDorsi": 0.9,
+        "trapeziusMiddle": 0.8,
+        "rhomboids": 0.7,
+        "teresMajor": 0.6,
+        "deltoidPosterior": 0.5,
+        "bicepsBrachii": 0.6,
+        "bicepsBrachialis": 0.5,
+        "trapeziusLower": 0.4,
+        "trapeziusUpper": 0.3,
+        "forearms": 0.5,
+        "erectorSpinae": 0.4
+      },
+      "defaultDescription": "Rowing movement pattern.",
+      "notes": "Chest-supported reduces erector demand. Wide grip emphasizes traps.",
+      "sources": [
+        "Fenwick 2009",
+        "Lehman 2004",
+        "Edelburg 2016"
+      ]
+    },
+    {
+      "id": "shrug",
+      "displayName": "Shrug",
+      "category": "pull",
+      "subcategory": "traps",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": [
+          "pronated",
+          "neutral"
+        ],
+        "stance": [
+          "standing"
+        ],
+        "laterality": [
+          "bilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "barbell",
+        "dumbbell",
+        "trap_bar",
+        "machine",
+        "smith_machine"
+      ],
+      "defaultMuscleWeights": {
+        "trapeziusUpper": 1.0,
+        "trapeziusMiddle": 0.2,
+        "trapeziusLower": 0.1,
+        "forearms": 0.4
+      },
+      "defaultDescription": "Scapular elevation for upper trapezius.",
+      "notes": "Trap bar allows heavier loads with neutral grip.",
+      "sources": [
+        "Ekstrom 2003",
+        "Andersen 2008",
+        "Contreras 2010"
+      ]
+    },
+    {
+      "id": "rear_delt_fly",
+      "displayName": "Rear Delt Fly / Face Pull",
+      "category": "isolation",
+      "subcategory": "shoulder",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": [
+          "pronated",
+          "neutral"
+        ],
+        "stance": [
+          "standing",
+          "seated",
+          "chest_supported"
+        ],
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "dumbbell",
+        "cable",
+        "machine"
+      ],
+      "defaultMuscleWeights": {
+        "deltoidPosterior": 1.0,
+        "trapeziusMiddle": 0.5,
+        "rhomboids": 0.5,
+        "rotatorCuff": 0.4,
+        "trapeziusLower": 0.3,
+        "teresMajor": 0.2
+      },
+      "defaultDescription": "Posterior deltoid and external rotation focus.",
+      "notes": "Face pulls add external rotation component for rotator cuff.",
+      "sources": [
+        "Schoenfeld 2013",
+        "Campos 2020",
+        "Fukunaga 2022"
+      ]
+    },
+    {
+      "id": "pullover",
+      "displayName": "Pullover",
+      "category": "pull",
+      "subcategory": "vertical_pull",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": [
+          "bilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "dumbbell",
+        "cable",
+        "machine"
+      ],
+      "defaultMuscleWeights": {
+        "latissimusDorsi": 1.0,
+        "teresMajor": 0.8,
+        "deltoidPosterior": 0.3,
+        "forearms": 0.3
+      },
+      "defaultDescription": "Shoulder extension under load.",
+      "notes": "Targets lats through lengthened position.",
+      "sources": [
+        "Marchetti 2011",
+        "Muyor 2022",
+        "Maeo 2023"
+      ]
+    },
+    {
+      "id": "squat",
+      "displayName": "Squat",
+      "category": "squat",
+      "subcategory": "bilateral",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": [
+          "narrow",
+          "standard",
+          "wide",
+          "sumo"
+        ],
+        "laterality": [
+          "bilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "barbell",
+        "dumbbell",
+        "kettlebell",
+        "machine",
+        "smith_machine",
+        "bodyweight"
+      ],
+      "defaultMuscleWeights": {
+        "quadricepsVastus": 1.0,
+        "quadricepsRectus": 0.75,
+        "gluteusMaximus": 0.7,
+        "gluteusMedius": 0.4,
+        "adductors": 0.5,
+        "hamstringsBicepsFemoris": 0.3,
+        "hamstringsSemimembranosus": 0.35,
+        "erectorSpinae": 0.5,
+        "gastrocnemius": 0.25,
+        "soleus": 0.2,
+        "rectusAbdominis": 0.3,
+        "obliquesExternal": 0.2
+      },
+      "defaultDescription": "Bilateral squat pattern. High bar back squat assumed.",
+      "notes": "Front-loaded (goblet, front squat) increases quad emphasis. Wide stance increases adductors.",
+      "sources": [
+        "Caterisano 2002",
+        "Paoli 2009",
+        "Contreras 2016",
+        "Pedrosa 2022"
+      ]
+    },
+    {
+      "id": "leg_press",
+      "displayName": "Leg Press",
+      "category": "squat",
+      "subcategory": "machine",
+      "applicableDimensions": {
+        "angle": [
+          "incline_30",
+          "incline_45",
+          "horizontal"
+        ],
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": [
+          "narrow",
+          "standard",
+          "wide",
+          "high",
+          "low"
+        ],
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "machine"
+      ],
+      "defaultMuscleWeights": {
+        "quadricepsVastus": 1.0,
+        "quadricepsRectus": 0.85,
+        "gluteusMaximus": 0.45,
+        "gluteusMedius": 0.2,
+        "adductors": 0.35,
+        "hamstringsBicepsFemoris": 0.25,
+        "hamstringsSemimembranosus": 0.25,
+        "gastrocnemius": 0.3,
+        "soleus": 0.2
+      },
+      "defaultDescription": "Machine-based lower body pressing.",
+      "notes": "High foot = more glute. Low foot = more quad. Allows heavier loads than squats.",
+      "sources": [
+        "Da Silva 2008",
+        "Escamilla 2001"
+      ]
+    },
+    {
+      "id": "lunge",
+      "displayName": "Lunge / Split Squat",
+      "category": "lunge",
+      "subcategory": "unilateral",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": [
+          "forward",
+          "reverse",
+          "lateral",
+          "elevated_rear"
+        ],
+        "laterality": [
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "barbell",
+        "dumbbell",
+        "kettlebell",
+        "bodyweight",
+        "smith_machine"
+      ],
+      "defaultMuscleWeights": {
+        "quadricepsVastus": 1.0,
+        "quadricepsRectus": 0.7,
+        "gluteusMaximus": 0.75,
+        "gluteusMedius": 0.65,
+        "adductors": 0.5,
+        "hamstringsBicepsFemoris": 0.35,
+        "hamstringsSemimembranosus": 0.35,
+        "erectorSpinae": 0.35,
+        "gastrocnemius": 0.3,
+        "soleus": 0.2,
+        "rectusAbdominis": 0.3,
+        "obliquesInternal": 0.35,
+        "obliquesExternal": 0.35
+      },
+      "defaultDescription": "Unilateral lower body pattern.",
+      "notes": "Bulgarian (rear foot elevated) increases ROM and glute demand.",
+      "sources": [
+        "McCurdy 2010",
+        "Muyor 2020",
+        "Stastny 2015"
+      ]
+    },
+    {
+      "id": "deadlift",
+      "displayName": "Deadlift",
+      "category": "hinge",
+      "subcategory": "floor_pull",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": [
+          "pronated",
+          "mixed",
+          "neutral"
+        ],
+        "stance": [
+          "conventional",
+          "sumo"
+        ],
+        "laterality": [
+          "bilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "barbell",
+        "trap_bar",
+        "dumbbell"
+      ],
+      "defaultMuscleWeights": {
+        "erectorSpinae": 1.0,
+        "gluteusMaximus": 0.85,
+        "hamstringsBicepsFemoris": 0.75,
+        "hamstringsSemimembranosus": 0.75,
+        "quadricepsRectus": 0.6,
+        "quadricepsVastus": 0.65,
+        "latissimusDorsi": 0.5,
+        "trapeziusUpper": 0.5,
+        "trapeziusMiddle": 0.45,
+        "trapeziusLower": 0.3,
+        "rhomboids": 0.35,
+        "forearms": 0.6,
+        "adductors": 0.4,
+        "gastrocnemius": 0.25
+      },
+      "defaultDescription": "Floor-based hip hinge pulling from dead stop.",
+      "notes": "Conventional = more erector. Sumo = more quads/adductors. Trap bar = more quad-dominant.",
+      "sources": [
+        "Escamilla 2002",
+        "Mart\u00c3\u00adn-Fuentes 2020",
+        "Lee 2018"
+      ]
+    },
+    {
+      "id": "hip_hinge",
+      "displayName": "Hip Hinge (RDL/Good Morning)",
+      "category": "hinge",
+      "subcategory": "hip_dominant",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": [
+          "pronated",
+          "neutral"
+        ],
+        "stance": [
+          "conventional",
+          "single_leg"
+        ],
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "barbell",
+        "dumbbell",
+        "cable",
+        "kettlebell"
+      ],
+      "defaultMuscleWeights": {
+        "hamstringsBicepsFemoris": 1.0,
+        "hamstringsSemimembranosus": 0.95,
+        "gluteusMaximus": 0.8,
+        "erectorSpinae": 0.7,
+        "latissimusDorsi": 0.4,
+        "trapeziusUpper": 0.35,
+        "trapeziusMiddle": 0.3,
+        "rhomboids": 0.25,
+        "forearms": 0.5,
+        "adductors": 0.35,
+        "gluteusMedius": 0.2
+      },
+      "defaultDescription": "Hip-dominant hinge with minimal knee bend.",
+      "notes": "RDL = weight at arms. Good morning = weight on back. Both emphasize hamstring stretch.",
+      "sources": [
+        "McAllister 2014",
+        "Andersen 2021",
+        "Maeo 2021"
+      ]
+    },
+    {
+      "id": "hip_thrust",
+      "displayName": "Hip Thrust / Glute Bridge",
+      "category": "hinge",
+      "subcategory": "glute_dominant",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": [
+          "standard",
+          "feet_elevated",
+          "single_leg"
+        ],
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "barbell",
+        "dumbbell",
+        "machine",
+        "bodyweight",
+        "resistance_band"
+      ],
+      "defaultMuscleWeights": {
+        "gluteusMaximus": 1.0,
+        "hamstringsBicepsFemoris": 0.5,
+        "hamstringsSemimembranosus": 0.45,
+        "quadricepsVastus": 0.25,
+        "quadricepsRectus": 0.15,
+        "erectorSpinae": 0.2,
+        "adductors": 0.3
+      },
+      "defaultDescription": "Supine hip extension movement.",
+      "notes": "Maximum glute activation at top. Band can add accommodating resistance.",
+      "sources": [
+        "Contreras 2015",
+        "Contreras 2023",
+        "Williams 2021"
+      ]
+    },
+    {
+      "id": "back_extension",
+      "displayName": "Back Extension / Hyperextension",
+      "category": "hinge",
+      "subcategory": "posterior_chain",
+      "applicableDimensions": {
+        "angle": [
+          "45_degree",
+          "horizontal"
+        ],
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": [
+          "bilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "machine",
+        "bodyweight"
+      ],
+      "defaultMuscleWeights": {
+        "gluteusMaximus": 0.9,
+        "hamstringsBicepsFemoris": 0.85,
+        "hamstringsSemimembranosus": 0.8,
+        "erectorSpinae": 0.7,
+        "adductors": 0.25
+      },
+      "defaultDescription": "Spinal extension and hip extension on bench.",
+      "notes": "45\u00b0 is easier. Horizontal (GHD) is more challenging.",
+      "sources": [
+        "Andersen 2021",
+        "Contreras 2013",
+        "Cuthbert 2021"
+      ]
+    },
+    {
+      "id": "leg_extension",
+      "displayName": "Leg Extension",
+      "category": "isolation",
+      "subcategory": "quadriceps",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "machine"
+      ],
+      "defaultMuscleWeights": {
+        "quadricepsRectus": 1.0,
+        "quadricepsVastus": 0.9
+      },
+      "defaultDescription": "Knee extension isolation for quadriceps.",
+      "notes": "Emphasizes rectus femoris due to hip flexed position.",
+      "sources": [
+        "Pedrosa 2022",
+        "Signorile 2014"
+      ]
+    },
+    {
+      "id": "leg_curl",
+      "displayName": "Leg Curl",
+      "category": "isolation",
+      "subcategory": "hamstrings",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": [
+          "lying",
+          "seated",
+          "standing"
+        ],
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "machine",
+        "stability_ball",
+        "bodyweight"
+      ],
+      "defaultMuscleWeights": {
+        "hamstringsBicepsFemoris": 1.0,
+        "hamstringsSemimembranosus": 1.0
+      },
+      "defaultDescription": "Knee flexion isolation for hamstrings.",
+      "notes": "Seated = more stretch = more hypertrophy. Lying = less stretch.",
+      "sources": [
+        "Maeo 2021 MSSE (PMC7969179)",
+        "Schoenfeld 2015"
+      ]
+    },
+    {
+      "id": "hip_abduction",
+      "displayName": "Hip Abduction",
+      "category": "isolation",
+      "subcategory": "glutes",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "machine",
+        "cable",
+        "resistance_band"
+      ],
+      "defaultMuscleWeights": {
+        "gluteusMedius": 1.0,
+        "gluteusMaximus": 0.3
+      },
+      "defaultDescription": "Hip abduction isolating gluteus medius.",
+      "notes": "Machine provides best glute med to TFL ratio.",
+      "sources": [
+        "PMID 35500965",
+        "JOSPT 2009"
+      ]
+    },
+    {
+      "id": "hip_adduction",
+      "displayName": "Hip Adduction",
+      "category": "isolation",
+      "subcategory": "adductors",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "machine",
+        "cable",
+        "resistance_band"
+      ],
+      "defaultMuscleWeights": {
+        "adductors": 1.0
+      },
+      "defaultDescription": "Hip adduction isolating adductor group.",
+      "notes": "0-45\u00b0 hip flexion optimal for magnus/longus.",
+      "sources": [
+        "PMID 22814446",
+        "PMID 23945760"
+      ]
+    },
+    {
+      "id": "calf_raise",
+      "displayName": "Calf Raise",
+      "category": "isolation",
+      "subcategory": "calves",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": [
+          "standing",
+          "seated",
+          "donkey"
+        ],
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "machine",
+        "smith_machine",
+        "dumbbell",
+        "barbell",
+        "bodyweight"
+      ],
+      "defaultMuscleWeights": {
+        "gastrocnemius": 1.0,
+        "soleus": 0.7
+      },
+      "defaultDescription": "Plantarflexion for calf development.",
+      "notes": "Standing = gastrocnemius. Seated = soleus. Standing far superior for gastroc hypertrophy.",
+      "sources": [
+        "Kinoshita 2023 (PMC10753835)",
+        "Signorile 2002"
+      ]
+    },
+    {
+      "id": "bicep_curl",
+      "displayName": "Bicep Curl",
+      "category": "isolation",
+      "subcategory": "biceps",
+      "applicableDimensions": {
+        "angle": [
+          "standing",
+          "incline",
+          "preacher"
+        ],
+        "gripWidth": null,
+        "gripOrientation": [
+          "supinated",
+          "neutral",
+          "pronated"
+        ],
+        "stance": [
+          "standing",
+          "seated"
+        ],
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "barbell",
+        "ez_bar",
+        "dumbbell",
+        "cable",
+        "machine"
+      ],
+      "defaultMuscleWeights": {
+        "bicepsBrachii": 1.0,
+        "bicepsBrachialis": 0.7,
+        "forearms": 0.4
+      },
+      "defaultDescription": "Elbow flexion for biceps.",
+      "notes": "Incline = stretched position. Preacher = shortened. Neutral grip emphasizes brachialis.",
+      "sources": [
+        "Coratella 2023",
+        "Basmajian 1978"
+      ]
+    },
+    {
+      "id": "preacher_curl",
+      "displayName": "Preacher Curl",
+      "category": "isolation",
+      "subcategory": "biceps",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": [
+          "supinated",
+          "neutral"
+        ],
+        "stance": [
+          "seated"
+        ],
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "ez_bar",
+        "dumbbell",
+        "cable",
+        "machine"
+      ],
+      "defaultMuscleWeights": {
+        "bicepsBrachii": 0.8,
+        "bicepsBrachialis": 1.0,
+        "forearms": 0.3
+      },
+      "defaultDescription": "Arm-supported curl with shortened biceps position.",
+      "notes": "Eliminates momentum. Emphasizes distal biceps development.",
+      "sources": [
+        "PMC11906226",
+        "PMC10407320"
+      ]
+    },
+    {
+      "id": "tricep_extension",
+      "displayName": "Tricep Extension",
+      "category": "isolation",
+      "subcategory": "triceps",
+      "applicableDimensions": {
+        "angle": [
+          "overhead",
+          "lying",
+          "decline"
+        ],
+        "gripWidth": [
+          "narrow",
+          "standard"
+        ],
+        "gripOrientation": [
+          "pronated",
+          "neutral"
+        ],
+        "stance": [
+          "standing",
+          "seated",
+          "lying"
+        ],
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "cable",
+        "dumbbell",
+        "ez_bar",
+        "barbell",
+        "machine"
+      ],
+      "defaultMuscleWeights": {
+        "tricepsLateralHead": 1.0,
+        "tricepsMedialHead": 0.9,
+        "tricepsLongHead": 0.5
+      },
+      "defaultDescription": "Elbow extension for triceps.",
+      "notes": "Overhead = long head stretch. Pushdown = lateral head emphasis.",
+      "sources": [
+        "Maeo 2023 EJSS",
+        "Kim 2011",
+        "Wakahara"
+      ]
+    },
+    {
+      "id": "crunch",
+      "displayName": "Crunch / Spinal Flexion",
+      "category": "core",
+      "subcategory": "abdominals",
+      "applicableDimensions": {
+        "angle": [
+          "flat",
+          "decline"
+        ],
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": null
+      },
+      "applicableEquipment": [
+        "bodyweight",
+        "machine",
+        "cable"
+      ],
+      "defaultMuscleWeights": {
+        "rectusAbdominis": 1.0,
+        "obliquesExternal": 0.5,
+        "obliquesInternal": 0.4
+      },
+      "defaultDescription": "Trunk flexion for rectus abdominis.",
+      "notes": "Cable crunch allows progressive overload.",
+      "sources": [
+        "PMC9505236",
+        "PMC7345922",
+        "PMID 16649890"
+      ]
+    },
+    {
+      "id": "leg_raise",
+      "displayName": "Leg Raise",
+      "category": "core",
+      "subcategory": "abdominals",
+      "applicableDimensions": {
+        "angle": [
+          "flat",
+          "decline",
+          "hanging"
+        ],
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": null
+      },
+      "applicableEquipment": [
+        "bodyweight",
+        "machine"
+      ],
+      "defaultMuscleWeights": {
+        "rectusAbdominis": 0.8,
+        "obliquesInternal": 0.5,
+        "obliquesExternal": 0.4,
+        "quadricepsRectus": 0.6
+      },
+      "defaultDescription": "Hip flexion with lower ab emphasis.",
+      "notes": "Focus on posterior pelvic tilt to maximize ab engagement.",
+      "sources": [
+        "PMID 16649890 Escamilla",
+        "PMC9505236"
+      ]
+    },
+    {
+      "id": "rotation",
+      "displayName": "Rotation / Woodchop",
+      "category": "core",
+      "subcategory": "obliques",
+      "applicableDimensions": {
+        "angle": [
+          "high_to_low",
+          "low_to_high",
+          "horizontal"
+        ],
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": [
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "cable",
+        "resistance_band",
+        "medicine_ball"
+      ],
+      "defaultMuscleWeights": {
+        "obliquesExternal": 1.0,
+        "obliquesInternal": 0.9,
+        "rectusAbdominis": 0.5,
+        "erectorSpinae": 0.4
+      },
+      "defaultDescription": "Rotational movement for obliques.",
+      "notes": "Pallof press = anti-rotation variant.",
+      "sources": [
+        "PMC7345922",
+        "JOSPT 2010"
+      ]
+    },
+    {
+      "id": "plank",
+      "displayName": "Plank",
+      "category": "core",
+      "subcategory": "isometric",
+      "applicableDimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": [
+          "front",
+          "side"
+        ],
+        "laterality": [
+          "bilateral",
+          "unilateral"
+        ]
+      },
+      "applicableEquipment": [
+        "bodyweight"
+      ],
+      "defaultMuscleWeights": {
+        "rectusAbdominis": 0.8,
+        "obliquesExternal": 0.7,
+        "obliquesInternal": 0.6,
+        "erectorSpinae": 0.4
+      },
+      "defaultDescription": "Isometric anti-extension or anti-lateral flexion.",
+      "notes": "Side plank = highest oblique activation.",
+      "sources": [
+        "PMC6006542",
+        "PMC7600276"
+      ]
+    }
+  ]
+}

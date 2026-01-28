@@ -98,14 +98,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 | EXER-05 | Phase 2 | Complete |
 | GYM-01 | Phase 3 | Complete |
 | GYM-02 | Phase 3 | Complete |
-| LOG-01 | Phase 4 | Pending |
-| LOG-02 | Phase 4 | Pending |
-| LOG-03 | Phase 4 | Pending |
-| LOG-04 | Phase 4 | Pending |
-| LOG-05 | Phase 4 | Pending |
-| LOG-06 | Phase 4 | Pending |
-| LOG-07 | Phase 4 | Pending |
-| LOG-08 | Phase 4 | Pending |
+| LOG-01 | Phase 4 | Complete |
+| LOG-02 | Phase 4 | Complete |
+| LOG-03 | Phase 4 | Complete |
+| LOG-04 | Phase 4 | Complete |
+| LOG-05 | Phase 4 | Complete |
+| LOG-06 | Phase 4 | Complete |
+| LOG-07 | Phase 4 | Complete |
+| LOG-08 | Phase 4 | Complete |
 | ANAL-01 | Phase 5 | Pending |
 | ANAL-02 | Phase 5 | Pending |
 
@@ -116,4 +116,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-01-26*
-*Last updated: 2026-01-27 — Phase 3 requirements complete (GYM-01, GYM-02)*
+*Last updated: 2026-01-28 — Phase 4 requirements complete (LOG-01 through LOG-08)*

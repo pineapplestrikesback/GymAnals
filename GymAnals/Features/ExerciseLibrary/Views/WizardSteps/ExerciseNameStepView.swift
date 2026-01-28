@@ -1,5 +1,5 @@
 //
-//  VariationStepView.swift
+//  ExerciseNameStepView.swift
 //  GymAnals
 //
 //  Created on 27/01/2026.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-/// Step 2: Variation naming with suggestions
-struct VariationStepView: View {
+/// Step 2: Exercise naming with suggested name from equipment + movement
+struct ExerciseNameStepView: View {
     @Bindable var viewModel: ExerciseCreationViewModel
 
-    /// Common variation suggestions
-    private let suggestions = [
+    /// Common modifier suggestions
+    private let modifiers = [
         "Standard", "Incline", "Decline",
         "Wide Grip", "Close Grip", "Neutral Grip", "Reverse Grip",
         "Single Arm", "Seated", "Standing"
@@ -20,23 +20,34 @@ struct VariationStepView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Name this variation")
+            Text("Name this exercise")
                 .font(.headline)
 
-            TextField("e.g., Incline, Wide Grip", text: $viewModel.variationName)
+            TextField("e.g., Incline Bench Press", text: $viewModel.exerciseName)
                 .textFieldStyle(.roundedBorder)
 
-            Text("Suggestions")
+            // Suggested name button based on equipment + movement
+            if let suggested = viewModel.suggestedName, viewModel.exerciseName != suggested {
+                Button {
+                    viewModel.exerciseName = suggested
+                } label: {
+                    Label("Use: \(suggested)", systemImage: "sparkles")
+                }
+                .buttonStyle(.borderedProminent)
+                .controlSize(.small)
+            }
+
+            Text("Modifiers")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
 
             FlowLayout(spacing: 8) {
-                ForEach(suggestions, id: \.self) { suggestion in
-                    Button(suggestion) {
-                        if viewModel.variationName.isEmpty {
-                            viewModel.variationName = suggestion
+                ForEach(modifiers, id: \.self) { modifier in
+                    Button(modifier) {
+                        if viewModel.exerciseName.isEmpty {
+                            viewModel.exerciseName = modifier
                         } else {
-                            viewModel.variationName += " \(suggestion)"
+                            viewModel.exerciseName += " \(modifier)"
                         }
                     }
                     .buttonStyle(.bordered)
@@ -47,12 +58,18 @@ struct VariationStepView: View {
             Spacer()
         }
         .padding()
+        .onAppear {
+            // Pre-fill with suggested name if empty
+            if viewModel.exerciseName.isEmpty, let suggested = viewModel.suggestedName {
+                viewModel.exerciseName = suggested
+            }
+        }
     }
 }
 
 // MARK: - FlowLayout
 
-/// Simple horizontal flow layout for variation suggestions
+/// Simple horizontal flow layout for suggestion chips
 struct FlowLayout: Layout {
     var spacing: CGFloat = 8
 
@@ -97,5 +114,5 @@ struct FlowLayout: Layout {
 }
 
 #Preview {
-    VariationStepView(viewModel: ExerciseCreationViewModel())
+    ExerciseNameStepView(viewModel: ExerciseCreationViewModel())
 }

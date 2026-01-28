@@ -21,30 +21,31 @@ struct ExerciseSearchResultsView: View {
         self.muscleGroup = muscleGroup
 
         // SwiftData predicates have limited support for complex expressions
-        // Filter by muscle group in query, apply search/sort in-memory
-        if let muscleGroupRaw = muscleGroup?.rawValue {
-            _exercises = Query(
-                filter: #Predicate<Exercise> { exercise in
-                    exercise.variant?.primaryMuscleGroupRaw == muscleGroupRaw
-                }
-            )
-        } else {
-            _exercises = Query()
-        }
+        // Fetch all exercises, apply muscle group filter and search in-memory
+        // (muscleWeights dictionary can't be queried via predicate)
+        _exercises = Query()
     }
 
-    /// Exercises filtered by search text and sorted (applied in-memory)
+    /// Exercises filtered by muscle group, search text, and sorted (applied in-memory)
     private var filteredExercises: [Exercise] {
         var results = Array(exercises)
 
-        // Apply search filter
+        // Apply muscle group filter in-memory
+        if let muscleGroup {
+            results = results.filter { exercise in
+                exercise.primaryMuscleGroup == muscleGroup
+            }
+        }
+
+        // Apply search filter (includes searchTerms array for in-memory matching)
         if !searchText.isEmpty {
             let lowercasedSearch = searchText.lowercased()
             results = results.filter { exercise in
                 exercise.displayName.lowercased().contains(lowercasedSearch) ||
-                exercise.variant?.movement?.name.lowercased().contains(lowercasedSearch) == true ||
-                exercise.equipment?.name.lowercased().contains(lowercasedSearch) == true ||
-                exercise.variant?.primaryMuscleGroup?.displayName.lowercased().contains(lowercasedSearch) == true
+                exercise.searchTerms.contains { $0.lowercased().contains(lowercasedSearch) } ||
+                exercise.movement?.displayName.lowercased().contains(lowercasedSearch) == true ||
+                exercise.equipment?.displayName.lowercased().contains(lowercasedSearch) == true ||
+                exercise.primaryMuscleGroup?.displayName.lowercased().contains(lowercasedSearch) == true
             }
         }
 

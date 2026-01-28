@@ -103,7 +103,7 @@ struct MuscleWeightEditorView: View {
 
 #Preview {
     NavigationStack {
-        MuscleWeightEditorView(viewModel: MuscleWeightViewModel(variant: nil))
+        MuscleWeightEditorView(viewModel: MuscleWeightViewModel(exercise: nil))
     }
     .modelContainer(PersistenceController.preview)
 }

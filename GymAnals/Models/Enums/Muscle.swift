@@ -8,7 +8,7 @@
 import Foundation
 
 /// Individual muscle enumeration with anatomical accuracy
-/// Contains 31 muscles organized by body region
+/// Contains 34 muscles organized by body region
 enum Muscle: String, CaseIterable, Codable, Identifiable {
 
     // MARK: - Chest (3)
@@ -16,13 +16,14 @@ enum Muscle: String, CaseIterable, Codable, Identifiable {
     case pectoralisMajorLower
     case pectoralisMinor
 
-    // MARK: - Back (6)
+    // MARK: - Back (7)
     case latissimusDorsi
     case trapeziusUpper
     case trapeziusMiddle
     case trapeziusLower
     case rhomboids
     case teresMajor
+    case serratusAnterior
 
     // MARK: - Shoulders (4)
     case deltoidAnterior
@@ -44,13 +45,15 @@ enum Muscle: String, CaseIterable, Codable, Identifiable {
     case obliquesExternal
     case erectorSpinae
 
-    // MARK: - Legs (8)
+    // MARK: - Legs (10)
     case quadricepsRectus
     case quadricepsVastus
     case hamstringsBicepsFemoris
     case hamstringsSemimembranosus
     case gluteusMaximus
     case gluteusMedius
+    case gluteusMinimus
+    case adductors
     case gastrocnemius
     case soleus
 
@@ -70,6 +73,7 @@ enum Muscle: String, CaseIterable, Codable, Identifiable {
         case .trapeziusLower: return "Lower Traps"
         case .rhomboids: return "Rhomboids"
         case .teresMajor: return "Teres Major"
+        case .serratusAnterior: return "Serratus"
         // Shoulders
         case .deltoidAnterior: return "Front Delts"
         case .deltoidLateral: return "Side Delts"
@@ -94,6 +98,8 @@ enum Muscle: String, CaseIterable, Codable, Identifiable {
         case .hamstringsSemimembranosus: return "Semimembranosus"
         case .gluteusMaximus: return "Glutes"
         case .gluteusMedius: return "Glute Medius"
+        case .gluteusMinimus: return "Glute Min"
+        case .adductors: return "Adductors"
         case .gastrocnemius: return "Calves"
         case .soleus: return "Soleus"
         }
@@ -113,6 +119,7 @@ enum Muscle: String, CaseIterable, Codable, Identifiable {
         case .trapeziusLower: return "Trapezius - Lower Fibers"
         case .rhomboids: return "Rhomboid Major & Minor"
         case .teresMajor: return "Teres Major"
+        case .serratusAnterior: return "Serratus Anterior"
         // Shoulders
         case .deltoidAnterior: return "Deltoid - Anterior Head"
         case .deltoidLateral: return "Deltoid - Lateral Head"
@@ -137,6 +144,8 @@ enum Muscle: String, CaseIterable, Codable, Identifiable {
         case .hamstringsSemimembranosus: return "Semimembranosus & Semitendinosus"
         case .gluteusMaximus: return "Gluteus Maximus"
         case .gluteusMedius: return "Gluteus Medius"
+        case .gluteusMinimus: return "Gluteus Minimus"
+        case .adductors: return "Hip Adductors"
         case .gastrocnemius: return "Gastrocnemius"
         case .soleus: return "Soleus"
         }
@@ -147,7 +156,7 @@ enum Muscle: String, CaseIterable, Codable, Identifiable {
         switch self {
         case .pectoralisMajorUpper, .pectoralisMajorLower, .pectoralisMinor:
             return .chest
-        case .latissimusDorsi, .trapeziusUpper, .trapeziusMiddle, .trapeziusLower, .rhomboids, .teresMajor:
+        case .latissimusDorsi, .trapeziusUpper, .trapeziusMiddle, .trapeziusLower, .rhomboids, .teresMajor, .serratusAnterior:
             return .back
         case .deltoidAnterior, .deltoidLateral, .deltoidPosterior, .rotatorCuff:
             return .shoulders
@@ -155,7 +164,7 @@ enum Muscle: String, CaseIterable, Codable, Identifiable {
             return .arms
         case .rectusAbdominis, .obliquesInternal, .obliquesExternal, .erectorSpinae:
             return .core
-        case .quadricepsRectus, .quadricepsVastus, .hamstringsBicepsFemoris, .hamstringsSemimembranosus, .gluteusMaximus, .gluteusMedius, .gastrocnemius, .soleus:
+        case .quadricepsRectus, .quadricepsVastus, .hamstringsBicepsFemoris, .hamstringsSemimembranosus, .gluteusMaximus, .gluteusMedius, .gluteusMinimus, .adductors, .gastrocnemius, .soleus:
             return .legs
         }
     }

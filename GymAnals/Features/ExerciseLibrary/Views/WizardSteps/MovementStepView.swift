@@ -11,14 +11,14 @@ import SwiftData
 /// Step 1: Movement selection or creation
 struct MovementStepView: View {
     @Bindable var viewModel: ExerciseCreationViewModel
-    @Query(sort: \Movement.name) private var movements: [Movement]
+    @Query(sort: \Movement.displayName) private var movements: [Movement]
     @State private var searchText = ""
 
     private var filteredMovements: [Movement] {
         if searchText.isEmpty {
             return movements
         }
-        return movements.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+        return movements.filter { $0.displayName.localizedCaseInsensitiveContains(searchText) }
     }
 
     var body: some View {
@@ -43,7 +43,7 @@ struct MovementStepView: View {
             List {
                 ForEach(filteredMovements) { movement in
                     HStack {
-                        Text(movement.name)
+                        Text(movement.displayName)
                         Spacer()
                         if viewModel.selectedMovement?.id == movement.id {
                             Image(systemName: "checkmark")

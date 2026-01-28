@@ -15,8 +15,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation** - SwiftData models, app shell, and offline persistence
 - [x] **Phase 2: Exercise Library** - Pre-populated exercises with weighted muscle contributions
 - [x] **Phase 3: Gyms** - Gym definitions and exercise branching per location
-- [ ] **Phase 4: Workout Logging** - Active workout session with fast set logging
-- [ ] **Phase 5: Analytics** - Volume dashboard with weighted muscle calculations
+- [x] **Phase 4: Workout Logging** - Active workout session with fast set logging
+- [x] **Phase 5: Exercise Library Rework** - Dimensions-based model with 237 exercise presets
+- [ ] **Phase 6: Analytics** - Volume dashboard with weighted muscle calculations
 
 ## Phase Details
 
@@ -84,17 +85,47 @@ Plans:
   6. Rest timer starts between sets with configurable duration and notification
   7. User can finish and save workout to history
   8. Active workout auto-saves after each set (crash recovery works)
-**Plans**: TBD
+**Plans**: 6 plans
 
 Plans:
-- [ ] 04-01: TBD
-- [ ] 04-02: TBD
-- [ ] 04-03: TBD
-- [ ] 04-04: TBD
+- [x] 04-01-PLAN.md — Timer infrastructure with Date-based persistence and notifications
+- [x] 04-02-PLAN.md — ActiveWorkoutViewModel with workout lifecycle and previous value lookup
+- [x] 04-03-PLAN.md — Set entry components (stepper, timer badge, set row with hints)
+- [x] 04-04-PLAN.md — Exercise section and picker (collapsible sections, FAB, search)
+- [x] 04-05-PLAN.md — ActiveWorkoutView with sticky header and finish flow
+- [x] 04-06-PLAN.md — WorkoutTabView integration and crash recovery (checkpoint)
 
-### Phase 5: Analytics
-**Goal**: Users can see weekly volume per muscle calculated from weighted contributions
+### Phase 5: Exercise Library Rework
+**Goal**: Replace Variant-based model with dimensions-based approach, seed 237 presets
 **Depends on**: Phase 4
+**Requirements**: None (refactor)
+**Success Criteria** (what must be TRUE):
+  1. Variant and VariantMuscle models removed
+  2. Exercise has embedded Dimensions struct and muscleWeights dictionary
+  3. Movement has category, defaultMuscleWeights, applicableDimensions
+  4. Equipment has category and properties struct
+  5. 237 exercise presets seeded from presets_all.json
+  6. 30 movements seeded from movements.json
+  7. 22 equipment types seeded from equipment.json
+  8. Fresh install scenario (breaking schema change - no migration from old Variant model)
+  9. Custom exercise creation wizard updated for new model
+**Plans**: 10 plans
+
+Plans:
+- [x] 05-01-PLAN.md — Create supporting enums and embedded Codable structs (Wave 1)
+- [x] 05-02-PLAN.md — Add 3 new muscles to Muscle enum (Wave 1)
+- [x] 05-03-PLAN.md — Update Equipment model with category and properties (Wave 2)
+- [x] 05-04-PLAN.md — Update Movement model with category and defaults (Wave 2)
+- [x] 05-05-PLAN.md — Transform Exercise model to dimensions-based schema (Wave 3)
+- [x] 05-06-PLAN.md — Remove Variant/VariantMuscle, update PersistenceController (Wave 4)
+- [x] 05-07-PLAN.md — Create new seed services for movements, equipment, presets (Wave 5)
+- [x] 05-08-PLAN.md — Copy JSON resources and update app seeding (Wave 5)
+- [x] 05-09-PLAN.md — Update exercise creation wizard for new model (Wave 6)
+- [x] 05-10-PLAN.md — Update exercise library views for new model (Wave 6)
+
+### Phase 6: Analytics
+**Goal**: Users can see weekly volume per muscle calculated from weighted contributions
+**Depends on**: Phase 5
 **Requirements**: ANAL-01, ANAL-02
 **Success Criteria** (what must be TRUE):
   1. Volume dashboard shows weekly sets per muscle calculated from weighted exercise contributions
@@ -104,22 +135,23 @@ Plans:
 **Plans**: TBD
 
 Plans:
-- [ ] 05-01: TBD
-- [ ] 05-02: TBD
+- [ ] 06-01: TBD
+- [ ] 06-02: TBD
 
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | ✓ Complete | 2026-01-26 |
 | 2. Exercise Library | 5/5 | ✓ Complete | 2026-01-27 |
 | 3. Gyms | 4/4 | ✓ Complete | 2026-01-27 |
-| 4. Workout Logging | 0/TBD | Not started | - |
-| 5. Analytics | 0/TBD | Not started | - |
+| 4. Workout Logging | 6/6 | ✓ Complete | 2026-01-28 |
+| 5. Exercise Library Rework | 10/10 | ✓ Complete | 2026-01-28 |
+| 6. Analytics | 0/TBD | Not started | - |
 
 ---
 *Roadmap created: 2026-01-26*
-*Last updated: 2026-01-27 — Phase 3 complete (4 plans executed)*
+*Last updated: 2026-01-28 — Phase 5 complete (10 plans in 6 waves)*

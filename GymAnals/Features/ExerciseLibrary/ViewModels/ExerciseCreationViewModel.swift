@@ -14,7 +14,7 @@ final class ExerciseCreationViewModel {
     // MARK: - Wizard Step Tracking
 
     var currentStep: Int = 0
-    let steps = ["Movement", "Variation", "Equipment", "Type", "Muscles"]
+    let steps = ["Movement", "Name", "Equipment", "Type", "Muscles"]
 
     // MARK: - Step 1: Movement
 
@@ -22,9 +22,9 @@ final class ExerciseCreationViewModel {
     var newMovementName: String = ""
     var isCreatingNewMovement: Bool = false
 
-    // MARK: - Step 2: Variation
+    // MARK: - Step 2: Name (replaces Variation)
 
-    var variationName: String = ""
+    var exerciseName: String = ""
 
     // MARK: - Step 3: Equipment
 
@@ -34,17 +34,31 @@ final class ExerciseCreationViewModel {
 
     var selectedExerciseType: ExerciseType = .weightReps
 
+    // MARK: - Dimensions
+
+    var dimensions: Dimensions = Dimensions()
+
     // MARK: - Created Entities
 
-    var createdVariant: Variant?
     var createdExercise: Exercise?
+
+    // MARK: - Suggested Name
+
+    /// Generates a suggested exercise name from equipment + movement
+    var suggestedName: String? {
+        guard let movement = selectedMovement else { return nil }
+        if let equipment = selectedEquipment {
+            return "\(equipment.displayName) \(movement.displayName)"
+        }
+        return movement.displayName
+    }
 
     // MARK: - Validation
 
     var canProceed: Bool {
         switch currentStep {
         case 0: return selectedMovement != nil || !newMovementName.isEmpty
-        case 1: return !variationName.isEmpty
+        case 1: return !exerciseName.isEmpty
         case 2: return selectedEquipment != nil
         case 3: return true // Type always has default
         case 4: return true // Muscles can be empty
@@ -82,14 +96,13 @@ final class ExerciseCreationViewModel {
             context.insert(movement)
         }
 
-        // Create variant
-        let variant = Variant(name: variationName, isBuiltIn: false)
-        variant.movement = movement
-        context.insert(variant)
-        createdVariant = variant
-
-        // Create exercise with equipment
-        let exercise = Exercise(variant: variant, equipment: selectedEquipment)
+        // Create exercise directly with movement (no variant)
+        let exercise = Exercise.custom(
+            displayName: exerciseName,
+            movement: movement,
+            equipment: selectedEquipment,
+            dimensions: dimensions
+        )
         context.insert(exercise)
         createdExercise = exercise
 
@@ -104,10 +117,10 @@ final class ExerciseCreationViewModel {
         selectedMovement = nil
         newMovementName = ""
         isCreatingNewMovement = false
-        variationName = ""
+        exerciseName = ""
         selectedEquipment = nil
         selectedExerciseType = .weightReps
-        createdVariant = nil
+        dimensions = Dimensions()
         createdExercise = nil
     }
 }

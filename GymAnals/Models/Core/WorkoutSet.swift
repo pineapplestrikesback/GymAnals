@@ -19,6 +19,9 @@ final class WorkoutSet {
     var completedDate: Date = Date.now
     var notes: String?
 
+    /// Whether the user has confirmed/completed this set (checkmark toggled on)
+    var isConfirmed: Bool = false
+
     var workout: Workout?
     var exercise: Exercise?
 
