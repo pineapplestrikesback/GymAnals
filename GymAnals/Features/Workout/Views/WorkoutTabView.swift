@@ -14,6 +14,12 @@ struct WorkoutTabView: View {
     @State private var showingGymSelector = false
     @State private var showingGymManagement = false
 
+    // Active workout state
+    @State private var activeWorkoutViewModel: ActiveWorkoutViewModel?
+    @State private var timerManager = SetTimerManager()
+    @State private var showingActiveWorkout = false
+    @State private var hasActiveWorkout = false
+
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -28,15 +34,20 @@ struct WorkoutTabView: View {
                     }
                     .padding(.top, 8)
 
-                    // Placeholder for "Start Workout" button
-                    Button(action: {}) {
-                        Label("Start Workout", systemImage: "plus.circle.fill")
-                            .font(.headline)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(Color.accentColor)
-                            .foregroundColor(.white)
-                            .cornerRadius(12)
+                    // Start or Resume Workout button
+                    Button {
+                        startOrResumeWorkout()
+                    } label: {
+                        Label(
+                            hasActiveWorkout ? "Resume Workout" : "Start Workout",
+                            systemImage: hasActiveWorkout ? "play.fill" : "plus.circle.fill"
+                        )
+                        .font(.headline)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(hasActiveWorkout ? Color.green : Color.accentColor)
+                        .foregroundColor(.white)
+                        .cornerRadius(12)
                     }
                     .padding(.horizontal)
 
@@ -59,6 +70,19 @@ struct WorkoutTabView: View {
             .onAppear {
                 if viewModel == nil {
                     viewModel = GymSelectionViewModel(modelContext: modelContext)
+                }
+                checkForActiveWorkout()
+            }
+            .onChange(of: showingActiveWorkout) { _, isShowing in
+                if !isShowing {
+                    // Clean up when returning from active workout
+                    activeWorkoutViewModel = nil
+                    checkForActiveWorkout()
+                }
+            }
+            .navigationDestination(isPresented: $showingActiveWorkout) {
+                if let vm = activeWorkoutViewModel {
+                    ActiveWorkoutView(viewModel: vm, timerManager: timerManager)
                 }
             }
             .sheet(isPresented: $showingGymSelector) {
@@ -84,6 +108,28 @@ struct WorkoutTabView: View {
                 .presentationDetents([.large])
             }
         }
+    }
+
+    // MARK: - Private Methods
+
+    private func checkForActiveWorkout() {
+        let descriptor = FetchDescriptor<Workout>(
+            predicate: #Predicate { $0.isActive == true }
+        )
+        hasActiveWorkout = (try? modelContext.fetchCount(descriptor)) ?? 0 > 0
+    }
+
+    private func startOrResumeWorkout() {
+        let vm = ActiveWorkoutViewModel(modelContext: modelContext)
+        activeWorkoutViewModel = vm
+
+        if !hasActiveWorkout {
+            // Start new workout at selected gym
+            vm.startWorkout(at: viewModel?.selectedGym)
+        }
+        // If resuming, ActiveWorkoutViewModel already loaded the active workout in init
+
+        showingActiveWorkout = true
     }
 }
 
