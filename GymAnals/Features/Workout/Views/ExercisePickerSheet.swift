@@ -22,9 +22,12 @@ struct ExercisePickerSheet: View {
             // Return first 50 recently used exercises
             return Array(exercises.prefix(50))
         } else {
-            // Filter by display name (case insensitive)
+            // Filter by displayName, searchTerms, and movement name (in-memory)
+            let lowered = searchText.lowercased()
             return exercises.filter { exercise in
-                exercise.displayName.localizedCaseInsensitiveContains(searchText)
+                exercise.displayName.localizedCaseInsensitiveContains(searchText) ||
+                exercise.searchTerms.contains { $0.lowercased().contains(lowered) } ||
+                exercise.movement?.displayName.localizedCaseInsensitiveContains(searchText) == true
             }
         }
     }
