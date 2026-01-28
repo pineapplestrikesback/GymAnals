@@ -64,11 +64,16 @@ struct ActiveWorkoutView: View {
                             startDate: viewModel.activeWorkout?.startDate ?? .now,
                             totalSets: viewModel.activeWorkout?.sets.count ?? 0,
                             headerTimer: timerManager.headerTimer,
+                            gym: viewModel.activeWorkout?.gym,
                             onTimerTap: {
                                 if let timer = timerManager.headerTimer {
                                     selectedTimerForControls = timer
                                     showingTimerControls = true
                                 }
+                            },
+                            onStartManualTimer: {
+                                timerManager.removeExpiredTimers()
+                                timerManager.startTimer(for: UUID(), duration: 120)
                             }
                         )
                     }
