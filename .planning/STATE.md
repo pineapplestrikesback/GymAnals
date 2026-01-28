@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-26)
 
 **Core value:** Precise per-muscle volume tracking with user-defined muscles and weighted set contributions
-**Current focus:** Phase 5 (Exercise Library Rework) - Plan 04 Complete
+**Current focus:** Phase 5 (Exercise Library Rework) - Plan 05 Complete
 
 ## Current Position
 
 Phase: 5 of 6 (Exercise Library Rework)
-Plan: 4 of 10 in current phase
+Plan: 5 of 10 in current phase
 Status: In progress
-Last activity: 2026-01-28 - Completed 05-04-PLAN.md (Movement Model Updates)
+Last activity: 2026-01-28 - Completed 05-05-PLAN.md (Exercise Model Refactor)
 
-Progress: [███████████████████░] ~79% (22/~28 total plans estimate)
+Progress: [████████████████████░] ~82% (23/~28 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 22
-- Average duration: 8.2 min
-- Total execution time: 181 min
+- Total plans completed: 23
+- Average duration: 8.5 min
+- Total execution time: 196 min
 
 **By Phase:**
 
@@ -31,11 +31,11 @@ Progress: [███████████████████░] ~79% (2
 | 02-exercise-library | 5 | 61 min | 12.2 min |
 | 03-gyms | 4 | 24 min | 6.0 min |
 | 04-workout-logging | 6 | 55 min | 9.2 min |
-| 05-exercise-library-rework | 4 | 28 min | 7.0 min |
+| 05-exercise-library-rework | 5 | 43 min | 8.6 min |
 
 **Recent Trend:**
-- Last 5 plans: 05-01 (4 min), 05-02 (3 min), 05-03 (10 min), 05-04 (11 min)
-- Trend: Wave 2 model updates progressing
+- Last 5 plans: 05-01 (4 min), 05-02 (3 min), 05-03 (10 min), 05-04 (11 min), 05-05 (15 min)
+- Trend: Wave 3 Exercise refactor larger due to downstream updates
 
 *Updated after each plan completion*
 
@@ -114,6 +114,11 @@ Recent decisions affecting current work:
 - [05-03]: displayName replaces name for consistency with Movement model naming
 - [05-04]: String id allows snake_case identifiers for built-in movements
 - [05-04]: exercises relationship temporarily commented until Exercise.movement exists
+- [05-05]: Exercise.id changed from UUID to String for snake_case preset identifiers
+- [05-05]: displayName changed from computed to stored property (presets have curated names)
+- [05-05]: muscleWeights stored as [String: Double] dictionary (replaces VariantMuscle relationship)
+- [05-05]: isUnilateral computed from dimensions.laterality (single source of truth)
+- [05-05]: exerciseOrder/expandedExercises changed from UUID to String types
 
 ### Pending Todos
 
@@ -121,7 +126,7 @@ None yet.
 
 ### Blockers/Concerns
 
-None.
+- Variant and VariantMuscle models still exist in codebase/PersistenceController - remove in 05-10 final integration.
 
 ### Roadmap Evolution
 
@@ -131,7 +136,7 @@ None.
 ## Session Continuity
 
 Last session: 2026-01-28
-Stopped at: Completed 05-04-PLAN.md (Movement Model Updates)
+Stopped at: Completed 05-05-PLAN.md (Exercise Model Refactor)
 Resume file: None
 
 ## Phase 5 Progress
@@ -140,8 +145,8 @@ Phase 5 (Exercise Library Rework) in progress:
 - 05-01: Supporting Types (COMPLETE)
 - 05-02: Muscle Taxonomy Expansion (COMPLETE)
 - 05-03: Equipment Model Updates (COMPLETE)
-- 05-04: Movement Model Updates (COMPLETE - summary created)
-- 05-05: Exercise Model Refactor (pending)
+- 05-04: Movement Model Updates (COMPLETE)
+- 05-05: Exercise Model Refactor (COMPLETE)
 - 05-06: Movement Seed Service (pending)
 - 05-07: Equipment Seed Service (pending)
 - 05-08: Exercise Preset Seeding (pending)
@@ -171,3 +176,11 @@ Phase 5 (Exercise Library Rework) in progress:
 - defaultMuscleWeights dictionary for inherited targeting
 - Removed variants relationship (Variant being phased out)
 - Updated MovementStepView to use displayName
+
+**Completed in 05-05:**
+- Exercise model: String id, displayName (stored), dimensions, muscleWeights dict
+- Direct movement relationship (replaces variant->movement chain)
+- Computed isUnilateral, primaryMuscleGroup, sortedMuscleWeights
+- Updated 15 downstream files for new Exercise API
+- Movement.exercises relationship uncommented
+- Variant.exercises inverse commented out
