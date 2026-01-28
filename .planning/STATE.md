@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-26)
 
 **Core value:** Precise per-muscle volume tracking with user-defined muscles and weighted set contributions
-**Current focus:** Phase 5 (Exercise Library Rework) - Plan 02 Complete
+**Current focus:** Phase 5 (Exercise Library Rework) - Plan 03 Complete
 
 ## Current Position
 
 Phase: 5 of 6 (Exercise Library Rework)
-Plan: 2 of 10 in current phase
+Plan: 3 of 10 in current phase
 Status: In progress
-Last activity: 2026-01-28 - Completed 05-02-PLAN.md (Muscle Taxonomy Expansion)
+Last activity: 2026-01-28 - Completed 05-03-PLAN.md (Equipment Model Updates)
 
-Progress: [██████████████████░░] ~71% (20/~28 total plans estimate)
+Progress: [███████████████████░] ~75% (21/~28 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 20
-- Average duration: 7.6 min
-- Total execution time: 160 min
+- Total plans completed: 21
+- Average duration: 7.7 min
+- Total execution time: 170 min
 
 **By Phase:**
 
@@ -31,11 +31,11 @@ Progress: [██████████████████░░] ~71% (2
 | 02-exercise-library | 5 | 61 min | 12.2 min |
 | 03-gyms | 4 | 24 min | 6.0 min |
 | 04-workout-logging | 6 | 55 min | 9.2 min |
-| 05-exercise-library-rework | 2 | 7 min | 3.5 min |
+| 05-exercise-library-rework | 3 | 17 min | 5.7 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-05 (5 min), 04-06 (25 min), 05-01 (4 min), 05-02 (3 min)
-- Trend: 05-02 verification-only plan (changes already committed in 05-01)
+- Last 5 plans: 04-06 (25 min), 05-01 (4 min), 05-02 (3 min), 05-03 (10 min)
+- Trend: 05-03 included blocking fix for incomplete 05-04 commit
 
 *Updated after each plan completion*
 
@@ -109,6 +109,9 @@ Recent decisions affecting current work:
 - [05-01]: Popularity.sortOrder returns 1/2/3 (lower = more popular) for sorting
 - [05-02]: serratusAnterior grouped under back (scapular movement assist)
 - [05-02]: gluteusMinimus and adductors grouped under legs (hip stabilization/adduction)
+- [05-03]: String id allows snake_case identifiers for built-in equipment, UUID strings for custom
+- [05-03]: Convenience init preserves backward compatibility with existing seed service
+- [05-03]: displayName replaces name for consistency with Movement model naming
 
 ### Pending Todos
 
@@ -126,7 +129,7 @@ None.
 ## Session Continuity
 
 Last session: 2026-01-28
-Stopped at: Completed 05-02-PLAN.md (Muscle Taxonomy Expansion)
+Stopped at: Completed 05-03-PLAN.md (Equipment Model Updates)
 Resume file: None
 
 ## Phase 5 Progress
@@ -134,8 +137,8 @@ Resume file: None
 Phase 5 (Exercise Library Rework) in progress:
 - 05-01: Supporting Types (COMPLETE)
 - 05-02: Muscle Taxonomy Expansion (COMPLETE)
-- 05-03: Equipment Model Updates (pending)
-- 05-04: Movement Model Updates (pending)
+- 05-03: Equipment Model Updates (COMPLETE)
+- 05-04: Movement Model Updates (COMPLETE - committed in 05-03 as blocking fix)
 - 05-05: Exercise Model Refactor (pending)
 - 05-06: Movement Seed Service (pending)
 - 05-07: Equipment Seed Service (pending)
@@ -154,3 +157,9 @@ Phase 5 (Exercise Library Rework) in progress:
 - Muscle enum expanded to 34 cases (verified, already done in 05-01)
 - serratusAnterior, gluteusMinimus, adductors added
 - MuscleGroup auto-includes via filter pattern
+
+**Completed in 05-03:**
+- Equipment model: String id, displayName, categoryRaw, properties, notes
+- Convenience init for backward compatibility
+- Updated views to use equipment.displayName
+- Also fixed incomplete Movement model from 05-04 (String id, displayName, categoryRaw)
