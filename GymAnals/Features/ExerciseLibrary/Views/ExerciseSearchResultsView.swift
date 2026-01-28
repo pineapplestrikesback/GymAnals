@@ -42,8 +42,8 @@ struct ExerciseSearchResultsView: View {
             let lowercasedSearch = searchText.lowercased()
             results = results.filter { exercise in
                 exercise.displayName.lowercased().contains(lowercasedSearch) ||
-                exercise.variant?.movement?.name.lowercased().contains(lowercasedSearch) == true ||
-                exercise.equipment?.name.lowercased().contains(lowercasedSearch) == true ||
+                exercise.variant?.movement?.displayName.lowercased().contains(lowercasedSearch) == true ||
+                exercise.equipment?.displayName.lowercased().contains(lowercasedSearch) == true ||
                 exercise.variant?.primaryMuscleGroup?.displayName.lowercased().contains(lowercasedSearch) == true
             }
         }

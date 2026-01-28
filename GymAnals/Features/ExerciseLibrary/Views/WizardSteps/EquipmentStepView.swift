@@ -11,7 +11,7 @@ import SwiftData
 /// Step 3: Equipment selection
 struct EquipmentStepView: View {
     @Bindable var viewModel: ExerciseCreationViewModel
-    @Query(sort: \Equipment.name) private var equipment: [Equipment]
+    @Query(sort: \Equipment.displayName) private var equipment: [Equipment]
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -21,7 +21,7 @@ struct EquipmentStepView: View {
             List {
                 ForEach(equipment) { item in
                     HStack {
-                        Text(item.name)
+                        Text(item.displayName)
                         Spacer()
                         if viewModel.selectedEquipment?.id == item.id {
                             Image(systemName: "checkmark")
