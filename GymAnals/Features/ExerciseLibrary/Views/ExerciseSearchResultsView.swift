@@ -37,11 +37,12 @@ struct ExerciseSearchResultsView: View {
             }
         }
 
-        // Apply search filter
+        // Apply search filter (includes searchTerms array for in-memory matching)
         if !searchText.isEmpty {
             let lowercasedSearch = searchText.lowercased()
             results = results.filter { exercise in
                 exercise.displayName.lowercased().contains(lowercasedSearch) ||
+                exercise.searchTerms.contains { $0.lowercased().contains(lowercasedSearch) } ||
                 exercise.movement?.displayName.lowercased().contains(lowercasedSearch) == true ||
                 exercise.equipment?.displayName.lowercased().contains(lowercasedSearch) == true ||
                 exercise.primaryMuscleGroup?.displayName.lowercased().contains(lowercasedSearch) == true
