@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-26)
 
 **Core value:** Precise per-muscle volume tracking with user-defined muscles and weighted set contributions
-**Current focus:** Phase 5 (Exercise Library Rework) - Plan 06 Complete
+**Current focus:** Phase 5 (Exercise Library Rework) - Plan 07 Complete
 
 ## Current Position
 
 Phase: 5 of 6 (Exercise Library Rework)
-Plan: 6 of 10 in current phase
+Plan: 7 of 10 in current phase
 Status: In progress
-Last activity: 2026-01-28 - Completed 05-06-PLAN.md (Remove Variant/VariantMuscle Models)
+Last activity: 2026-01-28 - Completed 05-07-PLAN.md (Seed Services)
 
-Progress: [█████████████████████░] ~86% (24/~28 total plans estimate)
+Progress: [██████████████████████░] ~89% (25/~28 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 24
-- Average duration: 8.3 min
-- Total execution time: 200 min
+- Total plans completed: 25
+- Average duration: 8.4 min
+- Total execution time: 209 min
 
 **By Phase:**
 
@@ -31,11 +31,11 @@ Progress: [█████████████████████░] ~
 | 02-exercise-library | 5 | 61 min | 12.2 min |
 | 03-gyms | 4 | 24 min | 6.0 min |
 | 04-workout-logging | 6 | 55 min | 9.2 min |
-| 05-exercise-library-rework | 6 | 47 min | 7.8 min |
+| 05-exercise-library-rework | 7 | 56 min | 8.0 min |
 
 **Recent Trend:**
-- Last 5 plans: 05-02 (3 min), 05-03 (10 min), 05-04 (11 min), 05-05 (15 min), 05-06 (4 min)
-- Trend: Wave 4 cleanup fast (file deletion + schema update)
+- Last 5 plans: 05-03 (10 min), 05-04 (11 min), 05-05 (15 min), 05-06 (4 min), 05-07 (5 min)
+- Trend: Wave 5 seeding moderate (JSON + seed service creation)
 
 *Updated after each plan completion*
 
@@ -119,6 +119,10 @@ Recent decisions affecting current work:
 - [05-05]: muscleWeights stored as [String: Double] dictionary (replaces VariantMuscle relationship)
 - [05-05]: isUnilateral computed from dimensions.laterality (single source of truth)
 - [05-05]: exerciseOrder/expandedExercises changed from UUID to String types
+- [05-07]: Seed order: GymSeedService -> EquipmentSeedService -> MovementSeedService -> PresetSeedService
+- [05-07]: Entity-specific seed services (one per model type) replace monolithic ExerciseSeedService
+- [05-07]: PresetSeedService builds lookup maps from fetched entities for O(1) relationship linking
+- [05-07]: Muscle key validation with warning (not failure) for graceful degradation
 
 ### Pending Todos
 
@@ -126,7 +130,7 @@ None yet.
 
 ### Blockers/Concerns
 
-- Variant/VariantMuscle references remain in ExerciseSeedService.swift and SeedData.swift (addressed by 05-07 through 05-10).
+None - Variant/VariantMuscle references cleared (ExerciseSeedService and SeedData replaced in 05-07).
 
 ### Roadmap Evolution
 
@@ -136,7 +140,7 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-01-28
-Stopped at: Completed 05-06-PLAN.md (Remove Variant/VariantMuscle Models)
+Stopped at: Completed 05-07-PLAN.md (Seed Services)
 Resume file: None
 
 ## Phase 5 Progress
@@ -148,7 +152,7 @@ Phase 5 (Exercise Library Rework) in progress:
 - 05-04: Movement Model Updates (COMPLETE)
 - 05-05: Exercise Model Refactor (COMPLETE)
 - 05-06: Remove Variant/VariantMuscle Models (COMPLETE)
-- 05-07: Equipment Seed Service (pending)
+- 05-07: Seed Services (COMPLETE)
 - 05-08: Exercise Preset Seeding (pending)
 - 05-09: Exercise Browser Updates (pending)
 - 05-10: Final Integration (pending)
@@ -190,3 +194,12 @@ Phase 5 (Exercise Library Rework) in progress:
 - Removed Variant.self and VariantMuscle.self from PersistenceController schema
 - Schema pruned from 9 to 7 models
 - Build verified successful
+
+**Completed in 05-07:**
+- SeedData.swift: New Decodable types (EquipmentSeedData, MovementSeedData, PresetSeedData)
+- EquipmentSeedService: Seeds 22 equipment types from equipment.json
+- MovementSeedService: Seeds 30 movements from movements.json with muscle key validation
+- PresetSeedService: Seeds 237 exercise presets from presets_all.json with lookup maps
+- Deleted ExerciseSeedService.swift (deprecated Variant-based seeding)
+- JSON resources: equipment.json, movements.json, presets_all.json added to bundle
+- GymAnalsApp.init: Updated seeding order (Gym -> Equipment -> Movement -> Preset)
