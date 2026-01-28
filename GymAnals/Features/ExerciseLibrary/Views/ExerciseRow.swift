@@ -17,10 +17,24 @@ struct ExerciseRow: View {
                 Text(exercise.displayName)
                     .font(.body)
 
-                if let muscles = exercise.primaryMuscleGroup?.displayName {
-                    Text(muscles)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
+                HStack(spacing: 6) {
+                    if let equipment = exercise.equipment?.displayName {
+                        Text(equipment)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+
+                    if exercise.equipment != nil, exercise.primaryMuscleGroup != nil {
+                        Text("\u{2022}")
+                            .font(.caption)
+                            .foregroundStyle(.tertiary)
+                    }
+
+                    if let muscles = exercise.primaryMuscleGroup?.displayName {
+                        Text(muscles)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }
 
@@ -30,6 +44,15 @@ struct ExerciseRow: View {
                 Image(systemName: "star.fill")
                     .foregroundStyle(.yellow)
                     .font(.caption)
+            }
+
+            if let category = exercise.movement?.category {
+                Text(category.displayName)
+                    .font(.caption2)
+                    .padding(.horizontal, 6)
+                    .padding(.vertical, 2)
+                    .background(Color.accentColor.opacity(0.1))
+                    .clipShape(Capsule())
             }
 
             if !exercise.isBuiltIn {
