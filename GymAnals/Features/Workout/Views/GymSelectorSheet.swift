@@ -10,6 +10,7 @@ import SwiftData
 
 /// Sheet presenting list of gyms for selection
 /// Updates lastUsedDate when a gym is selected
+/// Includes "New Gym" button for inline gym creation with auto-select
 struct GymSelectorSheet: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
@@ -19,9 +20,22 @@ struct GymSelectorSheet: View {
     @Binding var selectedGym: Gym?
     let onManageGyms: () -> Void
 
+    @State private var showingNewGymSheet = false
+    /// Snapshot of gym count before creating a new gym, used for auto-select detection
+    @State private var gymCountBeforeCreate = 0
+
     var body: some View {
         NavigationStack {
             List {
+                Section {
+                    Button {
+                        gymCountBeforeCreate = gyms.count
+                        showingNewGymSheet = true
+                    } label: {
+                        Label("New Gym", systemImage: "plus.circle.fill")
+                    }
+                }
+
                 Section {
                     ForEach(gyms, id: \.id) { gym in
                         GymSelectorRow(
@@ -50,6 +64,17 @@ struct GymSelectorSheet: View {
                     }
                 }
             }
+            .sheet(isPresented: $showingNewGymSheet) {
+                NavigationStack {
+                    GymEditView()
+                }
+            }
+            .onChange(of: showingNewGymSheet) { _, isShowing in
+                if !isShowing {
+                    // Auto-select newly created gym after sheet dismisses
+                    autoSelectNewGym()
+                }
+            }
         }
     }
 
@@ -57,6 +82,15 @@ struct GymSelectorSheet: View {
         gym.lastUsedDate = Date.now
         selectedGym = gym
         dismiss()
+    }
+
+    /// Finds and selects the most recently created gym if a new one was added
+    private func autoSelectNewGym() {
+        guard gyms.count > gymCountBeforeCreate else { return }
+        // Find the gym with the most recent createdDate
+        if let newestGym = gyms.max(by: { $0.createdDate < $1.createdDate }) {
+            selectGym(newestGym)
+        }
     }
 }
 
