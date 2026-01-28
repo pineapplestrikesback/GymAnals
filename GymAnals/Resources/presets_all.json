@@ -36,7 +36,7 @@
     },
     {
       "id": "barbell_incline_bench_press_30",
-      "displayName": "Incline Bench Press (30Â°)",
+      "displayName": "Incline Bench Press (30°)",
       "searchTerms": [
         "incline bench",
         "incline press",
@@ -61,7 +61,7 @@
         "pectoralisMajorLower": 0.65
       },
       "popularity": "very_common",
-      "notes": "Optimal angle for upper pec development (122-130% MVIC vs flat). Research shows 30Â° maximizes clavicular activation before deltoid dominance.",
+      "notes": "Optimal angle for upper pec development (122-130% MVIC vs flat). Research shows 30° maximizes clavicular activation before deltoid dominance.",
       "sources": [
         "RodrÃ­guez-Ridao 2020",
         "Lauver 2016",
@@ -70,7 +70,7 @@
     },
     {
       "id": "barbell_incline_bench_press_45",
-      "displayName": "Incline Bench Press (45Â°)",
+      "displayName": "Incline Bench Press (45°)",
       "searchTerms": [
         "high incline bench",
         "steep incline press",
@@ -94,7 +94,7 @@
         "pectoralisMajorLower": 0.5
       },
       "popularity": "common",
-      "notes": "Anterior deltoid approaches pec activation levels. Lower pec drops to ~72% MVIC. Consider 30Â° for pure chest focus.",
+      "notes": "Anterior deltoid approaches pec activation levels. Lower pec drops to ~72% MVIC. Consider 30° for pure chest focus.",
       "sources": [
         "RodrÃ­guez-Ridao 2020",
         "Lauver 2016",
@@ -127,7 +127,7 @@
         "pectoralisMajorLower": 0.97
       },
       "popularity": "common",
-      "notes": "Highest sternal pec activation (100.4% MVIC). Reduced anterior deltoid involvement. 15-25Â° decline angle typical.",
+      "notes": "Highest sternal pec activation (100.4% MVIC). Reduced anterior deltoid involvement. 15-25° decline angle typical.",
       "sources": [
         "Lauver 2016",
         "Barnett 1995"
@@ -231,7 +231,7 @@
         "pectoralisMajorLower": 0.6
       },
       "popularity": "very_common",
-      "notes": "Combines incline upper pec emphasis with dumbbell ROM advantages. Greater stretch in bottom position than barbell. Optimal at 30Â° angle.",
+      "notes": "Combines incline upper pec emphasis with dumbbell ROM advantages. Greater stretch in bottom position than barbell. Optimal at 30° angle.",
       "sources": [
         "Trebs 2010",
         "Saeterbakken 2017"
@@ -391,7 +391,7 @@
         "pectoralisMajorLower": 0.6
       },
       "popularity": "common",
-      "notes": "Clavicular head significantly greater at 44Â° and 56Â° vs flat. More consistent path allows focus on target muscles.",
+      "notes": "Clavicular head significantly greater at 44° and 56° vs flat. More consistent path allows focus on target muscles.",
       "sources": [
         "Trebs 2010"
       ]
@@ -733,7 +733,7 @@
         "deltoidPosterior": 0.35
       },
       "popularity": "common",
-      "notes": "Angled press (~45Â° from vertical) between horizontal and vertical plane. Single-arm variation increases anti-rotation demand. Shoulder-friendly alternative.",
+      "notes": "Angled press (~45° from vertical) between horizontal and vertical plane. Single-arm variation increases anti-rotation demand. Shoulder-friendly alternative.",
       "sources": [
         "Extrapolated from Saeterbakken 2013"
       ]
@@ -767,7 +767,7 @@
         "latissimusDorsi": 0.35
       },
       "popularity": "common",
-      "notes": "Forward lean of 30-45Â° emphasizes pectoralis major.  Ring dip shows greatest peak pec activation. Bar dip ~25-35Â° forward lean typical.",
+      "notes": "Forward lean of 30-45° emphasizes pectoralis major.  Ring dip shows greatest peak pec activation. Bar dip ~25-35° forward lean typical.",
       "sources": [
         "McKenzie 2022"
       ]
@@ -801,7 +801,7 @@
         "latissimusDorsi": 0.3
       },
       "popularity": "common",
-      "notes": "Upright position (~10-15Â° lean) shifts emphasis to triceps.  Bench dip has smallest lean but highest shoulder extension ROM.  ~88% normalized triceps EMG.",
+      "notes": "Upright position (~10-15° lean) shifts emphasis to triceps.  Bench dip has smallest lean but highest shoulder extension ROM.  ~88% normalized triceps EMG.",
       "sources": [
         "McKenzie 2022",
         "Boehler 2011"
@@ -931,7 +931,7 @@
         "pectoralisMajorLower": 0.6
       },
       "popularity": "common",
-      "notes": "Higher clavicular activation than flat. 69% pec activation vs bench. Optimal at 15-30Â° angle. Above 45Â° shoulders dominate.",
+      "notes": "Higher clavicular activation than flat. 69% pec activation vs bench. Optimal at 15-30° angle. Above 45° shoulders dominate.",
       "sources": [
         "Trebs 2010",
         "Barnett 1995"
@@ -1853,7 +1853,7 @@
     },
     {
       "id": "leg_press_45_degree",
-      "displayName": "Leg Press (45Â°)",
+      "displayName": "Leg Press (45°)",
       "searchTerms": [
         "leg press",
         "45 degree leg press",
@@ -1911,7 +1911,7 @@
         "hamstringsSemimembranosus": 0.15
       },
       "popularity": "common",
-      "notes": "Seated horizontal position with less hip flexion than 45Â° version. Similar quad emphasis but reduced glute involvement due to body position.",
+      "notes": "Seated horizontal position with less hip flexion than 45° version. Similar quad emphasis but reduced glute involvement due to body position.",
       "sources": [
         "MartÃ­n-Fuentes 2020"
       ]
@@ -2800,7 +2800,7 @@
         "rectusAbdominis": 0.2
       },
       "popularity": "common",
-      "notes": "High-intensity eccentric hamstring exercise. Semitendinosus slightly more activated than biceps femoris. Peak EMG occurs in 60-40Â° knee flexion range. Essential for hamstring injury prevention in athletes.",
+      "notes": "High-intensity eccentric hamstring exercise. Semitendinosus slightly more activated than biceps femoris. Peak EMG occurs in 60-40° knee flexion range. Essential for hamstring injury prevention in athletes.",
       "sources": [
         "Iga 2021",
         "Hegyi 2019",
@@ -3113,7 +3113,7 @@
     },
     {
       "id": "back_extension_45_degree",
-      "displayName": "45Â° Back Extension / Hyperextension",
+      "displayName": "45° Back Extension / Hyperextension",
       "searchTerms": [
         "back extension",
         "hyperextension",
@@ -3649,7 +3649,7 @@
         "erectorSpinae": 0.05
       },
       "popularity": "very_common",
-      "notes": "Standard foot position (mid-platform, shoulder-width). Squats generate greater quad and hamstring activation, but leg press allows safe high-volume training. Peak quad activation at 90Â° knee flexion.",
+      "notes": "Standard foot position (mid-platform, shoulder-width). Squats generate greater quad and hamstring activation, but leg press allows safe high-volume training. Peak quad activation at 90° knee flexion.",
       "sources": [
         "Escamilla 2001",
         "Da Silva 2008"
@@ -4153,7 +4153,7 @@
         "adductors": 0.1
       },
       "popularity": "very_common",
-      "notes": "Maximum quad isolation. Rectus femoris activation limited due to hip-flexed (seated) position. Peak activation at 90Â° knee flexion, decreases toward extension. Emphasize stretched/initial ROM for hypertrophy (Pedrosa 2022).",
+      "notes": "Maximum quad isolation. Rectus femoris activation limited due to hip-flexed (seated) position. Peak activation at 90° knee flexion, decreases toward extension. Emphasize stretched/initial ROM for hypertrophy (Pedrosa 2022).",
       "sources": [
         "Signorile 2014",
         "Pedrosa 2022"
@@ -4249,7 +4249,7 @@
         "obliquesExternal": 0.2
       },
       "popularity": "common",
-      "notes": "More challenging than 45Â° version with peak torque in upper portion. Lower hamstring activation due to knee position on GHD. Greater emphasis on glutes and erectors.",
+      "notes": "More challenging than 45° version with peak torque in upper portion. Lower hamstring activation due to knee position on GHD. Greater emphasis on glutes and erectors.",
       "sources": [
         "Andersen 2021",
         "Cuthbert 2021"
@@ -4794,7 +4794,7 @@
         "trapeziusUpper": 0.4
       },
       "popularity": "common",
-      "notes": "Shoulder abduction position increases posterior deltoid and mid trap activation per Garcia-Jaen 2021. 45Â° incline bench provides optimal chest support.",
+      "notes": "Shoulder abduction position increases posterior deltoid and mid trap activation per Garcia-Jaen 2021. 45° incline bench provides optimal chest support.",
       "sources": [
         "Garcia-Jaen et al. 2021 J Phys Ed Sport",
         "Schoenfeld et al. 2013"
@@ -4869,7 +4869,7 @@
         "trapeziusUpper": 0.35
       },
       "popularity": "very_common",
-      "notes": "Highest middle trap/rhomboid activation vs lat pulldown per Lehman 2004. 0Â° shoulder abduction maximizes lat involvement per Vasconcelos 2023.",
+      "notes": "Highest middle trap/rhomboid activation vs lat pulldown per Lehman 2004. 0° shoulder abduction maximizes lat involvement per Vasconcelos 2023.",
       "sources": [
         "Lehman et al. 2004 Dynamic Medicine 3(1):4",
         "Vasconcelos et al. 2023 Int J Strength Cond"
@@ -4906,7 +4906,7 @@
         "trapeziusUpper": 0.75
       },
       "popularity": "common",
-      "notes": "90Â° shoulder abduction dramatically increases upper trap (130-138% MVIC), mid trap, and rear delt while DECREASING lat activation by ~50% per Vasconcelos 2023.",
+      "notes": "90° shoulder abduction dramatically increases upper trap (130-138% MVIC), mid trap, and rear delt while DECREASING lat activation by ~50% per Vasconcelos 2023.",
       "sources": [
         "Vasconcelos et al. 2023 Int J Strength Cond",
         "Signorile et al. 2002"
@@ -5355,7 +5355,7 @@
         "erectorSpinae": 0.3
       },
       "popularity": "very_common",
-      "notes": "Prone horizontal abduction at 100Â° with external rotation: 88% MVIC posterior deltoid per Reinold 2004. 45Â° arm angle from body aligns with rear delt fiber direction.",
+      "notes": "Prone horizontal abduction at 100° with external rotation: 88% MVIC posterior deltoid per Reinold 2004. 45° arm angle from body aligns with rear delt fiber direction.",
       "sources": [
         "Reinold et al. 2004 J Orthop Sports Phys Ther",
         "Schoenfeld et al. 2013"
@@ -5387,7 +5387,7 @@
         "deltoidPosterior": 0.93
       },
       "popularity": "common",
-      "notes": "High-to-low 45Â° angle matches rear delt fiber orientation. Constant tension throughout ROM advantageous vs dumbbells. Top performer for rear delts in EMG testing.",
+      "notes": "High-to-low 45° angle matches rear delt fiber orientation. Constant tension throughout ROM advantageous vs dumbbells. Top performer for rear delts in EMG testing.",
       "sources": [
         "Schoenfeld et al. 2013",
         "Reinold et al. 2004"
@@ -7365,7 +7365,7 @@
         "forearms": 0.4
       },
       "popularity": "common",
-      "notes": "60-80% MVIC. Significant hip flexor involvement below 45Â° flexion. Cue posterior pelvic tilt to maximize rectus abdominis. Grip often limiting factor.",
+      "notes": "60-80% MVIC. Significant hip flexor involvement below 45° flexion. Cue posterior pelvic tilt to maximize rectus abdominis. Grip often limiting factor.",
       "sources": [
         "Escamilla 2006",
         "ACE 2001"

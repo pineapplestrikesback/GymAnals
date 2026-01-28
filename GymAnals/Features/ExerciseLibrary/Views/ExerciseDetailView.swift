@@ -195,7 +195,7 @@ struct ExerciseDetailView: View {
         }
         .sheet(isPresented: $showingMuscleEditor) {
             NavigationStack {
-                MuscleWeightEditorView(viewModel: MuscleWeightViewModel(exercise: exercise))
+                MuscleWeightEditorView(viewModel: MuscleWeightViewModel(exercise: exercise), startInEditMode: true)
             }
         }
     }
