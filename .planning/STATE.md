@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-01-26)
 ## Current Position
 
 Phase: 4 of 5 (Workout Logging)
-Plan: 4 of 5 in current phase
+Plan: 5 of 6 in current phase
 Status: In progress
-Last activity: 2026-01-28 - Completed 04-04-PLAN.md (Exercise Section & Picker)
+Last activity: 2026-01-28 - Completed 04-05-PLAN.md (Active Workout UI)
 
-Progress: [████████████████░░] ~89% (16/~18 total plans estimate)
+Progress: [█████████████████░] ~94% (17/~18 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 16
-- Average duration: 7.7 min
-- Total execution time: 123 min
+- Total plans completed: 17
+- Average duration: 7.5 min
+- Total execution time: 128 min
 
 **By Phase:**
 
@@ -30,11 +30,11 @@ Progress: [████████████████░░] ~89% (16/~18 
 | 01-foundation | 3 | 13 min | 4.3 min |
 | 02-exercise-library | 5 | 61 min | 12.2 min |
 | 03-gyms | 4 | 24 min | 6.0 min |
-| 04-workout-logging | 4 | 25 min | 6.3 min |
+| 04-workout-logging | 5 | 30 min | 6.0 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-04 (4 min), 04-01 (6 min), 04-02 (7 min), 04-03 (8 min), 04-04 (4 min)
-- Trend: Consistent execution pace
+- Last 5 plans: 04-01 (6 min), 04-02 (7 min), 04-03 (8 min), 04-04 (4 min), 04-05 (5 min)
+- Trend: Consistent fast execution
 
 *Updated after each plan completion*
 
@@ -96,6 +96,9 @@ Recent decisions affecting current work:
 - [04-04]: Closure-based binding pattern: (WorkoutSet) -> Binding<T> for ForEach scenarios
 - [04-04]: Exercise picker limits to 50 recent when not searching (performance)
 - [04-04]: FAB 56x56 size per Material Design guidelines
+- [04-05]: LazyVStack with pinnedViews for sticky section headers
+- [04-05]: ExerciseSectionForID helper view for SwiftData UUID fetching in ForEach
+- [04-05]: Popover for timer controls (vs sheet) for inline editing
 
 ### Pending Todos
 
@@ -108,7 +111,7 @@ None.
 ## Session Continuity
 
 Last session: 2026-01-28
-Stopped at: Completed 04-04-PLAN.md (Exercise Section & Picker)
+Stopped at: Completed 04-05-PLAN.md (Active Workout UI)
 Resume file: None
 
 ## Phase 4 Progress
@@ -118,4 +121,5 @@ Phase 4 (Workout Logging) in progress:
 - 04-02: Active Workout ViewModel (COMPLETE)
 - 04-03: Set Logging & Previous Values (COMPLETE)
 - 04-04: Exercise Section & Picker (COMPLETE)
-- 04-05: Active Workout UI (pending)
+- 04-05: Active Workout UI (COMPLETE)
+- 04-06: Final Integration (pending)
