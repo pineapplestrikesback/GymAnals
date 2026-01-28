@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-26)
 
 **Core value:** Precise per-muscle volume tracking with user-defined muscles and weighted set contributions
-**Current focus:** Phase 5 (Exercise Library Rework) - Plan 09 Complete
+**Current focus:** Phase 5 (Exercise Library Rework) - COMPLETE
 
 ## Current Position
 
 Phase: 5 of 6 (Exercise Library Rework)
-Plan: 9 of 10 in current phase
-Status: In progress
-Last activity: 2026-01-28 - Completed 05-09-PLAN.md (Exercise Creation Wizard Updates)
+Plan: 10 of 10 in current phase
+Status: Phase complete
+Last activity: 2026-01-28 - Completed 05-10-PLAN.md (Exercise Library View Updates)
 
-Progress: [████████████████████████░] ~96% (27/~28 total plans estimate)
+Progress: [█████████████████████████] 100% (28/28 total plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 27
+- Total plans completed: 28
 - Average duration: 8.4 min
-- Total execution time: 226 min
+- Total execution time: 234 min
 
 **By Phase:**
 
@@ -31,11 +31,11 @@ Progress: [███████████████████████
 | 02-exercise-library | 5 | 61 min | 12.2 min |
 | 03-gyms | 4 | 24 min | 6.0 min |
 | 04-workout-logging | 6 | 55 min | 9.2 min |
-| 05-exercise-library-rework | 9 | 73 min | 8.1 min |
+| 05-exercise-library-rework | 10 | 81 min | 8.1 min |
 
 **Recent Trend:**
-- Last 5 plans: 05-05 (15 min), 05-06 (4 min), 05-07 (5 min), 05-08 (9 min), 05-09 (8 min)
-- Trend: Wave 6 UI updates quick (most files pre-updated in 05-05)
+- Last 5 plans: 05-06 (4 min), 05-07 (5 min), 05-08 (9 min), 05-09 (8 min), 05-10 (8 min)
+- Trend: Wave 6 UI updates quick (most model files pre-updated in 05-05)
 
 *Updated after each plan completion*
 
@@ -127,6 +127,10 @@ Recent decisions affecting current work:
 - [05-08]: GymAnalsApp calls 4 seed services in dependency order on first launch
 - [05-09]: ExerciseNameStepView pre-fills name from equipment + movement display names
 - [05-09]: resetToDefault restores movement.defaultMuscleWeights (not just clearing)
+- [05-10]: searchTerms matched in-memory (SwiftData can't query array contents)
+- [05-10]: ExerciseRow shows equipment + category badge for richer context
+- [05-10]: ExerciseDetailView shows dimensions, notes, sources, popularity, timer settings
+- [05-10]: Built-in exercises read-only; custom exercises get muscle weight editor
 
 ### Pending Todos
 
@@ -134,22 +138,22 @@ None yet.
 
 ### Blockers/Concerns
 
-None - Variant/VariantMuscle references cleared (ExerciseSeedService and SeedData replaced in 05-07).
+None - Phase 5 complete. All Variant/VariantMuscle references cleared. Exercise library fully functional.
 
 ### Roadmap Evolution
 
-- Phase 5: Exercise Library Rework (inserted before Analytics)
-- Phase 6: Analytics (moved from Phase 5)
+- Phase 5: Exercise Library Rework (inserted before Analytics) - COMPLETE
+- Phase 6: Analytics (moved from Phase 5) - NEXT
 
 ## Session Continuity
 
 Last session: 2026-01-28
-Stopped at: Completed 05-09-PLAN.md (Exercise Creation Wizard Updates)
+Stopped at: Completed 05-10-PLAN.md (Exercise Library View Updates) - Phase 5 COMPLETE
 Resume file: None
 
 ## Phase 5 Progress
 
-Phase 5 (Exercise Library Rework) in progress:
+Phase 5 (Exercise Library Rework) COMPLETE:
 - 05-01: Supporting Types (COMPLETE)
 - 05-02: Muscle Taxonomy Expansion (COMPLETE)
 - 05-03: Equipment Model Updates (COMPLETE)
@@ -159,7 +163,7 @@ Phase 5 (Exercise Library Rework) in progress:
 - 05-07: Seed Services (COMPLETE)
 - 05-08: JSON Resources and App Seeding (COMPLETE)
 - 05-09: Exercise Creation Wizard Updates (COMPLETE)
-- 05-10: Final Integration (pending)
+- 05-10: Exercise Library View Updates (COMPLETE)
 
 **Completed in 05-01:**
 - MovementCategory enum (7 cases)
@@ -220,3 +224,11 @@ Phase 5 (Exercise Library Rework) in progress:
 - MuscleWeightViewModel: activeMuscles computed property, movement-aware resetToDefault
 - All wizard views verified free of Variant/VariantMuscle references
 - ExerciseCreationWizard updated to use ExerciseNameStepView
+
+**Completed in 05-10:**
+- ExerciseSearchResultsView: searchTerms in-memory filtering added
+- ExerciseRow: equipment + category badges, muscle group subtitle
+- ExerciseDetailView: dimensions, notes, sources, popularity, timer settings, toolbar favorite
+- ExercisePickerSheet: searchTerms + movement name search
+- Zero Variant references in codebase verified
+- Full clean build passes
