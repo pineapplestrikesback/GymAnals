@@ -16,6 +16,7 @@ final class SetTimerManager {
     var activeTimers: [SetTimer] = []
 
     private let notificationService: RestTimerNotificationService
+    private var hasRequestedNotificationPermission = false
 
     /// The most recently started timer (highest endTime), shown in header and triggers notification
     var headerTimer: SetTimer? {
@@ -40,6 +41,21 @@ final class SetTimerManager {
 
         // Schedule notification only if this is the new header timer
         if timer.id == headerTimer?.id {
+            requestPermissionAndScheduleNotification()
+        }
+    }
+
+    /// Request notification permission on first timer, then schedule notification
+    private func requestPermissionAndScheduleNotification() {
+        if !hasRequestedNotificationPermission {
+            Task {
+                let granted = await notificationService.requestPermission()
+                hasRequestedNotificationPermission = true
+                if granted {
+                    scheduleNotificationForHeaderTimer()
+                }
+            }
+        } else {
             scheduleNotificationForHeaderTimer()
         }
     }
