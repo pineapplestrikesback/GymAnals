@@ -185,7 +185,7 @@ struct SetRowView: View {
             // Minus button (only when focused)
             if isWeightFocused {
                 stepperButton(systemName: "minus") {
-                    weight = max(0, weight - 2.5)
+                    weight = max(0, weight - 1.0)
                     weightText = formatWeight(weight)
                 }
             }
@@ -215,7 +215,7 @@ struct SetRowView: View {
             // Plus button (only when focused)
             if isWeightFocused {
                 stepperButton(systemName: "plus") {
-                    weight = min(999, weight + 2.5)
+                    weight = min(999, weight + 1.0)
                     weightText = formatWeight(weight)
                 }
             }

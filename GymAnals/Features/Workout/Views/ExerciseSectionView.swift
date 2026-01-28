@@ -105,10 +105,10 @@ struct ExerciseSectionView: View {
                 .padding(.horizontal, 16)
                 .padding(.vertical, 12)
                 .contentShape(Rectangle())
+                .background(Color(.secondarySystemBackground))
             }
             .buttonStyle(.plain)
         }
-        .background(Color(.secondarySystemBackground))
     }
 
     // MARK: - Set Row with Swipe
@@ -175,9 +175,8 @@ private struct SwipeActionRow<Content: View>: View {
 
             // Main content
             content
-                .background(Color(.systemBackground))
                 .offset(x: offset)
-                .gesture(
+                .highPriorityGesture(
                     DragGesture(minimumDistance: 20)
                         .onChanged { value in
                             let translation = value.translation.width
