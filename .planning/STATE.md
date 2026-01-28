@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-26)
 
 **Core value:** Precise per-muscle volume tracking with user-defined muscles and weighted set contributions
-**Current focus:** Phase 5 (Exercise Library Rework) - Plan 01 Complete
+**Current focus:** Phase 5 (Exercise Library Rework) - Plan 02 Complete
 
 ## Current Position
 
 Phase: 5 of 6 (Exercise Library Rework)
-Plan: 1 of 10 in current phase
+Plan: 2 of 10 in current phase
 Status: In progress
-Last activity: 2026-01-28 - Completed 05-01-PLAN.md (Supporting Types)
+Last activity: 2026-01-28 - Completed 05-02-PLAN.md (Muscle Taxonomy Expansion)
 
-Progress: [██████████████████░░] ~68% (19/~28 total plans estimate)
+Progress: [██████████████████░░] ~71% (20/~28 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 19
-- Average duration: 7.7 min
-- Total execution time: 157 min
+- Total plans completed: 20
+- Average duration: 7.6 min
+- Total execution time: 160 min
 
 **By Phase:**
 
@@ -31,11 +31,11 @@ Progress: [██████████████████░░] ~68% (1
 | 02-exercise-library | 5 | 61 min | 12.2 min |
 | 03-gyms | 4 | 24 min | 6.0 min |
 | 04-workout-logging | 6 | 55 min | 9.2 min |
-| 05-exercise-library-rework | 1 | 4 min | 4.0 min |
+| 05-exercise-library-rework | 2 | 7 min | 3.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-04 (4 min), 04-05 (5 min), 04-06 (25 min), 05-01 (4 min)
-- Trend: 05-01 quick foundational plan
+- Last 5 plans: 04-05 (5 min), 04-06 (25 min), 05-01 (4 min), 05-02 (3 min)
+- Trend: 05-02 verification-only plan (changes already committed in 05-01)
 
 *Updated after each plan completion*
 
@@ -107,6 +107,8 @@ Recent decisions affecting current work:
 - [04-06]: Opaque background on swipe content to hide delete button at rest
 - [05-01]: Empty string defaults in embedded Codable structs to avoid SwiftData optional decoding issues
 - [05-01]: Popularity.sortOrder returns 1/2/3 (lower = more popular) for sorting
+- [05-02]: serratusAnterior grouped under back (scapular movement assist)
+- [05-02]: gluteusMinimus and adductors grouped under legs (hip stabilization/adduction)
 
 ### Pending Todos
 
@@ -124,17 +126,17 @@ None.
 ## Session Continuity
 
 Last session: 2026-01-28
-Stopped at: Completed 05-01-PLAN.md (Supporting Types)
+Stopped at: Completed 05-02-PLAN.md (Muscle Taxonomy Expansion)
 Resume file: None
 
 ## Phase 5 Progress
 
 Phase 5 (Exercise Library Rework) in progress:
 - 05-01: Supporting Types (COMPLETE)
-- 05-02: Movement Model Updates (pending)
+- 05-02: Muscle Taxonomy Expansion (COMPLETE)
 - 05-03: Equipment Model Updates (pending)
-- 05-04: Exercise Model Refactor (pending)
-- 05-05: Muscle Enum Updates (pending)
+- 05-04: Movement Model Updates (pending)
+- 05-05: Exercise Model Refactor (pending)
 - 05-06: Movement Seed Service (pending)
 - 05-07: Equipment Seed Service (pending)
 - 05-08: Exercise Preset Seeding (pending)
@@ -147,3 +149,8 @@ Phase 5 (Exercise Library Rework) in progress:
 - Popularity enum (3 cases with sortOrder)
 - Dimensions embedded struct (5 properties)
 - EquipmentProperties embedded struct (4 properties)
+
+**Completed in 05-02:**
+- Muscle enum expanded to 34 cases (verified, already done in 05-01)
+- serratusAnterior, gluteusMinimus, adductors added
+- MuscleGroup auto-includes via filter pattern
