@@ -39,7 +39,7 @@ struct ExerciseDetailView: View {
             Section("Exercise Info") {
                 LabeledContent("Name", value: exercise.displayName)
 
-                if let equipment = exercise.equipment?.name {
+                if let equipment = exercise.equipment?.displayName {
                     LabeledContent("Equipment", value: equipment)
                 }
 

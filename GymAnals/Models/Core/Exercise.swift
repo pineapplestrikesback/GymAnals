@@ -35,7 +35,7 @@ final class Exercise {
     /// User-friendly display name combining variant and equipment
     var displayName: String {
         let variantName = variant?.name ?? "Unknown"
-        let equipmentName = equipment?.name ?? ""
+        let equipmentName = equipment?.displayName ?? ""
         if equipmentName.isEmpty {
             return variantName
         }
