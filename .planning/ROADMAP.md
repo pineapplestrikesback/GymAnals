@@ -17,7 +17,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Gyms** - Gym definitions and exercise branching per location
 - [x] **Phase 4: Workout Logging** - Active workout session with fast set logging
 - [x] **Phase 5: Exercise Library Rework** - Dimensions-based model with 237 exercise presets
-- [ ] **Phase 6: Analytics** - Volume dashboard with weighted muscle calculations
+- [ ] **Phase 6: Bug Fixes** - Critical bug fixes and UX improvements across gym, exercise, and workout flows
+- [ ] **Phase 7: Analytics** - Volume dashboard with weighted muscle calculations
 
 ## Phase Details
 
@@ -123,9 +124,32 @@ Plans:
 - [x] 05-09-PLAN.md — Update exercise creation wizard for new model (Wave 6)
 - [x] 05-10-PLAN.md — Update exercise library views for new model (Wave 6)
 
-### Phase 6: Analytics
-**Goal**: Users can see weekly volume per muscle calculated from weighted contributions
+### Phase 6: Bug Fixes
+**Goal**: Resolve 20 critical bugs and UX issues discovered in Phases 1-5 to ensure production-ready quality
 **Depends on**: Phase 5
+**Requirements**: None (bug fixes)
+**Success Criteria** (what must be TRUE):
+  1. Gym switching updates immediately in workout view and is disabled during active workouts
+  2. New gyms can be immediately selected after creation
+  3. Character encoding issues (degree symbols) are fixed
+  4. Exercise library search is available from all entry points
+  5. Muscle weight sliders are functional and properly editable
+  6. Custom exercises are fully editable (name, equipment, movement, etc.)
+  7. Exercise selection in workout flow supports multi-select with checkboxes
+  8. Set logging layout displays previous workout data (Hevy-style)
+  9. Rest timer is visible and editable during workouts
+  10. Gym indicator visible in workout logging header with color theming
+**Plans**: 4 plans
+
+Plans:
+- [ ] 06-01-PLAN.md — Fix encoding, gym selector disabled state, and new gym auto-select
+- [ ] 06-02-PLAN.md — Muscle weight slider UX and custom exercise edit view
+- [ ] 06-03-PLAN.md — Hevy-style set layout with column headers and inline previous data
+- [ ] 06-04-PLAN.md — Multi-select picker, always-visible timer, and gym indicator in header
+
+### Phase 7: Analytics
+**Goal**: Users can see weekly volume per muscle calculated from weighted contributions
+**Depends on**: Phase 6
 **Requirements**: ANAL-01, ANAL-02
 **Success Criteria** (what must be TRUE):
   1. Volume dashboard shows weekly sets per muscle calculated from weighted exercise contributions
@@ -135,13 +159,13 @@ Plans:
 **Plans**: TBD
 
 Plans:
-- [ ] 06-01: TBD
-- [ ] 06-02: TBD
+- [ ] 07-01: TBD
+- [ ] 07-02: TBD
 
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -150,8 +174,9 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | 3. Gyms | 4/4 | ✓ Complete | 2026-01-27 |
 | 4. Workout Logging | 6/6 | ✓ Complete | 2026-01-28 |
 | 5. Exercise Library Rework | 10/10 | ✓ Complete | 2026-01-28 |
-| 6. Analytics | 0/TBD | Not started | - |
+| 6. Bug Fixes | 0/4 | Not started | - |
+| 7. Analytics | 0/TBD | Not started | - |
 
 ---
 *Roadmap created: 2026-01-26*
-*Last updated: 2026-01-28 — Phase 5 complete (10 plans in 6 waves)*
+*Last updated: 2026-01-28 — Phase 6 planned with 4 plans in 2 waves*
