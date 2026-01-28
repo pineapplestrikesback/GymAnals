@@ -84,13 +84,15 @@ Plans:
   6. Rest timer starts between sets with configurable duration and notification
   7. User can finish and save workout to history
   8. Active workout auto-saves after each set (crash recovery works)
-**Plans**: TBD
+**Plans**: 6 plans
 
 Plans:
-- [ ] 04-01: TBD
-- [ ] 04-02: TBD
-- [ ] 04-03: TBD
-- [ ] 04-04: TBD
+- [ ] 04-01-PLAN.md — Timer infrastructure with Date-based persistence and notifications
+- [ ] 04-02-PLAN.md — ActiveWorkoutViewModel with workout lifecycle and previous value lookup
+- [ ] 04-03-PLAN.md — Set entry components (stepper, timer badge, set row with hints)
+- [ ] 04-04-PLAN.md — Exercise section and picker (collapsible sections, FAB, search)
+- [ ] 04-05-PLAN.md — ActiveWorkoutView with sticky header and finish flow
+- [ ] 04-06-PLAN.md — WorkoutTabView integration and crash recovery (checkpoint)
 
 ### Phase 5: Analytics
 **Goal**: Users can see weekly volume per muscle calculated from weighted contributions
@@ -117,9 +119,9 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 1. Foundation | 3/3 | ✓ Complete | 2026-01-26 |
 | 2. Exercise Library | 5/5 | ✓ Complete | 2026-01-27 |
 | 3. Gyms | 4/4 | ✓ Complete | 2026-01-27 |
-| 4. Workout Logging | 0/TBD | Not started | - |
+| 4. Workout Logging | 0/6 | Not started | - |
 | 5. Analytics | 0/TBD | Not started | - |
 
 ---
 *Roadmap created: 2026-01-26*
-*Last updated: 2026-01-27 — Phase 3 complete (4 plans executed)*
+*Last updated: 2026-01-28 — Phase 4 planned (6 plans in 4 waves)*
