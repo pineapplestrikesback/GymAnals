@@ -126,14 +126,8 @@ struct ExerciseSectionView: View {
                 previousReps: previousReps(workoutSet),
                 previousWeight: previousWeight(workoutSet),
                 weightUnit: weightUnit,
-                timer: timerForSet(workoutSet),
                 isConfirmed: workoutSet.isConfirmed,
                 onConfirm: { onConfirmSet(workoutSet) },
-                onTimerTap: {
-                    if let timer = timerForSet(workoutSet) {
-                        onTimerTap(timer)
-                    }
-                },
                 focusedField: $focusedField,
                 setID: workoutSet.id
             )
