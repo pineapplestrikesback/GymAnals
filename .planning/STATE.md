@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-26)
 
 **Core value:** Precise per-muscle volume tracking with user-defined muscles and weighted set contributions
-**Current focus:** Phase 5 (Exercise Library Rework) - Plan 07 Complete
+**Current focus:** Phase 5 (Exercise Library Rework) - Plan 08 Complete
 
 ## Current Position
 
 Phase: 5 of 6 (Exercise Library Rework)
-Plan: 7 of 10 in current phase
+Plan: 8 of 10 in current phase
 Status: In progress
-Last activity: 2026-01-28 - Completed 05-07-PLAN.md (Seed Services)
+Last activity: 2026-01-28 - Completed 05-08-PLAN.md (JSON Resources and App Seeding)
 
-Progress: [██████████████████████░] ~89% (25/~28 total plans estimate)
+Progress: [███████████████████████░] ~93% (26/~28 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 25
+- Total plans completed: 26
 - Average duration: 8.4 min
-- Total execution time: 209 min
+- Total execution time: 218 min
 
 **By Phase:**
 
@@ -31,11 +31,11 @@ Progress: [██████████████████████░
 | 02-exercise-library | 5 | 61 min | 12.2 min |
 | 03-gyms | 4 | 24 min | 6.0 min |
 | 04-workout-logging | 6 | 55 min | 9.2 min |
-| 05-exercise-library-rework | 7 | 56 min | 8.0 min |
+| 05-exercise-library-rework | 8 | 65 min | 8.1 min |
 
 **Recent Trend:**
-- Last 5 plans: 05-03 (10 min), 05-04 (11 min), 05-05 (15 min), 05-06 (4 min), 05-07 (5 min)
-- Trend: Wave 5 seeding moderate (JSON + seed service creation)
+- Last 5 plans: 05-04 (11 min), 05-05 (15 min), 05-06 (4 min), 05-07 (5 min), 05-08 (9 min)
+- Trend: Wave 5 seeding moderate (JSON + seed service creation + app init wiring)
 
 *Updated after each plan completion*
 
@@ -123,6 +123,8 @@ Recent decisions affecting current work:
 - [05-07]: Entity-specific seed services (one per model type) replace monolithic ExerciseSeedService
 - [05-07]: PresetSeedService builds lookup maps from fetched entities for O(1) relationship linking
 - [05-07]: Muscle key validation with warning (not failure) for graceful degradation
+- [05-08]: JSON resources in app bundle (movements.json, equipment.json, presets_all.json)
+- [05-08]: GymAnalsApp calls 4 seed services in dependency order on first launch
 
 ### Pending Todos
 
@@ -140,7 +142,7 @@ None - Variant/VariantMuscle references cleared (ExerciseSeedService and SeedDat
 ## Session Continuity
 
 Last session: 2026-01-28
-Stopped at: Completed 05-07-PLAN.md (Seed Services)
+Stopped at: Completed 05-08-PLAN.md (JSON Resources and App Seeding)
 Resume file: None
 
 ## Phase 5 Progress
@@ -153,7 +155,7 @@ Phase 5 (Exercise Library Rework) in progress:
 - 05-05: Exercise Model Refactor (COMPLETE)
 - 05-06: Remove Variant/VariantMuscle Models (COMPLETE)
 - 05-07: Seed Services (COMPLETE)
-- 05-08: Exercise Preset Seeding (pending)
+- 05-08: JSON Resources and App Seeding (COMPLETE)
 - 05-09: Exercise Browser Updates (pending)
 - 05-10: Final Integration (pending)
 
@@ -203,3 +205,9 @@ Phase 5 (Exercise Library Rework) in progress:
 - Deleted ExerciseSeedService.swift (deprecated Variant-based seeding)
 - JSON resources: equipment.json, movements.json, presets_all.json added to bundle
 - GymAnalsApp.init: Updated seeding order (Gym -> Equipment -> Movement -> Preset)
+
+**Completed in 05-08:**
+- JSON resources verified in app bundle (movements.json, equipment.json, presets_all.json)
+- Old exercises.json deleted from Resources
+- GymAnalsApp seeding wired and build verified
+- Note: 05-07 and 05-08 ran in parallel; both created seed services (converged on same implementation)
