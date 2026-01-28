@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-01-26)
 ## Current Position
 
 Phase: 4 of 5 (Workout Logging)
-Plan: 1 of 5 in current phase
+Plan: 2 of 5 in current phase
 Status: In progress
-Last activity: 2026-01-28 - Completed 04-01-PLAN.md (Timer Infrastructure)
+Last activity: 2026-01-28 - Completed 04-02-PLAN.md (Active Workout ViewModel)
 
-Progress: [█████████████░░░░░] ~72% (13/~18 total plans estimate)
+Progress: [██████████████░░░░] ~78% (14/~18 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 13
-- Average duration: 8.0 min
-- Total execution time: 104 min
+- Total plans completed: 14
+- Average duration: 7.9 min
+- Total execution time: 111 min
 
 **By Phase:**
 
@@ -30,10 +30,10 @@ Progress: [█████████████░░░░░] ~72% (13/~18 
 | 01-foundation | 3 | 13 min | 4.3 min |
 | 02-exercise-library | 5 | 61 min | 12.2 min |
 | 03-gyms | 4 | 24 min | 6.0 min |
-| 04-workout-logging | 1 | 6 min | 6.0 min |
+| 04-workout-logging | 2 | 13 min | 6.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-01 (6 min), 03-03 (7 min), 03-02 (7 min), 03-04 (4 min), 04-01 (6 min)
+- Last 5 plans: 03-03 (7 min), 03-02 (7 min), 03-04 (4 min), 04-01 (6 min), 04-02 (7 min)
 - Trend: Consistent execution pace
 
 *Updated after each plan completion*
@@ -87,6 +87,9 @@ Recent decisions affecting current work:
 - [04-01]: Date-based endTime for timer background persistence (iOS suspends countdown timers)
 - [04-01]: Only header timer (most recent) triggers notifications to avoid spam
 - [04-01]: 2.5 lbs weight increment matches standard plate availability
+- [04-02]: Exercise order tracked as [UUID] array for display sequence
+- [04-02]: Pre-fill new sets from previous workout values at same gym
+- [04-02]: Crash recovery via isActive == true query on init
 
 ### Pending Todos
 
@@ -99,14 +102,14 @@ None.
 ## Session Continuity
 
 Last session: 2026-01-28
-Stopped at: Completed 04-01-PLAN.md (Timer Infrastructure)
+Stopped at: Completed 04-02-PLAN.md (Active Workout ViewModel)
 Resume file: None
 
 ## Phase 4 Progress
 
 Phase 4 (Workout Logging) in progress:
 - 04-01: Timer Infrastructure (COMPLETE)
-- 04-02: Workout Session UI (pending)
+- 04-02: Active Workout ViewModel (COMPLETE)
 - 04-03: Set Logging & Previous Values (pending)
 - 04-04: Timer UI & Controls (pending)
 - 04-05: Exercise Picker & Reordering (pending)
