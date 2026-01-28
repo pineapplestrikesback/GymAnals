@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-26)
 
 **Core value:** Precise per-muscle volume tracking with user-defined muscles and weighted set contributions
-**Current focus:** Phase 4 - Workout Logging (IN PROGRESS)
+**Current focus:** Phase 4 Complete - Ready for Phase 5 (Workout History)
 
 ## Current Position
 
-Phase: 4 of 5 (Workout Logging)
-Plan: 5 of 6 in current phase
-Status: In progress
-Last activity: 2026-01-28 - Completed 04-05-PLAN.md (Active Workout UI)
+Phase: 4 of 5 (Workout Logging) - COMPLETE
+Plan: 6 of 6 in current phase
+Status: Phase complete
+Last activity: 2026-01-28 - Completed 04-06-PLAN.md (Final Integration)
 
-Progress: [█████████████████░] ~94% (17/~18 total plans estimate)
+Progress: [██████████████████░] ~100% (18/~18 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 17
-- Average duration: 7.5 min
-- Total execution time: 128 min
+- Total plans completed: 18
+- Average duration: 8.0 min
+- Total execution time: 153 min
 
 **By Phase:**
 
@@ -30,11 +30,11 @@ Progress: [█████████████████░] ~94% (17/~18 
 | 01-foundation | 3 | 13 min | 4.3 min |
 | 02-exercise-library | 5 | 61 min | 12.2 min |
 | 03-gyms | 4 | 24 min | 6.0 min |
-| 04-workout-logging | 5 | 30 min | 6.0 min |
+| 04-workout-logging | 6 | 55 min | 9.2 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-01 (6 min), 04-02 (7 min), 04-03 (8 min), 04-04 (4 min), 04-05 (5 min)
-- Trend: Consistent fast execution
+- Last 5 plans: 04-02 (7 min), 04-03 (8 min), 04-04 (4 min), 04-05 (5 min), 04-06 (25 min)
+- Trend: 04-06 longer due to extensive verification bug fixes
 
 *Updated after each plan completion*
 
@@ -99,6 +99,11 @@ Recent decisions affecting current work:
 - [04-05]: LazyVStack with pinnedViews for sticky section headers
 - [04-05]: ExerciseSectionForID helper view for SwiftData UUID fetching in ForEach
 - [04-05]: Popover for timer controls (vs sheet) for inline editing
+- [04-06]: StepperTextField for quick +/- adjustment with focus-aware button visibility
+- [04-06]: Custom SwipeActionRow for swipe-to-delete outside List context
+- [04-06]: highPriorityGesture for swipe to take precedence over scroll
+- [04-06]: Checkmark toggle allows un-confirming sets and canceling timers
+- [04-06]: Opaque background on swipe content to hide delete button at rest
 
 ### Pending Todos
 
@@ -111,15 +116,29 @@ None.
 ## Session Continuity
 
 Last session: 2026-01-28
-Stopped at: Completed 04-05-PLAN.md (Active Workout UI)
+Stopped at: Completed 04-06-PLAN.md (Final Integration) - Phase 4 Complete
 Resume file: None
 
-## Phase 4 Progress
+## Phase 4 Complete
 
-Phase 4 (Workout Logging) in progress:
+Phase 4 (Workout Logging) fully complete:
 - 04-01: Timer Infrastructure (COMPLETE)
 - 04-02: Active Workout ViewModel (COMPLETE)
 - 04-03: Set Logging & Previous Values (COMPLETE)
 - 04-04: Exercise Section & Picker (COMPLETE)
 - 04-05: Active Workout UI (COMPLETE)
-- 04-06: Final Integration (pending)
+- 04-06: Final Integration (COMPLETE)
+
+**Key deliverables:**
+- Start/resume workout from Workout tab
+- Add exercises via floating action button
+- Log sets with stepper input (<10 seconds)
+- Previous workout values shown inline
+- Per-set rest timers with notifications
+- Swipe-to-delete for sets and exercises
+- Sticky header with duration and timer
+- Crash recovery (active workout persists)
+
+## Next: Phase 5 (Workout History)
+
+Ready to begin Phase 5 planning when user requests.
