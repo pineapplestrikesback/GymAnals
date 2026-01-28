@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-26)
 
 **Core value:** Precise per-muscle volume tracking with user-defined muscles and weighted set contributions
-**Current focus:** Phase 5 (Exercise Library Rework) - Plan 03 Complete
+**Current focus:** Phase 5 (Exercise Library Rework) - Plan 04 Complete
 
 ## Current Position
 
 Phase: 5 of 6 (Exercise Library Rework)
-Plan: 3 of 10 in current phase
+Plan: 4 of 10 in current phase
 Status: In progress
-Last activity: 2026-01-28 - Completed 05-03-PLAN.md (Equipment Model Updates)
+Last activity: 2026-01-28 - Completed 05-04-PLAN.md (Movement Model Updates)
 
-Progress: [███████████████████░] ~75% (21/~28 total plans estimate)
+Progress: [███████████████████░] ~79% (22/~28 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 21
-- Average duration: 7.7 min
-- Total execution time: 170 min
+- Total plans completed: 22
+- Average duration: 8.2 min
+- Total execution time: 181 min
 
 **By Phase:**
 
@@ -31,11 +31,11 @@ Progress: [███████████████████░] ~75% (2
 | 02-exercise-library | 5 | 61 min | 12.2 min |
 | 03-gyms | 4 | 24 min | 6.0 min |
 | 04-workout-logging | 6 | 55 min | 9.2 min |
-| 05-exercise-library-rework | 3 | 17 min | 5.7 min |
+| 05-exercise-library-rework | 4 | 28 min | 7.0 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-06 (25 min), 05-01 (4 min), 05-02 (3 min), 05-03 (10 min)
-- Trend: 05-03 included blocking fix for incomplete 05-04 commit
+- Last 5 plans: 05-01 (4 min), 05-02 (3 min), 05-03 (10 min), 05-04 (11 min)
+- Trend: Wave 2 model updates progressing
 
 *Updated after each plan completion*
 
@@ -112,6 +112,8 @@ Recent decisions affecting current work:
 - [05-03]: String id allows snake_case identifiers for built-in equipment, UUID strings for custom
 - [05-03]: Convenience init preserves backward compatibility with existing seed service
 - [05-03]: displayName replaces name for consistency with Movement model naming
+- [05-04]: String id allows snake_case identifiers for built-in movements
+- [05-04]: exercises relationship temporarily commented until Exercise.movement exists
 
 ### Pending Todos
 
@@ -129,7 +131,7 @@ None.
 ## Session Continuity
 
 Last session: 2026-01-28
-Stopped at: Completed 05-03-PLAN.md (Equipment Model Updates)
+Stopped at: Completed 05-04-PLAN.md (Movement Model Updates)
 Resume file: None
 
 ## Phase 5 Progress
@@ -138,7 +140,7 @@ Phase 5 (Exercise Library Rework) in progress:
 - 05-01: Supporting Types (COMPLETE)
 - 05-02: Muscle Taxonomy Expansion (COMPLETE)
 - 05-03: Equipment Model Updates (COMPLETE)
-- 05-04: Movement Model Updates (COMPLETE - committed in 05-03 as blocking fix)
+- 05-04: Movement Model Updates (COMPLETE - summary created)
 - 05-05: Exercise Model Refactor (pending)
 - 05-06: Movement Seed Service (pending)
 - 05-07: Equipment Seed Service (pending)
@@ -162,4 +164,10 @@ Phase 5 (Exercise Library Rework) in progress:
 - Equipment model: String id, displayName, categoryRaw, properties, notes
 - Convenience init for backward compatibility
 - Updated views to use equipment.displayName
-- Also fixed incomplete Movement model from 05-04 (String id, displayName, categoryRaw)
+
+**Completed in 05-04:**
+- Movement model: String id, displayName, categoryRaw, subcategory
+- applicableDimensions and applicableEquipment constraint arrays
+- defaultMuscleWeights dictionary for inherited targeting
+- Removed variants relationship (Variant being phased out)
+- Updated MovementStepView to use displayName
