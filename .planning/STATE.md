@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-26)
 
 **Core value:** Precise per-muscle volume tracking with user-defined muscles and weighted set contributions
-**Current focus:** Phase 3 - Gyms (COMPLETE)
+**Current focus:** Phase 4 - Workout Logging (IN PROGRESS)
 
 ## Current Position
 
-Phase: 3 of 5 (Gyms)
-Plan: 4 of 4 in current phase (all complete)
-Status: Phase complete
-Last activity: 2026-01-27 - Completed 03-04-PLAN.md (Selector-Management Flow)
+Phase: 4 of 5 (Workout Logging)
+Plan: 1 of 5 in current phase
+Status: In progress
+Last activity: 2026-01-28 - Completed 04-01-PLAN.md (Timer Infrastructure)
 
-Progress: [████████████░] ~67% (12/~18 total plans estimate)
+Progress: [█████████████░░░░░] ~72% (13/~18 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 12
-- Average duration: 8.2 min
-- Total execution time: 98 min
+- Total plans completed: 13
+- Average duration: 8.0 min
+- Total execution time: 104 min
 
 **By Phase:**
 
@@ -30,10 +30,11 @@ Progress: [████████████░] ~67% (12/~18 total plans est
 | 01-foundation | 3 | 13 min | 4.3 min |
 | 02-exercise-library | 5 | 61 min | 12.2 min |
 | 03-gyms | 4 | 24 min | 6.0 min |
+| 04-workout-logging | 1 | 6 min | 6.0 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-05 (27 min), 03-01 (6 min), 03-03 (7 min), 03-02 (7 min), 03-04 (4 min)
-- Trend: Gym plans consistently fast (patterns well-established)
+- Last 5 plans: 03-01 (6 min), 03-03 (7 min), 03-02 (7 min), 03-04 (4 min), 04-01 (6 min)
+- Trend: Consistent execution pace
 
 *Updated after each plan completion*
 
@@ -83,6 +84,9 @@ Recent decisions affecting current work:
 - [03-04]: Delayed sheet transition (0.3s) via DispatchQueue.main.asyncAfter
 - [03-04]: Dictionary grouping with compactMap for nil filtering in gymBranches
 - [03-04]: Gym branches sorted by lastUsedDate for relevance ordering
+- [04-01]: Date-based endTime for timer background persistence (iOS suspends countdown timers)
+- [04-01]: Only header timer (most recent) triggers notifications to avoid spam
+- [04-01]: 2.5 lbs weight increment matches standard plate availability
 
 ### Pending Todos
 
@@ -94,16 +98,15 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-01-27
-Stopped at: Completed 03-04-PLAN.md (Selector-Management Flow)
+Last session: 2026-01-28
+Stopped at: Completed 04-01-PLAN.md (Timer Infrastructure)
 Resume file: None
 
-## Phase 3 Summary
+## Phase 4 Progress
 
-Phase 3 (Gyms) is now complete with all 4 plans executed:
-- 03-01: Gym model with color tags and relationships
-- 03-02: Gym selector UI with header and sheet
-- 03-03: Gym management view with CRUD operations
-- 03-04: Selector-management flow and exercise detail gym branches
-
-Ready for Phase 4: Workout Logging
+Phase 4 (Workout Logging) in progress:
+- 04-01: Timer Infrastructure (COMPLETE)
+- 04-02: Workout Session UI (pending)
+- 04-03: Set Logging & Previous Values (pending)
+- 04-04: Timer UI & Controls (pending)
+- 04-05: Exercise Picker & Reordering (pending)
