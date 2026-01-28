@@ -16,15 +16,39 @@ struct ExerciseSectionView: View {
     let onDeleteSet: (WorkoutSet) -> Void
     let onAddSet: () -> Void
     let onDeleteExercise: () -> Void
+
+    // For SetRowView bindings
+    let repsBinding: (WorkoutSet) -> Binding<Int>
+    let weightBinding: (WorkoutSet) -> Binding<Double>
+    let previousReps: (WorkoutSet) -> Int?
+    let previousWeight: (WorkoutSet) -> Double?
+    let timerForSet: (WorkoutSet) -> SetTimer?
+    let onConfirmSet: (WorkoutSet) -> Void
+    let onTimerTap: (SetTimer) -> Void
+
+    @FocusState.Binding var focusedField: SetEntryField?
     let weightUnit: WeightUnit
 
     var body: some View {
         DisclosureGroup(isExpanded: $isExpanded) {
             VStack(spacing: 0) {
                 ForEach(sets) { workoutSet in
-                    SetRowPlaceholder(
-                        workoutSet: workoutSet,
-                        weightUnit: weightUnit
+                    SetRowView(
+                        setNumber: workoutSet.setNumber,
+                        reps: repsBinding(workoutSet),
+                        weight: weightBinding(workoutSet),
+                        previousReps: previousReps(workoutSet),
+                        previousWeight: previousWeight(workoutSet),
+                        weightUnit: weightUnit,
+                        timer: timerForSet(workoutSet),
+                        onConfirm: { onConfirmSet(workoutSet) },
+                        onTimerTap: {
+                            if let timer = timerForSet(workoutSet) {
+                                onTimerTap(timer)
+                            }
+                        },
+                        focusedField: $focusedField,
+                        setID: workoutSet.id
                     )
                     .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                         Button(role: .destructive) {
@@ -88,59 +112,5 @@ struct ExerciseSectionView: View {
             }
         }
         .contentShape(Rectangle())
-    }
-}
-
-// MARK: - Placeholder Set Row
-
-/// Simplified set row placeholder until SetRowView is implemented in 04-03.
-/// Displays set number, reps, weight, and basic layout.
-private struct SetRowPlaceholder: View {
-    let workoutSet: WorkoutSet
-    let weightUnit: WeightUnit
-
-    var body: some View {
-        HStack(spacing: 16) {
-            Text("\(workoutSet.setNumber)")
-                .font(.headline)
-                .foregroundStyle(.secondary)
-                .frame(width: 24)
-
-            VStack(alignment: .leading, spacing: 2) {
-                Text("\(workoutSet.reps)")
-                    .font(.body.monospacedDigit())
-                Text("reps")
-                    .font(.caption2)
-                    .foregroundStyle(.tertiary)
-            }
-            .frame(width: 50)
-
-            Text("x")
-                .foregroundStyle(.secondary)
-
-            VStack(alignment: .leading, spacing: 2) {
-                Text(formatWeight(workoutSet.weight))
-                    .font(.body.monospacedDigit())
-                Text(weightUnit.abbreviation)
-                    .font(.caption2)
-                    .foregroundStyle(.tertiary)
-            }
-            .frame(width: 60)
-
-            Spacer()
-
-            Image(systemName: "checkmark.circle.fill")
-                .font(.title2)
-                .foregroundStyle(.green)
-        }
-        .padding(.horizontal, 8)
-        .padding(.vertical, 10)
-    }
-
-    private func formatWeight(_ weight: Double) -> String {
-        if weight.truncatingRemainder(dividingBy: 1) == 0 {
-            return String(format: "%.0f", weight)
-        }
-        return String(format: "%.1f", weight)
     }
 }
