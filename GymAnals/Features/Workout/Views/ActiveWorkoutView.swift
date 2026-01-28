@@ -183,16 +183,24 @@ struct ActiveWorkoutView: View {
     private func handleSetConfirmation(_ workoutSet: WorkoutSet) {
         guard let exercise = workoutSet.exercise else { return }
 
-        // Update exercise last used date
-        exercise.lastUsedDate = .now
+        // Toggle confirmation state
+        if workoutSet.isConfirmed {
+            // Unconfirming: remove timer for this set
+            workoutSet.isConfirmed = false
+            timerManager.removeTimer(forSetID: workoutSet.id)
+        } else {
+            // Confirming: mark as complete and start timer
+            workoutSet.isConfirmed = true
+            workoutSet.completedDate = .now
 
-        // Mark set completion time
-        workoutSet.completedDate = .now
+            // Update exercise last used date
+            exercise.lastUsedDate = .now
 
-        // Start timer if auto-start is enabled
-        if exercise.autoStartTimer {
-            timerManager.removeExpiredTimers()
-            timerManager.startTimer(for: workoutSet.id, duration: exercise.restDuration)
+            // Start timer if auto-start is enabled
+            if exercise.autoStartTimer {
+                timerManager.removeExpiredTimers()
+                timerManager.startTimer(for: workoutSet.id, duration: exercise.restDuration)
+            }
         }
     }
 }

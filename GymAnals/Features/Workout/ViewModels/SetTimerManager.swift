@@ -78,6 +78,13 @@ final class SetTimerManager {
         }
     }
 
+    /// Remove timer associated with a specific workout set (used when unconfirming a set)
+    /// - Parameter setID: The UUID of the WorkoutSet whose timer should be removed
+    func removeTimer(forSetID setID: UUID) {
+        guard let timer = activeTimers.first(where: { $0.setID == setID }) else { return }
+        skipTimer(timer)
+    }
+
     /// Extend a timer by adding additional seconds
     /// - Parameters:
     ///   - timer: The timer to extend
