@@ -18,8 +18,6 @@ final class PersistenceController {
     private init() {
         schema = Schema([
             Movement.self,
-            Variant.self,
-            VariantMuscle.self,
             Equipment.self,
             Exercise.self,
             Gym.self,
@@ -59,8 +57,6 @@ final class PersistenceController {
     static var preview: ModelContainer {
         let schema = Schema([
             Movement.self,
-            Variant.self,
-            VariantMuscle.self,
             Equipment.self,
             Exercise.self,
             Gym.self,
