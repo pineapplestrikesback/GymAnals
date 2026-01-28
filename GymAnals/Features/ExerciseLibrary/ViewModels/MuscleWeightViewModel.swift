@@ -65,10 +65,23 @@ final class MuscleWeightViewModel {
         hasChanges = false
     }
 
+    /// Active muscles (weight > 0), sorted by weight descending
+    var activeMuscles: [(muscle: Muscle, weight: Double)] {
+        weights.filter { $0.value > 0 }
+            .sorted { $0.value > $1.value }
+            .map { ($0.key, $0.value) }
+    }
+
     func resetToDefault() {
-        // For built-in exercises, this would restore original seed data
-        // For now, clear all weights
+        // Restore from movement's default muscle weights
         weights = [:]
+        if let defaults = exercise?.movement?.defaultMuscleWeights {
+            for (key, value) in defaults {
+                if let muscle = Muscle(rawValue: key) {
+                    weights[muscle] = value
+                }
+            }
+        }
         hasChanges = weights != originalWeights
     }
 }
