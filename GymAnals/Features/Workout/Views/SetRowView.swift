@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// A single set entry row with reps, weight inputs, previous value hints, timer badge, and confirm button.
-/// Combines direct keyboard entry with "last: X" hints below each field for fast set logging.
+/// Combines +/- stepper buttons with direct keyboard entry and "last: X" hints for fast set logging.
 struct SetRowView: View {
     let setNumber: Int
     @Binding var reps: Int
@@ -17,92 +17,90 @@ struct SetRowView: View {
     let previousWeight: Double?
     let weightUnit: WeightUnit
     let timer: SetTimer?
+    let isConfirmed: Bool
     let onConfirm: () -> Void
     let onTimerTap: () -> Void
 
     @FocusState.Binding var focusedField: SetEntryField?
     let setID: UUID
 
+    /// Internal double binding for reps (StepperTextField expects Double)
+    private var repsDouble: Binding<Double> {
+        Binding(
+            get: { Double(reps) },
+            set: { reps = Int($0) }
+        )
+    }
+
     var body: some View {
-        HStack(spacing: 12) {
-            // Set number label
-            Text("\(setNumber)")
-                .font(.headline)
-                .foregroundStyle(.secondary)
-                .frame(width: 24)
+        VStack(alignment: .leading, spacing: 4) {
+            HStack(spacing: 8) {
+                // Set number label
+                Text("\(setNumber)")
+                    .font(.headline)
+                    .foregroundStyle(.secondary)
+                    .frame(width: 24)
 
-            // Reps input
-            repsSection
+                // Reps stepper
+                StepperTextField(
+                    value: repsDouble,
+                    step: 1,
+                    range: 0...999,
+                    unit: "reps"
+                )
 
-            Text("x")
-                .foregroundStyle(.secondary)
+                // Weight stepper
+                StepperTextField(
+                    value: $weight,
+                    step: 2.5,
+                    range: 0...999,
+                    unit: weightUnit.abbreviation
+                )
 
-            // Weight input
-            weightSection
+                Spacer()
 
-            Spacer()
+                // Timer badge (if active)
+                if let timer {
+                    SetTimerBadge(timer: timer, onTap: onTimerTap)
+                }
 
-            // Timer badge (if active)
-            if let timer {
-                SetTimerBadge(timer: timer, onTap: onTimerTap)
+                // Confirm button (toggleable)
+                Button {
+                    onConfirm()
+                } label: {
+                    Image(systemName: isConfirmed ? "checkmark.circle.fill" : "circle")
+                        .font(.title2)
+                        .foregroundStyle(isConfirmed ? .green : .secondary)
+                }
+                .buttonStyle(.plain)
             }
 
-            // Confirm button
-            Button {
-                onConfirm()
-            } label: {
-                Image(systemName: "checkmark.circle.fill")
-                    .font(.title2)
-                    .foregroundStyle(.green)
+            // Previous values hint row
+            if previousReps != nil || previousWeight != nil {
+                HStack(spacing: 8) {
+                    Spacer()
+                        .frame(width: 24)
+
+                    if let previousReps {
+                        Text("last: \(previousReps)")
+                            .font(.caption2)
+                            .foregroundStyle(.tertiary)
+                    }
+
+                    Spacer()
+
+                    if let previousWeight {
+                        Text("last: \(formatWeight(previousWeight)) \(weightUnit.abbreviation)")
+                            .font(.caption2)
+                            .foregroundStyle(.tertiary)
+                    }
+
+                    Spacer()
+                }
             }
-            .buttonStyle(.plain)
         }
         .padding(.horizontal, 8)
         .padding(.vertical, 10)
-    }
-
-    // MARK: - Reps Section
-
-    private var repsSection: some View {
-        VStack(alignment: .leading, spacing: 2) {
-            TextField("", value: $reps, format: .number)
-                .keyboardType(.numberPad)
-                .multilineTextAlignment(.center)
-                .frame(width: 50)
-                .textFieldStyle(.roundedBorder)
-                .focused($focusedField, equals: .reps(setID: setID))
-
-            if let previousReps {
-                Text("last: \(previousReps)")
-                    .font(.caption2)
-                    .foregroundStyle(.tertiary)
-            }
-        }
-    }
-
-    // MARK: - Weight Section
-
-    private var weightSection: some View {
-        VStack(alignment: .leading, spacing: 2) {
-            HStack(spacing: 4) {
-                TextField("", value: $weight, format: .number)
-                    .keyboardType(.decimalPad)
-                    .multilineTextAlignment(.center)
-                    .frame(width: 60)
-                    .textFieldStyle(.roundedBorder)
-                    .focused($focusedField, equals: .weight(setID: setID))
-
-                Text(weightUnit.abbreviation)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-            }
-
-            if let previousWeight {
-                Text("last: \(formatWeight(previousWeight))")
-                    .font(.caption2)
-                    .foregroundStyle(.tertiary)
-            }
-        }
     }
 
     // MARK: - Helper
@@ -126,7 +124,7 @@ struct SetRowView: View {
     let setID2 = UUID()
 
     VStack(spacing: 0) {
-        // Row with previous values and timer
+        // Row with previous values and timer (confirmed)
         SetRowView(
             setNumber: 1,
             reps: $reps1,
@@ -135,7 +133,8 @@ struct SetRowView: View {
             previousWeight: 95.0,
             weightUnit: .kilograms,
             timer: SetTimer(setID: setID1, duration: 90),
-            onConfirm: { print("Confirmed set 1") },
+            isConfirmed: true,
+            onConfirm: { print("Toggled set 1") },
             onTimerTap: { print("Timer tapped") },
             focusedField: $focus,
             setID: setID1
@@ -143,7 +142,7 @@ struct SetRowView: View {
 
         Divider()
 
-        // Row without previous values or timer
+        // Row without previous values or timer (not confirmed)
         SetRowView(
             setNumber: 2,
             reps: $reps2,
@@ -152,7 +151,8 @@ struct SetRowView: View {
             previousWeight: nil,
             weightUnit: .pounds,
             timer: nil,
-            onConfirm: { print("Confirmed set 2") },
+            isConfirmed: false,
+            onConfirm: { print("Toggled set 2") },
             onTimerTap: {},
             focusedField: $focus,
             setID: setID2
