@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-26)
 
 **Core value:** Precise per-muscle volume tracking with user-defined muscles and weighted set contributions
-**Current focus:** Phase 5 (Exercise Library Rework) - Plan 08 Complete
+**Current focus:** Phase 5 (Exercise Library Rework) - Plan 09 Complete
 
 ## Current Position
 
 Phase: 5 of 6 (Exercise Library Rework)
-Plan: 8 of 10 in current phase
+Plan: 9 of 10 in current phase
 Status: In progress
-Last activity: 2026-01-28 - Completed 05-08-PLAN.md (JSON Resources and App Seeding)
+Last activity: 2026-01-28 - Completed 05-09-PLAN.md (Exercise Creation Wizard Updates)
 
-Progress: [███████████████████████░] ~93% (26/~28 total plans estimate)
+Progress: [████████████████████████░] ~96% (27/~28 total plans estimate)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 26
+- Total plans completed: 27
 - Average duration: 8.4 min
-- Total execution time: 218 min
+- Total execution time: 226 min
 
 **By Phase:**
 
@@ -31,11 +31,11 @@ Progress: [███████████████████████
 | 02-exercise-library | 5 | 61 min | 12.2 min |
 | 03-gyms | 4 | 24 min | 6.0 min |
 | 04-workout-logging | 6 | 55 min | 9.2 min |
-| 05-exercise-library-rework | 8 | 65 min | 8.1 min |
+| 05-exercise-library-rework | 9 | 73 min | 8.1 min |
 
 **Recent Trend:**
-- Last 5 plans: 05-04 (11 min), 05-05 (15 min), 05-06 (4 min), 05-07 (5 min), 05-08 (9 min)
-- Trend: Wave 5 seeding moderate (JSON + seed service creation + app init wiring)
+- Last 5 plans: 05-05 (15 min), 05-06 (4 min), 05-07 (5 min), 05-08 (9 min), 05-09 (8 min)
+- Trend: Wave 6 UI updates quick (most files pre-updated in 05-05)
 
 *Updated after each plan completion*
 
@@ -125,6 +125,8 @@ Recent decisions affecting current work:
 - [05-07]: Muscle key validation with warning (not failure) for graceful degradation
 - [05-08]: JSON resources in app bundle (movements.json, equipment.json, presets_all.json)
 - [05-08]: GymAnalsApp calls 4 seed services in dependency order on first launch
+- [05-09]: ExerciseNameStepView pre-fills name from equipment + movement display names
+- [05-09]: resetToDefault restores movement.defaultMuscleWeights (not just clearing)
 
 ### Pending Todos
 
@@ -142,7 +144,7 @@ None - Variant/VariantMuscle references cleared (ExerciseSeedService and SeedDat
 ## Session Continuity
 
 Last session: 2026-01-28
-Stopped at: Completed 05-08-PLAN.md (JSON Resources and App Seeding)
+Stopped at: Completed 05-09-PLAN.md (Exercise Creation Wizard Updates)
 Resume file: None
 
 ## Phase 5 Progress
@@ -156,7 +158,7 @@ Phase 5 (Exercise Library Rework) in progress:
 - 05-06: Remove Variant/VariantMuscle Models (COMPLETE)
 - 05-07: Seed Services (COMPLETE)
 - 05-08: JSON Resources and App Seeding (COMPLETE)
-- 05-09: Exercise Browser Updates (pending)
+- 05-09: Exercise Creation Wizard Updates (COMPLETE)
 - 05-10: Final Integration (pending)
 
 **Completed in 05-01:**
@@ -211,3 +213,10 @@ Phase 5 (Exercise Library Rework) in progress:
 - Old exercises.json deleted from Resources
 - GymAnalsApp seeding wired and build verified
 - Note: 05-07 and 05-08 ran in parallel; both created seed services (converged on same implementation)
+
+**Completed in 05-09:**
+- ExerciseCreationViewModel: dimensions property, suggestedName helper, Exercise.custom() with dimensions
+- VariationStepView replaced with ExerciseNameStepView (equipment+movement suggested name, pre-fill)
+- MuscleWeightViewModel: activeMuscles computed property, movement-aware resetToDefault
+- All wizard views verified free of Variant/VariantMuscle references
+- ExerciseCreationWizard updated to use ExerciseNameStepView
