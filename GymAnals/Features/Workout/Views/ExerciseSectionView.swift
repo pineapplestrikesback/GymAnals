@@ -22,9 +22,7 @@ struct ExerciseSectionView: View {
     let weightBinding: (WorkoutSet) -> Binding<Double>
     let previousReps: (WorkoutSet) -> Int?
     let previousWeight: (WorkoutSet) -> Double?
-    let timerForSet: (WorkoutSet) -> SetTimer?
     let onConfirmSet: (WorkoutSet) -> Void
-    let onTimerTap: (SetTimer) -> Void
 
     @FocusState.Binding var focusedField: SetEntryField?
     let weightUnit: WeightUnit
@@ -37,6 +35,25 @@ struct ExerciseSectionView: View {
             // Expandable content
             if isExpanded {
                 VStack(spacing: 0) {
+                    // Column headers
+                    HStack(spacing: 0) {
+                        Text("SET")
+                            .frame(width: 32, alignment: .center)
+                        Text("PREVIOUS")
+                            .frame(width: 80, alignment: .center)
+                        Text(weightUnit.abbreviation.uppercased())
+                            .frame(minWidth: 50)
+                        Text("REPS")
+                            .frame(minWidth: 50)
+                        Spacer()
+                            .frame(width: 36) // Checkmark column spacer
+                    }
+                    .font(.caption2)
+                    .foregroundStyle(.tertiary)
+                    .padding(.horizontal, 8)
+                    .padding(.top, 8)
+                    .padding(.bottom, 4)
+
                     // Sets list with swipe-to-delete
                     ForEach(sets) { workoutSet in
                         setRowWithSwipe(workoutSet)

@@ -37,13 +37,8 @@ struct ActiveWorkoutView: View {
                             ExerciseSectionForID(
                                 exerciseID: exerciseID,
                                 viewModel: viewModel,
-                                timerManager: timerManager,
                                 weightUnit: weightUnit,
                                 focusedField: $focusedField,
-                                onTimerTap: { timer in
-                                    selectedTimerForControls = timer
-                                    showingTimerControls = true
-                                },
                                 onConfirmSet: { workoutSet in
                                     handleSetConfirmation(workoutSet)
                                 }
@@ -212,10 +207,8 @@ struct ActiveWorkoutView: View {
 private struct ExerciseSectionForID: View {
     let exerciseID: String
     let viewModel: ActiveWorkoutViewModel
-    let timerManager: SetTimerManager
     let weightUnit: WeightUnit
     @FocusState.Binding var focusedField: SetEntryField?
-    let onTimerTap: (SetTimer) -> Void
     let onConfirmSet: (WorkoutSet) -> Void
 
     @Environment(\.modelContext) private var modelContext
@@ -264,14 +257,8 @@ private struct ExerciseSectionForID: View {
                 previousWeight: { workoutSet in
                     viewModel.previousSetForRow(exercise: exercise, setNumber: workoutSet.setNumber)?.weight
                 },
-                timerForSet: { workoutSet in
-                    timerManager.activeTimers.first { $0.setID == workoutSet.id }
-                },
                 onConfirmSet: { workoutSet in
                     onConfirmSet(workoutSet)
-                },
-                onTimerTap: { timer in
-                    onTimerTap(timer)
                 },
                 focusedField: $focusedField,
                 weightUnit: weightUnit
