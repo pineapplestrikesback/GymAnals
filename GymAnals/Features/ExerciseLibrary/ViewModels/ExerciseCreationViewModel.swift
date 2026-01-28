@@ -34,9 +34,24 @@ final class ExerciseCreationViewModel {
 
     var selectedExerciseType: ExerciseType = .weightReps
 
+    // MARK: - Dimensions
+
+    var dimensions: Dimensions = Dimensions()
+
     // MARK: - Created Entities
 
     var createdExercise: Exercise?
+
+    // MARK: - Suggested Name
+
+    /// Generates a suggested exercise name from equipment + movement
+    var suggestedName: String? {
+        guard let movement = selectedMovement else { return nil }
+        if let equipment = selectedEquipment {
+            return "\(equipment.displayName) \(movement.displayName)"
+        }
+        return movement.displayName
+    }
 
     // MARK: - Validation
 
@@ -85,7 +100,8 @@ final class ExerciseCreationViewModel {
         let exercise = Exercise.custom(
             displayName: exerciseName,
             movement: movement,
-            equipment: selectedEquipment
+            equipment: selectedEquipment,
+            dimensions: dimensions
         )
         context.insert(exercise)
         createdExercise = exercise
@@ -104,6 +120,7 @@ final class ExerciseCreationViewModel {
         exerciseName = ""
         selectedEquipment = nil
         selectedExerciseType = .weightReps
+        dimensions = Dimensions()
         createdExercise = nil
     }
 }
