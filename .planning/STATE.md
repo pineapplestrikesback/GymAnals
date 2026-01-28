@@ -10,9 +10,9 @@ See: .planning/PROJECT.md (updated 2026-01-26)
 ## Current Position
 
 Phase: 6 of 7 (Bug Fixes)
-Plan: 03 of 04 in current phase
+Plan: 01 of 04 in current phase (SUMMARY finalized)
 Status: In progress
-Last activity: 2026-01-28 - Completed 06-03-PLAN.md (Hevy-Style Set Layout)
+Last activity: 2026-01-28 - Completed 06-01-PLAN.md (Character Encoding and Gym State Bugs)
 
 Progress: [██████████████████████████████] 97% (31/32 total plans)
 
@@ -132,6 +132,9 @@ Recent decisions affecting current work:
 - [05-10]: ExerciseRow shows equipment + category badge for richer context
 - [05-10]: ExerciseDetailView shows dimensions, notes, sources, popularity, timer settings
 - [05-10]: Built-in exercises read-only; custom exercises get muscle weight editor
+- [06-01]: Lock icon (lock.fill) replaces chevron when gym selector disabled during active workout
+- [06-01]: New Gym button in GymSelectorSheet with auto-select via createdDate max
+- [06-01]: gymCountBeforeCreate snapshot pattern for new-entity detection across sheet presentation
 - [06-03]: Column layout: SET(32pt) | PREVIOUS(80pt) | WEIGHT(flex) | REPS(flex) | CHECKMARK(36pt)
 - [06-03]: Timer badge removed from SetRowView (moves to always-visible header in Plan 04)
 - [06-03]: Weight unit abbreviation moved from row to column header
@@ -153,7 +156,7 @@ None - Phase 6 plans 01-03 complete. Plan 04 remaining.
 ## Session Continuity
 
 Last session: 2026-01-28
-Stopped at: Completed 06-03-PLAN.md (Hevy-Style Set Layout)
+Stopped at: Completed 06-01-PLAN.md (Character Encoding and Gym State Bugs) - SUMMARY finalized
 Resume file: None
 
 ## Phase 5 Progress
