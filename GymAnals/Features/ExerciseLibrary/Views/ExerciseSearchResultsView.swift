@@ -11,10 +11,14 @@ import SwiftData
 /// Subview that constructs @Query from init parameters for dynamic filtering
 /// Uses the subview pattern to rebuild @Query when filter parameters change
 struct ExerciseSearchResultsView: View {
+    @Environment(\.modelContext) private var modelContext
     @Query private var exercises: [Exercise]
 
     private let searchText: String
     private let muscleGroup: MuscleGroup?
+
+    @State private var exerciseToEdit: Exercise?
+    @State private var exerciseToDelete: Exercise?
 
     init(searchText: String, muscleGroup: MuscleGroup?) {
         self.searchText = searchText
@@ -66,39 +70,123 @@ struct ExerciseSearchResultsView: View {
     var body: some View {
         let results = filteredExercises
 
-        if results.isEmpty {
-            ContentUnavailableView {
-                Label("No Exercises", systemImage: "dumbbell")
-            } description: {
-                Text("No exercises match your search")
-            }
-        } else {
-            List {
-                // Starred/Recent section
-                let featured = results.filter { $0.isFavorite || $0.lastUsedDate != nil }
-                if !featured.isEmpty {
-                    Section("Starred & Recent") {
-                        ForEach(featured.prefix(10)) { exercise in
+        Group {
+            if results.isEmpty {
+                ContentUnavailableView {
+                    Label("No Exercises", systemImage: "dumbbell")
+                } description: {
+                    Text("No exercises match your search")
+                }
+            } else {
+                List {
+                    // Starred/Recent section
+                    let featured = results.filter { $0.isFavorite || $0.lastUsedDate != nil }
+                    if !featured.isEmpty {
+                        Section("Starred & Recent") {
+                            ForEach(featured.prefix(10)) { exercise in
+                                NavigationLink {
+                                    ExerciseDetailView(exercise: exercise)
+                                } label: {
+                                    ExerciseRow(exercise: exercise)
+                                }
+                                .contextMenu {
+                                    exerciseContextMenu(for: exercise)
+                                }
+                            }
+                        }
+                    }
+
+                    // All exercises
+                    Section("All Exercises") {
+                        ForEach(results) { exercise in
                             NavigationLink {
                                 ExerciseDetailView(exercise: exercise)
                             } label: {
                                 ExerciseRow(exercise: exercise)
                             }
-                        }
-                    }
-                }
-
-                // All exercises
-                Section("All Exercises") {
-                    ForEach(results) { exercise in
-                        NavigationLink {
-                            ExerciseDetailView(exercise: exercise)
-                        } label: {
-                            ExerciseRow(exercise: exercise)
+                            .contextMenu {
+                                exerciseContextMenu(for: exercise)
+                            }
                         }
                     }
                 }
             }
         }
+        .sheet(item: $exerciseToEdit) { exercise in
+            NavigationStack {
+                CustomExerciseEditView(exercise: exercise)
+            }
+        }
+        .alert(
+            "Delete Exercise",
+            isPresented: Binding(
+                get: { exerciseToDelete != nil },
+                set: { if !$0 { exerciseToDelete = nil } }
+            )
+        ) {
+            Button("Delete", role: .destructive) {
+                if let exercise = exerciseToDelete {
+                    deleteExercise(exercise)
+                }
+            }
+            Button("Cancel", role: .cancel) {
+                exerciseToDelete = nil
+            }
+        } message: {
+            if let exercise = exerciseToDelete {
+                Text("Are you sure you want to delete \"\(exercise.displayName)\"? This action cannot be undone.")
+            }
+        }
+    }
+
+    // MARK: - Context Menu
+
+    @ViewBuilder
+    private func exerciseContextMenu(for exercise: Exercise) -> some View {
+        if !exercise.isBuiltIn {
+            Button {
+                exerciseToEdit = exercise
+            } label: {
+                Label("Edit", systemImage: "pencil")
+            }
+        }
+
+        Button {
+            duplicateExercise(exercise)
+        } label: {
+            Label("Duplicate", systemImage: "doc.on.doc")
+        }
+
+        if !exercise.isBuiltIn {
+            Button(role: .destructive) {
+                exerciseToDelete = exercise
+            } label: {
+                Label("Delete", systemImage: "trash")
+            }
+        }
+    }
+
+    // MARK: - Actions
+
+    private func duplicateExercise(_ exercise: Exercise) {
+        let duplicate = Exercise(
+            displayName: "\(exercise.displayName) (Copy)",
+            movement: exercise.movement,
+            equipment: exercise.equipment,
+            dimensions: exercise.dimensions,
+            muscleWeights: exercise.muscleWeights,
+            popularity: exercise.popularity,
+            isBuiltIn: false
+        )
+        duplicate.notes = exercise.notes
+        duplicate.restDuration = exercise.restDuration
+        duplicate.autoStartTimer = exercise.autoStartTimer
+        modelContext.insert(duplicate)
+        try? modelContext.save()
+    }
+
+    private func deleteExercise(_ exercise: Exercise) {
+        modelContext.delete(exercise)
+        try? modelContext.save()
     }
 }

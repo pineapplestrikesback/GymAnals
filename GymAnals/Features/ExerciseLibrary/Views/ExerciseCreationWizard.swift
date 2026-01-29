@@ -15,6 +15,9 @@ struct ExerciseCreationWizard: View {
 
     @State private var viewModel = ExerciseCreationViewModel()
 
+    /// Optional callback invoked with the newly created exercise when the wizard completes
+    var onCreated: ((Exercise) -> Void)? = nil
+
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
@@ -84,6 +87,9 @@ struct ExerciseCreationWizard: View {
                         .disabled(!viewModel.canProceed)
                     } else {
                         Button("Done") {
+                            if let exercise = viewModel.createdExercise {
+                                onCreated?(exercise)
+                            }
                             dismiss()
                         }
                         .buttonStyle(.borderedProminent)
