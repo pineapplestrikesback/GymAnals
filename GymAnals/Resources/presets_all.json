@@ -29,7 +29,7 @@
       "popularity": "very_common",
       "notes": "Gold standard horizontal push. Flat angle activates both pec heads equally (~27% MVIC each). Standard grip width maximizes pec engagement.",
       "sources": [
-        "RodrÃ­guez-Ridao 2020",
+        "Rodríguez-Ridao 2020",
         "Lauver 2016",
         "Barnett 1995"
       ]
@@ -63,7 +63,7 @@
       "popularity": "very_common",
       "notes": "Optimal angle for upper pec development (122-130% MVIC vs flat). Research shows 30° maximizes clavicular activation before deltoid dominance.",
       "sources": [
-        "RodrÃ­guez-Ridao 2020",
+        "Rodríguez-Ridao 2020",
         "Lauver 2016",
         "Trebs 2010"
       ]
@@ -96,7 +96,7 @@
       "popularity": "common",
       "notes": "Anterior deltoid approaches pec activation levels. Lower pec drops to ~72% MVIC. Consider 30° for pure chest focus.",
       "sources": [
-        "RodrÃ­guez-Ridao 2020",
+        "Rodríguez-Ridao 2020",
         "Lauver 2016",
         "Trebs 2010"
       ]
@@ -1063,7 +1063,7 @@
       "notes": "98% pec activation vs bench press - essentially interchangeable. 'Produces best motor-unit activation' per ACE. Constant tension, safe to failure.",
       "sources": [
         "ACE Study 2012",
-        "Rocha JÃºnior 2007"
+        "Rocha Júnior 2007"
       ]
     },
     {
@@ -1391,7 +1391,7 @@
       "notes": "Upper pec targeting with machine stability. Allows higher volume work when stabilizers are fatigued.",
       "sources": [
         "Schick 2010",
-        "RodrÃ­guez-Ridao 2020"
+        "Rodríguez-Ridao 2020"
       ]
     },
     {
@@ -1557,7 +1557,7 @@
         "pectoralisMajorUpper": 0.25
       },
       "popularity": "common",
-      "notes": "CAUTION: Requires 101% maximal shoulder extension ROMâ€”higher anterior shoulder injury risk. Consider parallel bar dips as safer alternative.",
+      "notes": "CAUTION: Requires 101% maximal shoulder extension ROM—higher anterior shoulder injury risk. Consider parallel bar dips as safer alternative.",
       "sources": [
         "McKenzie 2022",
         "ACE study"
@@ -1882,7 +1882,7 @@
       "notes": "Standard angled leg press. Greater quadriceps activation at deep knee flexion. High foot placement increases hip extension demand.",
       "sources": [
         "Escamilla 2001",
-        "MartÃ­n-Fuentes 2020"
+        "Martín-Fuentes 2020"
       ]
     },
     {
@@ -1913,7 +1913,7 @@
       "popularity": "common",
       "notes": "Seated horizontal position with less hip flexion than 45° version. Similar quad emphasis but reduced glute involvement due to body position.",
       "sources": [
-        "MartÃ­n-Fuentes 2020"
+        "Martín-Fuentes 2020"
       ]
     },
     {
@@ -2017,7 +2017,7 @@
       "popularity": "very_common",
       "notes": "Full-body compound lift. Greater knee extension moment than sumo. Erector spinae highly stressed due to forward torso lean. Quadriceps significantly involved in floor initiation.",
       "sources": [
-        "MartÃ­n-Fuentes 2020",
+        "Martín-Fuentes 2020",
         "Escamilla 2001",
         "Lee 2018"
       ]
@@ -2483,7 +2483,7 @@
       "popularity": "very_common",
       "notes": "Stepping backward shifts more emphasis to front leg glutes and hamstrings. More knee-friendly than forward lunge as shear forces are reduced. Better for beginners.",
       "sources": [
-        "JÃ¶nhagen 2009",
+        "Jönhagen 2009",
         "Farrokhi 2008"
       ]
     },
@@ -3789,7 +3789,7 @@
         "obliquesExternal": 0.25
       },
       "popularity": "common",
-      "notes": "Lumbar erector spinae reaches 142-158% MVICâ€”primarily a back exercise despite hamstring stretch. Greater stretch-mediated hamstring stimulus than lying curls. Use moderate loads.",
+      "notes": "Lumbar erector spinae reaches 142-158% MVIC—primarily a back exercise despite hamstring stretch. Greater stretch-mediated hamstring stimulus than lying curls. Use moderate loads.",
       "sources": [
         "Vigotsky 2015",
         "McAllister 2014"
@@ -3971,7 +3971,7 @@
         "obliquesExternal": 0.3
       },
       "popularity": "very_common",
-      "notes": "70% MVIC gluteus maximusâ€”classified as 'very high' activation. Stationary position allows focus on technique. Lower metabolic demand than walking lunges.",
+      "notes": "70% MVIC gluteus maximus—classified as 'very high' activation. Stationary position allows focus on technique. Lower metabolic demand than walking lunges.",
       "sources": [
         "Krause Neto 2020",
         "McCurdy 2010"
@@ -4183,7 +4183,7 @@
         "obliquesExternal": 0.15
       },
       "popularity": "common",
-      "notes": "Addresses bilateral quad imbalances. Slight increase in stabilizer demands. Same ROM principles applyâ€”emphasize stretched position for hypertrophy.",
+      "notes": "Addresses bilateral quad imbalances. Slight increase in stabilizer demands. Same ROM principles apply—emphasize stretched position for hypertrophy.",
       "sources": [
         "Signorile 2014",
         "Pedrosa 2022"
@@ -4214,7 +4214,7 @@
         "obliquesExternal": 0.15
       },
       "popularity": "common",
-      "notes": "81% MVIC gluteus mediusâ€”highest of therapeutic exercises. Internal rotation of hip during movement increases activation further. Excellent for rehabilitation and glute med activation.",
+      "notes": "81% MVIC gluteus medius—highest of therapeutic exercises. Internal rotation of hip during movement increases activation further. Excellent for rehabilitation and glute med activation.",
       "sources": [
         "Distefano 2009",
         "Boren 2011"
@@ -6804,7 +6804,7 @@
         "tricepsMedialHead": 0.7
       },
       "popularity": "common",
-      "notes": "CRITICAL: Maeo 2023 showed 1.5Ã— greater long head hypertrophy than pushdowns despite 34-39% lighter loads. Shoulder flexion stretches biarticular long head. Priority exercise for triceps development.",
+      "notes": "CRITICAL: Maeo 2023 showed 1.5× greater long head hypertrophy than pushdowns despite 34-39% lighter loads. Shoulder flexion stretches biarticular long head. Priority exercise for triceps development.",
       "sources": [
         "Maeo 2023"
       ]
@@ -7486,7 +7486,7 @@
       "popularity": "common",
       "notes": "External oblique dominant due to gravity-assisted downward pull. Diagonal muscle activation pattern. Trains rotation with resistance through full ROM.",
       "sources": [
-        "ZemkovÃ¡ 2017"
+        "Zemková 2017"
       ]
     },
     {
@@ -7515,7 +7515,7 @@
       "popularity": "common",
       "notes": "Greater internal oblique demand for anti-gravity initiation. More rectus abdominis involvement than high-to-low. Both directions train diagonal pattern effectively.",
       "sources": [
-        "ZemkovÃ¡ 2017"
+        "Zemková 2017"
       ]
     },
     {

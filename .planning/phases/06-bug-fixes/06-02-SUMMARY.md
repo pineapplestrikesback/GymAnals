@@ -54,10 +54,10 @@ startInEditMode parameter for immediate slider interactivity plus Form-based Cus
 
 ## Tasks Completed
 
-| Task | Name | Commit | Key Files |
-|------|------|--------|-----------|
-| 1 | Make muscle weight sliders immediately editable | 4b40c02 | MuscleWeightEditorView.swift, ExerciseDetailView.swift, ExerciseCreationWizard.swift |
-| 2 | Create custom exercise edit view | 0e27e0f | CustomExerciseEditView.swift, ExerciseDetailView.swift |
+| Task | Name                                            | Commit  | Key Files                                                                            |
+| ---- | ----------------------------------------------- | ------- | ------------------------------------------------------------------------------------ |
+| 1    | Make muscle weight sliders immediately editable | 4b40c02 | MuscleWeightEditorView.swift, ExerciseDetailView.swift, ExerciseCreationWizard.swift |
+| 2    | Create custom exercise edit view                | 0e27e0f | CustomExerciseEditView.swift, ExerciseDetailView.swift                               |
 
 ## What Was Built
 

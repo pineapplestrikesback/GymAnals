@@ -34,7 +34,12 @@ struct SetRowView: View {
     @State private var timerProgress: CGFloat = 0
     @State private var showPulse: Bool = false
 
-    private let updateTimer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+    private var updateTimer: AnyPublisher<Date, Never> {
+        guard activeTimer != nil else { return Empty().eraseToAnyPublisher() }
+        return Timer.publish(every: 0.1, on: .main, in: .common)
+            .autoconnect()
+            .eraseToAnyPublisher()
+    }
 
     // MARK: - Computed Properties
 

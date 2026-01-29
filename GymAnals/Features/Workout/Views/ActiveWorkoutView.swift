@@ -18,10 +18,9 @@ struct ActiveWorkoutView: View {
     @State var timerManager: SetTimerManager
 
     @State private var showingExercisePicker = false
-    @State private var showingTimerControls = false
     @State private var showingFinishConfirmation = false
     @State private var showingDiscardConfirmation = false
-    @State private var selectedTimerForControls: SetTimer?
+    @State private var selectedTimerForSheet: SetTimer?
 
     @FocusState private var focusedField: SetEntryField?
 
@@ -45,8 +44,7 @@ struct ActiveWorkoutView: View {
                                     handleSetConfirmation(workoutSet)
                                 },
                                 onTimerTap: { timer in
-                                    selectedTimerForControls = timer
-                                    showingTimerControls = true
+                                    selectedTimerForSheet = timer
                                 }
                             )
                         }
@@ -73,14 +71,12 @@ struct ActiveWorkoutView: View {
                             gym: viewModel.activeWorkout?.gym,
                             defaultRestDuration: defaultRestDuration,
                             onTimerTap: {
-                                if let timer = timerManager.headerTimer {
-                                    selectedTimerForControls = timer
-                                    showingTimerControls = true
-                                }
+                                selectedTimerForSheet = timerManager.headerTimer
                             },
                             onStartManualTimer: {
                                 timerManager.removeExpiredTimers()
-                                timerManager.startTimer(for: UUID(), duration: 120)
+                                timerManager.startTimer(for: UUID(), duration: defaultRestDuration)
+                                selectedTimerForSheet = timerManager.headerTimer
                             }
                         )
                     }
@@ -119,21 +115,14 @@ struct ActiveWorkoutView: View {
                 }
             }
         }
-        .sheet(isPresented: $showingTimerControls) {
-            if let timer = selectedTimerForControls {
-                TimerControlsSheet(
-                    timer: timer,
-                    onSkip: {
-                        timerManager.skipTimer(timer)
-                    },
-                    onAdjustTimer: { delta in
-                        _ = timerManager.adjustTimer(timer, by: delta)
-                    },
-                    onDismiss: {
-                        showingTimerControls = false
-                    }
-                )
-            }
+        .sheet(item: $selectedTimerForSheet) { timer in
+            TimerControlsSheet(
+                timerManager: timerManager,
+                timerID: timer.id,
+                onDismiss: {
+                    selectedTimerForSheet = nil
+                }
+            )
         }
         .toolbar {
             ToolbarItemGroup(placement: .keyboard) {

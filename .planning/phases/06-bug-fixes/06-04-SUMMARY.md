@@ -80,11 +80,11 @@ None - plan executed exactly as written.
 
 ## Files Modified
 
-| File | Changes |
-|------|---------|
-| ExercisePickerSheet.swift | Rewritten for multi-select with muscle group tabs |
-| WorkoutHeader.swift | Added gym indicator row and always-visible timer |
-| ActiveWorkoutView.swift | Updated picker callback and header parameters |
+| File                      | Changes                                            |
+| ------------------------- | -------------------------------------------------- |
+| ExercisePickerSheet.swift | Rewritten for multi-select with muscle group tabs  |
+| WorkoutHeader.swift       | Added gym indicator row and always-visible timer   |
+| ActiveWorkoutView.swift   | Updated picker callback and header parameters      |
 
 ## Next Phase Readiness
 

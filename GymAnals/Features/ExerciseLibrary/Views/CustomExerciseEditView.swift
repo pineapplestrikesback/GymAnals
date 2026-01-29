@@ -115,8 +115,12 @@ struct CustomExerciseEditView: View {
         exercise.autoStartTimer = autoStartTimer
         exercise.equipment = selectedEquipment
         exercise.movement = selectedMovement
-        try? modelContext.save()
-        dismiss()
+        do {
+            try modelContext.save()
+            dismiss()
+        } catch {
+            print("Failed to save exercise: \(error)")
+        }
     }
 }
 
