@@ -83,7 +83,7 @@ struct ExercisePickerSheet: View {
                         .buttonStyle(.borderedProminent)
                         .controlSize(.large)
                         .padding()
-                        .background(.bar)
+                        .background(.bar, ignoresSafeAreaEdges: .bottom)
                     }
                 }
             }
@@ -103,10 +103,12 @@ struct ExercisePickerSheet: View {
     // MARK: - Helpers
 
     private func toggleSelection(_ exercise: Exercise) {
-        if selectedExerciseIDs.contains(exercise.id) {
-            selectedExerciseIDs.remove(exercise.id)
-        } else {
-            selectedExerciseIDs.insert(exercise.id)
+        withAnimation(.snappy) {
+            if selectedExerciseIDs.contains(exercise.id) {
+                selectedExerciseIDs.remove(exercise.id)
+            } else {
+                selectedExerciseIDs.insert(exercise.id)
+            }
         }
     }
 }
