@@ -161,9 +161,12 @@ struct SetRowView: View {
         .background(
             showPulse
                 ? Color.orange.opacity(0.15)
-                : Color.clear
+                : isConfirmed
+                    ? Color.green.opacity(0.08)
+                    : Color.clear
         )
         .animation(.easeInOut(duration: 0.3), value: showPulse)
+        .animation(.easeInOut(duration: 0.25), value: isConfirmed)
         .onAppear {
             repsText = "\(reps)"
             weightText = formatWeight(weight)
