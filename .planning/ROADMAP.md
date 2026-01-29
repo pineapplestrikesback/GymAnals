@@ -17,7 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Gyms** - Gym definitions and exercise branching per location
 - [x] **Phase 4: Workout Logging** - Active workout session with fast set logging
 - [x] **Phase 5: Exercise Library Rework** - Dimensions-based model with 237 exercise presets
-- [ ] **Phase 6: Bug Fixes** - Critical bug fixes and UX improvements across gym, exercise, and workout flows
+- [x] **Phase 6: Bug Fixes** - Critical bug fixes and UX improvements across gym, exercise, and workout flows
 - [ ] **Phase 7: Analytics** - Volume dashboard with weighted muscle calculations
 
 ## Phase Details
@@ -142,10 +142,10 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 06-01-PLAN.md — Fix encoding, gym selector disabled state, and new gym auto-select
-- [ ] 06-02-PLAN.md — Muscle weight slider UX and custom exercise edit view
-- [ ] 06-03-PLAN.md — Hevy-style set layout with column headers and inline previous data
-- [ ] 06-04-PLAN.md — Multi-select picker, always-visible timer, and gym indicator in header
+- [x] 06-01-PLAN.md — Fix encoding, gym selector disabled state, and new gym auto-select
+- [x] 06-02-PLAN.md — Muscle weight slider UX and custom exercise edit view
+- [x] 06-03-PLAN.md — Hevy-style set layout with column headers and inline previous data
+- [x] 06-04-PLAN.md — Multi-select picker, always-visible timer, and gym indicator in header
 
 ### Phase 7: Analytics
 **Goal**: Users can see weekly volume per muscle calculated from weighted contributions
@@ -174,9 +174,9 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 | 3. Gyms | 4/4 | ✓ Complete | 2026-01-27 |
 | 4. Workout Logging | 6/6 | ✓ Complete | 2026-01-28 |
 | 5. Exercise Library Rework | 10/10 | ✓ Complete | 2026-01-28 |
-| 6. Bug Fixes | 0/4 | Not started | - |
+| 6. Bug Fixes | 4/4 | ✓ Complete | 2026-01-29 |
 | 7. Analytics | 0/TBD | Not started | - |
 
 ---
 *Roadmap created: 2026-01-26*
-*Last updated: 2026-01-28 — Phase 6 planned with 4 plans in 2 waves*
+*Last updated: 2026-01-29 — Phase 6 complete, 10/10 success criteria verified*
