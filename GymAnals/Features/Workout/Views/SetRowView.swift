@@ -178,6 +178,24 @@ struct SetRowView: View {
                 weightText = formatWeight(newValue)
             }
         }
+        .onChange(of: focusedField) { oldValue, newValue in
+            // Weight field gained focus — clear for fresh input
+            if newValue == .weight(setID: setID) {
+                weightText = ""
+            }
+            // Weight field lost focus — restore formatted value
+            if oldValue == .weight(setID: setID) && newValue != .weight(setID: setID) {
+                weightText = formatWeight(weight)
+            }
+            // Reps field gained focus — clear for fresh input
+            if newValue == .reps(setID: setID) {
+                repsText = ""
+            }
+            // Reps field lost focus — restore formatted value
+            if oldValue == .reps(setID: setID) && newValue != .reps(setID: setID) {
+                repsText = "\(reps)"
+            }
+        }
         .onReceive(updateTimer) { _ in
             updateTimerProgress()
         }

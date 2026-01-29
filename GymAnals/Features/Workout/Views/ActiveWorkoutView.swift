@@ -85,6 +85,11 @@ struct ActiveWorkoutView: View {
                 }
             }
 
+            .scrollDismissesKeyboard(.interactively)
+            .onTapGesture {
+                focusedField = nil
+            }
+
             // Floating action button
             AddExerciseFAB {
                 showingExercisePicker = true
