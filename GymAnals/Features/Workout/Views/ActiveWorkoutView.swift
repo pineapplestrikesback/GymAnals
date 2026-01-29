@@ -204,7 +204,7 @@ struct ActiveWorkoutView: View {
     // MARK: - Actions
 
     /// Adjusts the currently focused field's value by the given delta.
-    /// Weight fields adjust by 1.0, reps fields adjust by 1.
+    /// Weight fields adjust by 1.0, reps fields adjust by 1, duration by 5s, distance by 0.1.
     private func adjustFocusedField(by delta: Int) {
         guard let field = focusedField,
               let workout = viewModel.activeWorkout else { return }
@@ -217,6 +217,14 @@ struct ActiveWorkoutView: View {
         case .reps(let setID):
             if let workoutSet = workout.sets.first(where: { $0.id == setID }) {
                 workoutSet.reps = max(0, min(999, workoutSet.reps + delta))
+            }
+        case .duration(let setID):
+            if let workoutSet = workout.sets.first(where: { $0.id == setID }) {
+                workoutSet.duration = max(0, min(86400, workoutSet.duration + Double(delta) * 5))
+            }
+        case .distance(let setID):
+            if let workoutSet = workout.sets.first(where: { $0.id == setID }) {
+                workoutSet.distance = max(0, min(9999, workoutSet.distance + Double(delta) * 0.1))
             }
         }
     }
@@ -305,11 +313,29 @@ private struct ExerciseSectionForID: View {
                         set: { workoutSet.weight = $0 }
                     )
                 },
+                durationBinding: { workoutSet in
+                    Binding(
+                        get: { workoutSet.duration },
+                        set: { workoutSet.duration = $0 }
+                    )
+                },
+                distanceBinding: { workoutSet in
+                    Binding(
+                        get: { workoutSet.distance },
+                        set: { workoutSet.distance = $0 }
+                    )
+                },
                 previousReps: { workoutSet in
                     viewModel.previousSetForRow(exercise: exercise, setNumber: workoutSet.setNumber)?.reps
                 },
                 previousWeight: { workoutSet in
                     viewModel.previousSetForRow(exercise: exercise, setNumber: workoutSet.setNumber)?.weight
+                },
+                previousDuration: { workoutSet in
+                    viewModel.previousSetForRow(exercise: exercise, setNumber: workoutSet.setNumber)?.duration
+                },
+                previousDistance: { workoutSet in
+                    viewModel.previousSetForRow(exercise: exercise, setNumber: workoutSet.setNumber)?.distance
                 },
                 onConfirmSet: { workoutSet in
                     onConfirmSet(workoutSet)

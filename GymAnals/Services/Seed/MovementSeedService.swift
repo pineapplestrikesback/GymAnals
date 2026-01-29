@@ -34,7 +34,6 @@ final class MovementSeedService {
         // Create Movement entities
         for seed in seedData.movements {
             let category = MovementCategory(rawValue: seed.category) ?? .push
-            let exerciseType = ExerciseType(rawValue: seed.exerciseTypeRaw ?? 0) ?? .weightReps
 
             // Validate muscle weight keys
             for key in seed.defaultMuscleWeights.keys {
@@ -48,7 +47,6 @@ final class MovementSeedService {
                 displayName: seed.displayName,
                 category: category,
                 subcategory: seed.subcategory,
-                exerciseType: exerciseType,
                 isBuiltIn: true
             )
             movement.applicableDimensions = seed.applicableDimensions.toDictionary()

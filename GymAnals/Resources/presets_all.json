@@ -32,7 +32,8 @@
         "Rodríguez-Ridao 2020",
         "Lauver 2016",
         "Barnett 1995"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_incline_bench_press_30",
@@ -66,7 +67,8 @@
         "Rodríguez-Ridao 2020",
         "Lauver 2016",
         "Trebs 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_incline_bench_press_45",
@@ -99,7 +101,8 @@
         "Rodríguez-Ridao 2020",
         "Lauver 2016",
         "Trebs 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_decline_bench_press",
@@ -131,7 +134,8 @@
       "sources": [
         "Lauver 2016",
         "Barnett 1995"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_close_grip_bench_press",
@@ -165,7 +169,8 @@
         "Lehman 2005",
         "Barnett 1995",
         "Saeterbakken 2017"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_flat_bench_press",
@@ -200,7 +205,8 @@
       "sources": [
         "Solstad 2020",
         "Saeterbakken 2017"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_incline_bench_press",
@@ -235,7 +241,8 @@
       "sources": [
         "Trebs 2010",
         "Saeterbakken 2017"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_decline_bench_press",
@@ -268,7 +275,8 @@
       "notes": "Greater ROM than barbell decline. Sternal/costal fiber emphasis. Reduced anterior deltoid involvement.",
       "sources": [
         "Lauver 2016"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "machine_chest_press",
@@ -300,7 +308,8 @@
       "notes": "Fixed path reduces stabilizer demand. Neutral grip may increase clavicular activation (~30% vs 25% MVIC with pronated). Safe for training to failure.",
       "sources": [
         "Schick 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "machine_incline_chest_press",
@@ -331,7 +340,8 @@
       "notes": "Same incline principles apply as free weights. Fixed path allows focus on prime movers. Good for isolating upper chest.",
       "sources": [
         "Trebs 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "smith_machine_flat_bench_press",
@@ -363,7 +373,8 @@
       "sources": [
         "Schick 2010",
         "Trebs 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "smith_machine_incline_bench_press",
@@ -394,7 +405,8 @@
       "notes": "Clavicular head significantly greater at 44° and 56° vs flat. More consistent path allows focus on target muscles.",
       "sources": [
         "Trebs 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "cable_chest_press",
@@ -428,7 +440,8 @@
       "notes": "Constant tension throughout ROM. Standing version requires significant core stabilization. Greater shoulder joint moment than bench press.",
       "sources": [
         "Signorile 2017"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "cable_incline_press",
@@ -461,7 +474,8 @@
       "sources": [
         "Signorile 2017",
         "Trebs 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "standing_barbell_overhead_press",
@@ -498,7 +512,8 @@
       "sources": [
         "Saeterbakken 2013",
         "Campos 2020"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "seated_barbell_overhead_press",
@@ -530,7 +545,8 @@
       "notes": "Allows ~10% heavier loads than standing. ~25% less posterior deltoid, ~20% less triceps activation vs standing. Minimal core demand.",
       "sources": [
         "Saeterbakken 2013"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_push_press",
@@ -568,7 +584,8 @@
       "notes": "Leg drive allows ~30% more weight overhead. Lower isolated deltoid work. Significantly higher erector spinae and external oblique activation vs strict press.",
       "sources": [
         "Kim 2022"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "standing_dumbbell_overhead_press",
@@ -603,7 +620,8 @@
       "sources": [
         "Saeterbakken 2013",
         "Dicus 2018"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "seated_dumbbell_overhead_press",
@@ -634,7 +652,8 @@
       "notes": "~11% greater anterior deltoid than seated barbell. ~8% lower activation vs standing DB. Balance of load capacity and activation.",
       "sources": [
         "Saeterbakken 2013"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_arnold_press",
@@ -667,7 +686,8 @@
       "notes": "29% greater anterior deltoid and 14% greater medial deltoid vs standard DB press. Rotation engages all three deltoid heads. Superior for shoulder hypertrophy.",
       "sources": [
         "Raizada 2017"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "machine_shoulder_press",
@@ -700,7 +720,8 @@
       "notes": "All muscles show LOWER activation vs barbell (effect size 1.42-2.80). Allows heaviest absolute loads. Fixed path reduces stabilizer demand.",
       "sources": [
         "Coratella 2022"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "landmine_press",
@@ -736,7 +757,8 @@
       "notes": "Angled press (~45° from vertical) between horizontal and vertical plane. Single-arm variation increases anti-rotation demand. Shoulder-friendly alternative.",
       "sources": [
         "Extrapolated from Saeterbakken 2013"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "chest_dip",
@@ -770,7 +792,8 @@
       "notes": "Forward lean of 30-45° emphasizes pectoralis major.  Ring dip shows greatest peak pec activation. Bar dip ~25-35° forward lean typical.",
       "sources": [
         "McKenzie 2022"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "tricep_dip",
@@ -805,7 +828,8 @@
       "sources": [
         "McKenzie 2022",
         "Boehler 2011"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "weighted_dip",
@@ -840,7 +864,8 @@
       "notes": "Progressive overload increases all muscle activation proportionally. Six muscles show significantly greater activation on bar dip vs bench dip.",
       "sources": [
         "McKenzie 2022"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "machine_assisted_dip",
@@ -871,7 +896,8 @@
       "notes": "Counter-resistance allows moderation of load. Same recruitment patterns as bar dip at reduced intensity. Good for progression building.",
       "sources": [
         "McKenzie 2022"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_flat_fly",
@@ -903,7 +929,8 @@
       "sources": [
         "Solstad 2020",
         "Maeo 2022"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_incline_fly",
@@ -935,7 +962,8 @@
       "sources": [
         "Trebs 2010",
         "Barnett 1995"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "cable_crossover",
@@ -968,7 +996,8 @@
       "sources": [
         "ACE Study 2012",
         "Signorile 2017"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "cable_fly_low_to_high",
@@ -1001,7 +1030,8 @@
       "sources": [
         "Trebs 2010",
         "Signorile 2017"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "cable_fly_high_to_low",
@@ -1033,7 +1063,8 @@
       "notes": "Downward arc specifically recruits costal/sternal fibers. Maintains tension at peak contraction unlike decline DB flies.",
       "sources": [
         "Signorile 2017"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "pec_deck",
@@ -1064,7 +1095,8 @@
       "sources": [
         "ACE Study 2012",
         "Rocha Júnior 2007"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "standard_push_up",
@@ -1099,7 +1131,8 @@
       "sources": [
         "Cogley 2005",
         "Kowalski 2022"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "incline_push_up",
@@ -1134,7 +1167,8 @@
       "sources": [
         "Kowalski 2022",
         "Suprak 2011"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "decline_push_up",
@@ -1168,7 +1202,8 @@
       "sources": [
         "Trebs 2010",
         "MSU Thesis"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "diamond_push_up",
@@ -1203,7 +1238,8 @@
       "sources": [
         "Cogley 2005",
         "Boehler 2011"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "barbell_wide_grip_bench_press",
@@ -1235,7 +1271,8 @@
       "sources": [
         "Lehman 2005",
         "Barnett 1995"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "floor_press",
@@ -1266,7 +1303,8 @@
       "notes": "Limited ROM eliminates deep stretch. Upper-half ROM emphasizes triceps more than pectoralis. Lockout strength builder.",
       "sources": [
         "Extrapolated from Lehman 2005"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "ring_dip",
@@ -1299,7 +1337,8 @@
       "notes": "Greatest peak pec sEMG amplitude of all dip variations (p=0.002-0.008). Instability significantly increases stabilizer demand.",
       "sources": [
         "McKenzie 2022"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "svend_press",
@@ -1329,7 +1368,8 @@
       "notes": "Isometric adduction emphasis. Constant pec contraction throughout. Light weight, high time under tension. Good for mind-muscle connection.",
       "sources": [
         "Extrapolated from fly mechanics"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "machine_chest_press_flat",
@@ -1360,7 +1400,8 @@
       "notes": "Fixed path eliminates stabilization demands. Medial deltoid activation 50% lower than free weights. Good for isolating chest with fatigue.",
       "sources": [
         "Schick 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "machine_chest_press_incline",
@@ -1392,7 +1433,8 @@
       "sources": [
         "Schick 2010",
         "Rodríguez-Ridao 2020"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_overhead_press_seated",
@@ -1425,7 +1467,8 @@
       "notes": "Core activation reduced 60-70% vs standing. Back support allows greater load focus on shoulders. Good for strict shoulder work.",
       "sources": [
         "Saeterbakken & Fimland 2013"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_overhead_press_standing",
@@ -1461,7 +1504,8 @@
       "notes": "Highest deltoid activation of any pressing variant. 11-15% greater anterior deltoid activation than barbell. Independent arms require more stabilization.",
       "sources": [
         "Saeterbakken & Fimland 2013"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_overhead_press_seated",
@@ -1494,7 +1538,8 @@
       "notes": "Excellent shoulder isolation with back support. Maintains dumbbell benefits (ROM, independent arms) while reducing core demands.",
       "sources": [
         "Saeterbakken & Fimland 2013"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dip_machine_assisted",
@@ -1528,7 +1573,8 @@
       "notes": "Counterweight reduces effective bodyweight. Approximately 25-30% lower activation vs full bodyweight. Good progression tool.",
       "sources": [
         "McKenzie 2022"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "bench_dip",
@@ -1561,7 +1607,8 @@
       "sources": [
         "McKenzie 2022",
         "ACE study"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "push_up_wide",
@@ -1594,7 +1641,8 @@
       "notes": "Lower EMG activation in BOTH pec and triceps vs narrow/standard. Greater horizontal abduction but reduced ROM contributes to lower overall activation.",
       "sources": [
         "Cogley 2005"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "barbell_back_squat_high_bar",
@@ -1634,7 +1682,8 @@
         "Contreras 2016",
         "Caterisano 2002",
         "Bryanton 2012"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_back_squat_low_bar",
@@ -1672,7 +1721,8 @@
       "sources": [
         "Glassbrook 2017",
         "Wretenberg 1996"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_front_squat",
@@ -1711,7 +1761,8 @@
         "Yavuz 2015",
         "Gullett 2009",
         "Contreras 2016"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "goblet_squat",
@@ -1746,7 +1797,8 @@
       "notes": "Beginner-friendly front-loaded squat. Counterbalance allows natural deep squat position. Limited by weight held.",
       "sources": [
         "extrapolated from front squat data"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "sumo_squat_barbell",
@@ -1779,7 +1831,8 @@
       "sources": [
         "Escamilla 2001",
         "Paoli 2009"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "hack_squat_machine",
@@ -1814,7 +1867,8 @@
       "sources": [
         "Yavuz 2020",
         "Schwanbeck 2009"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "smith_machine_squat",
@@ -1849,7 +1903,8 @@
       "sources": [
         "Schwanbeck 2009",
         "Frontiers 2022"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "leg_press_45_degree",
@@ -1883,7 +1938,8 @@
       "sources": [
         "Escamilla 2001",
         "Martín-Fuentes 2020"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "leg_press_horizontal",
@@ -1914,7 +1970,8 @@
       "notes": "Seated horizontal position with less hip flexion than 45° version. Similar quad emphasis but reduced glute involvement due to body position.",
       "sources": [
         "Martín-Fuentes 2020"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "pendulum_squat",
@@ -1948,7 +2005,8 @@
       "notes": "Arc-based movement creates unique resistance profile. Maintains tension throughout range, particularly effective at stretched position for quadriceps.",
       "sources": [
         "extrapolated from machine squat research"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "sissy_squat",
@@ -1976,7 +2034,8 @@
       "notes": "Maximum quad stretch by leaning back while descending. Hip extension minimizes glute involvement. Rectus femoris highly emphasized due to hip extension position.",
       "sources": [
         "extrapolated from quad mechanics"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "barbell_conventional_deadlift",
@@ -2020,7 +2079,8 @@
         "Martín-Fuentes 2020",
         "Escamilla 2001",
         "Lee 2018"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_sumo_deadlift",
@@ -2062,7 +2122,8 @@
       "sources": [
         "Escamilla 2001",
         "Cholewicki 1991"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "trap_bar_deadlift",
@@ -2103,7 +2164,8 @@
         "Camara 2016",
         "Swinton 2011",
         "Andersen 2018"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_romanian_deadlift",
@@ -2144,7 +2206,8 @@
         "Lee 2018",
         "Zebis 2013",
         "McAllister 2014"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_romanian_deadlift",
@@ -2178,7 +2241,8 @@
       "notes": "Dumbbells allow natural arm path and slightly greater range of motion. Lower erector stress than barbell version due to typically lighter loads.",
       "sources": [
         "extrapolated from barbell RDL research"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "single_leg_rdl_dumbbell",
@@ -2217,7 +2281,8 @@
       "sources": [
         "Clayton 2020",
         "Bourne 2017"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_stiff_leg_deadlift",
@@ -2254,7 +2319,8 @@
       "sources": [
         "Coratella 2022",
         "Bezerra 2013"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "deficit_romanian_deadlift",
@@ -2287,7 +2353,8 @@
       "notes": "Standing on platform increases range of motion. Research shows step-RDL produces greater glute and semitendinosus activation than standard RDL or stiff-leg.",
       "sources": [
         "Coratella 2022"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_hip_thrust",
@@ -2322,7 +2389,8 @@
         "Contreras 2015",
         "Contreras 2016",
         "Andersen 2018"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "single_leg_hip_thrust",
@@ -2356,7 +2424,8 @@
       "notes": "Unilateral version increases gluteus medius demand significantly. Addresses strength asymmetries. Can progress to weighted version.",
       "sources": [
         "extrapolated from hip thrust research"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "glute_bridge",
@@ -2389,7 +2458,8 @@
       "notes": "Floor-based version with reduced range compared to hip thrust. Excellent activation exercise and warm-up. Lower intensity than elevated hip thrust.",
       "sources": [
         "Contreras 2011"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "machine_hip_extension",
@@ -2421,7 +2491,8 @@
       "notes": "Isolated hip extension with supported position. Unilateral execution addresses asymmetries. Machine stabilization allows focus on mind-muscle connection.",
       "sources": [
         "extrapolated from hip extension mechanics"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "walking_lunge_dumbbell",
@@ -2453,7 +2524,8 @@
       "sources": [
         "Muyor 2020",
         "Riemann 2012"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "reverse_lunge_dumbbell",
@@ -2485,7 +2557,8 @@
       "sources": [
         "Jönhagen 2009",
         "Farrokhi 2008"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "stationary_lunge_barbell",
@@ -2518,7 +2591,8 @@
       "notes": "Fixed foot position allows heavier loading than walking variation. Can emphasize quads (upright) or glutes (forward lean) based on torso position.",
       "sources": [
         "Boudreau 2009"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "bulgarian_split_squat_dumbbell",
@@ -2553,7 +2627,8 @@
         "McCurdy 2021",
         "Mausehund 2019",
         "DeForest 2014"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "bulgarian_split_squat_barbell",
@@ -2586,7 +2661,8 @@
       "sources": [
         "Andersen 2014",
         "Speirs 2016"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "step_up_dumbbell",
@@ -2618,7 +2694,8 @@
       "sources": [
         "Muyor 2020",
         "Riemann 2012"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "lateral_step_up",
@@ -2654,7 +2731,8 @@
       "notes": "Frontal plane movement increases gluteus medius and adductor demand. Excellent for hip stability development. Lower quad activation than forward step-up.",
       "sources": [
         "Muyor 2020"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "leg_extension_machine",
@@ -2683,7 +2761,8 @@
         "Signorile 2006",
         "Ebben 2009",
         "Maeo 2021"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "single_leg_extension",
@@ -2709,7 +2788,8 @@
       "notes": "Unilateral execution addresses strength imbalances. Same muscle activation pattern as bilateral. Useful for post-injury rehabilitation.",
       "sources": [
         "extrapolated from leg extension research"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "lying_leg_curl",
@@ -2739,7 +2819,8 @@
       "sources": [
         "Maeo 2021",
         "Zebis 2013"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "seated_leg_curl",
@@ -2769,7 +2850,8 @@
       "sources": [
         "Maeo 2021",
         "Schoenfeld 2021"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "nordic_curl",
@@ -2805,7 +2887,8 @@
         "Iga 2021",
         "Hegyi 2019",
         "Opar 2012"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "glute_ham_raise",
@@ -2837,7 +2920,8 @@
       "sources": [
         "McAllister 2014",
         "Zebis 2013"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "machine_hip_abduction",
@@ -2865,7 +2949,8 @@
       "notes": "Isolated hip abduction targets gluteus medius. Seated position with hip flexion may increase tensor fasciae latae contribution. Useful for hip stability development.",
       "sources": [
         "extrapolated from hip abduction mechanics"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "cable_hip_abduction",
@@ -2898,7 +2983,8 @@
       "notes": "Standing position with hip extended may reduce TFL contribution compared to seated. Unilateral execution addresses asymmetries. Can be done lying for different angle.",
       "sources": [
         "extrapolated from hip abduction research"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "machine_hip_adduction",
@@ -2928,7 +3014,8 @@
       "notes": "Isolated hip adduction. Adductor magnus, longus, and brevis all activated. Useful for addressing adductor weakness and injury prevention.",
       "sources": [
         "extrapolated from adductor mechanics"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "standing_calf_raise_machine",
@@ -2959,7 +3046,8 @@
       "sources": [
         "Maeo 2023",
         "Reid 2012"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "standing_calf_raise_smith",
@@ -2989,7 +3077,8 @@
       "notes": "Smith machine provides stability for straight-leg calf work. Same muscle activation as dedicated machine. Requires block or step for range of motion.",
       "sources": [
         "extrapolated from calf raise research"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "standing_calf_raise_dumbbell",
@@ -3019,7 +3108,8 @@
       "notes": "Single-leg execution allows bodyweight plus dumbbell loading. Addresses bilateral asymmetries. Requires balance - can hold support for stability.",
       "sources": [
         "extrapolated from calf raise research"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "seated_calf_raise",
@@ -3048,7 +3138,8 @@
         "Maeo 2023",
         "Reid 2012",
         "Signorile 2002"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "leg_press_calf_raise",
@@ -3077,7 +3168,8 @@
       "notes": "Hip flexion creates hamstring-gastrocnemius interaction, maintaining tension. Similar activation to standing calf raise with slightly different feel. Allows heavy loading.",
       "sources": [
         "Nunes 2020"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "donkey_calf_raise",
@@ -3109,7 +3201,8 @@
       "notes": "Hip flexion with straight knees stretches gastrocnemius over both joints simultaneously. Classic bodybuilding exercise. Maximizes gastrocnemius stretch.",
       "sources": [
         "Boeckh-Behrens 2000"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "back_extension_45_degree",
@@ -3144,7 +3237,8 @@
       "notes": "Hip extension focused movement despite name. Can emphasize glutes by squeezing at top or spinal erectors with slight lumbar flexion/extension. Pad position affects muscle emphasis.",
       "sources": [
         "extrapolated from hip extension research"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "reverse_hyperextension",
@@ -3178,7 +3272,8 @@
       "notes": "Legs move while torso stays fixed. Provides spinal decompression effect. Greater glute emphasis than traditional back extension. Excellent for posterior chain development.",
       "sources": [
         "extrapolated from hip extension research"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "good_morning_barbell",
@@ -3208,7 +3303,8 @@
       "sources": [
         "McAllister 2014",
         "Zebis 2013"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "pistol_squat",
@@ -3240,7 +3336,8 @@
       "sources": [
         "Kim 2022",
         "McCurdy 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "belt_squat",
@@ -3271,7 +3368,8 @@
       "notes": "Load applied at hips eliminates spinal compression. Pure lower body exercise - no erector spinae demand. Excellent for high-volume leg training or those with back issues.",
       "sources": [
         "extrapolated from squat mechanics"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "landmine_squat",
@@ -3302,7 +3400,8 @@
       "notes": "Angled barbell path creates natural front-loaded position. Allows deep squat with upright torso. Good progression between goblet and barbell front squat.",
       "sources": [
         "extrapolated from front-loaded squat mechanics"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "stability_ball_leg_curl",
@@ -3332,7 +3431,8 @@
       "sources": [
         "Ortiz 2010",
         "Holcomb 2007"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "sliding_leg_curl",
@@ -3361,7 +3461,8 @@
       "notes": "Supine position with feet on sliders. Progressive exercise from bridge position. High-intensity classification in EMG research. Excellent minimal-equipment hamstring exercise.",
       "sources": [
         "Zebis 2013"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "kettlebell_swing",
@@ -3394,7 +3495,8 @@
       "sources": [
         "Zebis 2012",
         "McGill 2012"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "cable_pull_through",
@@ -3423,7 +3525,8 @@
       "notes": "Cable hip hinge with continuous tension. Horizontal force vector similar to hip thrust at lockout. Good hip hinge teaching tool and glute builder.",
       "sources": [
         "extrapolated from hip hinge mechanics"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "leg_press_single_leg",
@@ -3454,7 +3557,8 @@
       "notes": "Unilateral leg press addresses strength asymmetries. Increased stabilization demand compared to bilateral. Can use heavier relative loads than free-weight unilateral exercises.",
       "sources": [
         "extrapolated from leg press research"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "wall_sit",
@@ -3481,7 +3585,8 @@
       "notes": "Isometric quad exercise. Back support eliminates spinal loading. Endurance-focused training. Thigh parallel position provides highest quadriceps activation.",
       "sources": [
         "extrapolated from isometric squat research"
-      ]
+      ],
+      "exerciseTypeRaw": 4
     },
     {
       "id": "split_squat_dumbbell",
@@ -3512,7 +3617,8 @@
       "notes": "Basic staggered stance squat pattern. Less hip moment demand than Bulgarian split squat. Good precursor to more advanced split stance exercises.",
       "sources": [
         "Mausehund 2019"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "curtsy_lunge",
@@ -3543,7 +3649,8 @@
       "notes": "Cross-body step increases gluteus medius demand and adductor stretch. Multi-planar movement pattern. Increased hip stability challenge.",
       "sources": [
         "extrapolated from lunge biomechanics"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_back_squat_wide_stance",
@@ -3582,7 +3689,8 @@
         "Paoli 2009",
         "McCaw 1999",
         "Escamilla 2001"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "kettlebell_goblet_squat",
@@ -3618,7 +3726,8 @@
       "notes": "Kettlebell handle position increases forearm/grip demands compared to dumbbell version. Excellent for warm-ups and technique work.",
       "sources": [
         "Escamilla 2001"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "leg_press_standard",
@@ -3653,7 +3762,8 @@
       "sources": [
         "Escamilla 2001",
         "Da Silva 2008"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "leg_press_high_feet",
@@ -3688,7 +3798,8 @@
       "sources": [
         "Da Silva 2008",
         "Escamilla 2001"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "leg_press_low_feet",
@@ -3723,7 +3834,8 @@
       "sources": [
         "Da Silva 2008",
         "Escamilla 2001"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "leg_press_wide_stance",
@@ -3757,7 +3869,8 @@
       "notes": "Wide stance increases hamstring and adductor activation without significantly affecting quadriceps. Good for inner thigh emphasis.",
       "sources": [
         "Escamilla 2001"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "good_morning",
@@ -3793,7 +3906,8 @@
       "sources": [
         "Vigotsky 2015",
         "McAllister 2014"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "glute_bridge_weighted",
@@ -3825,7 +3939,8 @@
       "notes": "Adding load approaches hip thrust effectiveness. Floor contact provides stable spine position. Can use barbell, dumbbell, or plate for loading.",
       "sources": [
         "Contreras 2015"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "walking_lunge",
@@ -3863,7 +3978,8 @@
       "sources": [
         "Krause Neto 2020",
         "Muyor 2020"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "reverse_lunge",
@@ -3900,7 +4016,8 @@
       "sources": [
         "Muyor 2020",
         "Stastny 2015"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_reverse_lunge",
@@ -3938,7 +4055,8 @@
       "sources": [
         "Muyor 2020",
         "Stastny 2015"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "stationary_split_squat",
@@ -3975,7 +4093,8 @@
       "sources": [
         "Krause Neto 2020",
         "McCurdy 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "bulgarian_split_squat",
@@ -4015,7 +4134,8 @@
         "McCurdy 2010",
         "McCurdy 2021",
         "Williams 2021"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_bulgarian_split_squat",
@@ -4053,7 +4173,8 @@
       "sources": [
         "McCurdy 2010",
         "McCurdy 2021"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "step_up",
@@ -4091,7 +4212,8 @@
         "Krause Neto 2020",
         "Neto 2020",
         "Distefano 2009"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_step_up",
@@ -4129,7 +4251,8 @@
       "sources": [
         "Krause Neto 2020",
         "Neto 2020"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "leg_extension",
@@ -4157,7 +4280,8 @@
       "sources": [
         "Signorile 2014",
         "Pedrosa 2022"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "leg_extension_single_leg",
@@ -4187,7 +4311,8 @@
       "sources": [
         "Signorile 2014",
         "Pedrosa 2022"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "side_lying_hip_abduction",
@@ -4218,7 +4343,8 @@
       "sources": [
         "Distefano 2009",
         "Boren 2011"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "back_extension_horizontal",
@@ -4253,7 +4379,8 @@
       "sources": [
         "Andersen 2021",
         "Cuthbert 2021"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "pull_up_wide_grip",
@@ -4291,7 +4418,8 @@
         "Youdas et al. 2010 J Strength Cond Res",
         "Andersen et al. 2014",
         "Dickie et al. 2017"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "pull_up_standard_grip",
@@ -4328,7 +4456,8 @@
       "sources": [
         "Youdas et al. 2010 J Strength Cond Res 24(12):3404-3414",
         "Edelburg 2017 UWL"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "chin_up",
@@ -4365,7 +4494,8 @@
       "sources": [
         "Youdas et al. 2010 J Strength Cond Res",
         "Doma et al. 2013 Sports Biomechanics"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "pull_up_neutral_grip",
@@ -4400,7 +4530,8 @@
       "notes": "Lowest middle trapezius activation (37% peak MVIC) per Dickie 2017. Neutral grip emphasizes brachialis and brachioradialis. Comfortable wrist position.",
       "sources": [
         "Dickie et al. 2017 J Electromyogr Kinesiol 32:30-36"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "lat_pulldown_wide_grip",
@@ -4435,7 +4566,8 @@
       "sources": [
         "Signorile et al. 2002 J Strength Cond Res 16(4):539-546",
         "Lusk et al. 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "lat_pulldown_close_grip",
@@ -4470,7 +4602,8 @@
       "sources": [
         "Andersen et al. 2014 J Strength Cond Res 28(4):1135-1142",
         "Lusk et al. 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "lat_pulldown_neutral_grip",
@@ -4504,7 +4637,8 @@
       "notes": "V-bar shows similar LD activation to front-of-neck wide grip per Sperandei 2009. Comfortable wrist position for high volume training.",
       "sources": [
         "Sperandei et al. 2009 J Strength Cond Res 23(7):2033-2038"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "lat_pulldown_reverse_grip",
@@ -4539,7 +4673,8 @@
       "sources": [
         "Lusk et al. 2010 J Strength Cond Res 24(7):1895-1900",
         "Lehman et al. 2004"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "lat_pulldown_single_arm",
@@ -4576,7 +4711,8 @@
       "sources": [
         "Saeterbakken et al. 2015 Int J Sports Med",
         "Fenwick et al. 2009"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_bent_over_row",
@@ -4614,7 +4750,8 @@
       "sources": [
         "Fenwick et al. 2009 J Strength Cond Res 23(2):350-358",
         "Edelburg 2018 UWL"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_bent_over_row_underhand",
@@ -4650,7 +4787,8 @@
       "sources": [
         "Lehman et al. 2004 Dynamic Medicine 3:4",
         "Fenwick et al. 2009"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "pendlay_row",
@@ -4687,7 +4825,8 @@
       "notes": "Parallel torso emphasizes horizontal abduction plane - greater mid/lower trap and rhomboid involvement. Bar returns to floor each rep. Symmetrical erector activation.",
       "sources": [
         "Fenwick et al. 2009 J Strength Cond Res 23(2):350-358"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "seal_row",
@@ -4723,7 +4862,8 @@
       "sources": [
         "Garcia-Jaen et al. 2021 J Phys Ed Sport",
         "Lengthened position research - Pedrosa 2023"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_row_single_arm",
@@ -4761,7 +4901,8 @@
       "sources": [
         "Contreras 2010 EMG Experiments",
         "Saeterbakken et al. 2015"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_row_chest_supported",
@@ -4798,7 +4939,8 @@
       "sources": [
         "Garcia-Jaen et al. 2021 J Phys Ed Sport",
         "Schoenfeld et al. 2013"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_row_bent_over",
@@ -4835,7 +4977,8 @@
       "sources": [
         "Contreras 2010 EMG Experiments",
         "Fenwick et al. 2009"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "seated_cable_row_close_grip",
@@ -4873,7 +5016,8 @@
       "sources": [
         "Lehman et al. 2004 Dynamic Medicine 3(1):4",
         "Vasconcelos et al. 2023 Int J Strength Cond"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "seated_cable_row_wide_grip",
@@ -4910,7 +5054,8 @@
       "sources": [
         "Vasconcelos et al. 2023 Int J Strength Cond",
         "Signorile et al. 2002"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "seated_cable_row_neutral_grip",
@@ -4947,7 +5092,8 @@
       "sources": [
         "Lehman et al. 2004 Dynamic Medicine 3(1):4",
         "Taboada-Iglesias et al. 2024"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "single_arm_cable_row",
@@ -4985,7 +5131,8 @@
       "sources": [
         "Fenwick et al. 2009 J Strength Cond Res",
         "Saeterbakken et al. 2015"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "face_pull",
@@ -5020,7 +5167,8 @@
       "sources": [
         "Reinold et al. 2004 J Orthop Sports Phys Ther 34(7):385-394",
         "Ekstrom et al. 2003"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "machine_row",
@@ -5057,7 +5205,8 @@
       "sources": [
         "Saeterbakken et al. 2015 Int J Sports Med 36:900-905",
         "Lehman et al. 2004"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "hammer_strength_row",
@@ -5094,7 +5243,8 @@
       "sources": [
         "Biomechanical analysis based on Fenwick et al. 2009",
         "Garcia-Jaen et al. 2021"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "inverted_row",
@@ -5132,7 +5282,8 @@
       "sources": [
         "Fenwick et al. 2009 J Strength Cond Res 23(2):350-358",
         "Edelburg 2018"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "dumbbell_pullover",
@@ -5167,7 +5318,8 @@
       "sources": [
         "Marchetti & Uchida 2011 J Applied Biomech 27(4):380-384",
         "Campos & da Silva 2014"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "straight_arm_pulldown",
@@ -5202,7 +5354,8 @@
       "sources": [
         "Muyor et al. 2022 Applied Sciences 12(21):11138",
         "Lehman et al. 2004"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_shrug",
@@ -5234,7 +5387,8 @@
         "Andersen et al. 2012 J Strength Cond Res 26(9):2408-2417",
         "Ekstrom et al. 2003",
         "De Mey et al. 2016"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_shrug",
@@ -5264,7 +5418,8 @@
       "sources": [
         "Andersen et al. 2012",
         "Pizzari et al. 2014 Clin Biomech 29(2):201-205"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "trap_bar_shrug",
@@ -5293,7 +5448,8 @@
       "notes": "Most natural hand position (neutral grip). Allows heaviest loads of all shrug variations. Side weight position reduces forward pull - better posture maintenance.",
       "sources": [
         "Ekstrom et al. 2003 J Orthop Sports Phys Ther 33:247-258"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "reverse_fly_machine",
@@ -5325,7 +5481,8 @@
       "sources": [
         "Schoenfeld et al. 2013 J Strength Cond Res 27(10):2644-2649",
         "Botton et al. 2014"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "reverse_fly_dumbbell",
@@ -5359,7 +5516,8 @@
       "sources": [
         "Reinold et al. 2004 J Orthop Sports Phys Ther",
         "Schoenfeld et al. 2013"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "reverse_fly_cable",
@@ -5391,7 +5549,8 @@
       "sources": [
         "Schoenfeld et al. 2013",
         "Reinold et al. 2004"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "cable_row_rope",
@@ -5426,7 +5585,8 @@
       "sources": [
         "Vasconcelos et al. 2023",
         "Reinold et al. 2004"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "meadows_row",
@@ -5462,7 +5622,8 @@
       "sources": [
         "Fenwick et al. 2009",
         "Saeterbakken et al. 2015"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "t_bar_row",
@@ -5498,7 +5659,8 @@
       "sources": [
         "Fenwick et al. 2009",
         "Lehman et al. 2004"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "prone_incline_curl",
@@ -5528,7 +5690,8 @@
       "sources": [
         "Coratella et al. 2023 Sports 11(3):64",
         "Maeo et al. 2022"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "cable_curl_bayesian",
@@ -5558,7 +5721,8 @@
       "sources": [
         "Pedrosa et al. 2023 Eur J Sport Sci",
         "Coratella et al. 2023"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "hammer_curl",
@@ -5587,7 +5751,8 @@
       "sources": [
         "Coratella et al. 2023 Sports 11(3):64",
         "Jaafar et al. 2023"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "reverse_curl",
@@ -5616,7 +5781,8 @@
       "sources": [
         "Coratella et al. 2023 Sports 11(3):64",
         "Jaafar et al. 2023"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "preacher_curl",
@@ -5645,7 +5811,8 @@
       "sources": [
         "Coratella et al. 2023",
         "Marcolin et al. 2018 PeerJ 6:e5165"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_curl",
@@ -5676,7 +5843,8 @@
       "sources": [
         "Coratella et al. 2023 Sports 11(3):64",
         "Marcolin et al. 2018"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "concentration_curl",
@@ -5705,7 +5873,8 @@
       "sources": [
         "ACE Biceps Study 2014",
         "Coratella et al. 2023"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "cable_bicep_curl",
@@ -5734,7 +5903,8 @@
       "sources": [
         "Coratella et al. 2023",
         "Marcolin et al. 2018"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "high_cable_curl",
@@ -5764,7 +5934,8 @@
       "sources": [
         "Coratella et al. 2023",
         "Biomechanical analysis"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "lat_pulldown_supinated",
@@ -5797,7 +5968,8 @@
       "sources": [
         "Lusk 2010",
         "Lehman 2004"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "bent_over_barbell_row_pronated",
@@ -5832,7 +6004,8 @@
       "notes": "53-82% MVIC lat activation, 42-43% MVIC erector spinae. Highest lumbar spine load (~3576N compression) among rows. Pull to lower chest for lat emphasis, higher for mid-back.",
       "sources": [
         "Fenwick 2009"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "bent_over_barbell_row_supinated",
@@ -5868,7 +6041,8 @@
       "sources": [
         "Fenwick 2009",
         "Lehman 2004"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "plate_loaded_row",
@@ -5900,7 +6074,8 @@
       "notes": "Erector spinae 34% LOWER, multifidus 27-30% LOWER, obliques 43-50% LOWER than free-weight rows. Target muscle activation maintained. Iso-lateral arms allow unilateral work. Eliminates momentum.",
       "sources": [
         "Saeterbakken 2015"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "plate_loaded_high_row",
@@ -5933,7 +6108,8 @@
       "notes": "High pulling angle shifts emphasis to upper traps, rear delts, and upper lat fibers. Chest support eliminates spinal loading. Excellent for upper back thickness. Often performed with external rotation at peak contraction.",
       "sources": [
         "Saeterbakken 2015"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "plate_loaded_low_row",
@@ -5965,7 +6141,8 @@
       "notes": "Low pulling angle emphasizes lower lat fibers and teres major. Greater shoulder extension pattern. Excellent for lat width development. Chest support allows heavier loading. Full stretch at start position.",
       "sources": [
         "Saeterbakken 2015"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "helms_row",
@@ -5997,7 +6174,8 @@
       "notes": "Chest-supported on steep incline (70-80°). Row with elbows flared at 45-60°. Emphasizes mid-back over lats compared to standard chest-supported row. Named after Dr. Eric Helms. Eliminates momentum completely.",
       "sources": [
         "Saeterbakken 2015"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "kroc_row",
@@ -6032,7 +6210,8 @@
       "notes": "Heavy single-arm row with controlled body english. Named after Matt Kroczaleski. High reps (15-25) with maximum weight. Allows slight torso rotation and leg drive. Grip often limiting factor—great forearm builder. More trap involvement due to shrugging action.",
       "sources": [
         "Contreras 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "machine_pullover",
@@ -6063,7 +6242,8 @@
       "notes": "Arthur Jones designed Nautilus pullover specifically for lat isolation. Constant resistance curve throughout ROM. Deep stretch at top—excellent for stretch-mediated hypertrophy. Elbows push pads rather than hands pulling. Superior lat targeting to dumbbell pullover.",
       "sources": [
         "Muyor 2022"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "behind_back_barbell_shrug",
@@ -6093,7 +6273,8 @@
       "notes": "Bar position behind body shifts emphasis slightly to middle trap and posterior shoulder. Requires more shoulder external rotation. Smith machine often preferred for guided bar path. Limited ROM compared to front barbell.",
       "sources": [
         "Andersen 2008"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "upward_rotation_shrug",
@@ -6123,7 +6304,8 @@
       "notes": "Arms abducted 30° showed SIGNIFICANTLY higher activation for BOTH upper AND lower trapezius compared to standard shrug (p<0.05). Only shrug variation to meaningfully target lower traps. Superior for comprehensive trap development. Recommended for shoulder health.",
       "sources": [
         "Clinical Biomechanics Study"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "reverse_pec_deck",
@@ -6154,7 +6336,8 @@
       "sources": [
         "Franke 2015",
         "Schoenfeld 2013"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "incline_bench_reverse_fly",
@@ -6184,7 +6367,8 @@
       "notes": "Chest supported on incline bench eliminates momentum and body english. Allows pure rear delt isolation. Gravity provides resistance throughout ROM. 30-45° incline typical. Excellent for mind-muscle connection.",
       "sources": [
         "Schoenfeld 2013"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "single_arm_cable_rear_delt_fly",
@@ -6214,7 +6398,8 @@
       "notes": "Unilateral work allows focus on each side independently. Can achieve greater ROM and stretch. Slight anti-rotation demand. Standing facing cable stack, arm crosses body at start for maximum stretch. Addresses asymmetries.",
       "sources": [
         "Contreras 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "prone_incline_rear_delt_row",
@@ -6245,7 +6430,8 @@
       "notes": "Hybrid between row and rear delt fly. Lying face down on incline bench. Elbows flared at 60-90° during pull. Greater rhomboid and mid-trap involvement than pure isolation fly. Allows heavier loading than isolation movements.",
       "sources": [
         "Schoenfeld 2013"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "band_face_pull",
@@ -6276,7 +6462,8 @@
       "notes": "144% mean, 252% peak rear delt activation—exceeding ALL isolation rear delt raises tested including cable face pulls. Increasing resistance at end range maximally loads shortened position. Excellent for warm-up and shoulder health.",
       "sources": [
         "Contreras 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "wide_grip_cable_row_high",
@@ -6309,7 +6496,8 @@
       "sources": [
         "Vasconcelos 2023",
         "Contreras 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "rack_pull",
@@ -6342,7 +6530,8 @@
       "notes": "Partial deadlift from knee height or above. Heavy loading for upper back and traps. Isometric back contraction at lockout. Grip often limiting factor. Overloads lockout position of deadlift. Less hamstring/glute involvement than full deadlift.",
       "sources": [
         "Andersen 2008"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_curl_straight",
@@ -6372,7 +6561,8 @@
       "sources": [
         "Marcolin 2018",
         "ACE 2014"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "barbell_curl_ez",
@@ -6401,7 +6591,8 @@
       "notes": "Semi-supinated grip reduces wrist strain. Slightly higher brachioradialis activation than straight bar due to grip angle.",
       "sources": [
         "Marcolin 2018"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_curl_standing",
@@ -6431,7 +6622,8 @@
       "sources": [
         "ACE 2014",
         "Marcolin 2018"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_curl_alternating",
@@ -6460,7 +6652,8 @@
       "notes": "Unilateral execution allows slight core anti-rotation demand. Permits full focus on each arm independently.",
       "sources": [
         "ACE 2014"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "hammer_curl_dumbbell",
@@ -6489,7 +6682,8 @@
       "sources": [
         "Coratella 2023",
         "Marcolin 2018"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "incline_dumbbell_curl",
@@ -6519,7 +6713,8 @@
       "sources": [
         "Kassiano 2025",
         "Oliveira 2009"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "concentration_curl",
@@ -6547,7 +6742,8 @@
       "notes": "Highest biceps EMG activation in ACE study (97% MVIC). Elbow bracing eliminates momentum. Peak contraction focus.",
       "sources": [
         "ACE 2014"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "preacher_curl_ez",
@@ -6578,7 +6774,8 @@
         "Oliveira 2009",
         "Pedrosa 2023",
         "Kassiano 2025"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "preacher_curl_dumbbell",
@@ -6607,7 +6804,8 @@
       "sources": [
         "Pedrosa 2023",
         "Kassiano 2025"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "preacher_curl_machine",
@@ -6635,7 +6833,8 @@
       "notes": "Fixed path reduces stabilization demands. Cam mechanism may provide better resistance curve than free weight version.",
       "sources": [
         "Oliveira 2009"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "cable_curl_straight_bar",
@@ -6664,7 +6863,8 @@
       "notes": "Constant tension throughout ROM. 80% MVIC in ACE study. Maintains resistance at peak contraction where dumbbells lose tension.",
       "sources": [
         "ACE 2014"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "rope_hammer_curl",
@@ -6693,7 +6893,8 @@
       "sources": [
         "Coratella 2023",
         "ACE 2014"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "cable_pushdown_straight_bar",
@@ -6722,7 +6923,8 @@
       "notes": "67% combined MVIC. Shoulder-neutral position shortens long head, reducing its contribution. Lateral head shows highest activation.",
       "sources": [
         "Boehler/ACE 2011"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "cable_pushdown_v_bar",
@@ -6750,7 +6952,8 @@
       "notes": "Neutral grip may be more comfortable than straight bar. Similar activation profile to straight bar pushdown.",
       "sources": [
         "Boehler/ACE 2011"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "cable_pushdown_rope",
@@ -6778,7 +6981,8 @@
       "notes": "74% combined MVIC - outperforms bar variations by ~7%. Allows external rotation at lockout for greater lateral head engagement.",
       "sources": [
         "Boehler/ACE 2011"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "overhead_cable_extension",
@@ -6807,7 +7011,8 @@
       "notes": "CRITICAL: Maeo 2023 showed 1.5× greater long head hypertrophy than pushdowns despite 34-39% lighter loads. Shoulder flexion stretches biarticular long head. Priority exercise for triceps development.",
       "sources": [
         "Maeo 2023"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_overhead_extension_single",
@@ -6836,7 +7041,8 @@
       "notes": "Unilateral version adds anti-lateral flexion demand. Same stretch-mediated benefits as bilateral overhead work.",
       "sources": [
         "Maeo 2023"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_overhead_extension_bilateral",
@@ -6865,7 +7071,8 @@
       "notes": "Both hands hold one dumbbell overhead. Seated position provides stability for heavier loads. Superior long head stretch.",
       "sources": [
         "Maeo 2023"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "lying_triceps_extension_barbell",
@@ -6894,7 +7101,8 @@
       "notes": "62% combined MVIC. Partial long head stretch if arms angled behind head. Lower bar behind head rather than to forehead for greater stretch.",
       "sources": [
         "Boehler/ACE 2011"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "lying_triceps_extension_ez",
@@ -6922,7 +7130,8 @@
       "notes": "Most common skull crusher variation. EZ bar reduces wrist strain vs straight bar. Same activation profile.",
       "sources": [
         "Boehler/ACE 2011"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "lying_triceps_extension_dumbbell",
@@ -6950,7 +7159,8 @@
       "notes": "Neutral grip reduces elbow stress. Independent arms allow natural movement path. Similar activation to barbell variant.",
       "sources": [
         "Boehler/ACE 2011"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "triceps_kickback",
@@ -6978,7 +7188,8 @@
       "notes": "87% MVIC - second highest in ACE study. Often dismissed but highly effective. Shoulder extension position stretches long head. Light weights required for proper form.",
       "sources": [
         "Boehler/ACE 2011"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "close_grip_bench_press",
@@ -7011,7 +7222,8 @@
       "sources": [
         "Boehler/ACE 2011",
         "Barnett 1995"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_lateral_raise",
@@ -7042,7 +7254,8 @@
       "sources": [
         "Coratella 2020",
         "Larsen/Van den Tillaar 2024"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "cable_lateral_raise",
@@ -7072,7 +7285,8 @@
       "sources": [
         "Larsen/Van den Tillaar 2024",
         "Coratella 2020"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "machine_lateral_raise",
@@ -7101,7 +7315,8 @@
       "notes": "Fixed path reduces synergist involvement. Highest lateral deltoid isolation. Useful for pre-exhaust or when fatigued.",
       "sources": [
         "Coratella 2020"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dumbbell_front_raise",
@@ -7133,7 +7348,8 @@
       "sources": [
         "Coratella 2020",
         "ResearchGate frontal raise study"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "cable_front_raise",
@@ -7163,7 +7379,8 @@
       "notes": "Constant tension through full ROM. Same activation profile as dumbbell variant. Cable maintains resistance at top where dumbbells lose tension.",
       "sources": [
         "Coratella 2020"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "plate_front_raise",
@@ -7193,7 +7410,8 @@
       "notes": "Neutral grip reduces anterior deltoid slightly vs pronated. Grip challenge may limit deltoid focus. Wide hand position provides stability.",
       "sources": [
         "Coratella 2020"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "crunch_basic",
@@ -7223,7 +7441,8 @@
       "sources": [
         "Escamilla 2006",
         "Marchetti 2011"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "cable_crunch",
@@ -7252,7 +7471,8 @@
       "notes": "Allows progressive overload with external resistance. Marginally higher activation than bodyweight. Focus on spinal flexion, not hip flexion.",
       "sources": [
         "Escamilla 2006"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "machine_crunch",
@@ -7280,7 +7500,8 @@
       "notes": "Fixed path isolates spinal flexion. Similar activation to cable crunch when intensity matched. Useful for beginners learning movement pattern.",
       "sources": [
         "Escamilla 2006"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "sit_up",
@@ -7310,7 +7531,8 @@
       "sources": [
         "Escamilla 2006",
         "ACE 2001"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "decline_sit_up",
@@ -7339,7 +7561,8 @@
       "notes": "Higher activation than flat sit-up due to increased resistance. Greater hip flexor demand as well. Can hold weight for progressive overload.",
       "sources": [
         "Escamilla 2006"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "hanging_leg_raise",
@@ -7369,7 +7592,8 @@
       "sources": [
         "Escamilla 2006",
         "ACE 2001"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "captain_chair_leg_raise",
@@ -7398,7 +7622,8 @@
       "notes": "212% relative activation in ACE study - ranked #2 for rectus abdominis. Back support reduces hip flexor dominance vs hanging. Elbow support eliminates grip limitation.",
       "sources": [
         "ACE 2001"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "lying_leg_raise",
@@ -7428,7 +7653,8 @@
       "sources": [
         "Escamilla 2006",
         "Marchetti 2011"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "hanging_knee_raise",
@@ -7457,7 +7683,8 @@
       "notes": "Bent knees reduce hip flexor lever arm, increasing relative rectus abdominis contribution. Good progression to straight leg raises. Focus on curling pelvis up.",
       "sources": [
         "Escamilla 2006"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "cable_woodchop_high_to_low",
@@ -7487,7 +7714,8 @@
       "notes": "External oblique dominant due to gravity-assisted downward pull. Diagonal muscle activation pattern. Trains rotation with resistance through full ROM.",
       "sources": [
         "Zemková 2017"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "cable_woodchop_low_to_high",
@@ -7516,7 +7744,8 @@
       "notes": "Greater internal oblique demand for anti-gravity initiation. More rectus abdominis involvement than high-to-low. Both directions train diagonal pattern effectively.",
       "sources": [
         "Zemková 2017"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "russian_twist",
@@ -7545,7 +7774,8 @@
       "notes": "45-60% external oblique MVIC, 40-55% internal oblique. V-sit position maintains rectus abdominis tension. Can add weight or medicine ball for progression.",
       "sources": [
         "Workman 2008"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "pallof_press",
@@ -7575,7 +7805,8 @@
       "notes": "Anti-rotation exercise - resists rotation rather than producing it. Sustained isometric co-contraction. Lower peak activation but superior time under tension with lower spinal load.",
       "sources": [
         "Stephens 2021"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "plank",
@@ -7605,7 +7836,8 @@
       "notes": "30-45% rectus abdominis MVIC baseline. Anti-extension exercise - resists spinal extension from gravity. Time under tension builds endurance. Progress with longer holds or added weight.",
       "sources": [
         "Escamilla 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 4
     },
     {
       "id": "side_plank",
@@ -7636,7 +7868,8 @@
       "sources": [
         "JOSPM 2020",
         "Escamilla 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 4
     },
     {
       "id": "ab_wheel_rollout",
@@ -7668,7 +7901,8 @@
       "sources": [
         "Escamilla 2006",
         "Escamilla 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 1
     },
     {
       "id": "wrist_curl",
@@ -7694,7 +7928,8 @@
       "notes": "~74% MVIC flexor carpi radialis. Isolates wrist flexor compartment. Forearm supported on bench or thighs. Small ROM, controlled movement.",
       "sources": [
         "Boland 2008"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "reverse_wrist_curl",
@@ -7720,7 +7955,8 @@
       "notes": "~68% brachioradialis MVIC. Targets wrist extensors. Lighter weight than wrist curls - extensors are weaker. Important for grip balance and elbow health.",
       "sources": [
         "Boland 2008"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "farmers_carry",
@@ -7752,7 +7988,8 @@
       "sources": [
         "Ellestad 2024",
         "McGill 2009"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     }
   ]
 }

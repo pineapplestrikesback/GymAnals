@@ -58,6 +58,7 @@ final class PresetSeedService {
             )
 
             let popularity = Popularity(rawValue: seed.popularity) ?? .common
+            let exerciseType = ExerciseType(rawValue: seed.exerciseTypeRaw ?? 0) ?? .weightReps
 
             let exercise = Exercise(
                 id: seed.id,
@@ -67,6 +68,7 @@ final class PresetSeedService {
                 dimensions: dimensions,
                 muscleWeights: seed.muscleWeights,
                 popularity: popularity,
+                exerciseType: exerciseType,
                 isBuiltIn: true
             )
             exercise.searchTerms = seed.searchTerms
