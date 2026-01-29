@@ -47,10 +47,30 @@ final class PersistenceController {
             withIntermediateDirectories: true
         )
 
-        return try ModelContainer(
-            for: schema,
-            configurations: modelConfiguration
-        )
+        do {
+            return try ModelContainer(
+                for: schema,
+                configurations: modelConfiguration
+            )
+        } catch {
+            // Schema migration failed - delete incompatible store and retry
+            // This handles cases where model restructuring (e.g., removed tables,
+            // changed relationships) exceeds lightweight migration capabilities
+            print("PersistenceController: Schema migration failed, resetting database - \(error.localizedDescription)")
+
+            let fileManager = FileManager.default
+
+            // Remove store file and associated WAL/SHM files
+            for suffix in ["", "-shm", "-wal"] {
+                let url = directory.appending(path: "userdata.store\(suffix)")
+                try? fileManager.removeItem(at: url)
+            }
+
+            return try ModelContainer(
+                for: schema,
+                configurations: modelConfiguration
+            )
+        }
     }
 
     /// For SwiftUI previews - uses in-memory storage
