@@ -69,6 +69,23 @@ struct ExercisePickerSheet: View {
                     .tint(.primary)
                 }
                 .listStyle(.plain)
+                .safeAreaInset(edge: .bottom) {
+                    if !selectedExerciseIDs.isEmpty {
+                        Button {
+                            let selected = exercises.filter { selectedExerciseIDs.contains($0.id) }
+                            onSelectExercises(selected)
+                            dismiss()
+                        } label: {
+                            Text("Add \(selectedExerciseIDs.count) \(selectedExerciseIDs.count == 1 ? "Exercise" : "Exercises")")
+                                .fontWeight(.semibold)
+                                .frame(maxWidth: .infinity)
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .controlSize(.large)
+                        .padding()
+                        .background(.bar)
+                    }
+                }
             }
             .navigationTitle("Add Exercises")
             .navigationBarTitleDisplayMode(.inline)
@@ -78,16 +95,6 @@ struct ExercisePickerSheet: View {
                     Button("Cancel") {
                         dismiss()
                     }
-                }
-
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("Add (\(selectedExerciseIDs.count))") {
-                        let selected = exercises.filter { selectedExerciseIDs.contains($0.id) }
-                        onSelectExercises(selected)
-                        dismiss()
-                    }
-                    .disabled(selectedExerciseIDs.isEmpty)
-                    .fontWeight(.semibold)
                 }
             }
         }
