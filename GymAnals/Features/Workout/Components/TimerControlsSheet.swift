@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 /// Bottom sheet for controlling an active rest timer and editing the global default.
 struct TimerControlsSheet: View {
@@ -145,7 +146,7 @@ struct TimerControlsSheet: View {
             .frame(maxWidth: .infinity)
 
             Picker("Seconds", selection: $pickerSeconds) {
-                ForEach(stride(from: 0, through: 45, by: 15), id: \.self) { second in
+                ForEach(Array(stride(from: 0, through: 45, by: 15)), id: \ .self) { second in
                     Text(String(format: "%02ds", second)).tag(second)
                 }
             }
@@ -240,3 +241,4 @@ struct TimerControlsSheet: View {
         onDismiss: {}
     )
 }
+
