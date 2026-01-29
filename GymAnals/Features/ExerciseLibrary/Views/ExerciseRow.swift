@@ -57,11 +57,14 @@ struct ExerciseRow: View {
 
             if !exercise.isBuiltIn {
                 Text("Custom")
-                    .font(.caption2)
-                    .padding(.horizontal, 6)
-                    .padding(.vertical, 2)
-                    .background(Color.blue.opacity(0.1))
-                    .clipShape(Capsule())
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(.white)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 4)
+                    .background(
+                        RoundedRectangle(cornerRadius: 6)
+                            .fill(Color.blue)
+                    )
             }
         }
         .contentShape(Rectangle())

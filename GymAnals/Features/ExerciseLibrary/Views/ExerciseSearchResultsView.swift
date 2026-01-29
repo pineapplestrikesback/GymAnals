@@ -11,18 +11,14 @@ import SwiftData
 /// Subview that constructs @Query from init parameters for dynamic filtering
 /// Uses the subview pattern to rebuild @Query when filter parameters change
 struct ExerciseSearchResultsView: View {
-    @Environment(\.modelContext) private var modelContext
     @Query private var exercises: [Exercise]
 
     private let searchText: String
-    private let muscleGroup: MuscleGroup?
+    private let filter: ExerciseFilter
 
-    @State private var exerciseToEdit: Exercise?
-    @State private var exerciseToDelete: Exercise?
-
-    init(searchText: String, muscleGroup: MuscleGroup?) {
+    init(searchText: String, filter: ExerciseFilter) {
         self.searchText = searchText
-        self.muscleGroup = muscleGroup
+        self.filter = filter
 
         // SwiftData predicates have limited support for complex expressions
         // Fetch all exercises, apply muscle group filter and search in-memory
@@ -30,15 +26,18 @@ struct ExerciseSearchResultsView: View {
         _exercises = Query()
     }
 
-    /// Exercises filtered by muscle group, search text, and sorted (applied in-memory)
+    /// Exercises filtered by exercise filter, search text, and sorted (applied in-memory)
     private var filteredExercises: [Exercise] {
         var results = Array(exercises)
 
-        // Apply muscle group filter in-memory
-        if let muscleGroup {
-            results = results.filter { exercise in
-                exercise.primaryMuscleGroup == muscleGroup
-            }
+        // Apply exercise filter in-memory
+        switch filter {
+        case .all:
+            break // No filtering needed
+        case .custom:
+            results = results.filter { !$0.isBuiltIn }
+        case .muscleGroup(let muscleGroup):
+            results = results.filter { $0.primaryMuscleGroup == muscleGroup }
         }
 
         // Apply search filter (includes searchTerms array for in-memory matching)
@@ -70,123 +69,39 @@ struct ExerciseSearchResultsView: View {
     var body: some View {
         let results = filteredExercises
 
-        Group {
-            if results.isEmpty {
-                ContentUnavailableView {
-                    Label("No Exercises", systemImage: "dumbbell")
-                } description: {
-                    Text("No exercises match your search")
-                }
-            } else {
-                List {
-                    // Starred/Recent section
-                    let featured = results.filter { $0.isFavorite || $0.lastUsedDate != nil }
-                    if !featured.isEmpty {
-                        Section("Starred & Recent") {
-                            ForEach(featured.prefix(10)) { exercise in
-                                NavigationLink {
-                                    ExerciseDetailView(exercise: exercise)
-                                } label: {
-                                    ExerciseRow(exercise: exercise)
-                                }
-                                .contextMenu {
-                                    exerciseContextMenu(for: exercise)
-                                }
-                            }
-                        }
-                    }
-
-                    // All exercises
-                    Section("All Exercises") {
-                        ForEach(results) { exercise in
+        if results.isEmpty {
+            ContentUnavailableView {
+                Label("No Exercises", systemImage: "dumbbell")
+            } description: {
+                Text("No exercises match your search")
+            }
+        } else {
+            List {
+                // Starred/Recent section
+                let featured = results.filter { $0.isFavorite || $0.lastUsedDate != nil }
+                if !featured.isEmpty {
+                    Section("Starred & Recent") {
+                        ForEach(featured.prefix(10)) { exercise in
                             NavigationLink {
                                 ExerciseDetailView(exercise: exercise)
                             } label: {
                                 ExerciseRow(exercise: exercise)
                             }
-                            .contextMenu {
-                                exerciseContextMenu(for: exercise)
-                            }
+                        }
+                    }
+                }
+
+                // All exercises
+                Section("All Exercises") {
+                    ForEach(results) { exercise in
+                        NavigationLink {
+                            ExerciseDetailView(exercise: exercise)
+                        } label: {
+                            ExerciseRow(exercise: exercise)
                         }
                     }
                 }
             }
         }
-        .sheet(item: $exerciseToEdit) { exercise in
-            NavigationStack {
-                CustomExerciseEditView(exercise: exercise)
-            }
-        }
-        .alert(
-            "Delete Exercise",
-            isPresented: Binding(
-                get: { exerciseToDelete != nil },
-                set: { if !$0 { exerciseToDelete = nil } }
-            )
-        ) {
-            Button("Delete", role: .destructive) {
-                if let exercise = exerciseToDelete {
-                    deleteExercise(exercise)
-                }
-            }
-            Button("Cancel", role: .cancel) {
-                exerciseToDelete = nil
-            }
-        } message: {
-            if let exercise = exerciseToDelete {
-                Text("Are you sure you want to delete \"\(exercise.displayName)\"? This action cannot be undone.")
-            }
-        }
-    }
-
-    // MARK: - Context Menu
-
-    @ViewBuilder
-    private func exerciseContextMenu(for exercise: Exercise) -> some View {
-        if !exercise.isBuiltIn {
-            Button {
-                exerciseToEdit = exercise
-            } label: {
-                Label("Edit", systemImage: "pencil")
-            }
-        }
-
-        Button {
-            duplicateExercise(exercise)
-        } label: {
-            Label("Duplicate", systemImage: "doc.on.doc")
-        }
-
-        if !exercise.isBuiltIn {
-            Button(role: .destructive) {
-                exerciseToDelete = exercise
-            } label: {
-                Label("Delete", systemImage: "trash")
-            }
-        }
-    }
-
-    // MARK: - Actions
-
-    private func duplicateExercise(_ exercise: Exercise) {
-        let duplicate = Exercise(
-            displayName: "\(exercise.displayName) (Copy)",
-            movement: exercise.movement,
-            equipment: exercise.equipment,
-            dimensions: exercise.dimensions,
-            muscleWeights: exercise.muscleWeights,
-            popularity: exercise.popularity,
-            isBuiltIn: false
-        )
-        duplicate.notes = exercise.notes
-        duplicate.restDuration = exercise.restDuration
-        duplicate.autoStartTimer = exercise.autoStartTimer
-        modelContext.insert(duplicate)
-        try? modelContext.save()
-    }
-
-    private func deleteExercise(_ exercise: Exercise) {
-        modelContext.delete(exercise)
-        try? modelContext.save()
     }
 }

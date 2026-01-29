@@ -19,8 +19,8 @@ final class ExerciseLibraryViewModel {
     /// Debounced search text (updates 300ms after typing stops)
     var debouncedSearchText: String = ""
 
-    /// Currently selected muscle group filter (nil = show all)
-    var selectedMuscleGroup: MuscleGroup? = nil
+    /// Currently selected exercise filter (.all shows everything)
+    var selectedFilter: ExerciseFilter = .all
 
     private var debounceTask: Task<Void, Never>?
 
