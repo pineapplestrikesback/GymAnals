@@ -27,6 +27,10 @@ struct SetRowView: View {
     @FocusState.Binding var focusedField: SetEntryField?
     let setID: UUID
 
+    // MARK: - Environment
+
+    @Environment(\.colorScheme) private var colorScheme
+
     // MARK: - State
 
     @State private var repsText: String = ""
@@ -52,6 +56,15 @@ struct SetRowView: View {
             return "\(r) reps"
         }
         return "-"
+    }
+
+    // MARK: - Adaptive Colors
+
+    /// Green background for confirmed sets, tuned for visibility in both color schemes.
+    private var confirmedBackground: Color {
+        colorScheme == .dark
+            ? Color.green.opacity(0.25)
+            : Color.green.opacity(0.15)
     }
 
     // MARK: - Column Weights
@@ -162,7 +175,7 @@ struct SetRowView: View {
             showPulse
                 ? Color.orange.opacity(0.15)
                 : isConfirmed
-                    ? Color.green.opacity(0.08)
+                    ? confirmedBackground
                     : Color.clear
         )
         .animation(.easeInOut(duration: 0.3), value: showPulse)
