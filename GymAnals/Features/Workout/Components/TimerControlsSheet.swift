@@ -158,7 +158,7 @@ struct TimerControlsSheet: View {
             .frame(maxWidth: .infinity)
 
             Picker("Seconds", selection: $pickerSeconds) {
-                ForEach(Array(stride(from: 0, through: 45, by: 15)), id: \ .self) { second in
+                ForEach(Array(stride(from: 0, through: 45, by: 15)), id: \.self) { second in
                     Text(String(format: "%02ds", second)).tag(second)
                 }
             }
@@ -183,7 +183,8 @@ struct TimerControlsSheet: View {
     private func setPicker(from totalSeconds: Int) {
         let clamped = max(0, totalSeconds)
         pickerMinutes = clamped / 60
-        pickerSeconds = clamped % 60
+        let rawSeconds = clamped % 60
+        pickerSeconds = (rawSeconds / 15) * 15
     }
 
     private func handlePickerChange() {
@@ -251,9 +252,16 @@ struct TimerControlsSheet: View {
 }
 
 #Preview {
+    let timer = SetTimer(setID: UUID(), duration: 90)
+    let manager: SetTimerManager = {
+        let m = SetTimerManager()
+        m.activeTimers = [timer]
+        return m
+    }()
+
     TimerControlsSheet(
-        timerManager: SetTimerManager(),
-        timerID: UUID(),
+        timerManager: manager,
+        timerID: timer.id,
         onDismiss: {}
     )
 }

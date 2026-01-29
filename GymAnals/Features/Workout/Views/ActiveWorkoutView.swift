@@ -75,7 +75,7 @@ struct ActiveWorkoutView: View {
                             },
                             onStartManualTimer: {
                                 timerManager.removeExpiredTimers()
-                                timerManager.startTimer(for: UUID(), duration: 120)
+                                timerManager.startTimer(for: UUID(), duration: defaultRestDuration)
                                 selectedTimerForSheet = timerManager.headerTimer
                             }
                         )

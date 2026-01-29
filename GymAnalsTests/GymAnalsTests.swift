@@ -26,6 +26,7 @@ struct GymAnalsTests {
     @Test func setTimerAdjustEndTimeMovesRemaining() async throws {
         let timer = SetTimer(setID: UUID(), duration: 90)
         let updated = timer.adjustedEndTime(by: -15)
+        #expect(updated.remainingSeconds >= timer.remainingSeconds - 16)
         #expect(updated.remainingSeconds <= timer.remainingSeconds - 14)
     }
 
