@@ -15,6 +15,7 @@ struct WorkoutHeader: View {
     let totalSets: Int
     let headerTimer: SetTimer?
     let gym: Gym?
+    let defaultRestDuration: Double
     let onTimerTap: () -> Void
     let onStartManualTimer: () -> Void
 
@@ -79,6 +80,11 @@ struct WorkoutHeader: View {
                                 .font(.title3)
                                 .monospacedDigit()
                                 .foregroundStyle(.orange)
+                        } else if defaultRestDuration == 0 {
+                            Text("Off")
+                                .font(.title3)
+                                .monospacedDigit()
+                                .foregroundStyle(.secondary)
                         } else {
                             Text("--:--")
                                 .font(.title3)
@@ -136,6 +142,7 @@ struct WorkoutHeader: View {
             totalSets: 12,
             headerTimer: nil,
             gym: nil,
+            defaultRestDuration: AppConstants.defaultRestDuration,
             onTimerTap: {},
             onStartManualTimer: {}
         )
@@ -146,6 +153,7 @@ struct WorkoutHeader: View {
             totalSets: 3,
             headerTimer: SetTimer(setID: UUID(), duration: 90),
             gym: nil,
+            defaultRestDuration: AppConstants.defaultRestDuration,
             onTimerTap: {},
             onStartManualTimer: {}
         )
