@@ -12,6 +12,7 @@ import SwiftUI
 /// Displays gym indicator, elapsed duration, total sets completed, and always-visible rest timer.
 struct WorkoutHeader: View {
     let startDate: Date
+    let finishedSets: Int
     let totalSets: Int
     let headerTimer: SetTimer?
     let gym: Gym?
@@ -56,8 +57,13 @@ struct WorkoutHeader: View {
                     Text("Sets")
                         .font(.caption)
                         .foregroundStyle(.secondary)
-                    Text("\(totalSets)")
-                        .font(.title3)
+                    HStack(spacing: 0) {
+                        Text("\(finishedSets)")
+                            .foregroundStyle(.green)
+                        Text("/\(totalSets)")
+                    }
+                    .font(.title3)
+                    .monospacedDigit()
                 }
 
                 Spacer()
@@ -133,6 +139,7 @@ struct WorkoutHeader: View {
         // Preview with no timer, no gym
         WorkoutHeader(
             startDate: Date.now.addingTimeInterval(-3665), // 1 hour, 1 minute, 5 seconds ago
+            finishedSets: 8,
             totalSets: 12,
             headerTimer: nil,
             gym: nil,
@@ -143,6 +150,7 @@ struct WorkoutHeader: View {
         // Preview with timer
         WorkoutHeader(
             startDate: Date.now.addingTimeInterval(-125), // 2 minutes, 5 seconds ago
+            finishedSets: 1,
             totalSets: 3,
             headerTimer: SetTimer(setID: UUID(), duration: 90),
             gym: nil,

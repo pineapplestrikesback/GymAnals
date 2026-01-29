@@ -67,6 +67,7 @@ struct ActiveWorkoutView: View {
                     } header: {
                         WorkoutHeader(
                             startDate: viewModel.activeWorkout?.startDate ?? .now,
+                            finishedSets: viewModel.activeWorkout?.sets.filter(\.isConfirmed).count ?? 0,
                             totalSets: viewModel.activeWorkout?.sets.count ?? 0,
                             headerTimer: timerManager.headerTimer,
                             gym: viewModel.activeWorkout?.gym,
