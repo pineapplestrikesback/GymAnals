@@ -12,10 +12,13 @@ import SwiftUI
 /// Supports multi-select with checkboxes, muscle group filter tabs, and search.
 struct ExercisePickerSheet: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.modelContext) private var modelContext
     @Query(sort: \Exercise.lastUsedDate, order: .reverse) private var exercises: [Exercise]
     @State private var searchText = ""
     @State private var selectedExerciseIDs: Set<String> = []
     @State private var selectedFilter: ExerciseFilter = .all
+    @State private var exerciseToEdit: Exercise?
+    @State private var exerciseToDelete: Exercise?
 
     let onSelectExercises: ([Exercise]) -> Void
 
@@ -72,6 +75,30 @@ struct ExercisePickerSheet: View {
                         }
                     }
                     .tint(.primary)
+                    .contextMenu {
+                        if !exercise.isBuiltIn {
+                            Button {
+                                exerciseToEdit = exercise
+                            } label: {
+                                Label("Edit", systemImage: "pencil")
+                            }
+                        }
+
+                        Button {
+                            _ = exercise.duplicate(in: modelContext)
+                        } label: {
+                            Label("Duplicate", systemImage: "doc.on.doc")
+                        }
+
+                        if !exercise.isBuiltIn {
+                            Divider()
+                            Button(role: .destructive) {
+                                exerciseToDelete = exercise
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                        }
+                    }
                 }
                 .listStyle(.plain)
                 .safeAreaInset(edge: .bottom) {
@@ -101,6 +128,32 @@ struct ExercisePickerSheet: View {
                         dismiss()
                     }
                 }
+            }
+            .sheet(item: $exerciseToEdit) { exercise in
+                NavigationStack {
+                    CustomExerciseEditView(exercise: exercise)
+                }
+            }
+            .confirmationDialog(
+                "Delete Exercise",
+                isPresented: Binding(
+                    get: { exerciseToDelete != nil },
+                    set: { if !$0 { exerciseToDelete = nil } }
+                ),
+                titleVisibility: .visible
+            ) {
+                Button("Delete", role: .destructive) {
+                    if let exercise = exerciseToDelete {
+                        selectedExerciseIDs.remove(exercise.id)
+                        modelContext.delete(exercise)
+                        exerciseToDelete = nil
+                    }
+                }
+                Button("Cancel", role: .cancel) {
+                    exerciseToDelete = nil
+                }
+            } message: {
+                Text("This will permanently delete \"\(exerciseToDelete?.displayName ?? "")\" and all its workout history.")
             }
         }
     }
