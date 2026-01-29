@@ -34,6 +34,9 @@ final class Exercise {
     /// Raw value storage for popularity
     var popularityRaw: String = Popularity.common.rawValue
 
+    /// Raw value storage for exercise type (weight+reps, bodyweight reps, time-based, etc.)
+    var exerciseTypeRaw: Int = ExerciseType.weightReps.rawValue
+
     // MARK: - Metadata
 
     var notes: String = ""
@@ -76,6 +79,12 @@ final class Exercise {
         set { popularityRaw = newValue.rawValue }
     }
 
+    /// Type-safe access to exercise type
+    var exerciseType: ExerciseType {
+        get { ExerciseType(rawValue: exerciseTypeRaw) ?? .weightReps }
+        set { exerciseTypeRaw = newValue.rawValue }
+    }
+
     /// Whether this is a unilateral exercise (derived from dimensions)
     var isUnilateral: Bool {
         dimensions.laterality == "unilateral"
@@ -113,6 +122,7 @@ final class Exercise {
         dimensions: Dimensions = Dimensions(),
         muscleWeights: [String: Double] = [:],
         popularity: Popularity = .common,
+        exerciseType: ExerciseType = .weightReps,
         isBuiltIn: Bool = false
     ) {
         self.id = id ?? UUID().uuidString
@@ -122,6 +132,7 @@ final class Exercise {
         self.dimensions = dimensions
         self.muscleWeights = muscleWeights
         self.popularityRaw = popularity.rawValue
+        self.exerciseTypeRaw = exerciseType.rawValue
         self.isBuiltIn = isBuiltIn
     }
 
@@ -141,5 +152,26 @@ final class Exercise {
             isBuiltIn: false
         )
         return exercise
+    }
+
+    /// Create a duplicate custom exercise with same properties
+    func duplicate(in context: ModelContext) -> Exercise {
+        let copy = Exercise(
+            displayName: "\(displayName) (Copy)",
+            movement: movement,
+            equipment: equipment,
+            dimensions: dimensions,
+            muscleWeights: muscleWeights,
+            popularity: popularity,
+            exerciseType: exerciseType,
+            isBuiltIn: false
+        )
+        copy.notes = notes
+        copy.sources = sources
+        copy.searchTerms = searchTerms
+        copy.restDuration = restDuration
+        copy.autoStartTimer = autoStartTimer
+        context.insert(copy)
+        return copy
     }
 }
