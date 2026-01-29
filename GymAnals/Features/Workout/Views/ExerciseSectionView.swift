@@ -24,6 +24,10 @@ struct ExerciseSectionView: View {
     let previousWeight: (WorkoutSet) -> Double?
     let onConfirmSet: (WorkoutSet) -> Void
 
+    // Inline timer support
+    let timerForSet: (UUID) -> SetTimer?
+    let onTimerTap: (SetTimer) -> Void
+
     @FocusState.Binding var focusedField: SetEntryField?
     let weightUnit: WeightUnit
 
@@ -35,21 +39,29 @@ struct ExerciseSectionView: View {
             // Expandable content
             if isExpanded {
                 VStack(spacing: 0) {
-                    // Column headers
-                    HStack(spacing: 0) {
-                        Text("SET")
-                            .frame(width: 32, alignment: .center)
-                        Text("PREVIOUS")
-                            .frame(width: 80, alignment: .center)
-                        Text(weightUnit.abbreviation.uppercased())
-                            .frame(minWidth: 50)
-                        Text("REPS")
-                            .frame(minWidth: 50)
-                        Spacer()
-                            .frame(width: 36) // Checkmark column spacer
+                    // Column headers (proportional, matching SetRowView weights)
+                    GeometryReader { geo in
+                        let totalWeight = SetRowView.setWeight + SetRowView.previousWeight + SetRowView.kgWeight + SetRowView.repsWeight
+                        let availableWidth = geo.size.width - SetRowView.checkWidth
+                        let unitWidth = availableWidth / totalWeight
+
+                        HStack(spacing: 0) {
+                            Text("SET")
+                                .frame(width: unitWidth * SetRowView.setWeight, alignment: .center)
+                            Text("PREVIOUS")
+                                .frame(width: unitWidth * SetRowView.previousWeight, alignment: .center)
+                            Text(weightUnit.abbreviation.uppercased())
+                                .frame(width: unitWidth * SetRowView.kgWeight, alignment: .center)
+                            Text("REPS")
+                                .frame(width: unitWidth * SetRowView.repsWeight, alignment: .center)
+                            Spacer()
+                                .frame(width: SetRowView.checkWidth)
+                        }
                     }
+                    .frame(height: 16)
                     .font(.caption2)
-                    .foregroundStyle(.tertiary)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.primary)
                     .padding(.horizontal, 8)
                     .padding(.top, 8)
                     .padding(.bottom, 4)
@@ -60,7 +72,6 @@ struct ExerciseSectionView: View {
 
                         if workoutSet.id != sets.last?.id {
                             Divider()
-                                .padding(.leading, 32)
                         }
                     }
 
@@ -75,7 +86,7 @@ struct ExerciseSectionView: View {
                     .buttonStyle(.plain)
                     .padding(.vertical, 12)
                 }
-                .padding(.leading, 16)
+                .padding(.horizontal, 8)
             }
         }
         .background(Color(.systemBackground))
@@ -145,6 +156,8 @@ struct ExerciseSectionView: View {
                 weightUnit: weightUnit,
                 isConfirmed: workoutSet.isConfirmed,
                 onConfirm: { onConfirmSet(workoutSet) },
+                activeTimer: timerForSet(workoutSet.id),
+                onTimerTap: { timer in onTimerTap(timer) },
                 focusedField: $focusedField,
                 setID: workoutSet.id
             )

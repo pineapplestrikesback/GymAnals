@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import Combine
 
-/// A single set entry row with Hevy-style column layout: SET | PREVIOUS | WEIGHT | REPS | checkmark.
-/// Shows +/- stepper buttons only when the corresponding field is focused for a cleaner default UI.
+/// A single set entry row with proportional column layout: SET | PREVIOUS | WEIGHT | REPS | checkmark.
+/// Uses a progress bar below the row for rest timer instead of inline badge.
 struct SetRowView: View {
     let setNumber: Int
     @Binding var reps: Int
@@ -19,18 +20,23 @@ struct SetRowView: View {
     let isConfirmed: Bool
     let onConfirm: () -> Void
 
+    // Timer for progress bar
+    let activeTimer: SetTimer?
+    let onTimerTap: ((SetTimer) -> Void)?
+
     @FocusState.Binding var focusedField: SetEntryField?
     let setID: UUID
 
+    // MARK: - State
+
+    @State private var repsText: String = ""
+    @State private var weightText: String = ""
+    @State private var timerProgress: CGFloat = 0
+    @State private var showPulse: Bool = false
+
+    private let updateTimer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+
     // MARK: - Computed Properties
-
-    private var isRepsFocused: Bool {
-        focusedField == .reps(setID: setID)
-    }
-
-    private var isWeightFocused: Bool {
-        focusedField == .weight(setID: setID)
-    }
 
     private var previousText: String {
         if let w = previousWeight, let r = previousReps {
@@ -43,166 +49,153 @@ struct SetRowView: View {
         return "-"
     }
 
-    // String bindings for TextField
-    @State private var repsText: String = ""
-    @State private var weightText: String = ""
+    // MARK: - Column Weights
+
+    /// Proportional column weights for consistent layout
+    static let setWeight: CGFloat = 1
+    static let previousWeight: CGFloat = 2
+    static let kgWeight: CGFloat = 1.5
+    static let repsWeight: CGFloat = 1.5
+    static let checkWidth: CGFloat = 40
 
     var body: some View {
-        HStack(spacing: 0) {
-            // Set number
-            Text("\(setNumber)")
-                .font(.headline)
-                .foregroundStyle(.secondary)
-                .frame(width: 32, alignment: .center)
+        VStack(spacing: 0) {
+            // Main row with proportional columns
+            GeometryReader { geo in
+                let totalWeight = Self.setWeight + Self.previousWeight + Self.kgWeight + Self.repsWeight
+                let availableWidth = geo.size.width - Self.checkWidth
+                let unitWidth = availableWidth / totalWeight
 
-            // PREVIOUS column (read-only)
-            Text(previousText)
-                .font(.subheadline)
-                .foregroundStyle(.tertiary)
-                .frame(width: 80, alignment: .center)
+                HStack(spacing: 0) {
+                    // SET column
+                    Text("\(setNumber)")
+                        .font(.headline)
+                        .foregroundStyle(.secondary)
+                        .frame(width: unitWidth * Self.setWeight, alignment: .center)
 
-            // WEIGHT input (with stepper when focused)
-            weightInputView
-                .frame(minWidth: 50)
+                    // PREVIOUS column
+                    Text(previousText)
+                        .font(.subheadline)
+                        .foregroundStyle(.tertiary)
+                        .frame(width: unitWidth * Self.previousWeight, alignment: .center)
 
-            // REPS input (with stepper when focused)
-            repsInputView
-                .frame(minWidth: 50)
+                    // WEIGHT column
+                    TextField("", text: $weightText)
+                        .keyboardType(.decimalPad)
+                        .multilineTextAlignment(.center)
+                        .frame(width: min(50, unitWidth * Self.kgWeight - 4))
+                        .padding(.vertical, 6)
+                        .background(Color(.systemGray6))
+                        .cornerRadius(6)
+                        .focused($focusedField, equals: .weight(setID: setID))
+                        .onChange(of: weightText) { _, newValue in
+                            if let value = Double(newValue) {
+                                weight = max(0, min(999, value))
+                            }
+                        }
+                        .onSubmit {
+                            if let value = Double(weightText) {
+                                weight = max(0, min(999, value))
+                            }
+                            weightText = formatWeight(weight)
+                        }
+                        .frame(width: unitWidth * Self.kgWeight, alignment: .center)
 
-            // Confirm checkmark
-            Button {
-                onConfirm()
-            } label: {
-                Image(systemName: isConfirmed ? "checkmark.circle.fill" : "circle")
-                    .font(.title2)
-                    .foregroundStyle(isConfirmed ? .green : .secondary)
+                    // REPS column
+                    TextField("", text: $repsText)
+                        .keyboardType(.numberPad)
+                        .multilineTextAlignment(.center)
+                        .frame(width: min(50, unitWidth * Self.repsWeight - 4))
+                        .padding(.vertical, 6)
+                        .background(Color(.systemGray6))
+                        .cornerRadius(6)
+                        .focused($focusedField, equals: .reps(setID: setID))
+                        .onChange(of: repsText) { _, newValue in
+                            if let value = Int(newValue) {
+                                reps = max(0, min(999, value))
+                            }
+                        }
+                        .onSubmit {
+                            if let value = Int(repsText) {
+                                reps = max(0, min(999, value))
+                            }
+                            repsText = "\(reps)"
+                        }
+                        .frame(width: unitWidth * Self.repsWeight, alignment: .center)
+
+                    // Confirm checkmark
+                    Button {
+                        onConfirm()
+                    } label: {
+                        Image(systemName: isConfirmed ? "checkmark.circle.fill" : "circle")
+                            .font(.title2)
+                            .foregroundStyle(isConfirmed ? .green : .secondary)
+                    }
+                    .buttonStyle(.plain)
+                    .frame(width: Self.checkWidth, alignment: .center)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
-            .buttonStyle(.plain)
-            .frame(width: 36, alignment: .center)
+            .frame(height: 44)
+            .padding(.horizontal, 8)
         }
-        .padding(.horizontal, 8)
-        .padding(.vertical, 10)
-        .animation(.easeInOut(duration: 0.2), value: isRepsFocused)
-        .animation(.easeInOut(duration: 0.2), value: isWeightFocused)
+        .padding(.vertical, 3)
+        .overlay(alignment: .bottom) {
+            // Timer progress bar — overlaid at the bottom, never changes row height
+            if let timer = activeTimer, !timer.isExpired {
+                GeometryReader { geo in
+                    RoundedRectangle(cornerRadius: 1)
+                        .fill(Color.orange)
+                        .frame(width: geo.size.width * timerProgress, height: 2)
+                        .animation(.linear(duration: 0.1), value: timerProgress)
+                }
+                .frame(height: 2)
+                .padding(.horizontal, 8)
+            }
+        }
+        .background(
+            showPulse
+                ? Color.orange.opacity(0.15)
+                : Color.clear
+        )
+        .animation(.easeInOut(duration: 0.3), value: showPulse)
         .onAppear {
             repsText = "\(reps)"
             weightText = formatWeight(weight)
+            updateTimerProgress()
         }
         .onChange(of: reps) { _, newValue in
-            if !isRepsFocused {
-                repsText = "\(newValue)"
-            }
+            repsText = "\(newValue)"
         }
         .onChange(of: weight) { _, newValue in
-            if !isWeightFocused {
+            // Preserve trailing "." while user is mid-typing a decimal
+            if !weightText.hasSuffix(".") {
                 weightText = formatWeight(newValue)
             }
         }
-    }
-
-    // MARK: - Reps Input
-
-    @ViewBuilder
-    private var repsInputView: some View {
-        HStack(spacing: 4) {
-            // Minus button (only when focused)
-            if isRepsFocused {
-                stepperButton(systemName: "minus") {
-                    reps = max(0, reps - 1)
-                    repsText = "\(reps)"
-                }
-            }
-
-            // Reps text field
-            TextField("", text: $repsText)
-                .keyboardType(.numberPad)
-                .multilineTextAlignment(.center)
-                .frame(width: 40)
-                .padding(.vertical, 6)
-                .background(Color(.systemGray6))
-                .cornerRadius(6)
-                .focused($focusedField, equals: .reps(setID: setID))
-                .onChange(of: repsText) { _, newValue in
-                    if let value = Int(newValue) {
-                        reps = max(0, min(999, value))
-                    }
-                }
-                .onSubmit {
-                    // Sync on submit
-                    if let value = Int(repsText) {
-                        reps = max(0, min(999, value))
-                    }
-                    repsText = "\(reps)"
-                }
-
-            // Plus button (only when focused)
-            if isRepsFocused {
-                stepperButton(systemName: "plus") {
-                    reps = min(999, reps + 1)
-                    repsText = "\(reps)"
-                }
-            }
+        .onReceive(updateTimer) { _ in
+            updateTimerProgress()
         }
     }
 
-    // MARK: - Weight Input
+    // MARK: - Timer Progress
 
-    @ViewBuilder
-    private var weightInputView: some View {
-        HStack(spacing: 4) {
-            // Minus button (only when focused)
-            if isWeightFocused {
-                stepperButton(systemName: "minus") {
-                    weight = max(0, weight - 1.0)
-                    weightText = formatWeight(weight)
-                }
-            }
-
-            // Weight text field
-            TextField("", text: $weightText)
-                .keyboardType(.decimalPad)
-                .multilineTextAlignment(.center)
-                .frame(width: 40)
-                .padding(.vertical, 6)
-                .background(Color(.systemGray6))
-                .cornerRadius(6)
-                .focused($focusedField, equals: .weight(setID: setID))
-                .onChange(of: weightText) { _, newValue in
-                    if let value = Double(newValue) {
-                        weight = max(0, min(999, value))
-                    }
-                }
-                .onSubmit {
-                    // Sync on submit
-                    if let value = Double(weightText) {
-                        weight = max(0, min(999, value))
-                    }
-                    weightText = formatWeight(weight)
-                }
-
-            // Plus button (only when focused)
-            if isWeightFocused {
-                stepperButton(systemName: "plus") {
-                    weight = min(999, weight + 1.0)
-                    weightText = formatWeight(weight)
-                }
-            }
+    private func updateTimerProgress() {
+        if let timer = activeTimer, !timer.isExpired {
+            timerProgress = CGFloat(timer.progress)
+            showPulse = false
+        } else if let timer = activeTimer, timer.isExpired, timerProgress > 0 {
+            // Timer just expired — trigger pulse
+            timerProgress = 0
+            triggerPulse()
         }
     }
 
-    // MARK: - Stepper Button
-
-    @ViewBuilder
-    private func stepperButton(systemName: String, action: @escaping () -> Void) -> some View {
-        Button(action: action) {
-            Image(systemName: systemName)
-                .font(.system(size: 12, weight: .bold))
-                .foregroundStyle(.primary)
-                .frame(width: 22, height: 22)
-                .background(Color(.systemGray5))
-                .cornerRadius(4)
+    private func triggerPulse() {
+        showPulse = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+            showPulse = false
         }
-        .buttonStyle(.plain)
     }
 
     // MARK: - Helper
@@ -226,7 +219,6 @@ struct SetRowView: View {
     let setID2 = UUID()
 
     VStack(spacing: 0) {
-        // Row with previous values (confirmed)
         SetRowView(
             setNumber: 1,
             reps: $reps1,
@@ -236,13 +228,14 @@ struct SetRowView: View {
             weightUnit: .kilograms,
             isConfirmed: true,
             onConfirm: { print("Toggled set 1") },
+            activeTimer: SetTimer(setID: setID1, duration: 90),
+            onTimerTap: { _ in print("Timer tapped") },
             focusedField: $focus,
             setID: setID1
         )
 
         Divider()
 
-        // Row without previous values (not confirmed)
         SetRowView(
             setNumber: 2,
             reps: $reps2,
@@ -252,6 +245,8 @@ struct SetRowView: View {
             weightUnit: .pounds,
             isConfirmed: false,
             onConfirm: { print("Toggled set 2") },
+            activeTimer: nil,
+            onTimerTap: nil,
             focusedField: $focus,
             setID: setID2
         )

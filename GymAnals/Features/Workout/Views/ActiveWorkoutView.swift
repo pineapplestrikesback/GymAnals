@@ -38,9 +38,14 @@ struct ActiveWorkoutView: View {
                                 exerciseID: exerciseID,
                                 viewModel: viewModel,
                                 weightUnit: weightUnit,
+                                timerManager: timerManager,
                                 focusedField: $focusedField,
                                 onConfirmSet: { workoutSet in
                                     handleSetConfirmation(workoutSet)
+                                },
+                                onTimerTap: { timer in
+                                    selectedTimerForControls = timer
+                                    showingTimerControls = true
                                 }
                             )
                         }
@@ -129,6 +134,24 @@ struct ActiveWorkoutView: View {
                 )
             }
         }
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Button {
+                    adjustFocusedField(by: -1)
+                } label: {
+                    Image(systemName: "minus")
+                }
+                Button {
+                    adjustFocusedField(by: 1)
+                } label: {
+                    Image(systemName: "plus")
+                }
+                Spacer()
+                Button("Done") {
+                    focusedField = nil
+                }
+            }
+        }
         .confirmationDialog(
             "Finish Workout?",
             isPresented: $showingFinishConfirmation,
@@ -184,6 +207,24 @@ struct ActiveWorkoutView: View {
 
     // MARK: - Actions
 
+    /// Adjusts the currently focused field's value by the given delta.
+    /// Weight fields adjust by 1.0, reps fields adjust by 1.
+    private func adjustFocusedField(by delta: Int) {
+        guard let field = focusedField,
+              let workout = viewModel.activeWorkout else { return }
+
+        switch field {
+        case .weight(let setID):
+            if let workoutSet = workout.sets.first(where: { $0.id == setID }) {
+                workoutSet.weight = max(0, min(999, workoutSet.weight + Double(delta)))
+            }
+        case .reps(let setID):
+            if let workoutSet = workout.sets.first(where: { $0.id == setID }) {
+                workoutSet.reps = max(0, min(999, workoutSet.reps + delta))
+            }
+        }
+    }
+
     private func handleSetConfirmation(_ workoutSet: WorkoutSet) {
         guard let exercise = workoutSet.exercise else { return }
 
@@ -217,8 +258,10 @@ private struct ExerciseSectionForID: View {
     let exerciseID: String
     let viewModel: ActiveWorkoutViewModel
     let weightUnit: WeightUnit
+    let timerManager: SetTimerManager
     @FocusState.Binding var focusedField: SetEntryField?
     let onConfirmSet: (WorkoutSet) -> Void
+    let onTimerTap: (SetTimer) -> Void
 
     @Environment(\.modelContext) private var modelContext
 
@@ -268,6 +311,12 @@ private struct ExerciseSectionForID: View {
                 },
                 onConfirmSet: { workoutSet in
                     onConfirmSet(workoutSet)
+                },
+                timerForSet: { setID in
+                    timerManager.activeTimers.first { $0.setID == setID && !$0.isExpired }
+                },
+                onTimerTap: { timer in
+                    onTimerTap(timer)
                 },
                 focusedField: $focusedField,
                 weightUnit: weightUnit
