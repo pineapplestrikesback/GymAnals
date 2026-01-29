@@ -83,12 +83,12 @@ struct ActiveWorkoutView: View {
                         )
                     }
                 }
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    focusedField = nil
+                }
             }
-
             .scrollDismissesKeyboard(.interactively)
-            .onTapGesture {
-                focusedField = nil
-            }
 
             // Floating action button
             AddExerciseFAB {
