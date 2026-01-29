@@ -9,15 +9,15 @@ import SwiftUI
 import Combine
 
 /// Bottom sheet for controlling an active rest timer and editing the global default.
+/// Reads the live timer from SetTimerManager so adjustments are reflected immediately.
 struct TimerControlsSheet: View {
     enum Mode {
         case currentTimer
         case defaultTimer
     }
 
-    let timer: SetTimer
-    let onSkip: () -> Void
-    let onAdjustTimer: (_ deltaSeconds: Int) -> Void
+    let timerManager: SetTimerManager
+    let timerID: UUID
     let onDismiss: () -> Void
 
     @State private var mode: Mode = .currentTimer
@@ -33,6 +33,16 @@ struct TimerControlsSheet: View {
     private let updateTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     @State private var detentSelection: PresentationDetent = .height(170)
+
+    /// Look up the current timer from the manager (always up-to-date after mutations)
+    private var timer: SetTimer? {
+        timerManager.activeTimers.first { $0.id == timerID }
+    }
+
+    /// Current remaining seconds from the live timer
+    private var currentRemainingSeconds: Int {
+        timer?.remainingSeconds ?? 0
+    }
 
     var body: some View {
         VStack(spacing: 12) {
@@ -56,7 +66,9 @@ struct TimerControlsSheet: View {
             HStack(spacing: 12) {
                 if mode == .currentTimer {
                     Button {
-                        onSkip()
+                        if let t = timer {
+                            timerManager.skipTimer(t)
+                        }
                         onDismiss()
                     } label: {
                         Text("Skip")
@@ -102,13 +114,13 @@ struct TimerControlsSheet: View {
         .presentationDetents([.height(170), .medium], selection: $detentSelection)
         .presentationDragIndicator(.visible)
         .onAppear {
-            remainingSeconds = timer.remainingSeconds
+            remainingSeconds = currentRemainingSeconds
             let defaultSeconds = Int(defaultRestDuration)
             draftDefaultSeconds = defaultSeconds
             setPicker(from: displayedSeconds)
         }
         .onReceive(updateTimer) { _ in
-            remainingSeconds = timer.remainingSeconds
+            remainingSeconds = currentRemainingSeconds
             if mode == .currentTimer && !isPickerVisible {
                 setPicker(from: remainingSeconds)
             }
@@ -190,12 +202,15 @@ struct TimerControlsSheet: View {
     private func applyNewValue(_ seconds: Int) {
         switch mode {
         case .currentTimer:
+            guard let t = timer else { return }
             let delta = seconds - remainingSeconds
             if seconds <= 0 {
-                onSkip()
+                timerManager.skipTimer(t)
                 onDismiss()
             } else {
-                onAdjustTimer(delta)
+                _ = timerManager.adjustTimer(t, by: delta)
+                // Immediately refresh from the updated timer so display is instant
+                remainingSeconds = currentRemainingSeconds
             }
         case .defaultTimer:
             draftDefaultSeconds = max(0, seconds)
@@ -220,8 +235,10 @@ struct TimerControlsSheet: View {
     }
 
     private func stopTimerIfExpired() {
-        if mode == .currentTimer && remainingSeconds <= 0 {
-            onSkip()
+        if mode == .currentTimer && (timer == nil || currentRemainingSeconds <= 0) {
+            if let t = timer {
+                timerManager.skipTimer(t)
+            }
             onDismiss()
         }
     }
@@ -235,10 +252,8 @@ struct TimerControlsSheet: View {
 
 #Preview {
     TimerControlsSheet(
-        timer: SetTimer(setID: UUID(), duration: 90),
-        onSkip: {},
-        onAdjustTimer: { _ in },
+        timerManager: SetTimerManager(),
+        timerID: UUID(),
         onDismiss: {}
     )
 }
-
