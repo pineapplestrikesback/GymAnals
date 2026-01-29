@@ -26,6 +26,7 @@ struct ActiveWorkoutView: View {
     @FocusState private var focusedField: SetEntryField?
 
     @AppStorage("weightUnit") private var weightUnit: WeightUnit = .kilograms
+    @AppStorage("defaultRestDuration") private var defaultRestDuration: Double = AppConstants.defaultRestDuration
 
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
@@ -70,6 +71,7 @@ struct ActiveWorkoutView: View {
                             totalSets: viewModel.activeWorkout?.sets.count ?? 0,
                             headerTimer: timerManager.headerTimer,
                             gym: viewModel.activeWorkout?.gym,
+                            defaultRestDuration: defaultRestDuration,
                             onTimerTap: {
                                 if let timer = timerManager.headerTimer {
                                     selectedTimerForControls = timer
@@ -117,19 +119,18 @@ struct ActiveWorkoutView: View {
                 }
             }
         }
-        .popover(isPresented: $showingTimerControls) {
+        .sheet(isPresented: $showingTimerControls) {
             if let timer = selectedTimerForControls {
-                TimerControlsPopover(
+                TimerControlsSheet(
                     timer: timer,
                     onSkip: {
                         timerManager.skipTimer(timer)
+                    },
+                    onAdjustTimer: { delta in
+                        _ = timerManager.adjustTimer(timer, by: delta)
+                    },
+                    onDismiss: {
                         showingTimerControls = false
-                    },
-                    onExtend30s: {
-                        timerManager.extendTimer(timer, by: 30)
-                    },
-                    onExtend1m: {
-                        timerManager.extendTimer(timer, by: 60)
                     }
                 )
             }
@@ -244,7 +245,13 @@ struct ActiveWorkoutView: View {
             // Start timer if auto-start is enabled
             if exercise.autoStartTimer {
                 timerManager.removeExpiredTimers()
-                timerManager.startTimer(for: workoutSet.id, duration: exercise.restDuration)
+                let effectiveDefault = defaultRestDuration
+                if effectiveDefault > 0 {
+                    let duration = exercise.restDuration == AppConstants.defaultRestDuration
+                        ? effectiveDefault
+                        : exercise.restDuration
+                    timerManager.startTimer(for: workoutSet.id, duration: duration)
+                }
             }
         }
     }
