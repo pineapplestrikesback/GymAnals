@@ -103,6 +103,39 @@ final class SetTimerManager {
         }
     }
 
+    /// Update a timer to a specific remaining seconds value
+    /// - Parameters:
+    ///   - timer: The timer to update
+    ///   - remainingSeconds: New remaining seconds value
+    /// - Returns: false if the timer was skipped or not found
+    func updateTimer(_ timer: SetTimer, remainingSeconds: Int) -> Bool {
+        guard remainingSeconds > 0 else {
+            skipTimer(timer)
+            return false
+        }
+        guard let index = activeTimers.firstIndex(where: { $0.id == timer.id }) else { return false }
+
+        let wasHeaderTimer = timer.id == headerTimer?.id
+        let updatedTimer = timer.reset(remainingSeconds: TimeInterval(remainingSeconds))
+        activeTimers[index] = updatedTimer
+
+        if wasHeaderTimer {
+            notificationService.cancelNotification(id: timer.id.uuidString)
+            scheduleNotificationForHeaderTimer()
+        }
+
+        return true
+    }
+
+    /// Adjust a timer by a delta in seconds
+    /// - Parameters:
+    ///   - timer: The timer to update
+    ///   - deltaSeconds: Delta seconds to add (can be negative)
+    /// - Returns: false if the timer was skipped or not found
+    func adjustTimer(_ timer: SetTimer, by deltaSeconds: Int) -> Bool {
+        updateTimer(timer, remainingSeconds: timer.remainingSeconds + deltaSeconds)
+    }
+
     /// Cancel all timers and notifications
     func cancelAllTimers() {
         activeTimers.removeAll()
