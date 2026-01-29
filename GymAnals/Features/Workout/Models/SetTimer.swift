@@ -48,6 +48,27 @@ struct SetTimer: Identifiable {
         )
     }
 
+    /// Create a new timer reset to a new remaining duration from now
+    func reset(remainingSeconds: TimeInterval) -> SetTimer {
+        let clampedSeconds = max(0, remainingSeconds)
+        return SetTimer(
+            id: self.id,
+            setID: self.setID,
+            duration: clampedSeconds,
+            endTime: Date.now.addingTimeInterval(clampedSeconds)
+        )
+    }
+
+    /// Create a new timer by shifting the end time without changing duration
+    func adjustedEndTime(by seconds: TimeInterval) -> SetTimer {
+        SetTimer(
+            id: self.id,
+            setID: self.setID,
+            duration: self.duration,
+            endTime: self.endTime.addingTimeInterval(seconds)
+        )
+    }
+
     private init(id: UUID, setID: UUID, duration: TimeInterval, endTime: Date) {
         self.id = id
         self.setID = setID

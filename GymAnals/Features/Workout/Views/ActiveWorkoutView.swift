@@ -18,14 +18,14 @@ struct ActiveWorkoutView: View {
     @State var timerManager: SetTimerManager
 
     @State private var showingExercisePicker = false
-    @State private var showingTimerControls = false
     @State private var showingFinishConfirmation = false
     @State private var showingDiscardConfirmation = false
-    @State private var selectedTimerForControls: SetTimer?
+    @State private var selectedTimerForSheet: SetTimer?
 
     @FocusState private var focusedField: SetEntryField?
 
     @AppStorage("weightUnit") private var weightUnit: WeightUnit = .kilograms
+    @AppStorage("defaultRestDuration") private var defaultRestDuration: Double = AppConstants.defaultRestDuration
 
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
@@ -44,8 +44,7 @@ struct ActiveWorkoutView: View {
                                     handleSetConfirmation(workoutSet)
                                 },
                                 onTimerTap: { timer in
-                                    selectedTimerForControls = timer
-                                    showingTimerControls = true
+                                    selectedTimerForSheet = timer
                                 }
                             )
                         }
@@ -70,15 +69,14 @@ struct ActiveWorkoutView: View {
                             totalSets: viewModel.activeWorkout?.sets.count ?? 0,
                             headerTimer: timerManager.headerTimer,
                             gym: viewModel.activeWorkout?.gym,
+                            defaultRestDuration: defaultRestDuration,
                             onTimerTap: {
-                                if let timer = timerManager.headerTimer {
-                                    selectedTimerForControls = timer
-                                    showingTimerControls = true
-                                }
+                                selectedTimerForSheet = timerManager.headerTimer
                             },
                             onStartManualTimer: {
                                 timerManager.removeExpiredTimers()
                                 timerManager.startTimer(for: UUID(), duration: 120)
+                                selectedTimerForSheet = timerManager.headerTimer
                             }
                         )
                     }
@@ -122,22 +120,14 @@ struct ActiveWorkoutView: View {
                 }
             }
         }
-        .popover(isPresented: $showingTimerControls) {
-            if let timer = selectedTimerForControls {
-                TimerControlsPopover(
-                    timer: timer,
-                    onSkip: {
-                        timerManager.skipTimer(timer)
-                        showingTimerControls = false
-                    },
-                    onExtend30s: {
-                        timerManager.extendTimer(timer, by: 30)
-                    },
-                    onExtend1m: {
-                        timerManager.extendTimer(timer, by: 60)
-                    }
-                )
-            }
+        .sheet(item: $selectedTimerForSheet) { timer in
+            TimerControlsSheet(
+                timerManager: timerManager,
+                timerID: timer.id,
+                onDismiss: {
+                    selectedTimerForSheet = nil
+                }
+            )
         }
         .toolbar {
             ToolbarItemGroup(placement: .keyboard) {
@@ -249,7 +239,13 @@ struct ActiveWorkoutView: View {
             // Start timer if auto-start is enabled
             if exercise.autoStartTimer {
                 timerManager.removeExpiredTimers()
-                timerManager.startTimer(for: workoutSet.id, duration: exercise.restDuration)
+                let effectiveDefault = defaultRestDuration
+                if effectiveDefault > 0 {
+                    let duration = exercise.restDuration == AppConstants.defaultRestDuration
+                        ? effectiveDefault
+                        : exercise.restDuration
+                    timerManager.startTimer(for: workoutSet.id, duration: duration)
+                }
             }
         }
     }
