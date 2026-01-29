@@ -51,11 +51,12 @@
       "defaultDescription": "Horizontal pushing pattern. Includes bench press, push-up, and machine chest press variations.",
       "notes": "Default assumes flat angle, standard grip. Incline shifts to upper pec; decline to lower pec.",
       "sources": [
-        "Rodr\u00c3\u00adguez-Ridao 2020",
+        "RodrÃ­guez-Ridao 2020",
         "Lauver 2016",
         "Barnett 1995",
         "Saeterbakken 2017"
-      ]
+      ],
+      "exerciseTypeRaw": 2
     },
     {
       "id": "overhead_press",
@@ -108,7 +109,8 @@
         "Saeterbakken 2013",
         "Coratella 2022",
         "Paoli 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "dip",
@@ -155,7 +157,8 @@
         "Boeckh-Behrens 2000",
         "Welsch 2005",
         "ACE Triceps Study"
-      ]
+      ],
+      "exerciseTypeRaw": 2
     },
     {
       "id": "chest_fly",
@@ -199,7 +202,8 @@
         "Solstad 2020",
         "Trebs 2010",
         "Maeo 2022"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "lateral_raise",
@@ -240,7 +244,8 @@
         "Coratella 2020",
         "Larsen 2024",
         "Pinto 2020"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "front_raise",
@@ -281,7 +286,8 @@
       "sources": [
         "Coratella 2020",
         "Sweeney 2015"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "vertical_pull",
@@ -332,7 +338,8 @@
         "Andersen 2014",
         "Youdas 2010",
         "Signorile 2002"
-      ]
+      ],
+      "exerciseTypeRaw": 2
     },
     {
       "id": "horizontal_pull",
@@ -392,7 +399,8 @@
         "Fenwick 2009",
         "Lehman 2004",
         "Edelburg 2016"
-      ]
+      ],
+      "exerciseTypeRaw": 2
     },
     {
       "id": "shrug",
@@ -432,7 +440,8 @@
         "Ekstrom 2003",
         "Andersen 2008",
         "Contreras 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "rear_delt_fly",
@@ -475,7 +484,8 @@
         "Schoenfeld 2013",
         "Campos 2020",
         "Fukunaga 2022"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "pullover",
@@ -508,7 +518,8 @@
         "Marchetti 2011",
         "Muyor 2022",
         "Maeo 2023"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "squat",
@@ -558,7 +569,8 @@
         "Paoli 2009",
         "Contreras 2016",
         "Pedrosa 2022"
-      ]
+      ],
+      "exerciseTypeRaw": 2
     },
     {
       "id": "leg_press",
@@ -604,7 +616,8 @@
       "sources": [
         "Da Silva 2008",
         "Escamilla 2001"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "lunge",
@@ -653,7 +666,8 @@
         "McCurdy 2010",
         "Muyor 2020",
         "Stastny 2015"
-      ]
+      ],
+      "exerciseTypeRaw": 2
     },
     {
       "id": "deadlift",
@@ -701,9 +715,10 @@
       "notes": "Conventional = more erector. Sumo = more quads/adductors. Trap bar = more quad-dominant.",
       "sources": [
         "Escamilla 2002",
-        "Mart\u00c3\u00adn-Fuentes 2020",
+        "MartÃ­n-Fuentes 2020",
         "Lee 2018"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "hip_hinge",
@@ -751,7 +766,8 @@
         "McAllister 2014",
         "Andersen 2021",
         "Maeo 2021"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "hip_thrust",
@@ -794,7 +810,8 @@
         "Contreras 2015",
         "Contreras 2023",
         "Williams 2021"
-      ]
+      ],
+      "exerciseTypeRaw": 2
     },
     {
       "id": "back_extension",
@@ -825,12 +842,13 @@
         "adductors": 0.25
       },
       "defaultDescription": "Spinal extension and hip extension on bench.",
-      "notes": "45\u00b0 is easier. Horizontal (GHD) is more challenging.",
+      "notes": "45° is easier. Horizontal (GHD) is more challenging.",
       "sources": [
         "Andersen 2021",
         "Contreras 2013",
         "Cuthbert 2021"
-      ]
+      ],
+      "exerciseTypeRaw": 2
     },
     {
       "id": "leg_extension",
@@ -859,7 +877,8 @@
       "sources": [
         "Pedrosa 2022",
         "Signorile 2014"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "leg_curl",
@@ -894,7 +913,8 @@
       "sources": [
         "Maeo 2021 MSSE (PMC7969179)",
         "Schoenfeld 2015"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "hip_abduction",
@@ -925,7 +945,8 @@
       "sources": [
         "PMID 35500965",
         "JOSPT 2009"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "hip_adduction",
@@ -951,11 +972,12 @@
         "adductors": 1.0
       },
       "defaultDescription": "Hip adduction isolating adductor group.",
-      "notes": "0-45\u00b0 hip flexion optimal for magnus/longus.",
+      "notes": "0-45° hip flexion optimal for magnus/longus.",
       "sources": [
         "PMID 22814446",
         "PMID 23945760"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "calf_raise",
@@ -992,7 +1014,8 @@
       "sources": [
         "Kinoshita 2023 (PMC10753835)",
         "Signorile 2002"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "bicep_curl",
@@ -1037,7 +1060,8 @@
       "sources": [
         "Coratella 2023",
         "Basmajian 1978"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "preacher_curl",
@@ -1075,7 +1099,8 @@
       "sources": [
         "PMC11906226",
         "PMC10407320"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "tricep_extension",
@@ -1124,7 +1149,8 @@
         "Maeo 2023 EJSS",
         "Kim 2011",
         "Wakahara"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "crunch",
@@ -1157,7 +1183,8 @@
         "PMC9505236",
         "PMC7345922",
         "PMID 16649890"
-      ]
+      ],
+      "exerciseTypeRaw": 2
     },
     {
       "id": "leg_raise",
@@ -1190,7 +1217,8 @@
       "sources": [
         "PMID 16649890 Escamilla",
         "PMC9505236"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "rotation",
@@ -1226,7 +1254,8 @@
       "sources": [
         "PMC7345922",
         "JOSPT 2010"
-      ]
+      ],
+      "exerciseTypeRaw": 0
     },
     {
       "id": "plank",
@@ -1260,7 +1289,8 @@
       "sources": [
         "PMC6006542",
         "PMC7600276"
-      ]
+      ],
+      "exerciseTypeRaw": 4
     }
   ]
 }
