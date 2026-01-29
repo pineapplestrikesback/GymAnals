@@ -13,10 +13,17 @@ struct SetTimer: Identifiable {
     let id: UUID
     let setID: UUID  // Associated WorkoutSet
     let endTime: Date  // Store end time, not countdown seconds
+    let duration: TimeInterval  // Original duration for progress calculation
 
     /// Remaining seconds until timer expires, calculated from current time
     var remainingSeconds: Int {
         max(0, Int(endTime.timeIntervalSinceNow))
+    }
+
+    /// Progress from 1.0 (full) to 0.0 (expired)
+    var progress: Double {
+        guard duration > 0 else { return 0 }
+        return max(0, min(1, Double(remainingSeconds) / duration))
     }
 
     /// Whether the timer has reached zero
@@ -27,6 +34,7 @@ struct SetTimer: Identifiable {
     init(id: UUID = UUID(), setID: UUID, duration: TimeInterval) {
         self.id = id
         self.setID = setID
+        self.duration = duration
         self.endTime = Date.now.addingTimeInterval(duration)
     }
 
@@ -35,13 +43,15 @@ struct SetTimer: Identifiable {
         SetTimer(
             id: self.id,
             setID: self.setID,
+            duration: self.duration + seconds,
             endTime: self.endTime.addingTimeInterval(seconds)
         )
     }
 
-    private init(id: UUID, setID: UUID, endTime: Date) {
+    private init(id: UUID, setID: UUID, duration: TimeInterval, endTime: Date) {
         self.id = id
         self.setID = setID
+        self.duration = duration
         self.endTime = endTime
     }
 }

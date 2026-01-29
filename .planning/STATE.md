@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-26)
 
 **Core value:** Precise per-muscle volume tracking with user-defined muscles and weighted set contributions
-**Current focus:** Phase 5 Complete - Ready for Phase 6 (Analytics)
+**Current focus:** Phase 6 Complete - Bug Fixes
 
 ## Current Position
 
-Phase: 5 of 6 (Exercise Library Rework)
-Plan: 10 of 10 in current phase
+Phase: 6 of 7 (Bug Fixes)
+Plan: 04 of 04 in current phase (Phase COMPLETE)
 Status: Phase complete
-Last activity: 2026-01-28 - Completed 05-10-PLAN.md (Exercise Library View Updates)
+Last activity: 2026-01-28 - Completed 06-04-PLAN.md (Multi-Select Picker, Timer, Gym Indicator)
 
-Progress: [█████████████████████████] 100% (28/28 total plans)
+Progress: [██████████████████████████████] 100% (32/32 total plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 28
-- Average duration: 8.4 min
-- Total execution time: 234 min
+- Total plans completed: 32
+- Average duration: 8.2 min
+- Total execution time: 264 min
 
 **By Phase:**
 
@@ -32,10 +32,11 @@ Progress: [███████████████████████
 | 03-gyms | 4 | 24 min | 6.0 min |
 | 04-workout-logging | 6 | 55 min | 9.2 min |
 | 05-exercise-library-rework | 10 | 81 min | 8.1 min |
+| 06-bug-fixes | 4 | 30 min | 7.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 05-06 (4 min), 05-07 (5 min), 05-08 (9 min), 05-09 (8 min), 05-10 (8 min)
-- Trend: Wave 6 UI updates quick (most model files pre-updated in 05-05)
+- Last 5 plans: 05-10 (8 min), 06-01 (5 min), 06-02 (6 min), 06-03 (5 min), 06-04 (9 min)
+- Trend: Bug fix plans completing quickly (focused scope, existing code modifications)
 
 *Updated after each plan completion*
 
@@ -131,6 +132,18 @@ Recent decisions affecting current work:
 - [05-10]: ExerciseRow shows equipment + category badge for richer context
 - [05-10]: ExerciseDetailView shows dimensions, notes, sources, popularity, timer settings
 - [05-10]: Built-in exercises read-only; custom exercises get muscle weight editor
+- [06-01]: Lock icon (lock.fill) replaces chevron when gym selector disabled during active workout
+- [06-01]: New Gym button in GymSelectorSheet with auto-select via createdDate max
+- [06-01]: gymCountBeforeCreate snapshot pattern for new-entity detection across sheet presentation
+- [06-03]: Column layout: SET(32pt) | PREVIOUS(80pt) | WEIGHT(flex) | REPS(flex) | CHECKMARK(36pt)
+- [06-03]: Timer badge removed from SetRowView (moves to always-visible header in Plan 04)
+- [06-02]: startInEditMode parameter defaults false for backward compatibility; callers opt-in
+- [06-02]: Equipment/Movement pickers as private inline subviews for encapsulation
+- [06-02]: Dimensions editing excluded from CustomExerciseEditView (set at creation only)
+- [06-03]: Weight unit abbreviation moved from row to column header
+- [06-04]: Multi-select with Set<String> for selectedExerciseIDs in exercise picker
+- [06-04]: Always-visible timer with "--:--" placeholder and manual 120s start on tap
+- [06-04]: Gym indicator as color dot + name row above stats in workout header
 
 ### Pending Todos
 
@@ -138,17 +151,18 @@ None yet.
 
 ### Blockers/Concerns
 
-None - Phase 5 complete. All Variant/VariantMuscle references cleared. Exercise library fully functional.
+None - Phase 6 complete. All 4 plans executed successfully.
 
 ### Roadmap Evolution
 
 - Phase 5: Exercise Library Rework (inserted before Analytics) - COMPLETE
-- Phase 6: Analytics (moved from Phase 5) - NEXT
+- Phase 6: Bug Fixes (inserted 2026-01-28 to address 20 production-critical bugs before analytics) - COMPLETE
+- Phase 7: Analytics (moved from Phase 6) - FUTURE
 
 ## Session Continuity
 
 Last session: 2026-01-28
-Stopped at: Completed 05-10-PLAN.md (Exercise Library View Updates) - Phase 5 COMPLETE
+Stopped at: Completed 06-04-PLAN.md (Multi-Select Picker, Timer, Gym Indicator) - Phase 6 COMPLETE
 Resume file: None
 
 ## Phase 5 Progress

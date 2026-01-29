@@ -27,9 +27,11 @@ struct WorkoutTabView: View {
                     // Gym selector header
                     HStack {
                         Spacer()
-                        GymSelectorHeader(gym: viewModel?.selectedGym) {
-                            showingGymSelector = true
-                        }
+                        GymSelectorHeader(
+                            gym: viewModel?.selectedGym,
+                            onTap: { showingGymSelector = true },
+                            isDisabled: hasActiveWorkout
+                        )
                         Spacer()
                     }
                     .padding(.top, 8)

@@ -9,9 +9,11 @@ import SwiftUI
 
 /// Tappable header showing currently selected gym with color indicator
 /// Displays gym name with color dot and chevron to indicate tap action
+/// When `isDisabled` is true, shows a lock icon and prevents interaction
 struct GymSelectorHeader: View {
     let gym: Gym?
     let onTap: () -> Void
+    var isDisabled: Bool = false
 
     var body: some View {
         Button(action: onTap) {
@@ -23,7 +25,7 @@ struct GymSelectorHeader: View {
                 Text(gym?.name ?? "Select Gym")
                     .font(.subheadline)
 
-                Image(systemName: "chevron.down")
+                Image(systemName: isDisabled ? "lock.fill" : "chevron.down")
                     .font(.caption2)
                     .foregroundStyle(.secondary)
             }
@@ -32,6 +34,8 @@ struct GymSelectorHeader: View {
             .background(.regularMaterial, in: Capsule())
         }
         .buttonStyle(.plain)
+        .disabled(isDisabled)
+        .opacity(isDisabled ? 0.5 : 1.0)
     }
 }
 

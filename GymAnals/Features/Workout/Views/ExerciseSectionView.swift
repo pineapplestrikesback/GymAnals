@@ -22,8 +22,10 @@ struct ExerciseSectionView: View {
     let weightBinding: (WorkoutSet) -> Binding<Double>
     let previousReps: (WorkoutSet) -> Int?
     let previousWeight: (WorkoutSet) -> Double?
-    let timerForSet: (WorkoutSet) -> SetTimer?
     let onConfirmSet: (WorkoutSet) -> Void
+
+    // Inline timer support
+    let timerForSet: (UUID) -> SetTimer?
     let onTimerTap: (SetTimer) -> Void
 
     @FocusState.Binding var focusedField: SetEntryField?
@@ -37,13 +39,39 @@ struct ExerciseSectionView: View {
             // Expandable content
             if isExpanded {
                 VStack(spacing: 0) {
+                    // Column headers (proportional, matching SetRowView weights)
+                    GeometryReader { geo in
+                        let totalWeight = SetRowView.setWeight + SetRowView.previousWeight + SetRowView.kgWeight + SetRowView.repsWeight
+                        let availableWidth = geo.size.width - SetRowView.checkWidth
+                        let unitWidth = availableWidth / totalWeight
+
+                        HStack(spacing: 0) {
+                            Text("SET")
+                                .frame(width: unitWidth * SetRowView.setWeight, alignment: .center)
+                            Text("PREVIOUS")
+                                .frame(width: unitWidth * SetRowView.previousWeight, alignment: .center)
+                            Text(weightUnit.abbreviation.uppercased())
+                                .frame(width: unitWidth * SetRowView.kgWeight, alignment: .center)
+                            Text("REPS")
+                                .frame(width: unitWidth * SetRowView.repsWeight, alignment: .center)
+                            Spacer()
+                                .frame(width: SetRowView.checkWidth)
+                        }
+                    }
+                    .frame(height: 16)
+                    .font(.caption2)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.primary)
+                    .padding(.horizontal, 8)
+                    .padding(.top, 8)
+                    .padding(.bottom, 4)
+
                     // Sets list with swipe-to-delete
                     ForEach(sets) { workoutSet in
                         setRowWithSwipe(workoutSet)
 
                         if workoutSet.id != sets.last?.id {
                             Divider()
-                                .padding(.leading, 32)
                         }
                     }
 
@@ -58,7 +86,7 @@ struct ExerciseSectionView: View {
                     .buttonStyle(.plain)
                     .padding(.vertical, 12)
                 }
-                .padding(.leading, 16)
+                .padding(.horizontal, 8)
             }
         }
         .background(Color(.systemBackground))
@@ -126,14 +154,10 @@ struct ExerciseSectionView: View {
                 previousReps: previousReps(workoutSet),
                 previousWeight: previousWeight(workoutSet),
                 weightUnit: weightUnit,
-                timer: timerForSet(workoutSet),
                 isConfirmed: workoutSet.isConfirmed,
                 onConfirm: { onConfirmSet(workoutSet) },
-                onTimerTap: {
-                    if let timer = timerForSet(workoutSet) {
-                        onTimerTap(timer)
-                    }
-                },
+                activeTimer: timerForSet(workoutSet.id),
+                onTimerTap: { timer in onTimerTap(timer) },
                 focusedField: $focusedField,
                 setID: workoutSet.id
             )

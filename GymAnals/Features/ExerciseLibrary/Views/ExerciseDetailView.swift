@@ -14,6 +14,7 @@ struct ExerciseDetailView: View {
     let exercise: Exercise
 
     @State private var showingMuscleEditor = false
+    @State private var showingEditSheet = false
 
     /// Groups weight history by gym for branch display
     private var gymBranches: [(gym: Gym, entryCount: Int)] {
@@ -184,18 +185,30 @@ struct ExerciseDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
-                Button {
-                    exercise.isFavorite.toggle()
-                    try? modelContext.save()
-                } label: {
-                    Image(systemName: exercise.isFavorite ? "star.fill" : "star")
-                        .foregroundStyle(exercise.isFavorite ? .yellow : .gray)
+                HStack(spacing: 16) {
+                    if !exercise.isBuiltIn {
+                        Button("Edit") {
+                            showingEditSheet = true
+                        }
+                    }
+                    Button {
+                        exercise.isFavorite.toggle()
+                        try? modelContext.save()
+                    } label: {
+                        Image(systemName: exercise.isFavorite ? "star.fill" : "star")
+                            .foregroundStyle(exercise.isFavorite ? .yellow : .gray)
+                    }
                 }
             }
         }
         .sheet(isPresented: $showingMuscleEditor) {
             NavigationStack {
-                MuscleWeightEditorView(viewModel: MuscleWeightViewModel(exercise: exercise))
+                MuscleWeightEditorView(viewModel: MuscleWeightViewModel(exercise: exercise), startInEditMode: true)
+            }
+        }
+        .sheet(isPresented: $showingEditSheet) {
+            NavigationStack {
+                CustomExerciseEditView(exercise: exercise)
             }
         }
     }

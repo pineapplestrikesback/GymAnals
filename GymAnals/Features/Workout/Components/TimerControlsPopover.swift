@@ -35,7 +35,8 @@ struct TimerControlsPopover: View {
                 Button {
                     onSkip()
                 } label: {
-                    Label("Skip", systemImage: "xmark.circle")
+                    Text("Skip")
+                        .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.bordered)
                 .tint(.red)
@@ -44,7 +45,8 @@ struct TimerControlsPopover: View {
                 Button {
                     onExtend30s()
                 } label: {
-                    Label("+30s", systemImage: "plus.circle")
+                    Text("+30s")
+                        .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.bordered)
 
@@ -52,13 +54,14 @@ struct TimerControlsPopover: View {
                 Button {
                     onExtend1m()
                 } label: {
-                    Label("+1m", systemImage: "plus.circle")
+                    Text("+1m")
+                        .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.bordered)
             }
         }
         .padding()
-        .frame(width: 220)
+        .frame(width: 280)
         .onReceive(updateTimer) { _ in
             remainingSeconds = timer.remainingSeconds
         }

@@ -37,15 +37,15 @@ struct ActiveWorkoutView: View {
                             ExerciseSectionForID(
                                 exerciseID: exerciseID,
                                 viewModel: viewModel,
-                                timerManager: timerManager,
                                 weightUnit: weightUnit,
+                                timerManager: timerManager,
                                 focusedField: $focusedField,
+                                onConfirmSet: { workoutSet in
+                                    handleSetConfirmation(workoutSet)
+                                },
                                 onTimerTap: { timer in
                                     selectedTimerForControls = timer
                                     showingTimerControls = true
-                                },
-                                onConfirmSet: { workoutSet in
-                                    handleSetConfirmation(workoutSet)
                                 }
                             )
                         }
@@ -69,11 +69,16 @@ struct ActiveWorkoutView: View {
                             startDate: viewModel.activeWorkout?.startDate ?? .now,
                             totalSets: viewModel.activeWorkout?.sets.count ?? 0,
                             headerTimer: timerManager.headerTimer,
+                            gym: viewModel.activeWorkout?.gym,
                             onTimerTap: {
                                 if let timer = timerManager.headerTimer {
                                     selectedTimerForControls = timer
                                     showingTimerControls = true
                                 }
+                            },
+                            onStartManualTimer: {
+                                timerManager.removeExpiredTimers()
+                                timerManager.startTimer(for: UUID(), duration: 120)
                             }
                         )
                     }
@@ -102,10 +107,14 @@ struct ActiveWorkoutView: View {
             }
         }
         .sheet(isPresented: $showingExercisePicker) {
-            ExercisePickerSheet { exercise in
-                viewModel.addExercise(exercise)
-                // Auto-add first set
-                viewModel.addSet(for: exercise)
+            ExercisePickerSheet { exercises in
+                withAnimation {
+                    for exercise in exercises {
+                        viewModel.addExercise(exercise)
+                        // Auto-add first set for each exercise
+                        viewModel.addSet(for: exercise)
+                    }
+                }
             }
         }
         .popover(isPresented: $showingTimerControls) {
@@ -123,6 +132,24 @@ struct ActiveWorkoutView: View {
                         timerManager.extendTimer(timer, by: 60)
                     }
                 )
+            }
+        }
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Button {
+                    adjustFocusedField(by: -1)
+                } label: {
+                    Image(systemName: "minus")
+                }
+                Button {
+                    adjustFocusedField(by: 1)
+                } label: {
+                    Image(systemName: "plus")
+                }
+                Spacer()
+                Button("Done") {
+                    focusedField = nil
+                }
             }
         }
         .confirmationDialog(
@@ -180,6 +207,24 @@ struct ActiveWorkoutView: View {
 
     // MARK: - Actions
 
+    /// Adjusts the currently focused field's value by the given delta.
+    /// Weight fields adjust by 1.0, reps fields adjust by 1.
+    private func adjustFocusedField(by delta: Int) {
+        guard let field = focusedField,
+              let workout = viewModel.activeWorkout else { return }
+
+        switch field {
+        case .weight(let setID):
+            if let workoutSet = workout.sets.first(where: { $0.id == setID }) {
+                workoutSet.weight = max(0, min(999, workoutSet.weight + Double(delta)))
+            }
+        case .reps(let setID):
+            if let workoutSet = workout.sets.first(where: { $0.id == setID }) {
+                workoutSet.reps = max(0, min(999, workoutSet.reps + delta))
+            }
+        }
+    }
+
     private func handleSetConfirmation(_ workoutSet: WorkoutSet) {
         guard let exercise = workoutSet.exercise else { return }
 
@@ -212,11 +257,11 @@ struct ActiveWorkoutView: View {
 private struct ExerciseSectionForID: View {
     let exerciseID: String
     let viewModel: ActiveWorkoutViewModel
-    let timerManager: SetTimerManager
     let weightUnit: WeightUnit
+    let timerManager: SetTimerManager
     @FocusState.Binding var focusedField: SetEntryField?
-    let onTimerTap: (SetTimer) -> Void
     let onConfirmSet: (WorkoutSet) -> Void
+    let onTimerTap: (SetTimer) -> Void
 
     @Environment(\.modelContext) private var modelContext
 
@@ -264,11 +309,11 @@ private struct ExerciseSectionForID: View {
                 previousWeight: { workoutSet in
                     viewModel.previousSetForRow(exercise: exercise, setNumber: workoutSet.setNumber)?.weight
                 },
-                timerForSet: { workoutSet in
-                    timerManager.activeTimers.first { $0.setID == workoutSet.id }
-                },
                 onConfirmSet: { workoutSet in
                     onConfirmSet(workoutSet)
+                },
+                timerForSet: { setID in
+                    timerManager.activeTimers.first { $0.setID == setID && !$0.isExpired }
                 },
                 onTimerTap: { timer in
                     onTimerTap(timer)

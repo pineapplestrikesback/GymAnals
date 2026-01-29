@@ -14,6 +14,9 @@ struct MuscleWeightEditorView: View {
     @Bindable var viewModel: MuscleWeightViewModel
     @State private var expandedGroups: Set<MuscleGroup> = []
 
+    /// When true, sliders start in edit mode immediately (skipping the read-only state)
+    var startInEditMode: Bool = false
+
     var body: some View {
         List {
             // Assigned muscles section (muscles with weight > 0)
@@ -78,6 +81,11 @@ struct MuscleWeightEditorView: View {
         }
         .navigationTitle("Muscle Weights")
         .interactiveDismissDisabled(viewModel.hasChanges)
+        .onAppear {
+            if startInEditMode {
+                viewModel.isEditing = true
+            }
+        }
     }
 
     private func binding(for muscle: Muscle) -> Binding<Double> {

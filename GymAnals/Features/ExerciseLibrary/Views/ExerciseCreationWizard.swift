@@ -50,7 +50,7 @@ struct ExerciseCreationWizard: View {
                     case 4:
                         // Final step: create and show muscle editor
                         if let exercise = viewModel.createdExercise {
-                            MuscleWeightEditorView(viewModel: MuscleWeightViewModel(exercise: exercise))
+                            MuscleWeightEditorView(viewModel: MuscleWeightViewModel(exercise: exercise), startInEditMode: true)
                         } else {
                             ProgressView("Creating exercise...")
                                 .onAppear {
