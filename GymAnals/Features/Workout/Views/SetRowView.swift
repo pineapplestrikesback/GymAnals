@@ -67,7 +67,7 @@ struct SetRowView: View {
             switch field {
             case .weight:
                 if let w = previousWeight {
-                    parts.append(formatWeight(w))
+                    parts.append(SetFormatting.formatWeight(w))
                 }
             case .reps:
                 if let r = previousReps {
@@ -75,11 +75,11 @@ struct SetRowView: View {
                 }
             case .duration:
                 if let d = previousDuration {
-                    parts.append(formatDuration(d))
+                    parts.append(SetFormatting.formatDuration(d))
                 }
             case .distance:
                 if let d = previousDistance {
-                    parts.append(formatDistance(d))
+                    parts.append(SetFormatting.formatDistance(d))
                 }
             }
         }
@@ -181,15 +181,15 @@ struct SetRowView: View {
         .onChange(of: weight) { _, newValue in
             // Preserve trailing "." while user is mid-typing a decimal
             if !weightText.hasSuffix(".") {
-                weightText = formatWeight(newValue)
+                weightText = SetFormatting.formatWeight(newValue)
             }
         }
         .onChange(of: duration) { _, newValue in
-            durationText = formatDurationForEdit(newValue)
+            durationText = SetFormatting.formatDurationForEdit(newValue)
         }
         .onChange(of: distance) { _, newValue in
             if !distanceText.hasSuffix(".") {
-                distanceText = formatDistance(newValue)
+                distanceText = SetFormatting.formatDistance(newValue)
             }
         }
         .onChange(of: focusedField) { oldValue, newValue in
@@ -216,14 +216,14 @@ struct SetRowView: View {
                 .focused($focusedField, equals: .weight(setID: setID))
                 .onChange(of: weightText) { _, newValue in
                     if let value = Double(newValue) {
-                        weight = max(0, min(999, value))
+                        weight = SetFormatting.clampWeight(value)
                     }
                 }
                 .onSubmit {
                     if let value = Double(weightText) {
-                        weight = max(0, min(999, value))
+                        weight = SetFormatting.clampWeight(value)
                     }
-                    weightText = formatWeight(weight)
+                    weightText = SetFormatting.formatWeight(weight)
                 }
                 .frame(width: unitWidth * Self.dataFieldWeight, alignment: .center)
 
@@ -238,12 +238,12 @@ struct SetRowView: View {
                 .focused($focusedField, equals: .reps(setID: setID))
                 .onChange(of: repsText) { _, newValue in
                     if let value = Int(newValue) {
-                        reps = max(0, min(999, value))
+                        reps = SetFormatting.clampReps(value)
                     }
                 }
                 .onSubmit {
                     if let value = Int(repsText) {
-                        reps = max(0, min(999, value))
+                        reps = SetFormatting.clampReps(value)
                     }
                     repsText = "\(reps)"
                 }
@@ -260,14 +260,14 @@ struct SetRowView: View {
                 .focused($focusedField, equals: .duration(setID: setID))
                 .onChange(of: durationText) { _, newValue in
                     if let value = Double(newValue) {
-                        duration = max(0, min(86400, value))
+                        duration = SetFormatting.clampDuration(value)
                     }
                 }
                 .onSubmit {
                     if let value = Double(durationText) {
-                        duration = max(0, min(86400, value))
+                        duration = SetFormatting.clampDuration(value)
                     }
-                    durationText = formatDurationForEdit(duration)
+                    durationText = SetFormatting.formatDurationForEdit(duration)
                 }
                 .frame(width: unitWidth * Self.dataFieldWeight, alignment: .center)
 
@@ -282,14 +282,14 @@ struct SetRowView: View {
                 .focused($focusedField, equals: .distance(setID: setID))
                 .onChange(of: distanceText) { _, newValue in
                     if let value = Double(newValue) {
-                        distance = max(0, min(9999, value))
+                        distance = SetFormatting.clampDistance(value)
                     }
                 }
                 .onSubmit {
                     if let value = Double(distanceText) {
-                        distance = max(0, min(9999, value))
+                        distance = SetFormatting.clampDistance(value)
                     }
-                    distanceText = formatDistance(distance)
+                    distanceText = SetFormatting.formatDistance(distance)
                 }
                 .frame(width: unitWidth * Self.dataFieldWeight, alignment: .center)
         }
@@ -304,7 +304,7 @@ struct SetRowView: View {
         }
         // Weight field lost focus -- restore formatted value
         if oldValue == .weight(setID: setID) && newValue != .weight(setID: setID) {
-            weightText = formatWeight(weight)
+            weightText = SetFormatting.formatWeight(weight)
         }
         // Reps field gained focus -- clear for fresh input
         if newValue == .reps(setID: setID) {
@@ -320,7 +320,7 @@ struct SetRowView: View {
         }
         // Duration field lost focus -- restore formatted value
         if oldValue == .duration(setID: setID) && newValue != .duration(setID: setID) {
-            durationText = formatDurationForEdit(duration)
+            durationText = SetFormatting.formatDurationForEdit(duration)
         }
         // Distance field gained focus -- clear for fresh input
         if newValue == .distance(setID: setID) {
@@ -328,7 +328,7 @@ struct SetRowView: View {
         }
         // Distance field lost focus -- restore formatted value
         if oldValue == .distance(setID: setID) && newValue != .distance(setID: setID) {
-            distanceText = formatDistance(distance)
+            distanceText = SetFormatting.formatDistance(distance)
         }
     }
 
@@ -356,42 +356,9 @@ struct SetRowView: View {
 
     private func syncTextFromValues() {
         repsText = "\(reps)"
-        weightText = formatWeight(weight)
-        durationText = formatDurationForEdit(duration)
-        distanceText = formatDistance(distance)
-    }
-
-    private func formatWeight(_ weight: Double) -> String {
-        if weight.truncatingRemainder(dividingBy: 1) == 0 {
-            return String(format: "%.0f", weight)
-        }
-        return String(format: "%.1f", weight)
-    }
-
-    /// Format duration as seconds for text field editing
-    private func formatDurationForEdit(_ seconds: TimeInterval) -> String {
-        if seconds == 0 { return "0" }
-        return String(format: "%.0f", seconds)
-    }
-
-    /// Format duration for display (e.g., previous column)
-    private func formatDuration(_ seconds: TimeInterval) -> String {
-        if seconds == 0 { return "0s" }
-        let mins = Int(seconds) / 60
-        let secs = Int(seconds) % 60
-        if mins > 0 && secs > 0 {
-            return "\(mins)m\(secs)s"
-        } else if mins > 0 {
-            return "\(mins)m"
-        }
-        return "\(secs)s"
-    }
-
-    private func formatDistance(_ distance: Double) -> String {
-        if distance.truncatingRemainder(dividingBy: 1) == 0 {
-            return String(format: "%.0f", distance)
-        }
-        return String(format: "%.2f", distance)
+        weightText = SetFormatting.formatWeight(weight)
+        durationText = SetFormatting.formatDurationForEdit(duration)
+        distanceText = SetFormatting.formatDistance(distance)
     }
 }
 

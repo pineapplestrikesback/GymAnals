@@ -55,8 +55,7 @@ struct ExerciseCreationWizard: View {
                         } else {
                             ProgressView("Creating exercise...")
                                 .onAppear {
-                                    let exercise = viewModel.createExercise(context: modelContext)
-                                    if exercise != nil {
+                                    if let exercise = viewModel.createExercise(context: modelContext) {
                                         muscleWeightVM = MuscleWeightViewModel(exercise: exercise, startInEditMode: true)
                                     }
                                 }

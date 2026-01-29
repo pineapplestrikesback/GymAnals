@@ -53,10 +53,13 @@ final class PersistenceController {
                 configurations: modelConfiguration
             )
         } catch {
-            // Schema migration failed - delete incompatible store and retry
+            print("PersistenceController: Schema migration failed - \(error.localizedDescription)")
+
+            #if DEBUG
+            // In debug builds, delete incompatible store and retry.
             // This handles cases where model restructuring (e.g., removed tables,
-            // changed relationships) exceeds lightweight migration capabilities
-            print("PersistenceController: Schema migration failed, resetting database - \(error.localizedDescription)")
+            // changed relationships) exceeds lightweight migration capabilities.
+            print("PersistenceController: DEBUG - resetting database for development")
 
             let fileManager = FileManager.default
 
@@ -70,6 +73,11 @@ final class PersistenceController {
                 for: schema,
                 configurations: modelConfiguration
             )
+            #else
+            // In release builds, propagate the error to avoid silent data loss.
+            // The caller should present a user-facing error or recovery flow.
+            throw error
+            #endif
         }
     }
 

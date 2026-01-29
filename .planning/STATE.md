@@ -155,8 +155,8 @@ None - Phase 6 complete. All 4 plans executed successfully.
 
 ### Quick Tasks Completed
 
-| # | Description | Date | Commit | Directory |
-|---|-------------|------|--------|-----------|
+| #   | Description                                     | Date       | Commit  | Directory                                                       |
+|-----|--------------------------------------------------|------------|---------|-----------------------------------------------------------------|
 | 001 | Exercise context menu (Edit, Delete, Duplicate) | 2026-01-29 | fda2845 | [001-exercise-context-menu](./quick/001-exercise-context-menu/) |
 
 ### Roadmap Evolution

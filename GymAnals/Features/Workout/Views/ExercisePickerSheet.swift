@@ -19,6 +19,7 @@ struct ExercisePickerSheet: View {
     @State private var selectedFilter: ExerciseFilter = .all
     @State private var exerciseToEdit: Exercise?
     @State private var exerciseToDelete: Exercise?
+    @State private var duplicateTrigger = false
 
     let onSelectExercises: ([Exercise]) -> Void
 
@@ -86,6 +87,7 @@ struct ExercisePickerSheet: View {
 
                         Button {
                             _ = exercise.duplicate(in: modelContext)
+                            duplicateTrigger.toggle()
                         } label: {
                             Label("Duplicate", systemImage: "doc.on.doc")
                         }
@@ -134,6 +136,7 @@ struct ExercisePickerSheet: View {
                     CustomExerciseEditView(exercise: exercise)
                 }
             }
+            .sensoryFeedback(.success, trigger: duplicateTrigger)
             .confirmationDialog(
                 "Delete Exercise",
                 isPresented: Binding(

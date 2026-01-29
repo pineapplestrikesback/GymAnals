@@ -209,22 +209,24 @@ struct ActiveWorkoutView: View {
         guard let field = focusedField,
               let workout = viewModel.activeWorkout else { return }
 
+        typealias Limits = AppConstants.SetLimits
+
         switch field {
         case .weight(let setID):
             if let workoutSet = workout.sets.first(where: { $0.id == setID }) {
-                workoutSet.weight = max(0, min(999, workoutSet.weight + Double(delta)))
+                workoutSet.weight = max(0, min(Limits.maxWeight, workoutSet.weight + Double(delta)))
             }
         case .reps(let setID):
             if let workoutSet = workout.sets.first(where: { $0.id == setID }) {
-                workoutSet.reps = max(0, min(999, workoutSet.reps + delta))
+                workoutSet.reps = max(0, min(Limits.maxReps, workoutSet.reps + delta))
             }
         case .duration(let setID):
             if let workoutSet = workout.sets.first(where: { $0.id == setID }) {
-                workoutSet.duration = max(0, min(86400, workoutSet.duration + Double(delta) * 5))
+                workoutSet.duration = max(0, min(Limits.maxDuration, workoutSet.duration + Double(delta) * 5))
             }
         case .distance(let setID):
             if let workoutSet = workout.sets.first(where: { $0.id == setID }) {
-                workoutSet.distance = max(0, min(9999, workoutSet.distance + Double(delta) * 0.1))
+                workoutSet.distance = max(0, min(Limits.maxDistance, workoutSet.distance + Double(delta) * 0.1))
             }
         }
     }

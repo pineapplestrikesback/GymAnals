@@ -33,6 +33,9 @@ final class MovementSeedService {
 
         // Create Movement entities
         for seed in seedData.movements {
+            if MovementCategory(rawValue: seed.category) == nil {
+                print("MovementSeedService: Warning - invalid category '\(seed.category)' in movement '\(seed.id)', defaulting to 'push'")
+            }
             let category = MovementCategory(rawValue: seed.category) ?? .push
 
             // Validate muscle weight keys
