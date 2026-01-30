@@ -19,6 +19,7 @@ struct ExercisePickerSheet: View {
     @State private var selectedFilter: ExerciseFilter = .all
     @State private var exerciseToEdit: Exercise?
     @State private var exerciseToDelete: Exercise?
+    @State private var selectedDetailExercise: Exercise?
     @State private var duplicateTrigger = false
 
     let onSelectExercises: ([Exercise]) -> Void
@@ -62,20 +63,27 @@ struct ExercisePickerSheet: View {
                     .padding(.vertical, 8)
 
                 List(filteredExercises) { exercise in
-                    Button {
-                        toggleSelection(exercise)
-                    } label: {
-                        HStack {
+                    HStack {
+                        // Main row area - tapping navigates to exercise detail
+                        Button {
+                            selectedDetailExercise = exercise
+                        } label: {
                             ExerciseRow(exercise: exercise)
-
-                            Spacer()
-
-                            Image(systemName: selectedExerciseIDs.contains(exercise.id) ? "checkmark.circle.fill" : "circle")
-                                .font(.title3)
-                                .foregroundStyle(selectedExerciseIDs.contains(exercise.id) ? Color.accentColor : .secondary)
                         }
+                        .buttonStyle(.borderless)
+
+                        // Checkmark area - tapping toggles selection
+                        Button {
+                            toggleSelection(exercise)
+                        } label: {
+                            Image(systemName: selectedExerciseIDs.contains(exercise.id) ? "checkmark.circle.fill" : "circle")
+                                .font(.system(size: 26))
+                                .foregroundStyle(selectedExerciseIDs.contains(exercise.id) ? Color.accentColor : .secondary)
+                                .frame(width: 60, height: 44)
+                                .contentShape(Rectangle())
+                        }
+                        .buttonStyle(.borderless)
                     }
-                    .tint(.primary)
                     .contextMenu {
                         if !exercise.isBuiltIn {
                             Button {
@@ -131,6 +139,14 @@ struct ExercisePickerSheet: View {
                     }
                 }
             }
+            .navigationDestination(isPresented: Binding(
+                get: { selectedDetailExercise != nil },
+                set: { if !$0 { selectedDetailExercise = nil } }
+            )) {
+                if let exercise = selectedDetailExercise {
+                    ExerciseDetailView(exercise: exercise)
+                }
+            }
             .sheet(item: $exerciseToEdit) { exercise in
                 NavigationStack {
                     CustomExerciseEditView(exercise: exercise)
@@ -147,16 +163,16 @@ struct ExercisePickerSheet: View {
             ) {
                 Button("Delete", role: .destructive) {
                     if let exercise = exerciseToDelete {
-                        selectedExerciseIDs.remove(exercise.id)
-                        modelContext.delete(exercise)
-                        exerciseToDelete = nil
+                        deleteExercise(exercise)
                     }
                 }
                 Button("Cancel", role: .cancel) {
                     exerciseToDelete = nil
                 }
             } message: {
-                Text("This will permanently delete \"\(exerciseToDelete?.displayName ?? "")\" and all its workout history.")
+                if let exercise = exerciseToDelete {
+                    Text("Are you sure you want to delete \"\(exercise.displayName)\"? This action cannot be undone.")
+                }
             }
         }
     }
@@ -171,5 +187,30 @@ struct ExercisePickerSheet: View {
                 selectedExerciseIDs.insert(exercise.id)
             }
         }
+    }
+
+    private func duplicateExercise(_ exercise: Exercise) {
+        let copy = Exercise(
+            displayName: exercise.displayName + " (Copy)",
+            movement: exercise.movement,
+            equipment: exercise.equipment,
+            dimensions: exercise.dimensions,
+            muscleWeights: exercise.muscleWeights,
+            isBuiltIn: false
+        )
+        copy.notes = exercise.notes
+        copy.restDuration = exercise.restDuration
+        copy.autoStartTimer = exercise.autoStartTimer
+        copy.searchTerms = exercise.searchTerms
+        modelContext.insert(copy)
+        try? modelContext.save()
+        exerciseToEdit = copy
+    }
+
+    private func deleteExercise(_ exercise: Exercise) {
+        selectedExerciseIDs.remove(exercise.id)
+        modelContext.delete(exercise)
+        try? modelContext.save()
+        exerciseToDelete = nil
     }
 }

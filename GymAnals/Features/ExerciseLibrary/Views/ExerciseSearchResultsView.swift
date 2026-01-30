@@ -84,15 +84,16 @@ struct ExerciseSearchResultsView: View {
             ) {
                 Button("Delete", role: .destructive) {
                     if let exercise = exerciseToDelete {
-                        modelContext.delete(exercise)
-                        exerciseToDelete = nil
+                        deleteExercise(exercise)
                     }
                 }
                 Button("Cancel", role: .cancel) {
                     exerciseToDelete = nil
                 }
             } message: {
-                Text("This will permanently delete \"\(exerciseToDelete?.displayName ?? "")\" and all its workout history.")
+                if let exercise = exerciseToDelete {
+                    Text("Are you sure you want to delete \"\(exercise.displayName)\"? This action cannot be undone.")
+                }
             }
         }
     }
@@ -131,5 +132,11 @@ struct ExerciseSearchResultsView: View {
                 }
             }
         }
+    }
+
+    private func deleteExercise(_ exercise: Exercise) {
+        modelContext.delete(exercise)
+        try? modelContext.save()
+        exerciseToDelete = nil
     }
 }
