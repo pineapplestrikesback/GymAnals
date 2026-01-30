@@ -11,4 +11,6 @@ import Foundation
 enum SetEntryField: Hashable {
     case reps(setID: UUID)
     case weight(setID: UUID)
+    case duration(setID: UUID)
+    case distance(setID: UUID)
 }

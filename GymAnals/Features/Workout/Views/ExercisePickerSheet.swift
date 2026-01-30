@@ -16,18 +16,24 @@ struct ExercisePickerSheet: View {
     @Query(sort: \Exercise.lastUsedDate, order: .reverse) private var exercises: [Exercise]
     @State private var searchText = ""
     @State private var selectedExerciseIDs: Set<String> = []
-    @State private var selectedMuscleGroup: MuscleGroup? = nil
+    @State private var selectedFilter: ExerciseFilter = .all
     @State private var exerciseToEdit: Exercise?
     @State private var exerciseToDelete: Exercise?
     @State private var selectedDetailExercise: Exercise?
+    @State private var duplicateTrigger = false
 
     let onSelectExercises: ([Exercise]) -> Void
 
     private var filteredExercises: [Exercise] {
         var result = exercises
 
-        // Filter by muscle group if selected
-        if let group = selectedMuscleGroup {
+        // Apply exercise filter
+        switch selectedFilter {
+        case .all:
+            break
+        case .custom:
+            result = result.filter { !$0.isBuiltIn }
+        case .muscleGroup(let group):
             result = result.filter { $0.primaryMuscleGroup == group }
         }
 
@@ -42,7 +48,7 @@ struct ExercisePickerSheet: View {
         }
 
         // Only limit to 50 when no filters are active
-        if searchText.isEmpty && selectedMuscleGroup == nil {
+        if searchText.isEmpty && selectedFilter == .all {
             return Array(result.prefix(50))
         }
 
@@ -53,7 +59,7 @@ struct ExercisePickerSheet: View {
         NavigationStack {
             VStack(spacing: 0) {
                 // Muscle group filter tabs
-                MuscleGroupFilterTabs(selectedGroup: $selectedMuscleGroup)
+                MuscleGroupFilterTabs(selectedFilter: $selectedFilter)
                     .padding(.vertical, 8)
 
                 List(filteredExercises) { exercise in
@@ -85,18 +91,22 @@ struct ExercisePickerSheet: View {
                             } label: {
                                 Label("Edit", systemImage: "pencil")
                             }
+                        }
 
+                        Button {
+                            _ = exercise.duplicate(in: modelContext)
+                            duplicateTrigger.toggle()
+                        } label: {
+                            Label("Duplicate", systemImage: "doc.on.doc")
+                        }
+
+                        if !exercise.isBuiltIn {
+                            Divider()
                             Button(role: .destructive) {
                                 exerciseToDelete = exercise
                             } label: {
                                 Label("Delete", systemImage: "trash")
                             }
-                        }
-
-                        Button {
-                            duplicateExercise(exercise)
-                        } label: {
-                            Label("Duplicate", systemImage: "doc.on.doc")
                         }
                     }
                 }
@@ -142,6 +152,7 @@ struct ExercisePickerSheet: View {
                     CustomExerciseEditView(exercise: exercise)
                 }
             }
+            .sensoryFeedback(.success, trigger: duplicateTrigger)
             .confirmationDialog(
                 "Delete Exercise",
                 isPresented: Binding(

@@ -1,0 +1,1552 @@
+{
+  "presets": [
+    {
+      "id": "barbell_flat_bench_press",
+      "displayName": "Barbell Bench Press",
+      "searchTerms": [
+        "bench press",
+        "flat bench",
+        "bb bench",
+        "barbell bench"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.85,
+        "tricepsMedialHead": 0.5,
+        "tricepsLongHead": 0.45,
+        "tricepsLateralHead": 0.55,
+        "deltoidAnterior": 0.62,
+        "pectoralisMajorLower": 0.95
+      },
+      "notes": "Gold standard horizontal push. Flat angle activates both pec heads equally (~27% MVIC each). Standard grip width maximizes pec engagement.",
+      "sources": [
+        "RodrÃ­guez-Ridao 2020",
+        "Lauver 2016",
+        "Barnett 1995"
+      ]
+    },
+    {
+      "id": "barbell_incline_bench_press_30",
+      "displayName": "Incline Bench Press (30Â°)",
+      "searchTerms": [
+        "incline bench",
+        "incline press",
+        "low incline bench",
+        "upper chest press"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "incline_30",
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.97,
+        "tricepsMedialHead": 0.45,
+        "tricepsLongHead": 0.4,
+        "tricepsLateralHead": 0.5,
+        "deltoidAnterior": 0.73,
+        "pectoralisMajorLower": 0.65
+      },
+      "notes": "Optimal angle for upper pec development (122-130% MVIC vs flat). Research shows 30Â° maximizes clavicular activation before deltoid dominance.",
+      "sources": [
+        "RodrÃ­guez-Ridao 2020",
+        "Lauver 2016",
+        "Trebs 2010"
+      ]
+    },
+    {
+      "id": "barbell_incline_bench_press_45",
+      "displayName": "Incline Bench Press (45Â°)",
+      "searchTerms": [
+        "high incline bench",
+        "steep incline press",
+        "45 degree bench"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "incline_45",
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.85,
+        "tricepsMedialHead": 0.45,
+        "tricepsLongHead": 0.4,
+        "tricepsLateralHead": 0.5,
+        "deltoidAnterior": 0.88,
+        "pectoralisMajorLower": 0.5
+      },
+      "notes": "Anterior deltoid approaches pec activation levels. Lower pec drops to ~72% MVIC. Consider 30Â° for pure chest focus.",
+      "sources": [
+        "RodrÃ­guez-Ridao 2020",
+        "Lauver 2016",
+        "Trebs 2010"
+      ]
+    },
+    {
+      "id": "barbell_decline_bench_press",
+      "displayName": "Decline Bench Press",
+      "searchTerms": [
+        "decline bench",
+        "decline press",
+        "lower chest press"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "decline",
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.72,
+        "tricepsMedialHead": 0.5,
+        "tricepsLongHead": 0.5,
+        "tricepsLateralHead": 0.57,
+        "deltoidAnterior": 0.45,
+        "pectoralisMajorLower": 0.97
+      },
+      "notes": "Highest sternal pec activation (100.4% MVIC). Reduced anterior deltoid involvement. 15-25Â° decline angle typical.",
+      "sources": [
+        "Lauver 2016",
+        "Barnett 1995"
+      ]
+    },
+    {
+      "id": "barbell_close_grip_bench_press",
+      "displayName": "Close-Grip Bench Press",
+      "searchTerms": [
+        "close grip bench",
+        "cgbp",
+        "narrow grip bench",
+        "tricep bench"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": "narrow",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.72,
+        "tricepsMedialHead": 0.85,
+        "tricepsLongHead": 0.85,
+        "tricepsLateralHead": 0.93,
+        "deltoidAnterior": 0.57,
+        "pectoralisMajorLower": 0.7
+      },
+      "notes": "Narrow grip (shoulder width) increases triceps activation 10-25%. Slightly elevated clavicular head activation. Primary triceps builder.",
+      "sources": [
+        "Lehman 2005",
+        "Barnett 1995",
+        "Saeterbakken 2017"
+      ]
+    },
+    {
+      "id": "dumbbell_flat_bench_press",
+      "displayName": "Dumbbell Bench Press",
+      "searchTerms": [
+        "db bench press",
+        "dumbbell press",
+        "flat db press",
+        "dumbbell chest press"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": null,
+        "gripOrientation": "neutral_to_pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.88,
+        "bicepsBrachii": 0.3,
+        "tricepsMedialHead": 0.4,
+        "tricepsLongHead": 0.35,
+        "rotatorCuff": 0.35,
+        "tricepsLateralHead": 0.45,
+        "deltoidAnterior": 0.62,
+        "pectoralisMajorLower": 0.95
+      },
+      "notes": "Greater ROM than barbell allows deeper stretch. Higher stabilization demand. 57-86% higher biceps activation as stabilizer. Potentially superior for pec hypertrophy due to lengthened position.",
+      "sources": [
+        "Solstad 2020",
+        "Saeterbakken 2017"
+      ]
+    },
+    {
+      "id": "dumbbell_incline_bench_press",
+      "displayName": "Incline Dumbbell Press",
+      "searchTerms": [
+        "incline db press",
+        "incline dumbbell",
+        "db incline press",
+        "upper chest dumbbell"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "incline_30",
+        "gripWidth": null,
+        "gripOrientation": "neutral_to_pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.97,
+        "bicepsBrachii": 0.3,
+        "tricepsMedialHead": 0.35,
+        "tricepsLongHead": 0.3,
+        "rotatorCuff": 0.4,
+        "tricepsLateralHead": 0.4,
+        "deltoidAnterior": 0.75,
+        "pectoralisMajorLower": 0.6
+      },
+      "notes": "Combines incline upper pec emphasis with dumbbell ROM advantages. Greater stretch in bottom position than barbell. Optimal at 30Â° angle.",
+      "sources": [
+        "Trebs 2010",
+        "Saeterbakken 2017"
+      ]
+    },
+    {
+      "id": "dumbbell_decline_bench_press",
+      "displayName": "Decline Dumbbell Press",
+      "searchTerms": [
+        "decline db press",
+        "decline dumbbell",
+        "lower chest dumbbell"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "decline",
+        "gripWidth": null,
+        "gripOrientation": "neutral_to_pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.7,
+        "bicepsBrachii": 0.4,
+        "tricepsMedialHead": 0.43,
+        "tricepsLongHead": 0.4,
+        "rotatorCuff": 0.35,
+        "tricepsLateralHead": 0.47,
+        "deltoidAnterior": 0.4,
+        "pectoralisMajorLower": 0.97
+      },
+      "notes": "Greater ROM than barbell decline. Sternal/costal fiber emphasis. Reduced anterior deltoid involvement.",
+      "sources": [
+        "Lauver 2016"
+      ]
+    },
+    {
+      "id": "machine_chest_press",
+      "displayName": "Chest Press Machine",
+      "searchTerms": [
+        "chest press",
+        "machine press",
+        "seated chest press",
+        "horizontal press machine"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": "standard",
+        "gripOrientation": "neutral",
+        "stance": "seated",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "pectoralisMajorLower": 0.95,
+        "pectoralisMajorUpper": 0.85,
+        "deltoidAnterior": 0.5,
+        "tricepsLateralHead": 0.4,
+        "tricepsMedialHead": 0.35,
+        "tricepsLongHead": 0.3
+      },
+      "notes": "Fixed path reduces stabilizer demand. Neutral grip may increase clavicular activation (~30% vs 25% MVIC with pronated). Safe for training to failure.",
+      "sources": [
+        "Schick 2010"
+      ]
+    },
+    {
+      "id": "machine_incline_chest_press",
+      "displayName": "Incline Chest Press Machine",
+      "searchTerms": [
+        "incline machine press",
+        "incline chest press",
+        "upper chest machine"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "incline_30",
+        "gripWidth": "standard",
+        "gripOrientation": "neutral",
+        "stance": "seated",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.95,
+        "pectoralisMajorLower": 0.65,
+        "deltoidAnterior": 0.6,
+        "tricepsLateralHead": 0.35,
+        "tricepsMedialHead": 0.3,
+        "tricepsLongHead": 0.25
+      },
+      "notes": "Same incline principles apply as free weights. Fixed path allows focus on prime movers. Good for isolating upper chest.",
+      "sources": [
+        "Trebs 2010"
+      ]
+    },
+    {
+      "id": "smith_machine_flat_bench_press",
+      "displayName": "Smith Machine Bench Press",
+      "searchTerms": [
+        "smith bench",
+        "smith machine press",
+        "guided bench press"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "smith_machine",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.85,
+        "tricepsMedialHead": 0.45,
+        "tricepsLongHead": 0.4,
+        "tricepsLateralHead": 0.5,
+        "deltoidAnterior": 0.55,
+        "pectoralisMajorLower": 0.94
+      },
+      "notes": "Similar PM activation to free weights. Medial deltoid ~50% lower activation due to guided path. Allows heavier loads and safer solo training.",
+      "sources": [
+        "Schick 2010",
+        "Trebs 2010"
+      ]
+    },
+    {
+      "id": "smith_machine_incline_bench_press",
+      "displayName": "Smith Machine Incline Press",
+      "searchTerms": [
+        "smith incline",
+        "smith machine incline",
+        "incline smith press"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "incline_30",
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "smith_machine",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.95,
+        "tricepsMedialHead": 0.4,
+        "tricepsLongHead": 0.35,
+        "tricepsLateralHead": 0.45,
+        "deltoidAnterior": 0.68,
+        "pectoralisMajorLower": 0.6
+      },
+      "notes": "Clavicular head significantly greater at 44Â° and 56Â° vs flat. More consistent path allows focus on target muscles.",
+      "sources": [
+        "Trebs 2010"
+      ]
+    },
+    {
+      "id": "cable_chest_press",
+      "displayName": "Cable Chest Press",
+      "searchTerms": [
+        "standing cable press",
+        "cable press",
+        "cable bench press"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.82,
+        "tricepsMedialHead": 0.4,
+        "tricepsLongHead": 0.35,
+        "rotatorCuff": 0.3,
+        "erectorSpinae": 0.2,
+        "tricepsLateralHead": 0.45,
+        "deltoidAnterior": 0.6,
+        "rectusAbdominis": 0.33,
+        "pectoralisMajorLower": 0.88
+      },
+      "notes": "Constant tension throughout ROM. Standing version requires significant core stabilization. Greater shoulder joint moment than bench press.",
+      "sources": [
+        "Signorile 2017"
+      ]
+    },
+    {
+      "id": "cable_incline_press",
+      "displayName": "Incline Cable Press",
+      "searchTerms": [
+        "low to high cable press",
+        "incline cable chest",
+        "standing incline press"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "incline_30",
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.9,
+        "tricepsMedialHead": 0.35,
+        "tricepsLongHead": 0.3,
+        "tricepsLateralHead": 0.4,
+        "deltoidAnterior": 0.7,
+        "rectusAbdominis": 0.35,
+        "pectoralisMajorLower": 0.57
+      },
+      "notes": "Low-to-high angle specifically targets clavicular fibers. Constant tension advantage over incline dumbbell press.",
+      "sources": [
+        "Signorile 2017",
+        "Trebs 2010"
+      ]
+    },
+    {
+      "id": "standing_barbell_overhead_press",
+      "displayName": "Standing Overhead Press",
+      "searchTerms": [
+        "ohp",
+        "military press",
+        "standing press",
+        "barbell shoulder press"
+      ],
+      "movementID": "overhead_press",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.4,
+        "erectorSpinae": 0.35,
+        "deltoidAnterior": 0.97,
+        "rectusAbdominis": 0.35,
+        "trapeziusUpper": 0.53,
+        "deltoidLateral": 0.7,
+        "tricepsMedialHead": 0.62,
+        "tricepsLongHead": 0.62,
+        "tricepsLateralHead": 0.77,
+        "deltoidPosterior": 0.55
+      },
+      "notes": "Gold standard vertical push. Standing requires ~20% greater core activation. 39% more triceps activation than dumbbell version. ~33% MVIC anterior deltoid.",
+      "sources": [
+        "Saeterbakken 2013",
+        "Campos 2020"
+      ]
+    },
+    {
+      "id": "seated_barbell_overhead_press",
+      "displayName": "Seated Barbell Press",
+      "searchTerms": [
+        "seated shoulder press",
+        "seated military press",
+        "seated ohp"
+      ],
+      "movementID": "overhead_press",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": "seated",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "deltoidAnterior": 1.0,
+        "deltoidLateral": 0.5,
+        "tricepsLateralHead": 0.65,
+        "tricepsLongHead": 0.6,
+        "tricepsMedialHead": 0.5,
+        "pectoralisMajorUpper": 0.35,
+        "trapeziusUpper": 0.35
+      },
+      "notes": "Allows ~10% heavier loads than standing. ~25% less posterior deltoid, ~20% less triceps activation vs standing. Minimal core demand.",
+      "sources": [
+        "Saeterbakken 2013"
+      ]
+    },
+    {
+      "id": "barbell_push_press",
+      "displayName": "Push Press",
+      "searchTerms": [
+        "push press",
+        "power press",
+        "leg drive press"
+      ],
+      "movementID": "overhead_press",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "gluteusMaximus": 0.35,
+        "pectoralisMajorUpper": 0.35,
+        "obliquesExternal": 0.38,
+        "erectorSpinae": 0.65,
+        "deltoidAnterior": 0.72,
+        "rectusAbdominis": 0.43,
+        "quadricepsFemoris": 0.38,
+        "trapeziusUpper": 0.6,
+        "deltoidLateral": 0.5,
+        "tricepsMedialHead": 0.55,
+        "tricepsLongHead": 0.5,
+        "tricepsLateralHead": 0.6,
+        "gastrocnemius": 0.25
+      },
+      "notes": "Leg drive allows ~30% more weight overhead. Lower isolated deltoid work. Significantly higher erector spinae and external oblique activation vs strict press.",
+      "sources": [
+        "Kim 2022"
+      ]
+    },
+    {
+      "id": "standing_dumbbell_overhead_press",
+      "displayName": "Standing Dumbbell Press",
+      "searchTerms": [
+        "standing db press",
+        "dumbbell shoulder press",
+        "standing dumbbell ohp"
+      ],
+      "movementID": "overhead_press",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral_to_pronated",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "deltoidAnterior": 1.0,
+        "deltoidLateral": 0.7,
+        "deltoidPosterior": 0.35,
+        "tricepsLateralHead": 0.45,
+        "tricepsLongHead": 0.4,
+        "tricepsMedialHead": 0.35,
+        "trapeziusUpper": 0.4,
+        "erectorSpinae": 0.45,
+        "rectusAbdominis": 0.35
+      },
+      "notes": "HIGHEST deltoid activation of all press variations per research. ~15% greater anterior deltoid vs standing barbell. Greatest stability requirement. ~7% lower 1RM.",
+      "sources": [
+        "Saeterbakken 2013",
+        "Dicus 2018"
+      ]
+    },
+    {
+      "id": "seated_dumbbell_overhead_press",
+      "displayName": "Seated Dumbbell Press",
+      "searchTerms": [
+        "seated db press",
+        "seated dumbbell shoulder press",
+        "db shoulder press"
+      ],
+      "movementID": "overhead_press",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral_to_pronated",
+        "stance": "seated",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "deltoidAnterior": 1.0,
+        "deltoidLateral": 0.6,
+        "tricepsLateralHead": 0.45,
+        "tricepsLongHead": 0.4,
+        "tricepsMedialHead": 0.35,
+        "trapeziusUpper": 0.35
+      },
+      "notes": "~11% greater anterior deltoid than seated barbell. ~8% lower activation vs standing DB. Balance of load capacity and activation.",
+      "sources": [
+        "Saeterbakken 2013"
+      ]
+    },
+    {
+      "id": "dumbbell_arnold_press",
+      "displayName": "Arnold Press",
+      "searchTerms": [
+        "arnold press",
+        "rotating shoulder press",
+        "arnold dumbbell press"
+      ],
+      "movementID": "overhead_press",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "supinated_to_pronated",
+        "stance": "seated",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.5,
+        "trapeziusUpper": 0.47,
+        "deltoidLateral": 0.85,
+        "tricepsMedialHead": 0.45,
+        "tricepsLongHead": 0.42,
+        "tricepsLateralHead": 0.55,
+        "deltoidAnterior": 1.0,
+        "deltoidPosterior": 0.35
+      },
+      "notes": "29% greater anterior deltoid and 14% greater medial deltoid vs standard DB press. Rotation engages all three deltoid heads. Superior for shoulder hypertrophy.",
+      "sources": [
+        "Raizada 2017"
+      ]
+    },
+    {
+      "id": "machine_shoulder_press",
+      "displayName": "Machine Shoulder Press",
+      "searchTerms": [
+        "shoulder press machine",
+        "machine ohp",
+        "seated machine press"
+      ],
+      "movementID": "overhead_press",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "neutral",
+        "stance": "seated",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.4,
+        "trapeziusUpper": 0.47,
+        "deltoidLateral": 0.55,
+        "tricepsMedialHead": 0.5,
+        "tricepsLongHead": 0.5,
+        "tricepsLateralHead": 0.6,
+        "deltoidAnterior": 0.85,
+        "deltoidPosterior": 0.3
+      },
+      "notes": "All muscles show LOWER activation vs barbell (effect size 1.42-2.80). Allows heaviest absolute loads. Fixed path reduces stabilizer demand.",
+      "sources": [
+        "Coratella 2022"
+      ]
+    },
+    {
+      "id": "landmine_press",
+      "displayName": "Landmine Press",
+      "searchTerms": [
+        "landmine press",
+        "angled press",
+        "t-bar press"
+      ],
+      "movementID": "overhead_press",
+      "dimensions": {
+        "angle": "angled_45",
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "landmine",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.57,
+        "obliquesExternal": 0.48,
+        "erectorSpinae": 0.32,
+        "deltoidAnterior": 0.88,
+        "rectusAbdominis": 0.47,
+        "trapeziusUpper": 0.5,
+        "deltoidLateral": 0.65,
+        "tricepsMedialHead": 0.6,
+        "tricepsLongHead": 0.47,
+        "tricepsLateralHead": 0.6,
+        "deltoidPosterior": 0.35
+      },
+      "notes": "Angled press (~45Â° from vertical) between horizontal and vertical plane. Single-arm variation increases anti-rotation demand. Shoulder-friendly alternative.",
+      "sources": [
+        "Extrapolated from Saeterbakken 2013"
+      ]
+    },
+    {
+      "id": "chest_dip",
+      "displayName": "Chest Dip",
+      "searchTerms": [
+        "chest dip",
+        "forward lean dip",
+        "pec dip",
+        "wide grip dip"
+      ],
+      "movementID": "dip",
+      "dimensions": {
+        "angle": "forward_lean_30",
+        "gripWidth": "wide",
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "parallel_bars",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.68,
+        "tricepsMedialHead": 0.6,
+        "tricepsLongHead": 0.68,
+        "tricepsLateralHead": 0.68,
+        "deltoidAnterior": 0.62,
+        "rectusAbdominis": 0.3,
+        "pectoralisMajorLower": 0.97,
+        "latissimusDorsi": 0.35
+      },
+      "notes": "Forward lean of 30-45Â° emphasizes pectoralis major.  Ring dip shows greatest peak pec activation. Bar dip ~25-35Â° forward lean typical.",
+      "sources": [
+        "McKenzie 2022"
+      ]
+    },
+    {
+      "id": "tricep_dip",
+      "displayName": "Tricep Dip",
+      "searchTerms": [
+        "tricep dip",
+        "upright dip",
+        "bench dip",
+        "narrow grip dip"
+      ],
+      "movementID": "dip",
+      "dimensions": {
+        "angle": "upright",
+        "gripWidth": "narrow",
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "parallel_bars",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.4,
+        "tricepsMedialHead": 0.85,
+        "tricepsLongHead": 0.9,
+        "tricepsLateralHead": 0.93,
+        "deltoidAnterior": 0.53,
+        "rectusAbdominis": 0.3,
+        "pectoralisMajorLower": 0.53,
+        "latissimusDorsi": 0.3
+      },
+      "notes": "Upright position (~10-15Â° lean) shifts emphasis to triceps.  Bench dip has smallest lean but highest shoulder extension ROM.  ~88% normalized triceps EMG.",
+      "sources": [
+        "McKenzie 2022",
+        "Boehler 2011"
+      ]
+    },
+    {
+      "id": "weighted_dip",
+      "displayName": "Weighted Dip",
+      "searchTerms": [
+        "weighted dip",
+        "dip belt",
+        "loaded dip"
+      ],
+      "movementID": "dip",
+      "dimensions": {
+        "angle": "forward_lean_30",
+        "gripWidth": "standard",
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "parallel_bars",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.68,
+        "rhomboids": 0.35,
+        "deltoidAnterior": 0.65,
+        "rectusAbdominis": 0.4,
+        "latissimusDorsi": 0.45,
+        "tricepsMedialHead": 0.73,
+        "tricepsLongHead": 0.77,
+        "tricepsLateralHead": 0.8,
+        "trapeziusMiddle": 0.3,
+        "pectoralisMajorLower": 0.93
+      },
+      "notes": "Progressive overload increases all muscle activation proportionally. Six muscles show significantly greater activation on bar dip vs bench dip.",
+      "sources": [
+        "McKenzie 2022"
+      ]
+    },
+    {
+      "id": "machine_assisted_dip",
+      "displayName": "Assisted Dip Machine",
+      "searchTerms": [
+        "assisted dip",
+        "dip machine",
+        "gravitron dip"
+      ],
+      "movementID": "dip",
+      "dimensions": {
+        "angle": "forward_lean_30",
+        "gripWidth": "standard",
+        "gripOrientation": "neutral",
+        "stance": "kneeling",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "pectoralisMajorLower": 0.85,
+        "pectoralisMajorUpper": 0.55,
+        "tricepsLateralHead": 0.5,
+        "tricepsLongHead": 0.45,
+        "tricepsMedialHead": 0.4,
+        "deltoidAnterior": 0.45
+      },
+      "notes": "Counter-resistance allows moderation of load. Same recruitment patterns as bar dip at reduced intensity. Good for progression building.",
+      "sources": [
+        "McKenzie 2022"
+      ]
+    },
+    {
+      "id": "dumbbell_flat_fly",
+      "displayName": "Dumbbell Fly",
+      "searchTerms": [
+        "dumbbell fly",
+        "flat fly",
+        "chest fly",
+        "db fly"
+      ],
+      "movementID": "chest_fly",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.72,
+        "bicepsBrachii": 0.33,
+        "serratusAnterior": 0.3,
+        "deltoidAnterior": 0.45,
+        "pectoralisMajorLower": 0.93
+      },
+      "notes": "66% pec activation vs bench press. Peak tension at stretched/bottom position. Minimal triceps. Superior for lengthened-position training (Maeo 2022).",
+      "sources": [
+        "Solstad 2020",
+        "Maeo 2022"
+      ]
+    },
+    {
+      "id": "dumbbell_incline_fly",
+      "displayName": "Incline Dumbbell Fly",
+      "searchTerms": [
+        "incline fly",
+        "incline db fly",
+        "incline chest fly",
+        "upper chest fly"
+      ],
+      "movementID": "chest_fly",
+      "dimensions": {
+        "angle": "incline_30",
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.95,
+        "bicepsBrachii": 0.3,
+        "serratusAnterior": 0.25,
+        "deltoidAnterior": 0.55,
+        "pectoralisMajorLower": 0.6
+      },
+      "notes": "Higher clavicular activation than flat. 69% pec activation vs bench. Optimal at 15-30Â° angle. Above 45Â° shoulders dominate.",
+      "sources": [
+        "Trebs 2010",
+        "Barnett 1995"
+      ]
+    },
+    {
+      "id": "cable_crossover",
+      "displayName": "Cable Crossover",
+      "searchTerms": [
+        "cable crossover",
+        "cable fly",
+        "standing cable fly",
+        "mid cable fly"
+      ],
+      "movementID": "chest_fly",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.82,
+        "bicepsBrachii": 0.25,
+        "serratusAnterior": 0.35,
+        "deltoidAnterior": 0.45,
+        "rectusAbdominis": 0.2,
+        "pectoralisMajorLower": 0.95
+      },
+      "notes": "93-94% pec activation vs bench press - no significant difference. Constant tension throughout ROM. High activation during crossover phase.",
+      "sources": [
+        "ACE Study 2012",
+        "Signorile 2017"
+      ]
+    },
+    {
+      "id": "cable_fly_low_to_high",
+      "displayName": "Low-to-High Cable Fly",
+      "searchTerms": [
+        "low cable fly",
+        "low to high fly",
+        "incline cable fly",
+        "lower pulley fly"
+      ],
+      "movementID": "chest_fly",
+      "dimensions": {
+        "angle": "incline_path",
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.97,
+        "bicepsBrachii": 0.25,
+        "serratusAnterior": 0.3,
+        "deltoidAnterior": 0.57,
+        "rectusAbdominis": 0.2,
+        "pectoralisMajorLower": 0.55
+      },
+      "notes": "Upward arc specifically recruits clavicular fibers. Greater continuous tension than incline dumbbell fly. Trajectory mirrors upper pec fiber direction.",
+      "sources": [
+        "Trebs 2010",
+        "Signorile 2017"
+      ]
+    },
+    {
+      "id": "cable_fly_high_to_low",
+      "displayName": "High-to-Low Cable Fly",
+      "searchTerms": [
+        "high cable fly",
+        "high to low fly",
+        "decline cable fly",
+        "upper pulley fly"
+      ],
+      "movementID": "chest_fly",
+      "dimensions": {
+        "angle": "decline_path",
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.57,
+        "bicepsBrachii": 0.25,
+        "serratusAnterior": 0.35,
+        "deltoidAnterior": 0.35,
+        "rectusAbdominis": 0.2,
+        "pectoralisMajorLower": 0.97
+      },
+      "notes": "Downward arc specifically recruits costal/sternal fibers. Maintains tension at peak contraction unlike decline DB flies.",
+      "sources": [
+        "Signorile 2017"
+      ]
+    },
+    {
+      "id": "pec_deck",
+      "displayName": "Pec Deck",
+      "searchTerms": [
+        "pec deck",
+        "pec fly machine",
+        "butterfly machine",
+        "chest fly machine"
+      ],
+      "movementID": "chest_fly",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "seated",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.85,
+        "deltoidAnterior": 0.43,
+        "pectoralisMajorLower": 0.97,
+        "serratusAnterior": 0.35
+      },
+      "notes": "98% pec activation vs bench press - essentially interchangeable. 'Produces best motor-unit activation' per ACE. Constant tension, safe to failure.",
+      "sources": [
+        "ACE Study 2012",
+        "Rocha JÃºnior 2007"
+      ]
+    },
+    {
+      "id": "standard_push_up",
+      "displayName": "Push-Up",
+      "searchTerms": [
+        "push-up",
+        "pushup",
+        "press-up",
+        "standard push-up"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": "prone",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.75,
+        "obliquesExternal": 0.3,
+        "tricepsMedialHead": 0.7,
+        "tricepsLongHead": 0.75,
+        "tricepsLateralHead": 0.82,
+        "deltoidAnterior": 0.7,
+        "rectusAbdominis": 0.35,
+        "pectoralisMajorLower": 0.88
+      },
+      "notes": "~65% body weight load. Pec ~64% MVC, deltoid ~59% MVC, triceps ~74% MVC. Global EMG 38.2% MVIC. Foundational bodyweight push.",
+      "sources": [
+        "Cogley 2005",
+        "Kowalski 2022"
+      ]
+    },
+    {
+      "id": "incline_push_up",
+      "displayName": "Incline Push-Up",
+      "searchTerms": [
+        "incline push-up",
+        "hands elevated push-up",
+        "wall push-up",
+        "beginner push-up"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "incline",
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": "prone",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.47,
+        "obliquesExternal": 0.2,
+        "tricepsMedialHead": 0.4,
+        "tricepsLongHead": 0.45,
+        "tricepsLateralHead": 0.5,
+        "deltoidAnterior": 0.43,
+        "rectusAbdominis": 0.25,
+        "pectoralisMajorLower": 0.6
+      },
+      "notes": "Significantly reduced load (~41-55% BW depending on height). Global EMG ~16% MVIC. Serratus anterior highest relative activation. Regression/rehab option.",
+      "sources": [
+        "Kowalski 2022",
+        "Suprak 2011"
+      ]
+    },
+    {
+      "id": "decline_push_up",
+      "displayName": "Decline Push-Up",
+      "searchTerms": [
+        "decline push-up",
+        "feet elevated push-up",
+        "elevated push-up"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "decline",
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": "prone",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.93,
+        "obliquesExternal": 0.45,
+        "tricepsMedialHead": 0.75,
+        "tricepsLongHead": 0.82,
+        "tricepsLateralHead": 0.88,
+        "deltoidAnterior": 0.85,
+        "rectusAbdominis": 0.48,
+        "pectoralisMajorLower": 0.75
+      },
+      "notes": "~70-80% BW load. Shifts emphasis to upper pec and anterior deltoid, mimicking incline press. Increased activation across all muscles.",
+      "sources": [
+        "Trebs 2010",
+        "MSU Thesis"
+      ]
+    },
+    {
+      "id": "diamond_push_up",
+      "displayName": "Diamond Push-Up",
+      "searchTerms": [
+        "diamond push-up",
+        "triangle push-up",
+        "close grip push-up",
+        "narrow push-up"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": "narrow",
+        "gripOrientation": "pronated",
+        "stance": "prone",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.77,
+        "obliquesExternal": 0.35,
+        "tricepsMedialHead": 0.9,
+        "tricepsLongHead": 0.95,
+        "tricepsLateralHead": 1.0,
+        "deltoidAnterior": 0.68,
+        "rectusAbdominis": 0.38,
+        "pectoralisMajorLower": 0.88
+      },
+      "notes": "#1 MOST EFFECTIVE triceps exercise per ACE study. Significantly greater activation than wide-base for both triceps AND pectoralis major (p=0.005/0.026).",
+      "sources": [
+        "Cogley 2005",
+        "Boehler 2011"
+      ]
+    },
+    {
+      "id": "barbell_wide_grip_bench_press",
+      "displayName": "Wide-Grip Bench Press",
+      "searchTerms": [
+        "wide grip bench",
+        "wide bench press",
+        "pec focus bench"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": "wide",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "pectoralisMajorLower": 1.0,
+        "pectoralisMajorUpper": 0.9,
+        "deltoidAnterior": 0.6,
+        "tricepsLateralHead": 0.35,
+        "tricepsMedialHead": 0.3,
+        "tricepsLongHead": 0.25
+      },
+      "notes": "Wide grip increases sternocostal PM activation. Triceps activation decreases 10-20%. 1.5-2x biacromial width. Greater shoulder stress.",
+      "sources": [
+        "Lehman 2005",
+        "Barnett 1995"
+      ]
+    },
+    {
+      "id": "floor_press",
+      "displayName": "Floor Press",
+      "searchTerms": [
+        "floor press",
+        "floor bench",
+        "bb floor press"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": "supine_floor",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "tricepsLateralHead": 0.9,
+        "tricepsLongHead": 0.85,
+        "tricepsMedialHead": 0.8,
+        "pectoralisMajorLower": 0.7,
+        "pectoralisMajorUpper": 0.6,
+        "deltoidAnterior": 0.5
+      },
+      "notes": "Limited ROM eliminates deep stretch. Upper-half ROM emphasizes triceps more than pectoralis. Lockout strength builder.",
+      "sources": [
+        "Extrapolated from Lehman 2005"
+      ]
+    },
+    {
+      "id": "ring_dip",
+      "displayName": "Ring Dip",
+      "searchTerms": [
+        "ring dip",
+        "gymnastics dip",
+        "unstable dip"
+      ],
+      "movementID": "dip",
+      "dimensions": {
+        "angle": "forward_lean_30",
+        "gripWidth": "variable",
+        "gripOrientation": "neutral_to_pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "gymnastics_rings",
+      "muscleWeights": {
+        "pectoralisMajorLower": 1.0,
+        "pectoralisMajorUpper": 0.7,
+        "tricepsLateralHead": 0.6,
+        "tricepsLongHead": 0.55,
+        "tricepsMedialHead": 0.5,
+        "deltoidAnterior": 0.6,
+        "bicepsBrachii": 0.35,
+        "rectusAbdominis": 0.4
+      },
+      "notes": "Greatest peak pec sEMG amplitude of all dip variations (p=0.002-0.008). Instability significantly increases stabilizer demand.",
+      "sources": [
+        "McKenzie 2022"
+      ]
+    },
+    {
+      "id": "svend_press",
+      "displayName": "Svend Press",
+      "searchTerms": [
+        "svend press",
+        "plate squeeze press",
+        "squeeze press"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "weight_plate",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.85,
+        "pectoralisMajorLower": 0.8,
+        "deltoidAnterior": 0.5,
+        "tricepsLateralHead": 0.25,
+        "tricepsMedialHead": 0.2
+      },
+      "notes": "Isometric adduction emphasis. Constant pec contraction throughout. Light weight, high time under tension. Good for mind-muscle connection.",
+      "sources": [
+        "Extrapolated from fly mechanics"
+      ]
+    },
+    {
+      "id": "machine_chest_press_flat",
+      "displayName": "Machine Chest Press",
+      "searchTerms": [
+        "chest press machine",
+        "seated chest press",
+        "machine press"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "pectoralisMajorLower": 0.85,
+        "pectoralisMajorUpper": 0.8,
+        "deltoidAnterior": 0.65,
+        "tricepsLateralHead": 0.6,
+        "tricepsMedialHead": 0.55,
+        "tricepsLongHead": 0.5
+      },
+      "notes": "Fixed path eliminates stabilization demands. Medial deltoid activation 50% lower than free weights. Good for isolating chest with fatigue.",
+      "sources": [
+        "Schick 2010"
+      ]
+    },
+    {
+      "id": "machine_chest_press_incline",
+      "displayName": "Incline Machine Chest Press",
+      "searchTerms": [
+        "incline chest press machine",
+        "incline machine press",
+        "upper chest machine"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "incline_30",
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "pectoralisMajorUpper": 0.85,
+        "deltoidAnterior": 0.8,
+        "pectoralisMajorLower": 0.5,
+        "tricepsLateralHead": 0.55,
+        "tricepsMedialHead": 0.5,
+        "tricepsLongHead": 0.45
+      },
+      "notes": "Upper pec targeting with machine stability. Allows higher volume work when stabilizers are fatigued.",
+      "sources": [
+        "Schick 2010",
+        "RodrÃ­guez-Ridao 2020"
+      ]
+    },
+    {
+      "id": "barbell_overhead_press_seated",
+      "displayName": "Seated Overhead Press",
+      "searchTerms": [
+        "seated military press",
+        "seated shoulder press",
+        "seated barbell press"
+      ],
+      "movementID": "overhead_press",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": "seated",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "deltoidAnterior": 0.9,
+        "tricepsLateralHead": 0.75,
+        "deltoidLateral": 0.75,
+        "tricepsMedialHead": 0.65,
+        "trapeziusUpper": 0.65,
+        "tricepsLongHead": 0.55,
+        "pectoralisMajorUpper": 0.45,
+        "deltoidPosterior": 0.4
+      },
+      "notes": "Core activation reduced 60-70% vs standing. Back support allows greater load focus on shoulders. Good for strict shoulder work.",
+      "sources": [
+        "Saeterbakken & Fimland 2013"
+      ]
+    },
+    {
+      "id": "dumbbell_overhead_press_standing",
+      "displayName": "Standing Dumbbell Shoulder Press",
+      "searchTerms": [
+        "standing db press",
+        "standing dumbbell press",
+        "dumbbell shoulder press"
+      ],
+      "movementID": "overhead_press",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "deltoidAnterior": 1.0,
+        "deltoidLateral": 0.9,
+        "tricepsLateralHead": 0.75,
+        "tricepsMedialHead": 0.65,
+        "trapeziusUpper": 0.65,
+        "deltoidPosterior": 0.6,
+        "tricepsLongHead": 0.55,
+        "pectoralisMajorUpper": 0.45,
+        "rectusAbdominis": 0.4,
+        "obliquesExternal": 0.35,
+        "erectorSpinae": 0.3
+      },
+      "notes": "Highest deltoid activation of any pressing variant. 11-15% greater anterior deltoid activation than barbell. Independent arms require more stabilization.",
+      "sources": [
+        "Saeterbakken & Fimland 2013"
+      ]
+    },
+    {
+      "id": "dumbbell_overhead_press_seated",
+      "displayName": "Seated Dumbbell Shoulder Press",
+      "searchTerms": [
+        "seated db press",
+        "seated dumbbell press",
+        "seated dumbbell shoulder press"
+      ],
+      "movementID": "overhead_press",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "seated",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "deltoidAnterior": 0.95,
+        "deltoidLateral": 0.8,
+        "tricepsLateralHead": 0.7,
+        "tricepsMedialHead": 0.6,
+        "trapeziusUpper": 0.65,
+        "tricepsLongHead": 0.5,
+        "deltoidPosterior": 0.45,
+        "pectoralisMajorUpper": 0.45
+      },
+      "notes": "Excellent shoulder isolation with back support. Maintains dumbbell benefits (ROM, independent arms) while reducing core demands.",
+      "sources": [
+        "Saeterbakken & Fimland 2013"
+      ]
+    },
+    {
+      "id": "dip_machine_assisted",
+      "displayName": "Assisted Dip",
+      "searchTerms": [
+        "assisted dip",
+        "dip machine",
+        "gravitron dip",
+        "counterweight dip"
+      ],
+      "movementID": "dip",
+      "dimensions": {
+        "angle": "forward_lean",
+        "gripWidth": "standard",
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "assisted",
+      "muscleWeights": {
+        "tricepsLongHead": 0.75,
+        "tricepsLateralHead": 0.75,
+        "tricepsMedialHead": 0.7,
+        "pectoralisMajorLower": 0.65,
+        "deltoidAnterior": 0.5,
+        "pectoralisMajorUpper": 0.5,
+        "latissimusDorsi": 0.25,
+        "rectusAbdominis": 0.2
+      },
+      "notes": "Counterweight reduces effective bodyweight. Approximately 25-30% lower activation vs full bodyweight. Good progression tool.",
+      "sources": [
+        "McKenzie 2022"
+      ]
+    },
+    {
+      "id": "bench_dip",
+      "displayName": "Bench Dip",
+      "searchTerms": [
+        "bench dip",
+        "chair dip",
+        "tricep bench dip",
+        "hands behind dip"
+      ],
+      "movementID": "dip",
+      "dimensions": {
+        "angle": "upright",
+        "gripWidth": "narrow",
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "tricepsLongHead": 0.8,
+        "tricepsLateralHead": 0.8,
+        "tricepsMedialHead": 0.75,
+        "deltoidAnterior": 0.5,
+        "pectoralisMajorLower": 0.35,
+        "pectoralisMajorUpper": 0.25
+      },
+      "notes": "CAUTION: Requires 101% maximal shoulder extension ROMâ€”higher anterior shoulder injury risk. Consider parallel bar dips as safer alternative.",
+      "sources": [
+        "McKenzie 2022",
+        "ACE study"
+      ]
+    },
+    {
+      "id": "push_up_wide",
+      "displayName": "Wide Push-Up",
+      "searchTerms": [
+        "wide push up",
+        "wide grip push up",
+        "chest push up"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": "wide",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "pectoralisMajorLower": 0.75,
+        "deltoidAnterior": 0.7,
+        "pectoralisMajorUpper": 0.65,
+        "tricepsLateralHead": 0.6,
+        "tricepsLongHead": 0.55,
+        "tricepsMedialHead": 0.5,
+        "rectusAbdominis": 0.3,
+        "obliquesExternal": 0.3
+      },
+      "notes": "Lower EMG activation in BOTH pec and triceps vs narrow/standard. Greater horizontal abduction but reduced ROM contributes to lower overall activation.",
+      "sources": [
+        "Cogley 2005"
+      ]
+    }
+  ]
+}

@@ -7,26 +7,22 @@
 
 import SwiftUI
 
-/// Horizontal scrolling filter tabs for muscle group selection
+/// Horizontal scrolling filter tabs for exercise filtering (muscle groups + custom)
 struct MuscleGroupFilterTabs: View {
-    @Binding var selectedGroup: MuscleGroup?
+    @Binding var selectedFilter: ExerciseFilter
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 12) {
-                FilterTab(title: "All", isSelected: selectedGroup == nil) {
-                    selectedGroup = nil
-                }
-
-                ForEach(MuscleGroup.allCases) { group in
-                    FilterTab(title: group.displayName, isSelected: selectedGroup == group) {
-                        selectedGroup = group
+                ForEach(ExerciseFilter.allFilters) { filter in
+                    FilterTab(title: filter.displayName, isSelected: selectedFilter == filter) {
+                        selectedFilter = filter
                     }
                 }
             }
             .padding(.horizontal)
         }
-        .sensoryFeedback(.selection, trigger: selectedGroup)
+        .sensoryFeedback(.selection, trigger: selectedFilter)
     }
 }
 
@@ -52,6 +48,6 @@ private struct FilterTab: View {
 }
 
 #Preview {
-    @Previewable @State var selectedGroup: MuscleGroup? = nil
-    MuscleGroupFilterTabs(selectedGroup: $selectedGroup)
+    @Previewable @State var selectedFilter: ExerciseFilter = .all
+    MuscleGroupFilterTabs(selectedFilter: $selectedFilter)
 }

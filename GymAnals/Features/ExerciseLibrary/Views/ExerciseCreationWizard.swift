@@ -14,6 +14,8 @@ struct ExerciseCreationWizard: View {
     @Environment(\.dismiss) private var dismiss
 
     @State private var viewModel = ExerciseCreationViewModel()
+    @State private var muscleWeightVM: MuscleWeightViewModel?
+    @State private var creationFailed = false
 
     var body: some View {
         NavigationStack {
@@ -49,12 +51,46 @@ struct ExerciseCreationWizard: View {
                         ExerciseTypeStepView(viewModel: viewModel)
                     case 4:
                         // Final step: create and show muscle editor
-                        if let exercise = viewModel.createdExercise {
-                            MuscleWeightEditorView(viewModel: MuscleWeightViewModel(exercise: exercise), startInEditMode: true)
+                        if let muscleVM = muscleWeightVM {
+                            MuscleWeightEditorView(viewModel: muscleVM)
+                        } else if creationFailed {
+                            VStack(spacing: 16) {
+                                Image(systemName: "exclamationmark.circle.fill")
+                                    .font(.system(size: 48))
+                                    .foregroundStyle(.red)
+                                Text("Failed to create exercise")
+                                    .font(.headline)
+                                Text("An error occurred while creating the exercise. Please try again or cancel.")
+                                    .font(.subheadline)
+                                    .foregroundStyle(.secondary)
+                                    .multilineTextAlignment(.center)
+
+                                HStack(spacing: 12) {
+                                    Button("Cancel") {
+                                        dismiss()
+                                    }
+                                    .buttonStyle(.bordered)
+
+                                    Button("Try Again") {
+                                        creationFailed = false
+                                        if let exercise = viewModel.createExercise(context: modelContext) {
+                                            muscleWeightVM = MuscleWeightViewModel(exercise: exercise, startInEditMode: true)
+                                        } else {
+                                            creationFailed = true
+                                        }
+                                    }
+                                    .buttonStyle(.borderedProminent)
+                                }
+                            }
+                            .padding()
                         } else {
                             ProgressView("Creating exercise...")
                                 .onAppear {
-                                    _ = viewModel.createExercise(context: modelContext)
+                                    if let exercise = viewModel.createExercise(context: modelContext) {
+                                        muscleWeightVM = MuscleWeightViewModel(exercise: exercise, startInEditMode: true)
+                                    } else {
+                                        creationFailed = true
+                                    }
                                 }
                         }
                     default:

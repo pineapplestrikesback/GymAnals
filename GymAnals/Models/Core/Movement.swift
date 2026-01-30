@@ -29,7 +29,7 @@ final class Movement {
     var subcategory: String = ""
 
     /// Raw value storage for exercise type (weight+reps, time-based, etc.)
-    var exerciseTypeRaw: Int = ExerciseType.weightReps.rawValue
+    var exerciseTypeRaw: String = ExerciseType.weightReps.rawValue
 
     // MARK: - Dimension and Equipment Constraints
 

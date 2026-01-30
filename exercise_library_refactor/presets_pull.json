@@ -1,0 +1,2031 @@
+{
+  "presets": [
+    {
+      "id": "pull_up_wide_grip",
+      "displayName": "Wide Grip Pull-Up",
+      "searchTerms": [
+        "wide pull up",
+        "wide grip pullup",
+        "lat pull up",
+        "overhand pull up"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "wide",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.5,
+        "trapeziusMiddle": 0.53,
+        "trapeziusLower": 0.5,
+        "teresMajor": 0.78,
+        "rhomboids": 0.43,
+        "rectusAbdominis": 0.3,
+        "deltoidPosterior": 0.52,
+        "forearms": 0.53,
+        "bicepsBrachii": 0.62,
+        "latissimusDorsi": 1.0
+      },
+      "notes": "Pronated wide grip maximizes teres major involvement. Similar lat activation to standard grip per Andersen 2014. Full ROM essential - emphasize stretch at bottom.",
+      "sources": [
+        "Youdas et al. 2010 J Strength Cond Res",
+        "Andersen et al. 2014",
+        "Dickie et al. 2017"
+      ]
+    },
+    {
+      "id": "pull_up_standard_grip",
+      "displayName": "Pull-Up",
+      "searchTerms": [
+        "pull up",
+        "pullup",
+        "standard pull up",
+        "overhand pull up"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.5,
+        "trapeziusMiddle": 0.55,
+        "trapeziusLower": 0.5,
+        "teresMajor": 0.75,
+        "rhomboids": 0.43,
+        "rectusAbdominis": 0.35,
+        "deltoidPosterior": 0.55,
+        "forearms": 0.57,
+        "bicepsBrachii": 0.75,
+        "latissimusDorsi": 1.0
+      },
+      "notes": "117-130% MVIC lat activation. Highest lat EMG among back exercises per Edelburg 2017. Lower traps significantly more active than chin-ups.",
+      "sources": [
+        "Youdas et al. 2010 J Strength Cond Res 24(12):3404-3414",
+        "Edelburg 2017 UWL"
+      ]
+    },
+    {
+      "id": "chin_up",
+      "displayName": "Chin-Up",
+      "searchTerms": [
+        "chin up",
+        "chinup",
+        "supinated pull up",
+        "underhand pull up"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "supinated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.5,
+        "trapeziusMiddle": 0.42,
+        "trapeziusLower": 0.43,
+        "teresMajor": 0.7,
+        "rhomboids": 0.35,
+        "rectusAbdominis": 0.35,
+        "deltoidPosterior": 0.45,
+        "forearms": 0.55,
+        "bicepsBrachii": 0.88,
+        "latissimusDorsi": 1.0
+      },
+      "notes": "Supinated grip significantly increases biceps brachii activation (78-96% MVIC). Similar lat activation to pull-ups but greater bicep and pec involvement.",
+      "sources": [
+        "Youdas et al. 2010 J Strength Cond Res",
+        "Doma et al. 2013 Sports Biomechanics"
+      ]
+    },
+    {
+      "id": "pull_up_neutral_grip",
+      "displayName": "Neutral Grip Pull-Up",
+      "searchTerms": [
+        "neutral pull up",
+        "hammer grip pull up",
+        "parallel grip pull up"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "narrow",
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.62,
+        "trapeziusMiddle": 0.35,
+        "trapeziusLower": 0.46,
+        "teresMajor": 0.72,
+        "rhomboids": 0.35,
+        "rectusAbdominis": 0.35,
+        "deltoidPosterior": 0.53,
+        "forearms": 0.65,
+        "bicepsBrachii": 0.75,
+        "latissimusDorsi": 1.0
+      },
+      "notes": "Lowest middle trapezius activation (37% peak MVIC) per Dickie 2017. Neutral grip emphasizes brachialis and brachioradialis. Comfortable wrist position.",
+      "sources": [
+        "Dickie et al. 2017 J Electromyogr Kinesiol 32:30-36"
+      ]
+    },
+    {
+      "id": "lat_pulldown_wide_grip",
+      "displayName": "Wide Grip Lat Pulldown",
+      "searchTerms": [
+        "wide lat pulldown",
+        "wide grip pulldown",
+        "front pulldown"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "wide",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.45,
+        "trapeziusMiddle": 0.43,
+        "trapeziusLower": 0.4,
+        "teresMajor": 0.72,
+        "rhomboids": 0.35,
+        "deltoidPosterior": 0.4,
+        "forearms": 0.5,
+        "bicepsBrachii": 0.57,
+        "latissimusDorsi": 0.93
+      },
+      "notes": "Signorile 2002: Wide anterior grip produces greatest LD and teres major activation. Pronated grip elicits significantly greater LD than supinated per Lusk 2010.",
+      "sources": [
+        "Signorile et al. 2002 J Strength Cond Res 16(4):539-546",
+        "Lusk et al. 2010"
+      ]
+    },
+    {
+      "id": "lat_pulldown_close_grip",
+      "displayName": "Close Grip Lat Pulldown",
+      "searchTerms": [
+        "close grip pulldown",
+        "narrow pulldown",
+        "close lat pulldown"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "narrow",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.5,
+        "trapeziusMiddle": 0.43,
+        "trapeziusLower": 0.35,
+        "teresMajor": 0.65,
+        "rhomboids": 0.35,
+        "deltoidPosterior": 0.4,
+        "forearms": 0.55,
+        "bicepsBrachii": 0.65,
+        "latissimusDorsi": 0.93
+      },
+      "notes": "Similar lat activation to wide grip per Andersen 2014. Allows heavier loads (6RM: 80.3kg vs 77.3kg wide). Tendency for higher biceps activation.",
+      "sources": [
+        "Andersen et al. 2014 J Strength Cond Res 28(4):1135-1142",
+        "Lusk et al. 2010"
+      ]
+    },
+    {
+      "id": "lat_pulldown_neutral_grip",
+      "displayName": "Neutral Grip Lat Pulldown",
+      "searchTerms": [
+        "v-bar pulldown",
+        "neutral pulldown",
+        "hammer pulldown"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "narrow",
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.55,
+        "trapeziusMiddle": 0.38,
+        "trapeziusLower": 0.35,
+        "teresMajor": 0.68,
+        "rhomboids": 0.35,
+        "deltoidPosterior": 0.38,
+        "forearms": 0.6,
+        "bicepsBrachii": 0.62,
+        "latissimusDorsi": 0.93
+      },
+      "notes": "V-bar shows similar LD activation to front-of-neck wide grip per Sperandei 2009. Comfortable wrist position for high volume training.",
+      "sources": [
+        "Sperandei et al. 2009 J Strength Cond Res 23(7):2033-2038"
+      ]
+    },
+    {
+      "id": "lat_pulldown_reverse_grip",
+      "displayName": "Reverse Grip Lat Pulldown",
+      "searchTerms": [
+        "supinated pulldown",
+        "underhand pulldown",
+        "reverse pulldown"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "supinated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "latissimusDorsi": 0.75,
+        "bicepsBrachii": 0.7,
+        "teresMajor": 0.55,
+        "bicepsBrachialis": 0.4,
+        "trapeziusMiddle": 0.35,
+        "trapeziusLower": 0.35,
+        "rhomboids": 0.3,
+        "deltoidPosterior": 0.3,
+        "forearms": 0.45
+      },
+      "notes": "Significantly lower LD activation than pronated grip per Lusk 2010. Greater biceps emphasis. Best for combined back/biceps training.",
+      "sources": [
+        "Lusk et al. 2010 J Strength Cond Res 24(7):1895-1900",
+        "Lehman et al. 2004"
+      ]
+    },
+    {
+      "id": "lat_pulldown_single_arm",
+      "displayName": "Single-Arm Lat Pulldown",
+      "searchTerms": [
+        "one arm pulldown",
+        "unilateral pulldown",
+        "single arm lat pulldown"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "unilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.5,
+        "trapeziusMiddle": 0.43,
+        "trapeziusLower": 0.4,
+        "obliquesExternal": 0.38,
+        "teresMajor": 0.7,
+        "rhomboids": 0.4,
+        "rectusAbdominis": 0.3,
+        "deltoidPosterior": 0.43,
+        "forearms": 0.55,
+        "bicepsBrachii": 0.65,
+        "latissimusDorsi": 0.95
+      },
+      "notes": "Unilateral work increases per-side activation and core anti-rotation demand. Excellent for addressing asymmetries. 59-63% greater oblique activation vs bilateral.",
+      "sources": [
+        "Saeterbakken et al. 2015 Int J Sports Med",
+        "Fenwick et al. 2009"
+      ]
+    },
+    {
+      "id": "barbell_bent_over_row",
+      "displayName": "Barbell Bent-Over Row",
+      "searchTerms": [
+        "bent over row",
+        "barbell row",
+        "bb row",
+        "bent row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": 45,
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "latissimusDorsi": 0.8,
+        "trapeziusMiddle": 0.85,
+        "trapeziusLower": 0.75,
+        "rhomboids": 0.8,
+        "teresMajor": 0.7,
+        "erectorSpinae": 0.85,
+        "bicepsBrachii": 0.7,
+        "bicepsBrachialis": 0.55,
+        "deltoidPosterior": 0.65,
+        "trapeziusUpper": 0.4,
+        "forearms": 0.65
+      },
+      "notes": "53.4% MVIC lat (up phase), 42.5% MVIC erector spinae. Second-best exercise for lower traps after I-Y-T raises per Edelburg 2017. Highest spine compression: 3576N.",
+      "sources": [
+        "Fenwick et al. 2009 J Strength Cond Res 23(2):350-358",
+        "Edelburg 2018 UWL"
+      ]
+    },
+    {
+      "id": "barbell_bent_over_row_underhand",
+      "displayName": "Underhand Barbell Row",
+      "searchTerms": [
+        "yates row",
+        "supinated barbell row",
+        "underhand bent over row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": 45,
+        "gripWidth": "standard",
+        "gripOrientation": "supinated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "latissimusDorsi": 0.75,
+        "bicepsBrachii": 0.8,
+        "trapeziusMiddle": 0.75,
+        "trapeziusLower": 0.65,
+        "rhomboids": 0.7,
+        "teresMajor": 0.65,
+        "erectorSpinae": 0.8,
+        "bicepsBrachialis": 0.45,
+        "deltoidPosterior": 0.55,
+        "forearms": 0.5
+      },
+      "notes": "Supinated grip increases biceps brachii involvement significantly. Allows pulling bar closer to body. Popular variation for combined back/biceps emphasis.",
+      "sources": [
+        "Lehman et al. 2004 Dynamic Medicine 3:4",
+        "Fenwick et al. 2009"
+      ]
+    },
+    {
+      "id": "pendlay_row",
+      "displayName": "Pendlay Row",
+      "searchTerms": [
+        "pendlay row",
+        "dead stop row",
+        "explosive row",
+        "floor row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": 0,
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.5,
+        "teresMajor": 0.7,
+        "deltoidPosterior": 0.7,
+        "bicepsBrachii": 0.6,
+        "trapeziusLower": 0.8,
+        "trapeziusMiddle": 0.88,
+        "rhomboids": 0.85,
+        "forearms": 0.55,
+        "latissimusDorsi": 0.88,
+        "erectorSpinae": 0.6,
+        "trapeziusUpper": 0.45
+      },
+      "notes": "Parallel torso emphasizes horizontal abduction plane - greater mid/lower trap and rhomboid involvement. Bar returns to floor each rep. Symmetrical erector activation.",
+      "sources": [
+        "Fenwick et al. 2009 J Strength Cond Res 23(2):350-358"
+      ]
+    },
+    {
+      "id": "seal_row",
+      "displayName": "Seal Row",
+      "searchTerms": [
+        "seal row",
+        "prone row",
+        "bench supported barbell row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": 0,
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.5,
+        "trapeziusLower": 0.75,
+        "trapeziusMiddle": 0.82,
+        "teresMajor": 0.78,
+        "rhomboids": 0.8,
+        "deltoidPosterior": 0.7,
+        "forearms": 0.53,
+        "bicepsBrachii": 0.62,
+        "latissimusDorsi": 0.95,
+        "erectorSpinae": 0.25
+      },
+      "notes": "Chest support eliminates erector spinae demand - allows greater focus on target muscles. Lower spine loads per Garcia-Jaen 2021. Optimal for lat hypertrophy with reduced fatigue.",
+      "sources": [
+        "Garcia-Jaen et al. 2021 J Phys Ed Sport",
+        "Lengthened position research - Pedrosa 2023"
+      ]
+    },
+    {
+      "id": "dumbbell_row_single_arm",
+      "displayName": "Single-Arm Dumbbell Row",
+      "searchTerms": [
+        "one arm dumbbell row",
+        "db row",
+        "single arm row",
+        "lawn mower row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.55,
+        "obliquesExternal": 0.45,
+        "teresMajor": 0.72,
+        "deltoidPosterior": 0.62,
+        "bicepsBrachii": 0.68,
+        "trapeziusLower": 0.65,
+        "trapeziusMiddle": 0.65,
+        "rhomboids": 0.7,
+        "forearms": 0.65,
+        "latissimusDorsi": 0.95,
+        "erectorSpinae": 0.45
+      },
+      "notes": "91 mean peak lat activation per Contreras EMG. Pulling to hip emphasizes lower lats; pulling to ribcage emphasizes upper back. Greater anti-rotation demand.",
+      "sources": [
+        "Contreras 2010 EMG Experiments",
+        "Saeterbakken et al. 2015"
+      ]
+    },
+    {
+      "id": "dumbbell_row_chest_supported",
+      "displayName": "Chest-Supported Dumbbell Row",
+      "searchTerms": [
+        "incline dumbbell row",
+        "chest supported row",
+        "prone incline row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": 30,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.5,
+        "trapeziusMiddle": 0.8,
+        "trapeziusLower": 0.7,
+        "teresMajor": 0.72,
+        "rhomboids": 0.75,
+        "deltoidPosterior": 0.72,
+        "forearms": 0.53,
+        "bicepsBrachii": 0.65,
+        "latissimusDorsi": 0.93,
+        "erectorSpinae": 0.2,
+        "trapeziusUpper": 0.4
+      },
+      "notes": "Shoulder abduction position increases posterior deltoid and mid trap activation per Garcia-Jaen 2021. 45Â° incline bench provides optimal chest support.",
+      "sources": [
+        "Garcia-Jaen et al. 2021 J Phys Ed Sport",
+        "Schoenfeld et al. 2013"
+      ]
+    },
+    {
+      "id": "dumbbell_row_bent_over",
+      "displayName": "Bent-Over Dumbbell Row",
+      "searchTerms": [
+        "bent over db row",
+        "bilateral dumbbell row",
+        "two arm dumbbell row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": 45,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.55,
+        "teresMajor": 0.7,
+        "deltoidPosterior": 0.68,
+        "bicepsBrachii": 0.65,
+        "trapeziusLower": 0.75,
+        "trapeziusMiddle": 0.85,
+        "rhomboids": 0.8,
+        "forearms": 0.6,
+        "latissimusDorsi": 0.9,
+        "erectorSpinae": 0.7,
+        "trapeziusUpper": 0.4
+      },
+      "notes": "Highest mid-back activation of all exercises tested per Contreras 2010. Neutral grip allows natural wrist position. Significant erector spinae demand.",
+      "sources": [
+        "Contreras 2010 EMG Experiments",
+        "Fenwick et al. 2009"
+      ]
+    },
+    {
+      "id": "seated_cable_row_close_grip",
+      "displayName": "Seated Cable Row - Close Grip",
+      "searchTerms": [
+        "seated row",
+        "cable row",
+        "v-bar row",
+        "close grip cable row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "narrow",
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.5,
+        "teresMajor": 0.7,
+        "deltoidPosterior": 0.53,
+        "bicepsBrachii": 0.62,
+        "trapeziusMiddle": 0.8,
+        "trapeziusLower": 0.57,
+        "rhomboids": 0.77,
+        "forearms": 0.53,
+        "latissimusDorsi": 0.9,
+        "erectorSpinae": 0.35,
+        "trapeziusUpper": 0.35
+      },
+      "notes": "Highest middle trap/rhomboid activation vs lat pulldown per Lehman 2004. 0Â° shoulder abduction maximizes lat involvement per Vasconcelos 2023.",
+      "sources": [
+        "Lehman et al. 2004 Dynamic Medicine 3(1):4",
+        "Vasconcelos et al. 2023 Int J Strength Cond"
+      ]
+    },
+    {
+      "id": "seated_cable_row_wide_grip",
+      "displayName": "Seated Cable Row - Wide Grip",
+      "searchTerms": [
+        "wide cable row",
+        "wide grip row",
+        "wide seated row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "wide",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.45,
+        "teresMajor": 0.5,
+        "deltoidPosterior": 0.78,
+        "bicepsBrachii": 0.55,
+        "trapeziusMiddle": 0.9,
+        "trapeziusLower": 0.57,
+        "rhomboids": 0.78,
+        "forearms": 0.47,
+        "latissimusDorsi": 0.68,
+        "erectorSpinae": 0.35,
+        "trapeziusUpper": 0.75
+      },
+      "notes": "90Â° shoulder abduction dramatically increases upper trap (130-138% MVIC), mid trap, and rear delt while DECREASING lat activation by ~50% per Vasconcelos 2023.",
+      "sources": [
+        "Vasconcelos et al. 2023 Int J Strength Cond",
+        "Signorile et al. 2002"
+      ]
+    },
+    {
+      "id": "seated_cable_row_neutral_grip",
+      "displayName": "Seated Cable Row - Neutral Grip",
+      "searchTerms": [
+        "neutral cable row",
+        "hammer grip cable row",
+        "d-handle row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "latissimusDorsi": 0.8,
+        "trapeziusMiddle": 0.85,
+        "rhomboids": 0.8,
+        "teresMajor": 0.7,
+        "deltoidPosterior": 0.6,
+        "bicepsBrachii": 0.65,
+        "bicepsBrachialis": 0.5,
+        "trapeziusLower": 0.6,
+        "erectorSpinae": 0.35,
+        "trapeziusUpper": 0.35,
+        "forearms": 0.55
+      },
+      "notes": "Balanced activation between lats and upper back. Neutral grip comfortable for high volume. No significant difference between grip types for lat activation per Lehman 2004.",
+      "sources": [
+        "Lehman et al. 2004 Dynamic Medicine 3(1):4",
+        "Taboada-Iglesias et al. 2024"
+      ]
+    },
+    {
+      "id": "single_arm_cable_row",
+      "displayName": "Single-Arm Cable Row",
+      "searchTerms": [
+        "one arm cable row",
+        "unilateral cable row",
+        "single arm seated row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "unilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.5,
+        "obliquesExternal": 0.55,
+        "teresMajor": 0.68,
+        "deltoidPosterior": 0.6,
+        "bicepsBrachii": 0.62,
+        "obliquesInternal": 0.45,
+        "trapeziusMiddle": 0.7,
+        "rectusAbdominis": 0.35,
+        "rhomboids": 0.7,
+        "forearms": 0.55,
+        "latissimusDorsi": 0.93,
+        "erectorSpinae": 0.38
+      },
+      "notes": "Creates greatest torsional challenge per Fenwick 2009. Internal oblique activation 20.8% MVIC vs 12-13.3% in bilateral rows. Excellent for anti-rotation training.",
+      "sources": [
+        "Fenwick et al. 2009 J Strength Cond Res",
+        "Saeterbakken et al. 2015"
+      ]
+    },
+    {
+      "id": "face_pull",
+      "displayName": "Face Pull",
+      "searchTerms": [
+        "face pull",
+        "rope face pull",
+        "rear delt pull",
+        "external rotation pull"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "deltoidLateral": 0.38,
+        "trapeziusMiddle": 0.65,
+        "trapeziusLower": 0.5,
+        "rotatorCuff": 0.68,
+        "rhomboids": 0.48,
+        "deltoidPosterior": 0.85,
+        "forearms": 0.2,
+        "bicepsBrachii": 0.28
+      },
+      "notes": "High anchor promotes external rotation - increases infraspinatus (62% MVIC) and teres minor (67% MVIC) per Reinold 2004. Essential for shoulder health and posture.",
+      "sources": [
+        "Reinold et al. 2004 J Orthop Sports Phys Ther 34(7):385-394",
+        "Ekstrom et al. 2003"
+      ]
+    },
+    {
+      "id": "machine_row",
+      "displayName": "Machine Row",
+      "searchTerms": [
+        "machine row",
+        "seated machine row",
+        "row machine",
+        "plate loaded row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.45,
+        "trapeziusMiddle": 0.77,
+        "trapeziusLower": 0.6,
+        "teresMajor": 0.68,
+        "rhomboids": 0.73,
+        "deltoidPosterior": 0.55,
+        "forearms": 0.5,
+        "bicepsBrachii": 0.6,
+        "latissimusDorsi": 0.9,
+        "erectorSpinae": 0.28
+      },
+      "notes": "Erector spinae 60-63% of free-weight row activation per Saeterbakken 2015. Highest lat:biceps ratio with constant tension. Excellent for controlled hypertrophy work.",
+      "sources": [
+        "Saeterbakken et al. 2015 Int J Sports Med 36:900-905",
+        "Lehman et al. 2004"
+      ]
+    },
+    {
+      "id": "hammer_strength_row",
+      "displayName": "Hammer Strength Row",
+      "searchTerms": [
+        "hammer row",
+        "plate loaded row",
+        "iso-lateral row",
+        "hammer strength"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "latissimusDorsi": 0.85,
+        "trapeziusMiddle": 0.8,
+        "rhomboids": 0.8,
+        "teresMajor": 0.75,
+        "deltoidPosterior": 0.6,
+        "bicepsBrachii": 0.65,
+        "bicepsBrachialis": 0.5,
+        "trapeziusLower": 0.65,
+        "erectorSpinae": 0.25,
+        "forearms": 0.55
+      },
+      "notes": "Chest pad eliminates erector spinae demand. Fixed path ensures consistent loading. Independent arms allow addressing imbalances.",
+      "sources": [
+        "Biomechanical analysis based on Fenwick et al. 2009",
+        "Garcia-Jaen et al. 2021"
+      ]
+    },
+    {
+      "id": "inverted_row",
+      "displayName": "Inverted Row",
+      "searchTerms": [
+        "inverted row",
+        "body row",
+        "australian pull up",
+        "bodyweight row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.5,
+        "teresMajor": 0.62,
+        "deltoidPosterior": 0.6,
+        "bicepsBrachii": 0.68,
+        "trapeziusMiddle": 0.75,
+        "trapeziusLower": 0.55,
+        "rectusAbdominis": 0.35,
+        "rhomboids": 0.72,
+        "forearms": 0.5,
+        "latissimusDorsi": 0.85,
+        "erectorSpinae": 0.42
+      },
+      "notes": "64.8% MVIC lat activation (up phase) - highest of all row variations per Fenwick 2009. Upper erector 90.9% MVIC. Spine compression 35% lower than bent-over row.",
+      "sources": [
+        "Fenwick et al. 2009 J Strength Cond Res 23(2):350-358",
+        "Edelburg 2018"
+      ]
+    },
+    {
+      "id": "dumbbell_pullover",
+      "displayName": "Dumbbell Pullover",
+      "searchTerms": [
+        "pullover",
+        "db pullover",
+        "dumbbell pullover",
+        "lat pullover"
+      ],
+      "movementID": "pullover",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "deltoidAnterior": 0.2,
+        "teresMajor": 0.35,
+        "rectusAbdominis": 0.43,
+        "pectoralisMajorUpper": 0.7,
+        "deltoidPosterior": 0.2,
+        "pectoralisMajorLower": 0.85,
+        "latissimusDorsi": 0.4,
+        "tricepsLongHead": 0.65
+      },
+      "notes": "Marchetti & Uchida 2011: Pec major dominates - lat IEMG only ~10% of pec major. NOT an effective lat exercise despite gym lore. Provides stretch stimulus for triceps long head.",
+      "sources": [
+        "Marchetti & Uchida 2011 J Applied Biomech 27(4):380-384",
+        "Campos & da Silva 2014"
+      ]
+    },
+    {
+      "id": "straight_arm_pulldown",
+      "displayName": "Straight-Arm Pulldown",
+      "searchTerms": [
+        "straight arm pulldown",
+        "cable pullover",
+        "stiff arm pulldown",
+        "lat pushdown"
+      ],
+      "movementID": "pullover",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "trapeziusLower": 0.3,
+        "rectusAbdominis": 0.23,
+        "teresMajor": 0.57,
+        "rhomboids": 0.25,
+        "deltoidPosterior": 0.35,
+        "pectoralisMajorLower": 0.25,
+        "latissimusDorsi": 0.93,
+        "tricepsLongHead": 0.6
+      },
+      "notes": "Significantly higher lat activation than dumbbell pullover per Muyor 2022 (~18% MVIC). Eliminates bicep involvement - superior lat isolation. Grip width doesn't affect activation.",
+      "sources": [
+        "Muyor et al. 2022 Applied Sciences 12(21):11138",
+        "Lehman et al. 2004"
+      ]
+    },
+    {
+      "id": "barbell_shrug",
+      "displayName": "Barbell Shrug",
+      "searchTerms": [
+        "barbell shrug",
+        "bb shrug",
+        "shrug",
+        "trap shrug"
+      ],
+      "movementID": "shrug",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "trapeziusMiddle": 0.25,
+        "rhomboids": 0.23,
+        "forearms": 0.45,
+        "trapeziusUpper": 1.0
+      },
+      "notes": "69% MVIC upper trapezius per Andersen 2012. Allows heaviest loading for progressive overload. Activates levator scapulae substantially per De Mey 2016.",
+      "sources": [
+        "Andersen et al. 2012 J Strength Cond Res 26(9):2408-2417",
+        "Ekstrom et al. 2003",
+        "De Mey et al. 2016"
+      ]
+    },
+    {
+      "id": "dumbbell_shrug",
+      "displayName": "Dumbbell Shrug",
+      "searchTerms": [
+        "dumbbell shrug",
+        "db shrug",
+        "shrugs"
+      ],
+      "movementID": "shrug",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "trapeziusMiddle": 0.28,
+        "rhomboids": 0.25,
+        "forearms": 0.5,
+        "trapeziusUpper": 1.0
+      },
+      "notes": "Greater ROM than barbell shrugs - potentially superior activation per 2018 EMG study. Better mind-muscle connection. Addresses unilateral imbalances.",
+      "sources": [
+        "Andersen et al. 2012",
+        "Pizzari et al. 2014 Clin Biomech 29(2):201-205"
+      ]
+    },
+    {
+      "id": "trap_bar_shrug",
+      "displayName": "Trap Bar Shrug",
+      "searchTerms": [
+        "trap bar shrug",
+        "hex bar shrug",
+        "neutral shrug"
+      ],
+      "movementID": "shrug",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "trapeziusMiddle": 0.28,
+        "rhomboids": 0.25,
+        "forearms": 0.45,
+        "trapeziusUpper": 1.0
+      },
+      "notes": "Most natural hand position (neutral grip). Allows heaviest loads of all shrug variations. Side weight position reduces forward pull - better posture maintenance.",
+      "sources": [
+        "Ekstrom et al. 2003 J Orthop Sports Phys Ther 33:247-258"
+      ]
+    },
+    {
+      "id": "reverse_fly_machine",
+      "displayName": "Reverse Pec Deck Fly",
+      "searchTerms": [
+        "reverse fly machine",
+        "rear delt machine",
+        "reverse pec deck",
+        "machine reverse fly"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "deltoidPosterior": 1.0,
+        "rotatorCuff": 0.55,
+        "deltoidLateral": 0.35,
+        "trapeziusMiddle": 0.25,
+        "rhomboids": 0.25
+      },
+      "notes": "Highest posterior deltoid activation among all rear delt exercises per Schoenfeld 2013. Neutral grip significantly increases rear delt and infraspinatus (p=0.002) vs pronated.",
+      "sources": [
+        "Schoenfeld et al. 2013 J Strength Cond Res 27(10):2644-2649",
+        "Botton et al. 2014"
+      ]
+    },
+    {
+      "id": "reverse_fly_dumbbell",
+      "displayName": "Bent-Over Reverse Fly",
+      "searchTerms": [
+        "reverse fly",
+        "rear delt fly",
+        "bent over fly",
+        "dumbbell reverse fly"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "deltoidLateral": 0.3,
+        "trapeziusMiddle": 0.45,
+        "rotatorCuff": 0.38,
+        "teresMajor": 0.35,
+        "rhomboids": 0.45,
+        "deltoidPosterior": 0.9,
+        "erectorSpinae": 0.3
+      },
+      "notes": "Prone horizontal abduction at 100Â° with external rotation: 88% MVIC posterior deltoid per Reinold 2004. 45Â° arm angle from body aligns with rear delt fiber direction.",
+      "sources": [
+        "Reinold et al. 2004 J Orthop Sports Phys Ther",
+        "Schoenfeld et al. 2013"
+      ]
+    },
+    {
+      "id": "reverse_fly_cable",
+      "displayName": "Cable Reverse Fly",
+      "searchTerms": [
+        "cable reverse fly",
+        "cable rear delt fly",
+        "high cable fly",
+        "crossover reverse fly"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "deltoidLateral": 0.28,
+        "trapeziusMiddle": 0.43,
+        "rotatorCuff": 0.38,
+        "rhomboids": 0.45,
+        "deltoidPosterior": 0.93
+      },
+      "notes": "High-to-low 45Â° angle matches rear delt fiber orientation. Constant tension throughout ROM advantageous vs dumbbells. Top performer for rear delts in EMG testing.",
+      "sources": [
+        "Schoenfeld et al. 2013",
+        "Reinold et al. 2004"
+      ]
+    },
+    {
+      "id": "cable_row_rope",
+      "displayName": "Rope Cable Row",
+      "searchTerms": [
+        "rope row",
+        "rope cable row",
+        "face pull row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "latissimusDorsi": 0.75,
+        "trapeziusMiddle": 0.8,
+        "rhomboids": 0.75,
+        "deltoidPosterior": 0.65,
+        "rotatorCuff": 0.4,
+        "teresMajor": 0.6,
+        "bicepsBrachii": 0.55,
+        "bicepsBrachialis": 0.45,
+        "forearms": 0.5
+      },
+      "notes": "Rope allows external rotation at end of pull - increases rotator cuff involvement. Natural grip position reduces wrist strain. Good hybrid between row and face pull.",
+      "sources": [
+        "Vasconcelos et al. 2023",
+        "Reinold et al. 2004"
+      ]
+    },
+    {
+      "id": "meadows_row",
+      "displayName": "Meadows Row",
+      "searchTerms": [
+        "meadows row",
+        "landmine row",
+        "t-bar one arm row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": 45,
+        "gripWidth": null,
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "unilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.5,
+        "trapeziusMiddle": 0.65,
+        "obliquesExternal": 0.45,
+        "teresMajor": 0.75,
+        "rhomboids": 0.65,
+        "deltoidPosterior": 0.65,
+        "forearms": 0.6,
+        "bicepsBrachii": 0.62,
+        "latissimusDorsi": 0.95,
+        "erectorSpinae": 0.5
+      },
+      "notes": "Pronated grip emphasizes lat stretch. Unique arc of motion from landmine setup. High anti-rotation demand. Created by John Meadows for lat-focused rowing.",
+      "sources": [
+        "Fenwick et al. 2009",
+        "Saeterbakken et al. 2015"
+      ]
+    },
+    {
+      "id": "t_bar_row",
+      "displayName": "T-Bar Row",
+      "searchTerms": [
+        "t bar row",
+        "landmine row",
+        "chest supported t-bar row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": 45,
+        "gripWidth": "narrow",
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.5,
+        "trapeziusMiddle": 0.8,
+        "trapeziusLower": 0.6,
+        "teresMajor": 0.75,
+        "rhomboids": 0.78,
+        "deltoidPosterior": 0.62,
+        "forearms": 0.55,
+        "bicepsBrachii": 0.62,
+        "latissimusDorsi": 0.93,
+        "erectorSpinae": 0.62
+      },
+      "notes": "Close neutral grip allows heavy loading with natural wrist position. Standing version has high erector demand; chest-supported version reduces spinal load.",
+      "sources": [
+        "Fenwick et al. 2009",
+        "Lehman et al. 2004"
+      ]
+    },
+    {
+      "id": "prone_incline_curl",
+      "displayName": "Prone Incline Dumbbell Curl",
+      "searchTerms": [
+        "incline curl",
+        "spider curl",
+        "prone curl",
+        "incline dumbbell curl"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": 45,
+        "gripWidth": null,
+        "gripOrientation": "supinated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "bicepsBrachii": 1.0,
+        "bicepsBrachialis": 0.5,
+        "forearms": 0.45
+      },
+      "notes": "Incline position lengthens biceps at shoulder - emphasizes stretch position for superior hypertrophy per Maeo 2022 lengthened training research.",
+      "sources": [
+        "Coratella et al. 2023 Sports 11(3):64",
+        "Maeo et al. 2022"
+      ]
+    },
+    {
+      "id": "cable_curl_bayesian",
+      "displayName": "Bayesian Cable Curl",
+      "searchTerms": [
+        "bayesian curl",
+        "behind body curl",
+        "cable curl stretch"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "supinated",
+        "stance": null,
+        "laterality": "unilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "bicepsBrachii": 1.0,
+        "bicepsBrachialis": 0.45,
+        "forearms": 0.4,
+        "deltoidAnterior": 0.15
+      },
+      "notes": "Arm behind body maximally lengthens biceps. Emphasizes stretched position - superior for hypertrophy per lengthened training research (Pedrosa 2023).",
+      "sources": [
+        "Pedrosa et al. 2023 Eur J Sport Sci",
+        "Coratella et al. 2023"
+      ]
+    },
+    {
+      "id": "hammer_curl",
+      "displayName": "Hammer Curl",
+      "searchTerms": [
+        "hammer curl",
+        "neutral curl",
+        "dumbbell hammer curl"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.85,
+        "bicepsBrachii": 0.7,
+        "forearms": 0.8
+      },
+      "notes": "Neutral grip: -12% biceps brachii vs supinated per Coratella 2023. Emphasizes brachialis and brachioradialis. Best for overall arm thickness.",
+      "sources": [
+        "Coratella et al. 2023 Sports 11(3):64",
+        "Jaafar et al. 2023"
+      ]
+    },
+    {
+      "id": "reverse_curl",
+      "displayName": "Reverse Curl",
+      "searchTerms": [
+        "reverse curl",
+        "pronated curl",
+        "overhand curl"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "bicepsBrachialis": 0.9,
+        "forearms": 0.85,
+        "bicepsBrachii": 0.5
+      },
+      "notes": "Pronated grip: -19% biceps brachii vs supinated (p less than 0.001, ES: 2.60) per Coratella 2023. Maximizes brachialis and forearm involvement.",
+      "sources": [
+        "Coratella et al. 2023 Sports 11(3):64",
+        "Jaafar et al. 2023"
+      ]
+    },
+    {
+      "id": "preacher_curl",
+      "displayName": "Preacher Curl",
+      "searchTerms": [
+        "preacher curl",
+        "scott curl",
+        "ez bar preacher curl"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": 45,
+        "gripWidth": null,
+        "gripOrientation": "supinated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "bicepsBrachii": 1.0,
+        "bicepsBrachialis": 0.55,
+        "forearms": 0.45
+      },
+      "notes": "Bench support eliminates momentum. Emphasizes short head of biceps. Arm position in front of body creates shortened position - pair with incline curls for full development.",
+      "sources": [
+        "Coratella et al. 2023",
+        "Marcolin et al. 2018 PeerJ 6:e5165"
+      ]
+    },
+    {
+      "id": "barbell_curl",
+      "displayName": "Barbell Curl",
+      "searchTerms": [
+        "barbell curl",
+        "bb curl",
+        "standing curl",
+        "bicep curl"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "supinated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "bicepsBrachii": 1.0,
+        "bicepsBrachialis": 0.5,
+        "forearms": 0.6,
+        "deltoidAnterior": 0.15
+      },
+      "notes": "Supinated grip maximizes biceps brachii activation. Allows heaviest loading for biceps. Brachioradialis also highly active with supinated grip per Coratella 2023.",
+      "sources": [
+        "Coratella et al. 2023 Sports 11(3):64",
+        "Marcolin et al. 2018"
+      ]
+    },
+    {
+      "id": "concentration_curl",
+      "displayName": "Concentration Curl",
+      "searchTerms": [
+        "concentration curl",
+        "seated curl",
+        "isolated curl"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "supinated",
+        "stance": null,
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "bicepsBrachii": 1.0,
+        "bicepsBrachialis": 0.5,
+        "forearms": 0.4
+      },
+      "notes": "ACE study found highest biceps activation among curl variations. Elbow braced against thigh eliminates momentum. Excellent for mind-muscle connection.",
+      "sources": [
+        "ACE Biceps Study 2014",
+        "Coratella et al. 2023"
+      ]
+    },
+    {
+      "id": "cable_bicep_curl",
+      "displayName": "Cable Bicep Curl",
+      "searchTerms": [
+        "cable curl",
+        "cable bicep curl",
+        "low cable curl"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "supinated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "bicepsBrachii": 1.0,
+        "bicepsBrachialis": 0.5,
+        "forearms": 0.55
+      },
+      "notes": "Constant tension throughout ROM - no dead spot at top unlike dumbbell curls. Low pulley position provides resistance curve favoring bottom stretch position.",
+      "sources": [
+        "Coratella et al. 2023",
+        "Marcolin et al. 2018"
+      ]
+    },
+    {
+      "id": "high_cable_curl",
+      "displayName": "High Cable Curl",
+      "searchTerms": [
+        "high cable curl",
+        "overhead cable curl",
+        "crucifix curl"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "wide",
+        "gripOrientation": "supinated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "bicepsBrachii": 0.95,
+        "bicepsBrachialis": 0.45,
+        "forearms": 0.45,
+        "deltoidAnterior": 0.2
+      },
+      "notes": "Arms abducted position creates unique resistance angle. Peak contraction emphasis. Popular for biceps peak development and posing practice.",
+      "sources": [
+        "Coratella et al. 2023",
+        "Biomechanical analysis"
+      ]
+    },
+    {
+      "id": "lat_pulldown_supinated",
+      "displayName": "Supinated Grip Lat Pulldown",
+      "searchTerms": [
+        "reverse grip pulldown",
+        "underhand pulldown",
+        "supinated pulldown"
+      ],
+      "movementID": "vertical_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "narrow",
+        "gripOrientation": "supinated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "latissimusDorsi": 0.9,
+        "bicepsBrachii": 0.8,
+        "teresMajor": 0.65,
+        "bicepsBrachialis": 0.55,
+        "forearms": 0.55,
+        "trapeziusMiddle": 0.4,
+        "deltoidPosterior": 0.4
+      },
+      "notes": "~9% LOWER lat activation than pronated grip (significant, p<0.05). Pronated grip superior for pure lat targeting. Use when biceps emphasis desired.",
+      "sources": [
+        "Lusk 2010",
+        "Lehman 2004"
+      ]
+    },
+    {
+      "id": "bent_over_barbell_row_pronated",
+      "displayName": "Bent-Over Barbell Row",
+      "searchTerms": [
+        "barbell row",
+        "bent over row",
+        "bb row",
+        "overhand row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "latissimusDorsi": 1.0,
+        "trapeziusMiddle": 0.8,
+        "rhomboids": 0.75,
+        "teresMajor": 0.7,
+        "trapeziusLower": 0.7,
+        "deltoidPosterior": 0.7,
+        "erectorSpinae": 0.6,
+        "bicepsBrachii": 0.6,
+        "forearms": 0.5
+      },
+      "notes": "53-82% MVIC lat activation, 42-43% MVIC erector spinae. Highest lumbar spine load (~3576N compression) among rows. Pull to lower chest for lat emphasis, higher for mid-back.",
+      "sources": [
+        "Fenwick 2009"
+      ]
+    },
+    {
+      "id": "bent_over_barbell_row_supinated",
+      "displayName": "Yates Row",
+      "searchTerms": [
+        "yates row",
+        "underhand barbell row",
+        "supinated row",
+        "reverse grip row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "supinated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "latissimusDorsi": 1.0,
+        "bicepsBrachii": 0.8,
+        "trapeziusMiddle": 0.75,
+        "teresMajor": 0.7,
+        "rhomboids": 0.65,
+        "deltoidPosterior": 0.6,
+        "bicepsBrachialis": 0.55,
+        "erectorSpinae": 0.5,
+        "forearms": 0.5
+      },
+      "notes": "Supinated grip significantly increases biceps activation. More upright torso (45°) reduces lumbar load vs parallel position. Elbows tucked, bar pulled to lower chest. Named after Dorian Yates.",
+      "sources": [
+        "Fenwick 2009",
+        "Lehman 2004"
+      ]
+    },
+    {
+      "id": "plate_loaded_row",
+      "displayName": "Plate-Loaded Machine Row",
+      "searchTerms": [
+        "hammer strength row",
+        "plate loaded row",
+        "machine row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "plate_loaded_machine",
+      "muscleWeights": {
+        "latissimusDorsi": 1.0,
+        "trapeziusMiddle": 0.75,
+        "rhomboids": 0.7,
+        "teresMajor": 0.7,
+        "deltoidPosterior": 0.65,
+        "bicepsBrachii": 0.6,
+        "forearms": 0.5
+      },
+      "notes": "Erector spinae 34% LOWER, multifidus 27-30% LOWER, obliques 43-50% LOWER than free-weight rows. Target muscle activation maintained. Iso-lateral arms allow unilateral work. Eliminates momentum.",
+      "sources": [
+        "Saeterbakken 2015"
+      ]
+    },
+    {
+      "id": "plate_loaded_high_row",
+      "displayName": "Iso-Lateral High Row",
+      "searchTerms": [
+        "high row",
+        "hammer strength high row",
+        "upper back row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "plate_loaded_machine",
+      "muscleWeights": {
+        "trapeziusMiddle": 0.85,
+        "latissimusDorsi": 0.85,
+        "trapeziusUpper": 0.75,
+        "rhomboids": 0.7,
+        "deltoidPosterior": 0.7,
+        "teresMajor": 0.6,
+        "bicepsBrachii": 0.55,
+        "forearms": 0.45
+      },
+      "notes": "High pulling angle shifts emphasis to upper traps, rear delts, and upper lat fibers. Chest support eliminates spinal loading. Excellent for upper back thickness. Often performed with external rotation at peak contraction.",
+      "sources": [
+        "Saeterbakken 2015"
+      ]
+    },
+    {
+      "id": "plate_loaded_low_row",
+      "displayName": "Iso-Lateral Low Row",
+      "searchTerms": [
+        "low row machine",
+        "hammer strength low row",
+        "d.y. row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "plate_loaded_machine",
+      "muscleWeights": {
+        "latissimusDorsi": 1.0,
+        "teresMajor": 0.8,
+        "trapeziusMiddle": 0.6,
+        "bicepsBrachii": 0.6,
+        "rhomboids": 0.55,
+        "deltoidPosterior": 0.5,
+        "forearms": 0.5
+      },
+      "notes": "Low pulling angle emphasizes lower lat fibers and teres major. Greater shoulder extension pattern. Excellent for lat width development. Chest support allows heavier loading. Full stretch at start position.",
+      "sources": [
+        "Saeterbakken 2015"
+      ]
+    },
+    {
+      "id": "helms_row",
+      "displayName": "Helms Row",
+      "searchTerms": [
+        "helms row",
+        "chest supported incline row",
+        "eric helms row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": "incline_30",
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "latissimusDorsi": 0.95,
+        "trapeziusMiddle": 0.8,
+        "rhomboids": 0.75,
+        "deltoidPosterior": 0.7,
+        "teresMajor": 0.7,
+        "bicepsBrachii": 0.6,
+        "forearms": 0.5
+      },
+      "notes": "Chest-supported on steep incline (70-80°). Row with elbows flared at 45-60°. Emphasizes mid-back over lats compared to standard chest-supported row. Named after Dr. Eric Helms. Eliminates momentum completely.",
+      "sources": [
+        "Saeterbakken 2015"
+      ]
+    },
+    {
+      "id": "kroc_row",
+      "displayName": "Kroc Row",
+      "searchTerms": [
+        "kroc row",
+        "heavy dumbbell row",
+        "high rep db row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "latissimusDorsi": 1.0,
+        "trapeziusMiddle": 0.7,
+        "trapeziusUpper": 0.6,
+        "teresMajor": 0.7,
+        "bicepsBrachii": 0.7,
+        "deltoidPosterior": 0.6,
+        "rhomboids": 0.55,
+        "forearms": 0.7,
+        "obliquesExternal": 0.45,
+        "erectorSpinae": 0.5
+      },
+      "notes": "Heavy single-arm row with controlled body english. Named after Matt Kroczaleski. High reps (15-25) with maximum weight. Allows slight torso rotation and leg drive. Grip often limiting factor—great forearm builder. More trap involvement due to shrugging action.",
+      "sources": [
+        "Contreras 2010"
+      ]
+    },
+    {
+      "id": "machine_pullover",
+      "displayName": "Machine Pullover",
+      "searchTerms": [
+        "nautilus pullover",
+        "machine pullover",
+        "pullover machine"
+      ],
+      "movementID": "pullover",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "latissimusDorsi": 1.0,
+        "teresMajor": 0.6,
+        "tricepsLongHead": 0.55,
+        "pectoralisMajorLower": 0.35,
+        "deltoidPosterior": 0.25,
+        "rectusAbdominis": 0.25
+      },
+      "notes": "Arthur Jones designed Nautilus pullover specifically for lat isolation. Constant resistance curve throughout ROM. Deep stretch at top—excellent for stretch-mediated hypertrophy. Elbows push pads rather than hands pulling. Superior lat targeting to dumbbell pullover.",
+      "sources": [
+        "Muyor 2022"
+      ]
+    },
+    {
+      "id": "behind_back_barbell_shrug",
+      "displayName": "Behind-the-Back Barbell Shrug",
+      "searchTerms": [
+        "behind back shrug",
+        "smith machine shrug",
+        "rear shrug"
+      ],
+      "movementID": "shrug",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "trapeziusUpper": 1.0,
+        "trapeziusMiddle": 0.4,
+        "forearms": 0.4,
+        "rhomboids": 0.3,
+        "deltoidPosterior": 0.2
+      },
+      "notes": "Bar position behind body shifts emphasis slightly to middle trap and posterior shoulder. Requires more shoulder external rotation. Smith machine often preferred for guided bar path. Limited ROM compared to front barbell.",
+      "sources": [
+        "Andersen 2008"
+      ]
+    },
+    {
+      "id": "upward_rotation_shrug",
+      "displayName": "Upward Rotation Shrug",
+      "searchTerms": [
+        "scaption shrug",
+        "abducted shrug",
+        "overhead shrug"
+      ],
+      "movementID": "shrug",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "trapeziusUpper": 1.0,
+        "trapeziusLower": 0.55,
+        "trapeziusMiddle": 0.4,
+        "deltoidLateral": 0.25,
+        "rhomboids": 0.25
+      },
+      "notes": "Arms abducted 30° showed SIGNIFICANTLY higher activation for BOTH upper AND lower trapezius compared to standard shrug (p<0.05). Only shrug variation to meaningfully target lower traps. Superior for comprehensive trap development. Recommended for shoulder health.",
+      "sources": [
+        "Clinical Biomechanics Study"
+      ]
+    },
+    {
+      "id": "reverse_pec_deck",
+      "displayName": "Reverse Pec Deck",
+      "searchTerms": [
+        "reverse pec deck",
+        "machine rear delt fly",
+        "rear delt machine"
+      ],
+      "movementID": "rear_delt_fly",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "deltoidPosterior": 1.0,
+        "rotatorCuff": 0.55,
+        "rhomboids": 0.55,
+        "trapeziusMiddle": 0.5,
+        "deltoidLateral": 0.4
+      },
+      "notes": "SIGNIFICANTLY greater posterior deltoid activation (p=0.001) vs seated row, inclined pulldown. NEUTRAL GRIP significantly increases posterior deltoid AND infraspinatus activation vs pronated (p=0.046 and p=0.002). Best machine for isolated rear delt work.",
+      "sources": [
+        "Franke 2015",
+        "Schoenfeld 2013"
+      ]
+    },
+    {
+      "id": "incline_bench_reverse_fly",
+      "displayName": "Incline Bench Reverse Fly",
+      "searchTerms": [
+        "chest supported reverse fly",
+        "incline rear delt fly",
+        "prone incline fly"
+      ],
+      "movementID": "rear_delt_fly",
+      "dimensions": {
+        "angle": "incline_30",
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "deltoidPosterior": 0.95,
+        "rhomboids": 0.6,
+        "trapeziusMiddle": 0.5,
+        "rotatorCuff": 0.35,
+        "deltoidLateral": 0.25
+      },
+      "notes": "Chest supported on incline bench eliminates momentum and body english. Allows pure rear delt isolation. Gravity provides resistance throughout ROM. 30-45° incline typical. Excellent for mind-muscle connection.",
+      "sources": [
+        "Schoenfeld 2013"
+      ]
+    },
+    {
+      "id": "single_arm_cable_rear_delt_fly",
+      "displayName": "Single-Arm Cable Rear Delt Fly",
+      "searchTerms": [
+        "one arm rear delt fly",
+        "unilateral cable rear delt",
+        "single arm reverse fly"
+      ],
+      "movementID": "rear_delt_fly",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "unilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "deltoidPosterior": 0.95,
+        "rhomboids": 0.55,
+        "trapeziusMiddle": 0.45,
+        "rotatorCuff": 0.35,
+        "obliquesExternal": 0.25
+      },
+      "notes": "Unilateral work allows focus on each side independently. Can achieve greater ROM and stretch. Slight anti-rotation demand. Standing facing cable stack, arm crosses body at start for maximum stretch. Addresses asymmetries.",
+      "sources": [
+        "Contreras 2010"
+      ]
+    },
+    {
+      "id": "prone_incline_rear_delt_row",
+      "displayName": "Prone Incline Rear Delt Row",
+      "searchTerms": [
+        "rear delt row",
+        "prone row",
+        "high elbow row"
+      ],
+      "movementID": "rear_delt_fly",
+      "dimensions": {
+        "angle": "incline_30",
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "deltoidPosterior": 0.85,
+        "rhomboids": 0.7,
+        "trapeziusMiddle": 0.65,
+        "latissimusDorsi": 0.4,
+        "bicepsBrachii": 0.35,
+        "teresMajor": 0.35
+      },
+      "notes": "Hybrid between row and rear delt fly. Lying face down on incline bench. Elbows flared at 60-90° during pull. Greater rhomboid and mid-trap involvement than pure isolation fly. Allows heavier loading than isolation movements.",
+      "sources": [
+        "Schoenfeld 2013"
+      ]
+    },
+    {
+      "id": "band_face_pull",
+      "displayName": "Band Face Pull",
+      "searchTerms": [
+        "resistance band face pull",
+        "band pull apart",
+        "rear delt band pull"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "resistance_band",
+      "muscleWeights": {
+        "deltoidPosterior": 0.95,
+        "trapeziusMiddle": 0.75,
+        "rotatorCuff": 0.7,
+        "trapeziusLower": 0.55,
+        "rhomboids": 0.5,
+        "deltoidLateral": 0.4
+      },
+      "notes": "144% mean, 252% peak rear delt activation—exceeding ALL isolation rear delt raises tested including cable face pulls. Increasing resistance at end range maximally loads shortened position. Excellent for warm-up and shoulder health.",
+      "sources": [
+        "Contreras 2010"
+      ]
+    },
+    {
+      "id": "wide_grip_cable_row_high",
+      "displayName": "Wide Grip High Cable Row",
+      "searchTerms": [
+        "high cable row",
+        "face level row",
+        "wide high row"
+      ],
+      "movementID": "horizontal_pull",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "wide",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "deltoidPosterior": 0.85,
+        "trapeziusMiddle": 0.85,
+        "rhomboids": 0.75,
+        "trapeziusLower": 0.6,
+        "latissimusDorsi": 0.5,
+        "rotatorCuff": 0.5,
+        "bicepsBrachii": 0.4
+      },
+      "notes": "Cable set at face height with wide pronated grip. Pull toward face with elbows high. Combination of face pull and wide row mechanics. Excellent for upper back thickness and rear delt. External rotation at end increases rotator cuff involvement.",
+      "sources": [
+        "Vasconcelos 2023",
+        "Contreras 2010"
+      ]
+    },
+    {
+      "id": "rack_pull",
+      "displayName": "Rack Pull",
+      "searchTerms": [
+        "rack pull",
+        "block pull",
+        "partial deadlift"
+      ],
+      "movementID": "hip_hinge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "erectorSpinae": 1.0,
+        "trapeziusUpper": 0.85,
+        "trapeziusMiddle": 0.7,
+        "gluteusMaximus": 0.6,
+        "hamstringsBicepsFemoris": 0.5,
+        "forearms": 0.6,
+        "latissimusDorsi": 0.45,
+        "rhomboids": 0.4
+      },
+      "notes": "Partial deadlift from knee height or above. Heavy loading for upper back and traps. Isometric back contraction at lockout. Grip often limiting factor. Overloads lockout position of deadlift. Less hamstring/glute involvement than full deadlift.",
+      "sources": [
+        "Andersen 2008"
+      ]
+    }
+  ]
+}

@@ -13,16 +13,16 @@ import SwiftData
 struct ExerciseSearchResultsView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var exercises: [Exercise]
-
-    private let searchText: String
-    private let muscleGroup: MuscleGroup?
-
     @State private var exerciseToEdit: Exercise?
     @State private var exerciseToDelete: Exercise?
+    @State private var duplicateTrigger = false
 
-    init(searchText: String, muscleGroup: MuscleGroup?) {
+    private let searchText: String
+    private let filter: ExerciseFilter
+
+    init(searchText: String, filter: ExerciseFilter) {
         self.searchText = searchText
-        self.muscleGroup = muscleGroup
+        self.filter = filter
 
         // SwiftData predicates have limited support for complex expressions
         // Fetch all exercises, apply muscle group filter and search in-memory
@@ -30,41 +30,14 @@ struct ExerciseSearchResultsView: View {
         _exercises = Query()
     }
 
-    /// Exercises filtered by muscle group, search text, and sorted (applied in-memory)
+    /// Exercises filtered by exercise filter, search text, and sorted.
+    /// Delegates to ExerciseLibraryViewModel for shared filter/sort logic.
     private var filteredExercises: [Exercise] {
-        var results = Array(exercises)
-
-        // Apply muscle group filter in-memory
-        if let muscleGroup {
-            results = results.filter { exercise in
-                exercise.primaryMuscleGroup == muscleGroup
-            }
-        }
-
-        // Apply search filter (includes searchTerms array for in-memory matching)
-        if !searchText.isEmpty {
-            let lowercasedSearch = searchText.lowercased()
-            results = results.filter { exercise in
-                exercise.displayName.lowercased().contains(lowercasedSearch) ||
-                exercise.searchTerms.contains { $0.lowercased().contains(lowercasedSearch) } ||
-                exercise.movement?.displayName.lowercased().contains(lowercasedSearch) == true ||
-                exercise.equipment?.displayName.lowercased().contains(lowercasedSearch) == true ||
-                exercise.primaryMuscleGroup?.displayName.lowercased().contains(lowercasedSearch) == true
-            }
-        }
-
-        // Sort: favorites first, then by display name
-        results.sort { lhs, rhs in
-            if lhs.isFavorite != rhs.isFavorite {
-                return lhs.isFavorite
-            }
-            if (lhs.lastUsedDate != nil) != (rhs.lastUsedDate != nil) {
-                return lhs.lastUsedDate != nil
-            }
-            return lhs.displayName.localizedStandardCompare(rhs.displayName) == .orderedAscending
-        }
-
-        return results
+        ExerciseLibraryViewModel.filterAndSort(
+            exercises: exercises,
+            searchText: searchText,
+            filter: filter
+        )
     }
 
     var body: some View {
@@ -83,14 +56,7 @@ struct ExerciseSearchResultsView: View {
                 if !featured.isEmpty {
                     Section("Starred & Recent") {
                         ForEach(featured.prefix(10)) { exercise in
-                            NavigationLink {
-                                ExerciseDetailView(exercise: exercise)
-                            } label: {
-                                ExerciseRow(exercise: exercise)
-                            }
-                            .contextMenu {
-                                exerciseContextMenu(for: exercise)
-                            }
+                            exerciseRowWithContextMenu(exercise)
                         }
                     }
                 }
@@ -98,17 +64,11 @@ struct ExerciseSearchResultsView: View {
                 // All exercises
                 Section("All Exercises") {
                     ForEach(results) { exercise in
-                        NavigationLink {
-                            ExerciseDetailView(exercise: exercise)
-                        } label: {
-                            ExerciseRow(exercise: exercise)
-                        }
-                        .contextMenu {
-                            exerciseContextMenu(for: exercise)
-                        }
+                        exerciseRowWithContextMenu(exercise)
                     }
                 }
             }
+            .sensoryFeedback(.success, trigger: duplicateTrigger)
             .sheet(item: $exerciseToEdit) { exercise in
                 NavigationStack {
                     CustomExerciseEditView(exercise: exercise)
@@ -138,49 +98,40 @@ struct ExerciseSearchResultsView: View {
         }
     }
 
-    // MARK: - Context Menu
-
-    @ViewBuilder
-    private func exerciseContextMenu(for exercise: Exercise) -> some View {
-        if !exercise.isBuiltIn {
-            Button {
-                exerciseToEdit = exercise
-            } label: {
-                Label("Edit", systemImage: "pencil")
-            }
-
-            Button(role: .destructive) {
-                exerciseToDelete = exercise
-            } label: {
-                Label("Delete", systemImage: "trash")
-            }
-        }
-
-        Button {
-            duplicateExercise(exercise)
-        } label: {
-            Label("Duplicate", systemImage: "doc.on.doc")
-        }
-    }
-
     // MARK: - Helpers
 
-    private func duplicateExercise(_ exercise: Exercise) {
-        let copy = Exercise(
-            displayName: exercise.displayName + " (Copy)",
-            movement: exercise.movement,
-            equipment: exercise.equipment,
-            dimensions: exercise.dimensions,
-            muscleWeights: exercise.muscleWeights,
-            isBuiltIn: false
-        )
-        copy.notes = exercise.notes
-        copy.restDuration = exercise.restDuration
-        copy.autoStartTimer = exercise.autoStartTimer
-        copy.searchTerms = exercise.searchTerms
-        modelContext.insert(copy)
-        try? modelContext.save()
-        exerciseToEdit = copy
+    @ViewBuilder
+    private func exerciseRowWithContextMenu(_ exercise: Exercise) -> some View {
+        NavigationLink {
+            ExerciseDetailView(exercise: exercise)
+        } label: {
+            ExerciseRow(exercise: exercise)
+        }
+        .contextMenu {
+            if !exercise.isBuiltIn {
+                Button {
+                    exerciseToEdit = exercise
+                } label: {
+                    Label("Edit", systemImage: "pencil")
+                }
+            }
+
+            Button {
+                _ = exercise.duplicate(in: modelContext)
+                duplicateTrigger.toggle()
+            } label: {
+                Label("Duplicate", systemImage: "doc.on.doc")
+            }
+
+            if !exercise.isBuiltIn {
+                Divider()
+                Button(role: .destructive) {
+                    exerciseToDelete = exercise
+                } label: {
+                    Label("Delete", systemImage: "trash")
+                }
+            }
+        }
     }
 
     private func deleteExercise(_ exercise: Exercise) {

@@ -9,6 +9,7 @@ import SwiftUI
 
 /// A collapsible section displaying an exercise with its sets in the active workout.
 /// Provides swipe-to-delete on individual sets and the entire exercise, plus an "Add Set" button.
+/// Column layout adapts dynamically based on the exercise's logFields (exercise type).
 struct ExerciseSectionView: View {
     let exercise: Exercise
     let sets: [WorkoutSet]
@@ -20,8 +21,12 @@ struct ExerciseSectionView: View {
     // For SetRowView bindings
     let repsBinding: (WorkoutSet) -> Binding<Int>
     let weightBinding: (WorkoutSet) -> Binding<Double>
+    let durationBinding: (WorkoutSet) -> Binding<TimeInterval>
+    let distanceBinding: (WorkoutSet) -> Binding<Double>
     let previousReps: (WorkoutSet) -> Int?
     let previousWeight: (WorkoutSet) -> Double?
+    let previousDuration: (WorkoutSet) -> TimeInterval?
+    let previousDistance: (WorkoutSet) -> Double?
     let onConfirmSet: (WorkoutSet) -> Void
 
     // Inline timer support
@@ -30,6 +35,11 @@ struct ExerciseSectionView: View {
 
     @FocusState.Binding var focusedField: SetEntryField?
     let weightUnit: WeightUnit
+
+    /// The log fields for this exercise type, determining which columns are shown
+    private var logFields: [LogField] {
+        exercise.exerciseType.logFields
+    }
 
     var body: some View {
         VStack(spacing: 0) {
@@ -41,7 +51,8 @@ struct ExerciseSectionView: View {
                 VStack(spacing: 0) {
                     // Column headers (proportional, matching SetRowView weights)
                     GeometryReader { geo in
-                        let totalWeight = SetRowView.setWeight + SetRowView.previousWeight + SetRowView.kgWeight + SetRowView.repsWeight
+                        let dataFieldCount = CGFloat(logFields.count)
+                        let totalWeight = SetRowView.setWeight + SetRowView.previousWeight + dataFieldCount * SetRowView.dataFieldWeight
                         let availableWidth = geo.size.width - SetRowView.checkWidth
                         let unitWidth = availableWidth / totalWeight
 
@@ -50,10 +61,10 @@ struct ExerciseSectionView: View {
                                 .frame(width: unitWidth * SetRowView.setWeight, alignment: .center)
                             Text("PREVIOUS")
                                 .frame(width: unitWidth * SetRowView.previousWeight, alignment: .center)
-                            Text(weightUnit.abbreviation.uppercased())
-                                .frame(width: unitWidth * SetRowView.kgWeight, alignment: .center)
-                            Text("REPS")
-                                .frame(width: unitWidth * SetRowView.repsWeight, alignment: .center)
+                            ForEach(logFields, id: \.self) { field in
+                                Text(columnHeader(for: field))
+                                    .frame(width: unitWidth * SetRowView.dataFieldWeight, alignment: .center)
+                            }
                             Spacer()
                                 .frame(width: SetRowView.checkWidth)
                         }
@@ -149,10 +160,15 @@ struct ExerciseSectionView: View {
         ) {
             SetRowView(
                 setNumber: workoutSet.setNumber,
+                logFields: logFields,
                 reps: repsBinding(workoutSet),
                 weight: weightBinding(workoutSet),
+                duration: durationBinding(workoutSet),
+                distance: distanceBinding(workoutSet),
                 previousReps: previousReps(workoutSet),
                 previousWeight: previousWeight(workoutSet),
+                previousDuration: previousDuration(workoutSet),
+                previousDistance: previousDistance(workoutSet),
                 weightUnit: weightUnit,
                 isConfirmed: workoutSet.isConfirmed,
                 onConfirm: { onConfirmSet(workoutSet) },
@@ -161,6 +177,17 @@ struct ExerciseSectionView: View {
                 focusedField: $focusedField,
                 setID: workoutSet.id
             )
+        }
+    }
+
+    // MARK: - Column Header Labels
+
+    private func columnHeader(for field: LogField) -> String {
+        switch field {
+        case .weight: return weightUnit.abbreviation.uppercased()
+        case .reps: return "REPS"
+        case .duration: return "SEC"
+        case .distance: return "KM"
         }
     }
 }

@@ -1,0 +1,360 @@
+{
+  "equipment": [
+    {
+      "id": "barbell",
+      "displayName": "Barbell",
+      "category": "free_weight",
+      "properties": {
+        "bilateralOnly": true,
+        "resistanceCurve": "gravity",
+        "stabilizationDemand": "moderate",
+        "commonInGyms": true
+      },
+      "variants": [
+        "standard",
+        "olympic",
+        "ez_curl",
+        "trap_bar",
+        "safety_squat_bar"
+      ],
+      "notes": "Most common free weight. Fixed bilateral loading. Trap bar and safety squat bar shift loading mechanics significantly."
+    },
+    {
+      "id": "dumbbell",
+      "displayName": "Dumbbell",
+      "category": "free_weight",
+      "properties": {
+        "bilateralOnly": false,
+        "resistanceCurve": "gravity",
+        "stabilizationDemand": "high",
+        "commonInGyms": true
+      },
+      "variants": null,
+      "notes": "Allows unilateral work and greater ROM. Higher stabilization demand than barbell. Ideal for addressing bilateral deficits."
+    },
+    {
+      "id": "kettlebell",
+      "displayName": "Kettlebell",
+      "category": "free_weight",
+      "properties": {
+        "bilateralOnly": false,
+        "resistanceCurve": "gravity",
+        "stabilizationDemand": "high",
+        "commonInGyms": true
+      },
+      "variants": null,
+      "notes": "Offset center of mass creates unique loading. Excellent for ballistic movements (swings, cleans, snatches) and goblet variations."
+    },
+    {
+      "id": "weight_plate",
+      "displayName": "Weight Plate",
+      "category": "free_weight",
+      "properties": {
+        "bilateralOnly": false,
+        "resistanceCurve": "gravity",
+        "stabilizationDemand": "high",
+        "commonInGyms": true
+      },
+      "variants": null,
+      "notes": "Used for plate-loaded exercises (front raises, pinch carries) and as added resistance. Limited load progression."
+    },
+    {
+      "id": "cable",
+      "displayName": "Cable",
+      "category": "cable",
+      "properties": {
+        "bilateralOnly": false,
+        "resistanceCurve": "constant",
+        "stabilizationDemand": "low",
+        "commonInGyms": true
+      },
+      "variants": [
+        "single_pulley",
+        "lat_pulldown",
+        "seated_row"
+      ],
+      "notes": "Constant tension throughout ROM. Adjustable angle allows targeting muscles at different lengths. Single attachment point."
+    },
+    {
+      "id": "dual_cable",
+      "displayName": "Dual Cable / Functional Trainer",
+      "category": "cable",
+      "properties": {
+        "bilateralOnly": false,
+        "resistanceCurve": "constant",
+        "stabilizationDemand": "moderate",
+        "commonInGyms": true
+      },
+      "variants": null,
+      "notes": "Two independent cable stacks. Allows unilateral work with cable benefits. Greater stabilization than single cable due to independent loading."
+    },
+    {
+      "id": "machine",
+      "displayName": "Machine (Selectorized)",
+      "category": "machine",
+      "properties": {
+        "bilateralOnly": true,
+        "resistanceCurve": "variable",
+        "stabilizationDemand": "minimal",
+        "commonInGyms": true
+      },
+      "variants": null,
+      "notes": "Fixed movement path with pin-loaded weight stack. Cam design creates variable resistance curve. Specific machine captured in exercise name."
+    },
+    {
+      "id": "plate_loaded_machine",
+      "displayName": "Plate-Loaded Machine",
+      "category": "machine",
+      "properties": {
+        "bilateralOnly": true,
+        "resistanceCurve": "variable",
+        "stabilizationDemand": "minimal",
+        "commonInGyms": true
+      },
+      "variants": null,
+      "notes": "Fixed path like selectorized but loaded with plates. Often allows heavier loads. Brands like Hammer Strength common in gyms."
+    },
+    {
+      "id": "smith_machine",
+      "displayName": "Smith Machine",
+      "category": "machine",
+      "properties": {
+        "bilateralOnly": true,
+        "resistanceCurve": "gravity",
+        "stabilizationDemand": "low",
+        "commonInGyms": true
+      },
+      "variants": [
+        "vertical",
+        "angled"
+      ],
+      "notes": "Barbell on fixed vertical or angled track. Reduces stabilization demand. Angled variant (5-7\u00c2\u00b0) allows more natural bar path for pressing."
+    },
+    {
+      "id": "bodyweight",
+      "displayName": "Bodyweight",
+      "category": "bodyweight",
+      "properties": {
+        "bilateralOnly": false,
+        "resistanceCurve": "gravity",
+        "stabilizationDemand": "high",
+        "commonInGyms": true
+      },
+      "variants": null,
+      "notes": "No external load. Progression via leverage changes, ROM, tempo, or adding external load. High relative strength component."
+    },
+    {
+      "id": "assisted",
+      "displayName": "Assisted",
+      "category": "bodyweight",
+      "properties": {
+        "bilateralOnly": true,
+        "resistanceCurve": "variable",
+        "stabilizationDemand": "moderate",
+        "commonInGyms": true
+      },
+      "variants": [
+        "band_assisted",
+        "machine_assisted"
+      ],
+      "notes": "Reduces effective bodyweight via bands or counterweight. Assistance typically greatest at bottom (stretched) position."
+    },
+    {
+      "id": "weighted_bodyweight",
+      "displayName": "Weighted Bodyweight",
+      "category": "bodyweight",
+      "properties": {
+        "bilateralOnly": false,
+        "resistanceCurve": "gravity",
+        "stabilizationDemand": "high",
+        "commonInGyms": true
+      },
+      "variants": [
+        "dip_belt",
+        "weight_vest",
+        "chains"
+      ],
+      "notes": "Bodyweight movements with added external load. Allows progressive overload beyond bodyweight. Common for dips, pull-ups, push-ups."
+    },
+    {
+      "id": "resistance_band",
+      "displayName": "Resistance Band",
+      "category": "band",
+      "properties": {
+        "bilateralOnly": false,
+        "resistanceCurve": "ascending",
+        "stabilizationDemand": "moderate",
+        "commonInGyms": true
+      },
+      "variants": [
+        "loop",
+        "tube_with_handles",
+        "mini_band"
+      ],
+      "notes": "Resistance increases as band stretches (ascending curve). Opposite of gravity - hardest at shortened position. Good for accommodating resistance."
+    },
+    {
+      "id": "suspension_trainer",
+      "displayName": "Suspension Trainer",
+      "category": "specialty",
+      "properties": {
+        "bilateralOnly": false,
+        "resistanceCurve": "gravity",
+        "stabilizationDemand": "high",
+        "commonInGyms": true
+      },
+      "variants": null,
+      "notes": "Straps anchored overhead. Body angle determines resistance. Extremely high stabilization demand due to unstable handles. TRX is common brand."
+    },
+    {
+      "id": "landmine",
+      "displayName": "Landmine",
+      "category": "specialty",
+      "properties": {
+        "bilateralOnly": false,
+        "resistanceCurve": "gravity",
+        "stabilizationDemand": "moderate",
+        "commonInGyms": true
+      },
+      "variants": null,
+      "notes": "Barbell anchored at one end creating arc movement. Unique pressing angles (easier on shoulders). Good for rotational work."
+    },
+    {
+      "id": "medicine_ball",
+      "displayName": "Medicine Ball",
+      "category": "free_weight",
+      "properties": {
+        "bilateralOnly": false,
+        "resistanceCurve": "gravity",
+        "stabilizationDemand": "high",
+        "commonInGyms": true
+      },
+      "variants": [
+        "standard",
+        "slam_ball",
+        "wall_ball"
+      ],
+      "notes": "Spherical weighted ball. Excellent for explosive throws, rotational movements, and core work. Slam balls designed for impact."
+    },
+    {
+      "id": "cable_machine_unilateral",
+      "displayName": "Cable Machine (Unilateral)",
+      "category": "machine",
+      "properties": {
+        "bilateralOnly": false,
+        "resistanceCurve": "variable",
+        "stabilizationDemand": "minimal",
+        "commonInGyms": false
+      },
+      "variants": null,
+      "notes": "Selectorized machines with independent arms (e.g., converging chest press). Allows unilateral training with machine stability benefits."
+    },
+    {
+      "id": "parallel_bars",
+      "displayName": "Parallel Bars",
+      "category": "bodyweight",
+      "properties": {
+        "bilateralOnly": true,
+        "resistanceCurve": "gravity",
+        "stabilizationDemand": "high",
+        "commonInGyms": true
+      },
+      "variants": [
+        "fixed",
+        "adjustable_width"
+      ],
+      "notes": "Standard dip station. Width affects chest vs triceps emphasis. Found in most gyms."
+    },
+    {
+      "id": "gymnastics_rings",
+      "displayName": "Gymnastics Rings",
+      "category": "bodyweight",
+      "properties": {
+        "bilateralOnly": false,
+        "resistanceCurve": "gravity",
+        "stabilizationDemand": "very_high",
+        "commonInGyms": false
+      },
+      "variants": null,
+      "notes": "Suspended rings requiring maximum stabilization. Significantly increases muscle activation due to instability. More common in CrossFit gyms."
+    },
+    {
+      "id": "trap_bar",
+      "displayName": "Trap Bar / Hex Bar",
+      "category": "free_weight",
+      "properties": {
+        "bilateralOnly": true,
+        "resistanceCurve": "gravity",
+        "stabilizationDemand": "moderate",
+        "commonInGyms": true
+      },
+      "variants": [
+        "standard",
+        "high_handle",
+        "open_back"
+      ],
+      "notes": "Hexagonal bar allowing neutral grip and centered load. Reduces spinal stress vs conventional deadlift. High handles reduce ROM."
+    },
+    {
+      "id": "ez_bar",
+      "displayName": "EZ Curl Bar",
+      "category": "free_weight",
+      "properties": {
+        "bilateralOnly": true,
+        "resistanceCurve": "gravity",
+        "stabilizationDemand": "moderate",
+        "commonInGyms": true
+      },
+      "variants": [
+        "standard",
+        "super_curl"
+      ],
+      "notes": "Cambered bar with angled grips. Reduces wrist strain during curls and skull crushers. Typically 15-25 lbs."
+    },
+    {
+      "id": "stability_ball",
+      "displayName": "Stability Ball / Swiss Ball",
+      "category": "specialty",
+      "properties": {
+        "bilateralOnly": false,
+        "resistanceCurve": "gravity",
+        "stabilizationDemand": "high",
+        "commonInGyms": true
+      },
+      "variants": null,
+      "notes": "Inflatable exercise ball. Adds instability challenge to exercises. Common sizes: 55cm, 65cm, 75cm based on height."
+    }
+  ],
+  "categories": {
+    "free_weight": {
+      "displayName": "Free Weights",
+      "description": "Traditional weights subject only to gravity. Highest skill/stabilization requirements."
+    },
+    "cable": {
+      "displayName": "Cable/Pulley",
+      "description": "Pulley-based systems providing constant tension throughout ROM."
+    },
+    "machine": {
+      "displayName": "Machines",
+      "description": "Fixed movement path equipment. Lowest stabilization demand, highest isolation potential."
+    },
+    "bodyweight": {
+      "displayName": "Bodyweight",
+      "description": "Using body mass as resistance. Includes assisted and weighted variations."
+    },
+    "band": {
+      "displayName": "Resistance Bands",
+      "description": "Elastic resistance with ascending resistance curve."
+    },
+    "specialty": {
+      "displayName": "Specialty Equipment",
+      "description": "Specialized tools for specific training applications."
+    }
+  },
+  "resistanceCurveDescriptions": {
+    "gravity": "Resistance determined by gravity vector. Hardest at position where moment arm is longest (often stretched position). Easier as joint approaches lockout.",
+    "constant": "Even resistance throughout entire ROM. Characteristic of cable/pulley systems.",
+    "variable": "Resistance changes based on cam/lever design. Well-designed machines match strength curve of target muscle.",
+    "ascending": "Resistance increases through ROM. Characteristic of bands - hardest at shortened/contracted position."
+  }
+}

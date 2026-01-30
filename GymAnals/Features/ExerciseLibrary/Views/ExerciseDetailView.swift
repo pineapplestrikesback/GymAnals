@@ -15,6 +15,7 @@ struct ExerciseDetailView: View {
 
     @State private var showingMuscleEditor = false
     @State private var showingEditSheet = false
+    @State private var muscleWeightVM: MuscleWeightViewModel?
 
     /// Groups weight history by gym for branch display
     private var gymBranches: [(gym: Gym, entryCount: Int)] {
@@ -78,10 +79,35 @@ struct ExerciseDetailView: View {
                 }
             }
 
+            // Timer settings section - editable for all exercises (preset and custom)
+            Section("Timer Settings") {
+                Stepper(
+                    "Rest Duration: \(Int(exercise.restDuration))s",
+                    value: Binding(
+                        get: { exercise.restDuration },
+                        set: { newValue in
+                            exercise.restDuration = newValue
+                            try? modelContext.save()
+                        }
+                    ),
+                    in: 30...300,
+                    step: 15
+                )
+
+                Toggle("Auto-start Timer", isOn: Binding(
+                    get: { exercise.autoStartTimer },
+                    set: { newValue in
+                        exercise.autoStartTimer = newValue
+                        try? modelContext.save()
+                    }
+                ))
+            }
+
             // Muscle targeting section
             Section {
                 if !exercise.isBuiltIn {
                     Button {
+                        muscleWeightVM = MuscleWeightViewModel(exercise: exercise, startInEditMode: true)
                         showingMuscleEditor = true
                     } label: {
                         HStack {
@@ -121,12 +147,6 @@ struct ExerciseDetailView: View {
                 }
             } header: {
                 Text("Muscle Targeting")
-            }
-
-            // Timer settings section
-            Section("Timer Settings") {
-                LabeledContent("Rest Duration", value: "\(Int(exercise.restDuration))s")
-                LabeledContent("Auto-start Timer", value: exercise.autoStartTimer ? "On" : "Off")
             }
 
             // Notes section
@@ -202,8 +222,10 @@ struct ExerciseDetailView: View {
             }
         }
         .sheet(isPresented: $showingMuscleEditor) {
-            NavigationStack {
-                MuscleWeightEditorView(viewModel: MuscleWeightViewModel(exercise: exercise), startInEditMode: true)
+            if let muscleVM = muscleWeightVM {
+                NavigationStack {
+                    MuscleWeightEditorView(viewModel: muscleVM)
+                }
             }
         }
         .sheet(isPresented: $showingEditSheet) {
