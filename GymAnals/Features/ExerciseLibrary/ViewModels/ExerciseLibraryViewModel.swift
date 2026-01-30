@@ -78,6 +78,9 @@ final class ExerciseLibraryViewModel {
             if lhs.isFavorite != rhs.isFavorite {
                 return lhs.isFavorite
             }
+            if let lhsDate = lhs.lastUsedDate, let rhsDate = rhs.lastUsedDate, lhsDate != rhsDate {
+                return lhsDate > rhsDate
+            }
             if (lhs.lastUsedDate != nil) != (rhs.lastUsedDate != nil) {
                 return lhs.lastUsedDate != nil
             }

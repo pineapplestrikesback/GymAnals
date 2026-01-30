@@ -1,0 +1,18 @@
+{
+  "total_presets": 237,
+  "by_category": {
+    "push": 48,
+    "legs": 79,
+    "pull": 62,
+    "arms_core": 48
+  },
+  "equipment_count": 22,
+  "movement_count": 30,
+  "muscles_tracked": 32,
+  "notes": [
+    "All preset files merged from dual research runs (averaged weights for overlapping exercises)",
+    "Equipment IDs normalized (e.g., cable_machine -> cable)",
+    "Movement IDs simplified to generic patterns (e.g., barbell_back_squat -> squat)",
+    "9 exercises have no dominant primary mover (max < 0.7) - these are compound/stabilization exercises"
+  ]
+}

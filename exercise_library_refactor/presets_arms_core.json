@@ -1,0 +1,1366 @@
+{
+  "presets": [
+    {
+      "id": "barbell_curl_straight",
+      "displayName": "Barbell Curl (Straight Bar)",
+      "searchTerms": [
+        "barbell curl",
+        "straight bar curl",
+        "bb curl",
+        "standing barbell curl"
+      ],
+      "movementID": "bicep_curl",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "supinated",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "bicepsBrachii": 0.85,
+        "bicepsBrachialis": 0.5,
+        "forearms": 0.55
+      },
+      "notes": "Foundational biceps exercise. Supinated grip maximizes biceps brachii activation. Straight bar forces full supination throughout ROM.",
+      "sources": [
+        "Marcolin 2018",
+        "ACE 2014"
+      ]
+    },
+    {
+      "id": "barbell_curl_ez",
+      "displayName": "EZ Bar Curl",
+      "searchTerms": [
+        "ez bar curl",
+        "ez curl",
+        "cambered bar curl",
+        "easy curl bar"
+      ],
+      "movementID": "bicep_curl",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "supinated",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "ez_bar",
+      "muscleWeights": {
+        "bicepsBrachii": 0.85,
+        "bicepsBrachialis": 0.55,
+        "forearms": 0.6
+      },
+      "notes": "Semi-supinated grip reduces wrist strain. Slightly higher brachioradialis activation than straight bar due to grip angle.",
+      "sources": [
+        "Marcolin 2018"
+      ]
+    },
+    {
+      "id": "dumbbell_curl_standing",
+      "displayName": "Standing Dumbbell Curl",
+      "searchTerms": [
+        "dumbbell curl",
+        "db curl",
+        "standing curl",
+        "bicep curl dumbbells"
+      ],
+      "movementID": "bicep_curl",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "supinated",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "bicepsBrachii": 0.8,
+        "bicepsBrachialis": 0.45,
+        "forearms": 0.5
+      },
+      "notes": "Allows natural supination through ROM. Independent arms address bilateral imbalances. Slightly lower activation than barbell due to stabilization demands.",
+      "sources": [
+        "ACE 2014",
+        "Marcolin 2018"
+      ]
+    },
+    {
+      "id": "dumbbell_curl_alternating",
+      "displayName": "Alternating Dumbbell Curl",
+      "searchTerms": [
+        "alternating curl",
+        "alternate dumbbell curl",
+        "alternating bicep curl"
+      ],
+      "movementID": "bicep_curl",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "supinated",
+        "stance": "standing",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "bicepsBrachii": 0.8,
+        "bicepsBrachialis": 0.45,
+        "forearms": 0.5,
+        "rectusAbdominis": 0.15
+      },
+      "notes": "Unilateral execution allows slight core anti-rotation demand. Permits full focus on each arm independently.",
+      "sources": [
+        "ACE 2014"
+      ]
+    },
+    {
+      "id": "hammer_curl_dumbbell",
+      "displayName": "Hammer Curl",
+      "searchTerms": [
+        "hammer curl",
+        "neutral grip curl",
+        "hammer curls dumbbells"
+      ],
+      "movementID": "bicep_curl",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "bicepsBrachii": 0.55,
+        "bicepsBrachialis": 0.75,
+        "forearms": 0.8
+      },
+      "notes": "Neutral grip shifts emphasis to brachialis and brachioradialis. Excellent for overall arm thickness. Reduces biceps brachii by ~12% vs supinated.",
+      "sources": [
+        "Coratella 2023",
+        "Marcolin 2018"
+      ]
+    },
+    {
+      "id": "incline_dumbbell_curl",
+      "displayName": "Incline Dumbbell Curl",
+      "searchTerms": [
+        "incline curl",
+        "incline bicep curl",
+        "incline db curl",
+        "seated incline curl"
+      ],
+      "movementID": "bicep_curl",
+      "dimensions": {
+        "angle": "incline_45",
+        "gripWidth": null,
+        "gripOrientation": "supinated",
+        "stance": "seated",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "bicepsBrachii": 0.85,
+        "bicepsBrachialis": 0.45,
+        "forearms": 0.45
+      },
+      "notes": "Shoulder extension stretches biceps long head. Kassiano 2025 found greater proximal biceps growth vs preacher curls. Key exercise for stretch-mediated hypertrophy.",
+      "sources": [
+        "Kassiano 2025",
+        "Oliveira 2009"
+      ]
+    },
+    {
+      "id": "concentration_curl",
+      "displayName": "Concentration Curl",
+      "searchTerms": [
+        "concentration curl",
+        "seated concentration curl",
+        "arnold curl"
+      ],
+      "movementID": "bicep_curl",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "supinated",
+        "stance": "seated",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "bicepsBrachii": 0.95,
+        "bicepsBrachialis": 0.4,
+        "forearms": 0.35
+      },
+      "notes": "Highest biceps EMG activation in ACE study (97% MVIC). Elbow bracing eliminates momentum. Peak contraction focus.",
+      "sources": [
+        "ACE 2014"
+      ]
+    },
+    {
+      "id": "preacher_curl_ez",
+      "displayName": "Preacher Curl (EZ Bar)",
+      "searchTerms": [
+        "preacher curl",
+        "scott curl",
+        "ez bar preacher",
+        "preacher bench curl"
+      ],
+      "movementID": "preacher_curl",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "supinated",
+        "stance": "seated",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "ez_bar",
+      "muscleWeights": {
+        "bicepsBrachii": 0.75,
+        "bicepsBrachialis": 0.55,
+        "forearms": 0.5
+      },
+      "notes": "Shoulder flexion shortens biceps. EMG highest in initial ROM only. Kassiano 2025 found greater distal biceps growth. Emphasize stretched position for best results.",
+      "sources": [
+        "Oliveira 2009",
+        "Pedrosa 2023",
+        "Kassiano 2025"
+      ]
+    },
+    {
+      "id": "preacher_curl_dumbbell",
+      "displayName": "Preacher Curl (Dumbbell)",
+      "searchTerms": [
+        "dumbbell preacher curl",
+        "single arm preacher",
+        "db preacher curl"
+      ],
+      "movementID": "preacher_curl",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "supinated",
+        "stance": "seated",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "bicepsBrachii": 0.7,
+        "bicepsBrachialis": 0.55,
+        "forearms": 0.5
+      },
+      "notes": "Unilateral version allows focus on each arm. Same shortened position limitations as barbell variant. Training initial ROM produces greater adaptations.",
+      "sources": [
+        "Pedrosa 2023",
+        "Kassiano 2025"
+      ]
+    },
+    {
+      "id": "preacher_curl_machine",
+      "displayName": "Preacher Curl Machine",
+      "searchTerms": [
+        "machine preacher curl",
+        "preacher curl machine",
+        "bicep curl machine"
+      ],
+      "movementID": "preacher_curl",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "supinated",
+        "stance": "seated",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "bicepsBrachii": 0.75,
+        "bicepsBrachialis": 0.55,
+        "forearms": 0.45
+      },
+      "notes": "Fixed path reduces stabilization demands. Cam mechanism may provide better resistance curve than free weight version.",
+      "sources": [
+        "Oliveira 2009"
+      ]
+    },
+    {
+      "id": "cable_curl_straight_bar",
+      "displayName": "Cable Curl (Straight Bar)",
+      "searchTerms": [
+        "cable curl",
+        "cable bicep curl",
+        "low pulley curl",
+        "standing cable curl"
+      ],
+      "movementID": "bicep_curl",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "supinated",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "bicepsBrachii": 0.85,
+        "bicepsBrachialis": 0.5,
+        "forearms": 0.55
+      },
+      "notes": "Constant tension throughout ROM. 80% MVIC in ACE study. Maintains resistance at peak contraction where dumbbells lose tension.",
+      "sources": [
+        "ACE 2014"
+      ]
+    },
+    {
+      "id": "rope_hammer_curl",
+      "displayName": "Rope Hammer Curl",
+      "searchTerms": [
+        "rope curl",
+        "cable hammer curl",
+        "rope hammer curl"
+      ],
+      "movementID": "bicep_curl",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "bicepsBrachii": 0.55,
+        "bicepsBrachialis": 0.7,
+        "forearms": 0.75
+      },
+      "notes": "Combines neutral grip benefits with constant cable tension. Excellent brachialis and forearm developer.",
+      "sources": [
+        "Coratella 2023",
+        "ACE 2014"
+      ]
+    },
+    {
+      "id": "cable_pushdown_straight_bar",
+      "displayName": "Triceps Pushdown (Straight Bar)",
+      "searchTerms": [
+        "tricep pushdown",
+        "cable pushdown",
+        "pressdown",
+        "tricep pressdown"
+      ],
+      "movementID": "tricep_extension",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "tricepsLongHead": 0.7,
+        "tricepsLateralHead": 0.8,
+        "tricepsMedialHead": 0.7
+      },
+      "notes": "67% combined MVIC. Shoulder-neutral position shortens long head, reducing its contribution. Lateral head shows highest activation.",
+      "sources": [
+        "Boehler/ACE 2011"
+      ]
+    },
+    {
+      "id": "cable_pushdown_v_bar",
+      "displayName": "Triceps Pushdown (V-Bar)",
+      "searchTerms": [
+        "v bar pushdown",
+        "v-bar tricep pushdown",
+        "triangle bar pushdown"
+      ],
+      "movementID": "tricep_extension",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "narrow",
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "tricepsLongHead": 0.7,
+        "tricepsLateralHead": 0.8,
+        "tricepsMedialHead": 0.7
+      },
+      "notes": "Neutral grip may be more comfortable than straight bar. Similar activation profile to straight bar pushdown.",
+      "sources": [
+        "Boehler/ACE 2011"
+      ]
+    },
+    {
+      "id": "cable_pushdown_rope",
+      "displayName": "Triceps Pushdown (Rope)",
+      "searchTerms": [
+        "rope pushdown",
+        "rope tricep extension",
+        "cable rope pushdown"
+      ],
+      "movementID": "tricep_extension",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "tricepsLongHead": 0.75,
+        "tricepsLateralHead": 0.85,
+        "tricepsMedialHead": 0.7
+      },
+      "notes": "74% combined MVIC - outperforms bar variations by ~7%. Allows external rotation at lockout for greater lateral head engagement.",
+      "sources": [
+        "Boehler/ACE 2011"
+      ]
+    },
+    {
+      "id": "overhead_cable_extension",
+      "displayName": "Overhead Cable Triceps Extension",
+      "searchTerms": [
+        "overhead cable extension",
+        "cable overhead tricep",
+        "french press cable",
+        "overhead tricep extension"
+      ],
+      "movementID": "tricep_extension",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "tricepsLongHead": 0.95,
+        "tricepsLateralHead": 0.7,
+        "tricepsMedialHead": 0.7
+      },
+      "notes": "CRITICAL: Maeo 2023 showed 1.5Ã— greater long head hypertrophy than pushdowns despite 34-39% lighter loads. Shoulder flexion stretches biarticular long head. Priority exercise for triceps development.",
+      "sources": [
+        "Maeo 2023"
+      ]
+    },
+    {
+      "id": "dumbbell_overhead_extension_single",
+      "displayName": "Single-Arm Dumbbell Overhead Extension",
+      "searchTerms": [
+        "single arm overhead extension",
+        "one arm tricep extension",
+        "single dumbbell overhead"
+      ],
+      "movementID": "tricep_extension",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "tricepsLongHead": 0.95,
+        "tricepsLateralHead": 0.65,
+        "tricepsMedialHead": 0.65,
+        "rectusAbdominis": 0.15
+      },
+      "notes": "Unilateral version adds anti-lateral flexion demand. Same stretch-mediated benefits as bilateral overhead work.",
+      "sources": [
+        "Maeo 2023"
+      ]
+    },
+    {
+      "id": "dumbbell_overhead_extension_bilateral",
+      "displayName": "Dumbbell Overhead Extension (Two Hands)",
+      "searchTerms": [
+        "overhead dumbbell extension",
+        "two hand tricep extension",
+        "french press dumbbell",
+        "seated overhead extension"
+      ],
+      "movementID": "tricep_extension",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "seated",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "tricepsLongHead": 0.95,
+        "tricepsLateralHead": 0.65,
+        "tricepsMedialHead": 0.65
+      },
+      "notes": "Both hands hold one dumbbell overhead. Seated position provides stability for heavier loads. Superior long head stretch.",
+      "sources": [
+        "Maeo 2023"
+      ]
+    },
+    {
+      "id": "lying_triceps_extension_barbell",
+      "displayName": "Skull Crusher (Barbell)",
+      "searchTerms": [
+        "skull crusher",
+        "lying tricep extension",
+        "nose breaker",
+        "french press barbell"
+      ],
+      "movementID": "tricep_extension",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": "narrow",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "tricepsLongHead": 0.8,
+        "tricepsLateralHead": 0.75,
+        "tricepsMedialHead": 0.7
+      },
+      "notes": "62% combined MVIC. Partial long head stretch if arms angled behind head. Lower bar behind head rather than to forehead for greater stretch.",
+      "sources": [
+        "Boehler/ACE 2011"
+      ]
+    },
+    {
+      "id": "lying_triceps_extension_ez",
+      "displayName": "Skull Crusher (EZ Bar)",
+      "searchTerms": [
+        "ez bar skull crusher",
+        "ez bar lying extension",
+        "ez bar french press"
+      ],
+      "movementID": "tricep_extension",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": "narrow",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "ez_bar",
+      "muscleWeights": {
+        "tricepsLongHead": 0.8,
+        "tricepsLateralHead": 0.75,
+        "tricepsMedialHead": 0.7
+      },
+      "notes": "Most common skull crusher variation. EZ bar reduces wrist strain vs straight bar. Same activation profile.",
+      "sources": [
+        "Boehler/ACE 2011"
+      ]
+    },
+    {
+      "id": "lying_triceps_extension_dumbbell",
+      "displayName": "Dumbbell Skull Crusher",
+      "searchTerms": [
+        "dumbbell skull crusher",
+        "dumbbell lying extension",
+        "db skull crusher"
+      ],
+      "movementID": "tricep_extension",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "tricepsLongHead": 0.8,
+        "tricepsLateralHead": 0.75,
+        "tricepsMedialHead": 0.7
+      },
+      "notes": "Neutral grip reduces elbow stress. Independent arms allow natural movement path. Similar activation to barbell variant.",
+      "sources": [
+        "Boehler/ACE 2011"
+      ]
+    },
+    {
+      "id": "triceps_kickback",
+      "displayName": "Triceps Kickback",
+      "searchTerms": [
+        "tricep kickback",
+        "dumbbell kickback",
+        "bent over kickback"
+      ],
+      "movementID": "tricep_extension",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": null,
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "tricepsLongHead": 0.9,
+        "tricepsLateralHead": 0.85,
+        "tricepsMedialHead": 0.8
+      },
+      "notes": "87% MVIC - second highest in ACE study. Often dismissed but highly effective. Shoulder extension position stretches long head. Light weights required for proper form.",
+      "sources": [
+        "Boehler/ACE 2011"
+      ]
+    },
+    {
+      "id": "close_grip_bench_press",
+      "displayName": "Close-Grip Bench Press",
+      "searchTerms": [
+        "close grip bench",
+        "narrow grip bench",
+        "cgbp",
+        "tricep bench press"
+      ],
+      "movementID": "bench_press",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": "narrow",
+        "gripOrientation": "pronated",
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "tricepsLongHead": 0.55,
+        "tricepsLateralHead": 0.65,
+        "tricepsMedialHead": 0.7,
+        "pectoralisMajorLower": 0.6,
+        "pectoralisMajorUpper": 0.5,
+        "deltoidAnterior": 0.4
+      },
+      "notes": "62% triceps MVIC - compound movement. Nearly equal activation across all three heads. Better for pressing strength than triceps-specific hypertrophy.",
+      "sources": [
+        "Boehler/ACE 2011",
+        "Barnett 1995"
+      ]
+    },
+    {
+      "id": "dumbbell_lateral_raise",
+      "displayName": "Dumbbell Lateral Raise",
+      "searchTerms": [
+        "lateral raise",
+        "side raise",
+        "dumbbell side raise",
+        "shoulder lateral raise"
+      ],
+      "movementID": "lateral_raise",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "deltoidLateral": 0.85,
+        "deltoidAnterior": 0.25,
+        "deltoidPosterior": 0.35,
+        "rotatorCuff": 0.4
+      },
+      "notes": "55% lateral deltoid MVIC with neutral grip. Coratella 2020 found neutral grip optimal - internal rotation increases trap involvement. Larsen 2024 showed equivalent hypertrophy to cables.",
+      "sources": [
+        "Coratella 2020",
+        "Larsen/Van den Tillaar 2024"
+      ]
+    },
+    {
+      "id": "cable_lateral_raise",
+      "displayName": "Cable Lateral Raise",
+      "searchTerms": [
+        "cable side raise",
+        "cable lateral raise",
+        "single arm cable lateral"
+      ],
+      "movementID": "lateral_raise",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "deltoidLateral": 0.85,
+        "deltoidAnterior": 0.2,
+        "deltoidPosterior": 0.3,
+        "rotatorCuff": 0.35
+      },
+      "notes": "Constant tension throughout ROM. 8-week study showed equivalent hypertrophy to dumbbells (3.3-4.6% thickness increase). Different resistance curve, same results.",
+      "sources": [
+        "Larsen/Van den Tillaar 2024",
+        "Coratella 2020"
+      ]
+    },
+    {
+      "id": "machine_lateral_raise",
+      "displayName": "Machine Lateral Raise",
+      "searchTerms": [
+        "lateral raise machine",
+        "machine side raise",
+        "pec deck lateral"
+      ],
+      "movementID": "lateral_raise",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "seated",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "deltoidLateral": 0.9,
+        "deltoidAnterior": 0.15,
+        "deltoidPosterior": 0.25,
+        "rotatorCuff": 0.35
+      },
+      "notes": "Fixed path reduces synergist involvement. Highest lateral deltoid isolation. Useful for pre-exhaust or when fatigued.",
+      "sources": [
+        "Coratella 2020"
+      ]
+    },
+    {
+      "id": "dumbbell_front_raise",
+      "displayName": "Dumbbell Front Raise",
+      "searchTerms": [
+        "front raise",
+        "dumbbell front raise",
+        "anterior raise",
+        "front delt raise"
+      ],
+      "movementID": "front_raise",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "pronated",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "deltoidAnterior": 0.9,
+        "deltoidLateral": 0.15,
+        "deltoidPosterior": 0.1,
+        "rotatorCuff": 0.2,
+        "pectoralisMajorUpper": 0.35
+      },
+      "notes": "51.6% anterior deltoid MVIC with pronated grip vs 43.4% neutral. Significant upper pec synergist activation. Often redundant if pressing volume is adequate.",
+      "sources": [
+        "Coratella 2020",
+        "ResearchGate frontal raise study"
+      ]
+    },
+    {
+      "id": "cable_front_raise",
+      "displayName": "Cable Front Raise",
+      "searchTerms": [
+        "cable front raise",
+        "low pulley front raise",
+        "cable anterior raise"
+      ],
+      "movementID": "front_raise",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "pronated",
+        "stance": "standing",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "deltoidAnterior": 0.9,
+        "deltoidLateral": 0.15,
+        "deltoidPosterior": 0.1,
+        "rotatorCuff": 0.2,
+        "pectoralisMajorUpper": 0.35
+      },
+      "notes": "Constant tension through full ROM. Same activation profile as dumbbell variant. Cable maintains resistance at top where dumbbells lose tension.",
+      "sources": [
+        "Coratella 2020"
+      ]
+    },
+    {
+      "id": "plate_front_raise",
+      "displayName": "Plate Front Raise",
+      "searchTerms": [
+        "plate raise",
+        "weight plate front raise",
+        "plate anterior raise"
+      ],
+      "movementID": "front_raise",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "weight_plate",
+      "muscleWeights": {
+        "deltoidAnterior": 0.85,
+        "deltoidLateral": 0.1,
+        "deltoidPosterior": 0.1,
+        "rotatorCuff": 0.2,
+        "forearms": 0.3
+      },
+      "notes": "Neutral grip reduces anterior deltoid slightly vs pronated. Grip challenge may limit deltoid focus. Wide hand position provides stability.",
+      "sources": [
+        "Coratella 2020"
+      ]
+    },
+    {
+      "id": "crunch_basic",
+      "displayName": "Crunch",
+      "searchTerms": [
+        "crunch",
+        "basic crunch",
+        "floor crunch",
+        "ab crunch"
+      ],
+      "movementID": "crunch",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "rectusAbdominis": 0.85,
+        "obliquesExternal": 0.35,
+        "obliquesInternal": 0.35
+      },
+      "notes": "54-68% rectus abdominis MVIC. Upper RA shows slightly higher activation than lower (ratio 1.25). Foundational core exercise.",
+      "sources": [
+        "Escamilla 2006",
+        "Marchetti 2011"
+      ]
+    },
+    {
+      "id": "cable_crunch",
+      "displayName": "Cable Crunch",
+      "searchTerms": [
+        "cable crunch",
+        "kneeling cable crunch",
+        "rope crunch",
+        "weighted crunch"
+      ],
+      "movementID": "crunch",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "rectusAbdominis": 0.9,
+        "obliquesExternal": 0.4,
+        "obliquesInternal": 0.4
+      },
+      "notes": "Allows progressive overload with external resistance. Marginally higher activation than bodyweight. Focus on spinal flexion, not hip flexion.",
+      "sources": [
+        "Escamilla 2006"
+      ]
+    },
+    {
+      "id": "machine_crunch",
+      "displayName": "Machine Crunch",
+      "searchTerms": [
+        "ab machine",
+        "crunch machine",
+        "abdominal machine"
+      ],
+      "movementID": "crunch",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "seated",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "rectusAbdominis": 0.85,
+        "obliquesExternal": 0.35,
+        "obliquesInternal": 0.35
+      },
+      "notes": "Fixed path isolates spinal flexion. Similar activation to cable crunch when intensity matched. Useful for beginners learning movement pattern.",
+      "sources": [
+        "Escamilla 2006"
+      ]
+    },
+    {
+      "id": "sit_up",
+      "displayName": "Sit-Up",
+      "searchTerms": [
+        "sit up",
+        "situp",
+        "full sit up"
+      ],
+      "movementID": "crunch",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "rectusAbdominis": 0.7,
+        "obliquesExternal": 0.3,
+        "obliquesInternal": 0.3,
+        "erectorSpinae": 0.1
+      },
+      "notes": "31-47% upper RA, 38-56% lower RA MVIC. Significant hip flexor involvement. Less rectus abdominis activation than crunch due to hip flexor contribution.",
+      "sources": [
+        "Escamilla 2006",
+        "ACE 2001"
+      ]
+    },
+    {
+      "id": "decline_sit_up",
+      "displayName": "Decline Sit-Up",
+      "searchTerms": [
+        "decline sit up",
+        "decline situp",
+        "roman chair sit up"
+      ],
+      "movementID": "crunch",
+      "dimensions": {
+        "angle": "decline",
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "rectusAbdominis": 0.75,
+        "obliquesExternal": 0.35,
+        "obliquesInternal": 0.35,
+        "erectorSpinae": 0.1
+      },
+      "notes": "Higher activation than flat sit-up due to increased resistance. Greater hip flexor demand as well. Can hold weight for progressive overload.",
+      "sources": [
+        "Escamilla 2006"
+      ]
+    },
+    {
+      "id": "hanging_leg_raise",
+      "displayName": "Hanging Leg Raise",
+      "searchTerms": [
+        "hanging leg raise",
+        "hanging straight leg raise",
+        "bar leg raise"
+      ],
+      "movementID": "leg_raise",
+      "dimensions": {
+        "angle": "hanging",
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "rectusAbdominis": 0.65,
+        "obliquesExternal": 0.45,
+        "obliquesInternal": 0.45,
+        "forearms": 0.4
+      },
+      "notes": "60-80% MVIC. Significant hip flexor involvement below 45Â° flexion. Cue posterior pelvic tilt to maximize rectus abdominis. Grip often limiting factor.",
+      "sources": [
+        "Escamilla 2006",
+        "ACE 2001"
+      ]
+    },
+    {
+      "id": "captain_chair_leg_raise",
+      "displayName": "Captain's Chair Leg Raise",
+      "searchTerms": [
+        "captains chair",
+        "vertical knee raise",
+        "roman chair leg raise",
+        "VKR"
+      ],
+      "movementID": "leg_raise",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "rectusAbdominis": 0.75,
+        "obliquesExternal": 0.5,
+        "obliquesInternal": 0.5
+      },
+      "notes": "212% relative activation in ACE study - ranked #2 for rectus abdominis. Back support reduces hip flexor dominance vs hanging. Elbow support eliminates grip limitation.",
+      "sources": [
+        "ACE 2001"
+      ]
+    },
+    {
+      "id": "lying_leg_raise",
+      "displayName": "Lying Leg Raise",
+      "searchTerms": [
+        "lying leg raise",
+        "flat leg raise",
+        "supine leg raise",
+        "floor leg raise"
+      ],
+      "movementID": "leg_raise",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "rectusAbdominis": 0.55,
+        "obliquesExternal": 0.3,
+        "obliquesInternal": 0.3
+      },
+      "notes": "Lower rectus abdominis activation than hanging or captain's chair. Higher hip flexor demand without spine support. Press lower back into floor to increase ab engagement.",
+      "sources": [
+        "Escamilla 2006",
+        "Marchetti 2011"
+      ]
+    },
+    {
+      "id": "hanging_knee_raise",
+      "displayName": "Hanging Knee Raise",
+      "searchTerms": [
+        "hanging knee raise",
+        "knee raise",
+        "bar knee raise"
+      ],
+      "movementID": "leg_raise",
+      "dimensions": {
+        "angle": "hanging",
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "rectusAbdominis": 0.7,
+        "obliquesExternal": 0.4,
+        "obliquesInternal": 0.4,
+        "forearms": 0.4
+      },
+      "notes": "Bent knees reduce hip flexor lever arm, increasing relative rectus abdominis contribution. Good progression to straight leg raises. Focus on curling pelvis up.",
+      "sources": [
+        "Escamilla 2006"
+      ]
+    },
+    {
+      "id": "cable_woodchop_high_to_low",
+      "displayName": "Cable Woodchop (High to Low)",
+      "searchTerms": [
+        "woodchop",
+        "cable woodchop",
+        "high to low woodchop",
+        "diagonal chop"
+      ],
+      "movementID": "rotation",
+      "dimensions": {
+        "angle": "high_to_low",
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "standing",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "obliquesExternal": 0.8,
+        "obliquesInternal": 0.6,
+        "rectusAbdominis": 0.4,
+        "erectorSpinae": 0.3
+      },
+      "notes": "External oblique dominant due to gravity-assisted downward pull. Diagonal muscle activation pattern. Trains rotation with resistance through full ROM.",
+      "sources": [
+        "ZemkovÃ¡ 2017"
+      ]
+    },
+    {
+      "id": "cable_woodchop_low_to_high",
+      "displayName": "Cable Woodchop (Low to High)",
+      "searchTerms": [
+        "low to high woodchop",
+        "reverse woodchop",
+        "upward chop"
+      ],
+      "movementID": "rotation",
+      "dimensions": {
+        "angle": "low_to_high",
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "standing",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "obliquesExternal": 0.7,
+        "obliquesInternal": 0.7,
+        "rectusAbdominis": 0.5,
+        "erectorSpinae": 0.3
+      },
+      "notes": "Greater internal oblique demand for anti-gravity initiation. More rectus abdominis involvement than high-to-low. Both directions train diagonal pattern effectively.",
+      "sources": [
+        "ZemkovÃ¡ 2017"
+      ]
+    },
+    {
+      "id": "russian_twist",
+      "displayName": "Russian Twist",
+      "searchTerms": [
+        "russian twist",
+        "seated twist",
+        "weighted twist"
+      ],
+      "movementID": "rotation",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "seated",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "obliquesExternal": 0.8,
+        "obliquesInternal": 0.7,
+        "rectusAbdominis": 0.6,
+        "erectorSpinae": 0.2
+      },
+      "notes": "45-60% external oblique MVIC, 40-55% internal oblique. V-sit position maintains rectus abdominis tension. Can add weight or medicine ball for progression.",
+      "sources": [
+        "Workman 2008"
+      ]
+    },
+    {
+      "id": "pallof_press",
+      "displayName": "Pallof Press",
+      "searchTerms": [
+        "pallof press",
+        "anti rotation press",
+        "core press",
+        "belly press"
+      ],
+      "movementID": "rotation",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "standing",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "obliquesExternal": 0.5,
+        "obliquesInternal": 0.6,
+        "rectusAbdominis": 0.4,
+        "erectorSpinae": 0.4
+      },
+      "notes": "Anti-rotation exercise - resists rotation rather than producing it. Sustained isometric co-contraction. Lower peak activation but superior time under tension with lower spinal load.",
+      "sources": [
+        "Stephens 2021"
+      ]
+    },
+    {
+      "id": "plank",
+      "displayName": "Plank",
+      "searchTerms": [
+        "plank",
+        "front plank",
+        "prone plank",
+        "plank hold"
+      ],
+      "movementID": "plank",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "rectusAbdominis": 0.7,
+        "obliquesExternal": 0.5,
+        "obliquesInternal": 0.5,
+        "erectorSpinae": 0.1
+      },
+      "notes": "30-45% rectus abdominis MVIC baseline. Anti-extension exercise - resists spinal extension from gravity. Time under tension builds endurance. Progress with longer holds or added weight.",
+      "sources": [
+        "Escamilla 2010"
+      ]
+    },
+    {
+      "id": "side_plank",
+      "displayName": "Side Plank",
+      "searchTerms": [
+        "side plank",
+        "lateral plank",
+        "side bridge"
+      ],
+      "movementID": "plank",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "unilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "obliquesInternal": 1.0,
+        "obliquesExternal": 0.8,
+        "rectusAbdominis": 0.3,
+        "erectorSpinae": 0.3,
+        "gluteusMedius": 0.4
+      },
+      "notes": "HIGHEST oblique activation: 107% MVIC internal oblique (JOSPM 2020). Bottom-side oblique dramatically more activated than top. Anti-lateral flexion exercise.",
+      "sources": [
+        "JOSPM 2020",
+        "Escamilla 2010"
+      ]
+    },
+    {
+      "id": "ab_wheel_rollout",
+      "displayName": "Ab Wheel Rollout",
+      "searchTerms": [
+        "ab wheel",
+        "rollout",
+        "ab roller",
+        "wheel rollout"
+      ],
+      "movementID": "plank",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "rectusAbdominis": 0.9,
+        "obliquesExternal": 0.6,
+        "obliquesInternal": 0.6,
+        "erectorSpinae": 0.1,
+        "latissimusDorsi": 0.3
+      },
+      "notes": "63% upper RA, 53% lower RA MVIC kneeling. Among highest rectus abdominis activating exercises. Standing version approaches 100% MVIC. Lat involvement for shoulder extension.",
+      "sources": [
+        "Escamilla 2006",
+        "Escamilla 2010"
+      ]
+    },
+    {
+      "id": "wrist_curl",
+      "displayName": "Wrist Curl",
+      "searchTerms": [
+        "wrist curl",
+        "forearm curl",
+        "wrist flexion"
+      ],
+      "movementID": "bicep_curl",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "supinated",
+        "stance": "seated",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "forearms": 0.9
+      },
+      "notes": "~74% MVIC flexor carpi radialis. Isolates wrist flexor compartment. Forearm supported on bench or thighs. Small ROM, controlled movement.",
+      "sources": [
+        "Boland 2008"
+      ]
+    },
+    {
+      "id": "reverse_wrist_curl",
+      "displayName": "Reverse Wrist Curl",
+      "searchTerms": [
+        "reverse wrist curl",
+        "wrist extension",
+        "forearm extension"
+      ],
+      "movementID": "bicep_curl",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "pronated",
+        "stance": "seated",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "forearms": 0.85
+      },
+      "notes": "~68% brachioradialis MVIC. Targets wrist extensors. Lighter weight than wrist curls - extensors are weaker. Important for grip balance and elbow health.",
+      "sources": [
+        "Boland 2008"
+      ]
+    },
+    {
+      "id": "farmers_carry",
+      "displayName": "Farmer's Carry",
+      "searchTerms": [
+        "farmers walk",
+        "farmers carry",
+        "loaded carry",
+        "suitcase carry"
+      ],
+      "movementID": "deadlift",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "forearms": 0.7,
+        "erectorSpinae": 0.55,
+        "obliquesExternal": 0.5,
+        "rectusAbdominis": 0.35,
+        "trapeziusUpper": 0.45
+      },
+      "notes": "Locomotion significantly increases activation vs static holds (p<0.0001). Longissimus 16.4%, external oblique 14.2%, rectus abdominis 10.7% MVIC. Unilateral (suitcase) increases contralateral oblique to 33%.",
+      "sources": [
+        "Ellestad 2024",
+        "McGill 2009"
+      ]
+    }
+  ]
+}

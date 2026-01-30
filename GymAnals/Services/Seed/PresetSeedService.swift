@@ -40,7 +40,7 @@ final class PresetSeedService {
 
         var presetCount = 0
         var invalidMuscleKeys: Set<String> = []
-        var invalidExerciseTypeRaws: Set<Int> = []
+        var invalidExerciseTypeRaws: Set<String> = []
         var invalidPopularityValues: Set<String> = []
 
         for seed in seedData.presets {
@@ -68,7 +68,7 @@ final class PresetSeedService {
             if let raw = seed.exerciseTypeRaw, ExerciseType(rawValue: raw) == nil {
                 invalidExerciseTypeRaws.insert(raw)
             }
-            let exerciseType = ExerciseType(rawValue: seed.exerciseTypeRaw ?? 0) ?? .weightReps
+            let exerciseType = ExerciseType(rawValue: seed.exerciseTypeRaw ?? "weight_reps") ?? .weightReps
 
             let exercise = Exercise(
                 id: seed.id,

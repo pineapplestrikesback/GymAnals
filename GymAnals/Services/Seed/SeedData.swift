@@ -79,7 +79,7 @@ struct SeedPreset: Decodable {
     let movementID: String
     let dimensions: SeedDimensions
     let equipmentID: String
-    let exerciseTypeRaw: Int?  // Optional for backward compatibility, defaults to 0 (weightReps)
+    let exerciseTypeRaw: String?  // Optional for backward compatibility, defaults to weight_reps
     let muscleWeights: [String: Double]
     let popularity: String
     let notes: String

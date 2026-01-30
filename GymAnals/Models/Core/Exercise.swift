@@ -35,7 +35,7 @@ final class Exercise {
     var popularityRaw: String = Popularity.common.rawValue
 
     /// Raw value storage for exercise type (weight+reps, bodyweight reps, time-based, etc.)
-    var exerciseTypeRaw: Int = ExerciseType.weightReps.rawValue
+    var exerciseTypeRaw: String = ExerciseType.weightReps.rawValue
 
     // MARK: - Metadata
 
