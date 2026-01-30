@@ -60,10 +60,10 @@ Add long press context menu to exercise rows for quick actions (edit, duplicate,
 
 ## Tasks Completed
 
-| Task | Name | Commit | Files |
-|------|------|--------|-------|
-| 1 | Add duplicate() method to Exercise model | 56fa58c | Exercise.swift |
-| 2 | Add context menus to library and picker | ffcb615 | ExerciseSearchResultsView.swift, ExercisePickerSheet.swift |
+| Task | Name                                      | Commit  | Files                                                     |
+|------|-------------------------------------------|---------|-----------------------------------------------------------|
+| 1    | Add duplicate() method to Exercise model  | 56fa58c | Exercise.swift                                            |
+| 2    | Add context menus to library and picker   | ffcb615 | ExerciseSearchResultsView.swift, ExercisePickerSheet.swift |
 
 ## What Was Built
 

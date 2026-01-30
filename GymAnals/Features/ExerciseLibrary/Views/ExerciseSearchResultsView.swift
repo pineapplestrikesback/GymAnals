@@ -15,6 +15,7 @@ struct ExerciseSearchResultsView: View {
     @Query private var exercises: [Exercise]
     @State private var exerciseToEdit: Exercise?
     @State private var exerciseToDelete: Exercise?
+    @State private var duplicateTrigger = false
 
     private let searchText: String
     private let filter: ExerciseFilter
@@ -29,44 +30,14 @@ struct ExerciseSearchResultsView: View {
         _exercises = Query()
     }
 
-    /// Exercises filtered by exercise filter, search text, and sorted (applied in-memory)
+    /// Exercises filtered by exercise filter, search text, and sorted.
+    /// Delegates to ExerciseLibraryViewModel for shared filter/sort logic.
     private var filteredExercises: [Exercise] {
-        var results = Array(exercises)
-
-        // Apply exercise filter in-memory
-        switch filter {
-        case .all:
-            break // No filtering needed
-        case .custom:
-            results = results.filter { !$0.isBuiltIn }
-        case .muscleGroup(let muscleGroup):
-            results = results.filter { $0.primaryMuscleGroup == muscleGroup }
-        }
-
-        // Apply search filter (includes searchTerms array for in-memory matching)
-        if !searchText.isEmpty {
-            let lowercasedSearch = searchText.lowercased()
-            results = results.filter { exercise in
-                exercise.displayName.lowercased().contains(lowercasedSearch) ||
-                exercise.searchTerms.contains { $0.lowercased().contains(lowercasedSearch) } ||
-                exercise.movement?.displayName.lowercased().contains(lowercasedSearch) == true ||
-                exercise.equipment?.displayName.lowercased().contains(lowercasedSearch) == true ||
-                exercise.primaryMuscleGroup?.displayName.lowercased().contains(lowercasedSearch) == true
-            }
-        }
-
-        // Sort: favorites first, then by display name
-        results.sort { lhs, rhs in
-            if lhs.isFavorite != rhs.isFavorite {
-                return lhs.isFavorite
-            }
-            if (lhs.lastUsedDate != nil) != (rhs.lastUsedDate != nil) {
-                return lhs.lastUsedDate != nil
-            }
-            return lhs.displayName.localizedStandardCompare(rhs.displayName) == .orderedAscending
-        }
-
-        return results
+        ExerciseLibraryViewModel.filterAndSort(
+            exercises: exercises,
+            searchText: searchText,
+            filter: filter
+        )
     }
 
     var body: some View {
@@ -97,6 +68,7 @@ struct ExerciseSearchResultsView: View {
                     }
                 }
             }
+            .sensoryFeedback(.success, trigger: duplicateTrigger)
             .sheet(item: $exerciseToEdit) { exercise in
                 NavigationStack {
                     CustomExerciseEditView(exercise: exercise)
@@ -145,6 +117,7 @@ struct ExerciseSearchResultsView: View {
 
             Button {
                 _ = exercise.duplicate(in: modelContext)
+                duplicateTrigger.toggle()
             } label: {
                 Label("Duplicate", systemImage: "doc.on.doc")
             }
