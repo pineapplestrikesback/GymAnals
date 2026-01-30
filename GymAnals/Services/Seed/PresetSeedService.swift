@@ -40,6 +40,8 @@ final class PresetSeedService {
 
         var presetCount = 0
         var invalidMuscleKeys: Set<String> = []
+        var invalidExerciseTypeRaws: Set<String> = []
+        var invalidPopularityValues: Set<String> = []
 
         for seed in seedData.presets {
             // Validate muscle weight keys
@@ -57,7 +59,16 @@ final class PresetSeedService {
                 laterality: seed.dimensions.laterality
             )
 
+            // Validate popularity and exerciseType, logging invalid values
+            if Popularity(rawValue: seed.popularity) == nil {
+                invalidPopularityValues.insert(seed.popularity)
+            }
             let popularity = Popularity(rawValue: seed.popularity) ?? .common
+
+            if let raw = seed.exerciseTypeRaw, ExerciseType(rawValue: raw) == nil {
+                invalidExerciseTypeRaws.insert(raw)
+            }
+            let exerciseType = ExerciseType(rawValue: seed.exerciseTypeRaw ?? "weight_reps") ?? .weightReps
 
             let exercise = Exercise(
                 id: seed.id,
@@ -67,6 +78,7 @@ final class PresetSeedService {
                 dimensions: dimensions,
                 muscleWeights: seed.muscleWeights,
                 popularity: popularity,
+                exerciseType: exerciseType,
                 isBuiltIn: true
             )
             exercise.searchTerms = seed.searchTerms
@@ -79,6 +91,12 @@ final class PresetSeedService {
 
         if !invalidMuscleKeys.isEmpty {
             print("PresetSeedService: Warning - invalid muscle keys found: \(invalidMuscleKeys.sorted())")
+        }
+        if !invalidExerciseTypeRaws.isEmpty {
+            print("PresetSeedService: Warning - invalid exerciseTypeRaw values found: \(invalidExerciseTypeRaws.sorted())")
+        }
+        if !invalidPopularityValues.isEmpty {
+            print("PresetSeedService: Warning - invalid popularity values found: \(invalidPopularityValues.sorted())")
         }
 
         do {

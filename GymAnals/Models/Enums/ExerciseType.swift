@@ -16,17 +16,17 @@ enum LogField: String, CaseIterable {
 }
 
 /// Exercise type determines which fields are shown during workout logging
-enum ExerciseType: Int, CaseIterable, Codable, Identifiable {
-    case weightReps = 0        // Bench Press, Curls -> Reps + KG
-    case bodyweightReps = 1    // Pullups, Situps -> Reps only
-    case weightedBodyweight = 2 // Weighted Pullups -> Reps + (+KG)
-    case assistedBodyweight = 3 // Assisted Pullups -> Reps + (-KG)
-    case duration = 4          // Planks, Yoga -> Timer
-    case durationWeight = 5    // Weighted Plank -> KG + Time
-    case distanceDuration = 6  // Running, Cycling -> Time + KM
-    case weightDistance = 7    // Farmers Walk -> KG + KM
+enum ExerciseType: String, CaseIterable, Codable, Identifiable {
+    case weightReps = "weight_reps"
+    case bodyweightReps = "bodyweight_reps"
+    case weightedBodyweight = "weighted_bodyweight"
+    case assistedBodyweight = "assisted_bodyweight"
+    case duration = "duration"
+    case durationWeight = "duration_weight"
+    case distanceDuration = "distance_duration"
+    case weightDistance = "weight_distance"
 
-    var id: Int { rawValue }
+    var id: String { rawValue }
 
     /// User-friendly display name
     var displayName: String {

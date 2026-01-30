@@ -1,0 +1,2584 @@
+{
+  "presets": [
+    {
+      "id": "barbell_back_squat_high_bar",
+      "displayName": "Barbell Back Squat (High Bar)",
+      "searchTerms": [
+        "back squat",
+        "high bar squat",
+        "bb squat",
+        "barbell squat"
+      ],
+      "movementID": "squat",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "gluteusMaximus": 0.75,
+        "hamstringsBicepsFemoris": 0.3,
+        "hamstringsSemimembranosus": 0.3,
+        "obliquesExternal": 0.2,
+        "obliquesInternal": 0.2,
+        "erectorSpinae": 0.57,
+        "rectusAbdominis": 0.25,
+        "adductors": 0.47,
+        "quadricepsFemoris": 0.78,
+        "gluteusMedius": 0.38,
+        "gastrocnemius": 0.25,
+        "soleus": 0.2
+      },
+      "notes": "Olympic-style squat with bar on upper traps. Upright torso emphasizes quadriceps. Deep squats (below parallel) increase glute and adductor activation.",
+      "sources": [
+        "Contreras 2016",
+        "Caterisano 2002",
+        "Bryanton 2012"
+      ]
+    },
+    {
+      "id": "barbell_back_squat_low_bar",
+      "displayName": "Barbell Back Squat (Low Bar)",
+      "searchTerms": [
+        "low bar squat",
+        "powerlifting squat",
+        "low bar back squat"
+      ],
+      "movementID": "squat",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "gluteusMaximus": 0.82,
+        "hamstringsBicepsFemoris": 0.4,
+        "hamstringsSemimembranosus": 0.4,
+        "obliquesExternal": 0.25,
+        "obliquesInternal": 0.25,
+        "erectorSpinae": 0.7,
+        "rectusAbdominis": 0.3,
+        "adductors": 0.5,
+        "quadricepsFemoris": 0.68,
+        "gluteusMedius": 0.38,
+        "gastrocnemius": 0.2,
+        "soleus": 0.15
+      },
+      "notes": "Powerlifting-style with bar on rear delts. Forward lean shifts emphasis to posterior chain. Typically allows heavier loads than high bar.",
+      "sources": [
+        "Glassbrook 2017",
+        "Wretenberg 1996"
+      ]
+    },
+    {
+      "id": "barbell_front_squat",
+      "displayName": "Barbell Front Squat",
+      "searchTerms": [
+        "front squat",
+        "front rack squat",
+        "olympic front squat"
+      ],
+      "movementID": "squat",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "gluteusMaximus": 0.65,
+        "hamstringsBicepsFemoris": 0.2,
+        "hamstringsSemimembranosus": 0.23,
+        "obliquesExternal": 0.25,
+        "obliquesInternal": 0.25,
+        "erectorSpinae": 0.45,
+        "rectusAbdominis": 0.35,
+        "adductors": 0.4,
+        "quadricepsFemoris": 0.84,
+        "gluteusMedius": 0.4,
+        "gastrocnemius": 0.25,
+        "soleus": 0.2
+      },
+      "notes": "Most upright torso position maximizes quad emphasis. Front rack position limits load but reduces spinal stress. EMG shows highest rectus femoris activation of squat variations.",
+      "sources": [
+        "Yavuz 2015",
+        "Gullett 2009",
+        "Contreras 2016"
+      ]
+    },
+    {
+      "id": "goblet_squat",
+      "displayName": "Goblet Squat",
+      "searchTerms": [
+        "goblet squat",
+        "dumbbell front squat",
+        "kb goblet squat"
+      ],
+      "movementID": "squat",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "gluteusMaximus": 0.6,
+        "hamstringsBicepsFemoris": 0.2,
+        "hamstringsSemimembranosus": 0.2,
+        "obliquesExternal": 0.25,
+        "obliquesInternal": 0.25,
+        "erectorSpinae": 0.38,
+        "rectusAbdominis": 0.4,
+        "adductors": 0.4,
+        "quadricepsFemoris": 0.72,
+        "gluteusMedius": 0.35
+      },
+      "notes": "Beginner-friendly front-loaded squat. Counterbalance allows natural deep squat position. Limited by weight held.",
+      "sources": [
+        "extrapolated from front squat data"
+      ]
+    },
+    {
+      "id": "sumo_squat_barbell",
+      "displayName": "Sumo Squat (Barbell)",
+      "searchTerms": [
+        "sumo squat",
+        "wide stance squat",
+        "plie squat"
+      ],
+      "movementID": "squat",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "sumo",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.7,
+        "gluteusMaximus": 0.75,
+        "gluteusMedius": 0.5,
+        "adductors": 0.7,
+        "hamstringsBicepsFemoris": 0.3,
+        "hamstringsSemimembranosus": 0.3,
+        "erectorSpinae": 0.55
+      },
+      "notes": "Wide stance with toes pointed out increases adductor and gluteus medius activation. External rotation of sumo stance enhances glute recruitment.",
+      "sources": [
+        "Escamilla 2001",
+        "Paoli 2009"
+      ]
+    },
+    {
+      "id": "hack_squat_machine",
+      "displayName": "Hack Squat (Machine)",
+      "searchTerms": [
+        "hack squat",
+        "machine hack squat",
+        "reverse hack squat"
+      ],
+      "movementID": "squat",
+      "dimensions": {
+        "angle": "incline_45",
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "gluteusMaximus": 0.55,
+        "hamstringsBicepsFemoris": 0.15,
+        "hamstringsSemimembranosus": 0.15,
+        "erectorSpinae": 0.15,
+        "adductors": 0.38,
+        "quadricepsFemoris": 0.82,
+        "gluteusMedius": 0.28,
+        "gastrocnemius": 0.2,
+        "soleus": 0.15
+      },
+      "notes": "Fixed path machine removes balance requirement. Lower erector spinae activation than free squats. Different foot placements shift emphasis between quads and glutes.",
+      "sources": [
+        "Yavuz 2020",
+        "Schwanbeck 2009"
+      ]
+    },
+    {
+      "id": "smith_machine_squat",
+      "displayName": "Smith Machine Squat",
+      "searchTerms": [
+        "smith squat",
+        "smith machine back squat",
+        "guided squat"
+      ],
+      "movementID": "squat",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "smith_machine",
+      "muscleWeights": {
+        "gluteusMaximus": 0.57,
+        "adductors": 0.38,
+        "quadricepsFemoris": 0.68,
+        "hamstringsBicepsFemoris": 0.25,
+        "hamstringsSemimembranosus": 0.25,
+        "erectorSpinae": 0.4,
+        "gluteusMedius": 0.28,
+        "gastrocnemius": 0.15,
+        "soleus": 0.1
+      },
+      "notes": "Fixed vertical path allows different foot positions. Reduced stabilizer activation compared to free barbell. Can place feet forward to increase glute emphasis.",
+      "sources": [
+        "Schwanbeck 2009",
+        "Frontiers 2022"
+      ]
+    },
+    {
+      "id": "leg_press_45_degree",
+      "displayName": "Leg Press (45Â°)",
+      "searchTerms": [
+        "leg press",
+        "45 degree leg press",
+        "incline leg press",
+        "sled leg press"
+      ],
+      "movementID": "leg_press",
+      "dimensions": {
+        "angle": "incline_45",
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.8,
+        "gluteusMaximus": 0.5,
+        "gluteusMedius": 0.25,
+        "adductors": 0.35,
+        "hamstringsBicepsFemoris": 0.15,
+        "hamstringsSemimembranosus": 0.15,
+        "gastrocnemius": 0.15
+      },
+      "notes": "Standard angled leg press. Greater quadriceps activation at deep knee flexion. High foot placement increases hip extension demand.",
+      "sources": [
+        "Escamilla 2001",
+        "MartÃ­n-Fuentes 2020"
+      ]
+    },
+    {
+      "id": "leg_press_horizontal",
+      "displayName": "Leg Press (Horizontal)",
+      "searchTerms": [
+        "horizontal leg press",
+        "seated leg press",
+        "cable leg press"
+      ],
+      "movementID": "leg_press",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.78,
+        "gluteusMaximus": 0.45,
+        "gluteusMedius": 0.2,
+        "adductors": 0.3,
+        "hamstringsBicepsFemoris": 0.15,
+        "hamstringsSemimembranosus": 0.15
+      },
+      "notes": "Seated horizontal position with less hip flexion than 45Â° version. Similar quad emphasis but reduced glute involvement due to body position.",
+      "sources": [
+        "MartÃ­n-Fuentes 2020"
+      ]
+    },
+    {
+      "id": "pendulum_squat",
+      "displayName": "Pendulum Squat",
+      "searchTerms": [
+        "pendulum squat",
+        "arc squat",
+        "lever squat machine"
+      ],
+      "movementID": "squat",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "gluteusMaximus": 0.57,
+        "hamstringsBicepsFemoris": 0.17,
+        "hamstringsSemimembranosus": 0.17,
+        "erectorSpinae": 0.1,
+        "adductors": 0.35,
+        "quadricepsFemoris": 0.81,
+        "gluteusMedius": 0.28,
+        "gastrocnemius": 0.2,
+        "soleus": 0.15
+      },
+      "notes": "Arc-based movement creates unique resistance profile. Maintains tension throughout range, particularly effective at stretched position for quadriceps.",
+      "sources": [
+        "extrapolated from machine squat research"
+      ]
+    },
+    {
+      "id": "sissy_squat",
+      "displayName": "Sissy Squat",
+      "searchTerms": [
+        "sissy squat",
+        "quad isolation squat",
+        "sissy squat machine"
+      ],
+      "movementID": "squat",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.95,
+        "gluteusMaximus": 0.2,
+        "adductors": 0.15
+      },
+      "notes": "Maximum quad stretch by leaning back while descending. Hip extension minimizes glute involvement. Rectus femoris highly emphasized due to hip extension position.",
+      "sources": [
+        "extrapolated from quad mechanics"
+      ]
+    },
+    {
+      "id": "barbell_conventional_deadlift",
+      "displayName": "Conventional Deadlift",
+      "searchTerms": [
+        "deadlift",
+        "conventional deadlift",
+        "barbell deadlift",
+        "bb deadlift"
+      ],
+      "movementID": "hip_hinge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "gluteusMaximus": 0.78,
+        "rhomboids": 0.35,
+        "hamstringsBicepsFemoris": 0.57,
+        "hamstringsSemimembranosus": 0.55,
+        "obliquesExternal": 0.3,
+        "obliquesInternal": 0.3,
+        "erectorSpinae": 0.95,
+        "rectusAbdominis": 0.35,
+        "latissimusDorsi": 0.45,
+        "adductors": 0.43,
+        "quadricepsFemoris": 0.56,
+        "trapeziusUpper": 0.42,
+        "forearms": 0.55,
+        "gluteusMedius": 0.4,
+        "gastrocnemius": 0.25,
+        "trapeziusMiddle": 0.45
+      },
+      "notes": "Full-body compound lift. Greater knee extension moment than sumo. Erector spinae highly stressed due to forward torso lean. Quadriceps significantly involved in floor initiation.",
+      "sources": [
+        "MartÃ­n-Fuentes 2020",
+        "Escamilla 2001",
+        "Lee 2018"
+      ]
+    },
+    {
+      "id": "barbell_sumo_deadlift",
+      "displayName": "Sumo Deadlift",
+      "searchTerms": [
+        "sumo deadlift",
+        "sumo pull",
+        "wide stance deadlift"
+      ],
+      "movementID": "hip_hinge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "narrow",
+        "gripOrientation": null,
+        "stance": "sumo",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "gluteusMaximus": 0.8,
+        "rhomboids": 0.3,
+        "hamstringsBicepsFemoris": 0.5,
+        "hamstringsSemimembranosus": 0.53,
+        "obliquesExternal": 0.3,
+        "obliquesInternal": 0.3,
+        "erectorSpinae": 0.72,
+        "rectusAbdominis": 0.35,
+        "latissimusDorsi": 0.4,
+        "adductors": 0.7,
+        "quadricepsFemoris": 0.62,
+        "trapeziusUpper": 0.45,
+        "gluteusMedius": 0.45,
+        "forearms": 0.55,
+        "gastrocnemius": 0.2,
+        "trapeziusMiddle": 0.4
+      },
+      "notes": "Wide stance reduces range of motion. More upright torso decreases spinal shear stress. Greater hip abductor and adductor demands than conventional.",
+      "sources": [
+        "Escamilla 2001",
+        "Cholewicki 1991"
+      ]
+    },
+    {
+      "id": "trap_bar_deadlift",
+      "displayName": "Trap Bar Deadlift",
+      "searchTerms": [
+        "hex bar deadlift",
+        "trap bar deadlift",
+        "hex deadlift"
+      ],
+      "movementID": "hip_hinge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "trap_bar",
+      "muscleWeights": {
+        "gluteusMaximus": 0.72,
+        "hamstringsBicepsFemoris": 0.53,
+        "hamstringsSemimembranosus": 0.53,
+        "obliquesExternal": 0.25,
+        "obliquesInternal": 0.25,
+        "erectorSpinae": 0.72,
+        "rectusAbdominis": 0.3,
+        "adductors": 0.4,
+        "quadricepsFemoris": 0.71,
+        "trapeziusUpper": 0.5,
+        "forearms": 0.5,
+        "gluteusMedius": 0.4,
+        "gastrocnemius": 0.25,
+        "trapeziusMiddle": 0.45
+      },
+      "notes": "Center of mass aligned with body reduces lumbar stress. More quad-dominant than conventional due to more upright position. Neutral grip reduces bicep injury risk.",
+      "sources": [
+        "Camara 2016",
+        "Swinton 2011",
+        "Andersen 2018"
+      ]
+    },
+    {
+      "id": "barbell_romanian_deadlift",
+      "displayName": "Romanian Deadlift (Barbell)",
+      "searchTerms": [
+        "RDL",
+        "romanian deadlift",
+        "barbell RDL",
+        "stiff hip deadlift"
+      ],
+      "movementID": "hip_hinge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "gluteusMaximus": 0.75,
+        "rhomboids": 0.25,
+        "hamstringsSemimembranosus": 0.85,
+        "hamstringsBicepsFemoris": 0.88,
+        "erectorSpinae": 0.62,
+        "latissimusDorsi": 0.4,
+        "adductors": 0.35,
+        "quadricepsFemoris": 0.17,
+        "trapeziusUpper": 0.35,
+        "gluteusMedius": 0.32,
+        "forearms": 0.45,
+        "gastrocnemius": 0.2,
+        "trapeziusMiddle": 0.3
+      },
+      "notes": "Hip hinge with slight knee bend emphasizes hamstrings at long muscle lengths. Superior hamstring stretch compared to conventional deadlift. Key exercise for hamstring hypertrophy.",
+      "sources": [
+        "Lee 2018",
+        "Zebis 2013",
+        "McAllister 2014"
+      ]
+    },
+    {
+      "id": "dumbbell_romanian_deadlift",
+      "displayName": "Romanian Deadlift (Dumbbell)",
+      "searchTerms": [
+        "dumbbell RDL",
+        "DB romanian deadlift",
+        "dumbbell stiff leg"
+      ],
+      "movementID": "hip_hinge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "gluteusMaximus": 0.7,
+        "hamstringsSemimembranosus": 0.8,
+        "hamstringsBicepsFemoris": 0.82,
+        "erectorSpinae": 0.57,
+        "adductors": 0.35,
+        "quadricepsFemoris": 0.17,
+        "gluteusMedius": 0.35,
+        "forearms": 0.4,
+        "gastrocnemius": 0.2
+      },
+      "notes": "Dumbbells allow natural arm path and slightly greater range of motion. Lower erector stress than barbell version due to typically lighter loads.",
+      "sources": [
+        "extrapolated from barbell RDL research"
+      ]
+    },
+    {
+      "id": "single_leg_rdl_dumbbell",
+      "displayName": "Single-Leg Romanian Deadlift (Dumbbell)",
+      "searchTerms": [
+        "single leg RDL",
+        "one leg deadlift",
+        "unilateral RDL",
+        "SL RDL"
+      ],
+      "movementID": "hip_hinge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": "neutral",
+        "stance": "single_leg",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "gluteusMaximus": 0.8,
+        "hamstringsSemimembranosus": 0.85,
+        "hamstringsBicepsFemoris": 0.88,
+        "obliquesExternal": 0.35,
+        "obliquesInternal": 0.35,
+        "erectorSpinae": 0.53,
+        "adductors": 0.42,
+        "quadricepsFemoris": 0.23,
+        "gluteusMedius": 0.72,
+        "gastrocnemius": 0.3,
+        "forearms": 0.4,
+        "soleus": 0.25
+      },
+      "notes": "Single-leg stance dramatically increases gluteus medius demand for pelvic stability. Excellent for addressing bilateral asymmetries. Balance component limits load.",
+      "sources": [
+        "Clayton 2020",
+        "Bourne 2017"
+      ]
+    },
+    {
+      "id": "barbell_stiff_leg_deadlift",
+      "displayName": "Stiff-Leg Deadlift",
+      "searchTerms": [
+        "stiff leg deadlift",
+        "SLDL",
+        "straight leg deadlift"
+      ],
+      "movementID": "hip_hinge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "gluteusMaximus": 0.78,
+        "hamstringsSemimembranosus": 0.93,
+        "hamstringsBicepsFemoris": 0.88,
+        "erectorSpinae": 0.82,
+        "latissimusDorsi": 0.35,
+        "adductors": 0.3,
+        "quadricepsFemoris": 0.12,
+        "trapeziusUpper": 0.3,
+        "gluteusMedius": 0.3,
+        "forearms": 0.43,
+        "gastrocnemius": 0.15
+      },
+      "notes": "Minimal knee flexion maximizes hamstring stretch. Higher erector spinae activation than RDL. Step-RDL (deficit) further increases glute and hamstring activation.",
+      "sources": [
+        "Coratella 2022",
+        "Bezerra 2013"
+      ]
+    },
+    {
+      "id": "deficit_romanian_deadlift",
+      "displayName": "Deficit Romanian Deadlift",
+      "searchTerms": [
+        "deficit RDL",
+        "step RDL",
+        "elevated RDL",
+        "deficit romanian"
+      ],
+      "movementID": "hip_hinge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "hamstringsBicepsFemoris": 0.95,
+        "hamstringsSemimembranosus": 0.9,
+        "gluteusMaximus": 0.85,
+        "erectorSpinae": 0.7,
+        "gluteusMedius": 0.35,
+        "adductors": 0.35,
+        "forearms": 0.4
+      },
+      "notes": "Standing on platform increases range of motion. Research shows step-RDL produces greater glute and semitendinosus activation than standard RDL or stiff-leg.",
+      "sources": [
+        "Coratella 2022"
+      ]
+    },
+    {
+      "id": "barbell_hip_thrust",
+      "displayName": "Barbell Hip Thrust",
+      "searchTerms": [
+        "hip thrust",
+        "barbell hip thrust",
+        "glute bridge weighted",
+        "BHT"
+      ],
+      "movementID": "hip_thrust",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "gluteusMaximus": 1.0,
+        "adductors": 0.35,
+        "quadricepsFemoris": 0.3,
+        "hamstringsBicepsFemoris": 0.47,
+        "hamstringsSemimembranosus": 0.45,
+        "erectorSpinae": 0.25,
+        "gluteusMedius": 0.42
+      },
+      "notes": "Peak glute activation occurs at full hip extension where glutes are strongest. Knee flexion places hamstrings in active insufficiency, forcing greater glute contribution. EMG shows 2x greater glute activation than squat.",
+      "sources": [
+        "Contreras 2015",
+        "Contreras 2016",
+        "Andersen 2018"
+      ]
+    },
+    {
+      "id": "single_leg_hip_thrust",
+      "displayName": "Single-Leg Hip Thrust",
+      "searchTerms": [
+        "single leg hip thrust",
+        "one leg hip thrust",
+        "unilateral hip thrust"
+      ],
+      "movementID": "hip_thrust",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "single_leg",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "gluteusMaximus": 0.97,
+        "hamstringsBicepsFemoris": 0.43,
+        "hamstringsSemimembranosus": 0.4,
+        "obliquesExternal": 0.3,
+        "obliquesInternal": 0.3,
+        "erectorSpinae": 0.3,
+        "adductors": 0.4,
+        "quadricepsFemoris": 0.33,
+        "gluteusMedius": 0.6
+      },
+      "notes": "Unilateral version increases gluteus medius demand significantly. Addresses strength asymmetries. Can progress to weighted version.",
+      "sources": [
+        "extrapolated from hip thrust research"
+      ]
+    },
+    {
+      "id": "glute_bridge",
+      "displayName": "Glute Bridge",
+      "searchTerms": [
+        "glute bridge",
+        "hip bridge",
+        "floor bridge",
+        "supine bridge"
+      ],
+      "movementID": "hip_thrust",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "gluteusMaximus": 0.75,
+        "adductors": 0.3,
+        "quadricepsFemoris": 0.2,
+        "hamstringsBicepsFemoris": 0.4,
+        "hamstringsSemimembranosus": 0.38,
+        "erectorSpinae": 0.2,
+        "gluteusMedius": 0.35
+      },
+      "notes": "Floor-based version with reduced range compared to hip thrust. Excellent activation exercise and warm-up. Lower intensity than elevated hip thrust.",
+      "sources": [
+        "Contreras 2011"
+      ]
+    },
+    {
+      "id": "machine_hip_extension",
+      "displayName": "Machine Hip Extension",
+      "searchTerms": [
+        "hip extension machine",
+        "glute kickback machine",
+        "reverse hip extension"
+      ],
+      "movementID": "hip_thrust",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "unilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "gluteusMaximus": 0.9,
+        "adductors": 0.25,
+        "quadricepsFemoris": 0.12,
+        "hamstringsSemimembranosus": 0.4,
+        "hamstringsBicepsFemoris": 0.42,
+        "erectorSpinae": 0.15,
+        "gluteusMedius": 0.3
+      },
+      "notes": "Isolated hip extension with supported position. Unilateral execution addresses asymmetries. Machine stabilization allows focus on mind-muscle connection.",
+      "sources": [
+        "extrapolated from hip extension mechanics"
+      ]
+    },
+    {
+      "id": "walking_lunge_dumbbell",
+      "displayName": "Walking Lunge (Dumbbell)",
+      "searchTerms": [
+        "walking lunges",
+        "dumbbell walking lunge",
+        "forward walking lunge"
+      ],
+      "movementID": "lunge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "staggered",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.72,
+        "gluteusMaximus": 0.75,
+        "gluteusMedius": 0.55,
+        "hamstringsBicepsFemoris": 0.35,
+        "hamstringsSemimembranosus": 0.3,
+        "adductors": 0.4
+      },
+      "notes": "Dynamic lunge variation with continuous forward motion. High metabolic demand. EMG shows high VL and VM activation. Greater glute medius demand for stability during transition.",
+      "sources": [
+        "Muyor 2020",
+        "Riemann 2012"
+      ]
+    },
+    {
+      "id": "reverse_lunge_dumbbell",
+      "displayName": "Reverse Lunge (Dumbbell)",
+      "searchTerms": [
+        "reverse lunge",
+        "backward lunge",
+        "rear lunge"
+      ],
+      "movementID": "lunge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "staggered",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.7,
+        "gluteusMaximus": 0.8,
+        "gluteusMedius": 0.55,
+        "hamstringsBicepsFemoris": 0.4,
+        "hamstringsSemimembranosus": 0.35,
+        "adductors": 0.35
+      },
+      "notes": "Stepping backward shifts more emphasis to front leg glutes and hamstrings. More knee-friendly than forward lunge as shear forces are reduced. Better for beginners.",
+      "sources": [
+        "JÃ¶nhagen 2009",
+        "Farrokhi 2008"
+      ]
+    },
+    {
+      "id": "stationary_lunge_barbell",
+      "displayName": "Stationary Lunge (Barbell)",
+      "searchTerms": [
+        "static lunge",
+        "split squat",
+        "stationary lunge",
+        "barbell lunge"
+      ],
+      "movementID": "lunge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "staggered",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.73,
+        "gluteusMaximus": 0.7,
+        "gluteusMedius": 0.5,
+        "hamstringsBicepsFemoris": 0.35,
+        "hamstringsSemimembranosus": 0.3,
+        "adductors": 0.35,
+        "erectorSpinae": 0.3
+      },
+      "notes": "Fixed foot position allows heavier loading than walking variation. Can emphasize quads (upright) or glutes (forward lean) based on torso position.",
+      "sources": [
+        "Boudreau 2009"
+      ]
+    },
+    {
+      "id": "bulgarian_split_squat_dumbbell",
+      "displayName": "Bulgarian Split Squat (Dumbbell)",
+      "searchTerms": [
+        "bulgarian split squat",
+        "rear foot elevated split squat",
+        "BSS",
+        "RFESS"
+      ],
+      "movementID": "lunge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "staggered",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.8,
+        "gluteusMaximus": 0.8,
+        "gluteusMedius": 0.55,
+        "hamstringsBicepsFemoris": 0.45,
+        "hamstringsSemimembranosus": 0.4,
+        "adductors": 0.4,
+        "erectorSpinae": 0.25
+      },
+      "notes": "Rear foot elevation increases range of motion and front leg demand. Research shows higher hamstring:quad ratio than back squat. Greater hip moment demand suggests hip-dominant pattern.",
+      "sources": [
+        "McCurdy 2021",
+        "Mausehund 2019",
+        "DeForest 2014"
+      ]
+    },
+    {
+      "id": "bulgarian_split_squat_barbell",
+      "displayName": "Bulgarian Split Squat (Barbell)",
+      "searchTerms": [
+        "barbell bulgarian",
+        "BB split squat",
+        "barbell RFESS"
+      ],
+      "movementID": "lunge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "staggered",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.77,
+        "gluteusMaximus": 0.75,
+        "gluteusMedius": 0.5,
+        "hamstringsBicepsFemoris": 0.45,
+        "hamstringsSemimembranosus": 0.4,
+        "adductors": 0.4,
+        "erectorSpinae": 0.4
+      },
+      "notes": "Barbell version allows heavier loading but requires more stability. Balance demands increase core activation. Can be done in Smith machine for stability.",
+      "sources": [
+        "Andersen 2014",
+        "Speirs 2016"
+      ]
+    },
+    {
+      "id": "step_up_dumbbell",
+      "displayName": "Step-Up (Dumbbell)",
+      "searchTerms": [
+        "step up",
+        "dumbbell step up",
+        "box step up"
+      ],
+      "movementID": "lunge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "staggered",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.72,
+        "gluteusMaximus": 0.7,
+        "gluteusMedius": 0.55,
+        "hamstringsBicepsFemoris": 0.3,
+        "hamstringsSemimembranosus": 0.25,
+        "adductors": 0.3
+      },
+      "notes": "Functional movement pattern. Higher step increases hip flexion and glute demand. Minimize push-off from trailing leg for maximal lead leg emphasis.",
+      "sources": [
+        "Muyor 2020",
+        "Riemann 2012"
+      ]
+    },
+    {
+      "id": "lateral_step_up",
+      "displayName": "Lateral Step-Up",
+      "searchTerms": [
+        "side step up",
+        "lateral box step up",
+        "crossover step up"
+      ],
+      "movementID": "lunge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "staggered",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "gluteusMaximus": 0.75,
+        "hamstringsBicepsFemoris": 0.3,
+        "hamstringsSemimembranosus": 0.28,
+        "obliquesExternal": 0.4,
+        "obliquesInternal": 0.4,
+        "erectorSpinae": 0.35,
+        "adductors": 0.53,
+        "quadricepsFemoris": 0.69,
+        "gluteusMedius": 0.72,
+        "gastrocnemius": 0.3,
+        "soleus": 0.25
+      },
+      "notes": "Frontal plane movement increases gluteus medius and adductor demand. Excellent for hip stability development. Lower quad activation than forward step-up.",
+      "sources": [
+        "Muyor 2020"
+      ]
+    },
+    {
+      "id": "leg_extension_machine",
+      "displayName": "Leg Extension (Machine)",
+      "searchTerms": [
+        "leg extension",
+        "quad extension",
+        "knee extension",
+        "leg curl machine"
+      ],
+      "movementID": "leg_extension",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.9
+      },
+      "notes": "Isolated knee extension. Rectus femoris highly activated due to shortened hip position. Research shows leg extension produces superior rectus femoris growth vs squats. Effective for quad hypertrophy when combined with compound movements.",
+      "sources": [
+        "Signorile 2006",
+        "Ebben 2009",
+        "Maeo 2021"
+      ]
+    },
+    {
+      "id": "single_leg_extension",
+      "displayName": "Single-Leg Extension",
+      "searchTerms": [
+        "unilateral leg extension",
+        "one leg extension",
+        "single leg quad extension"
+      ],
+      "movementID": "leg_extension",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "unilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.9
+      },
+      "notes": "Unilateral execution addresses strength imbalances. Same muscle activation pattern as bilateral. Useful for post-injury rehabilitation.",
+      "sources": [
+        "extrapolated from leg extension research"
+      ]
+    },
+    {
+      "id": "lying_leg_curl",
+      "displayName": "Lying Leg Curl",
+      "searchTerms": [
+        "prone leg curl",
+        "lying hamstring curl",
+        "flat leg curl"
+      ],
+      "movementID": "leg_curl",
+      "dimensions": {
+        "angle": "flat",
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "gluteusMaximus": 0.15,
+        "gastrocnemius": 0.23,
+        "hamstringsSemimembranosus": 0.7,
+        "hamstringsBicepsFemoris": 0.82
+      },
+      "notes": "Hip-extended position places hamstrings in shortened state. Research shows slightly greater biceps femoris than semitendinosus activation. Less overall hypertrophy than seated curl due to shorter muscle length.",
+      "sources": [
+        "Maeo 2021",
+        "Zebis 2013"
+      ]
+    },
+    {
+      "id": "seated_leg_curl",
+      "displayName": "Seated Leg Curl",
+      "searchTerms": [
+        "seated hamstring curl",
+        "sitting leg curl",
+        "flexed hip leg curl"
+      ],
+      "movementID": "leg_curl",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "gluteusMaximus": 0.15,
+        "gastrocnemius": 0.22,
+        "hamstringsSemimembranosus": 0.95,
+        "hamstringsBicepsFemoris": 0.95
+      },
+      "notes": "Hip flexion places biarticular hamstrings in lengthened position. Research shows 14% vs 9% whole hamstring hypertrophy compared to lying curl. Superior for biceps femoris long head, semitendinosus, and semimembranosus growth.",
+      "sources": [
+        "Maeo 2021",
+        "Schoenfeld 2021"
+      ]
+    },
+    {
+      "id": "nordic_curl",
+      "displayName": "Nordic Hamstring Curl",
+      "searchTerms": [
+        "nordic curl",
+        "nordic hamstring exercise",
+        "NHE",
+        "Russian leg curl"
+      ],
+      "movementID": "leg_curl",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "gluteusMaximus": 0.25,
+        "adductors": 0.2,
+        "hamstringsSemimembranosus": 0.95,
+        "hamstringsBicepsFemoris": 0.95,
+        "erectorSpinae": 0.25,
+        "gluteusMedius": 0.15,
+        "gastrocnemius": 0.25,
+        "rectusAbdominis": 0.2
+      },
+      "notes": "High-intensity eccentric hamstring exercise. Semitendinosus slightly more activated than biceps femoris. Peak EMG occurs in 60-40Â° knee flexion range. Essential for hamstring injury prevention in athletes.",
+      "sources": [
+        "Iga 2021",
+        "Hegyi 2019",
+        "Opar 2012"
+      ]
+    },
+    {
+      "id": "glute_ham_raise",
+      "displayName": "Glute-Ham Raise",
+      "searchTerms": [
+        "GHR",
+        "glute ham raise",
+        "GHD raise",
+        "glute ham developer"
+      ],
+      "movementID": "leg_curl",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "hamstringsBicepsFemoris": 0.95,
+        "hamstringsSemimembranosus": 0.9,
+        "gluteusMaximus": 0.5,
+        "erectorSpinae": 0.4,
+        "gastrocnemius": 0.25
+      },
+      "notes": "Combines hip extension and knee flexion. Both hamstring heads highly activated. More glute involvement than pure knee flexion exercises due to hip movement component.",
+      "sources": [
+        "McAllister 2014",
+        "Zebis 2013"
+      ]
+    },
+    {
+      "id": "machine_hip_abduction",
+      "displayName": "Hip Abduction Machine",
+      "searchTerms": [
+        "hip abduction",
+        "abductor machine",
+        "outer thigh machine",
+        "seated abduction"
+      ],
+      "movementID": "hip_abduction",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "gluteusMaximus": 0.4,
+        "gluteusMedius": 0.97
+      },
+      "notes": "Isolated hip abduction targets gluteus medius. Seated position with hip flexion may increase tensor fasciae latae contribution. Useful for hip stability development.",
+      "sources": [
+        "extrapolated from hip abduction mechanics"
+      ]
+    },
+    {
+      "id": "cable_hip_abduction",
+      "displayName": "Cable Hip Abduction",
+      "searchTerms": [
+        "standing hip abduction",
+        "cable side leg raise",
+        "cable abductor"
+      ],
+      "movementID": "hip_abduction",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "single_leg",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "gluteusMaximus": 0.4,
+        "quadricepsFemoris": 0.1,
+        "hamstringsBicepsFemoris": 0.1,
+        "hamstringsSemimembranosus": 0.1,
+        "obliquesExternal": 0.3,
+        "obliquesInternal": 0.3,
+        "erectorSpinae": 0.25,
+        "gluteusMedius": 0.95
+      },
+      "notes": "Standing position with hip extended may reduce TFL contribution compared to seated. Unilateral execution addresses asymmetries. Can be done lying for different angle.",
+      "sources": [
+        "extrapolated from hip abduction research"
+      ]
+    },
+    {
+      "id": "machine_hip_adduction",
+      "displayName": "Hip Adduction Machine",
+      "searchTerms": [
+        "hip adduction",
+        "adductor machine",
+        "inner thigh machine",
+        "seated adduction"
+      ],
+      "movementID": "hip_adduction",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "gluteusMaximus": 0.12,
+        "adductors": 1.0,
+        "hamstringsSemimembranosus": 0.1,
+        "hamstringsBicepsFemoris": 0.1
+      },
+      "notes": "Isolated hip adduction. Adductor magnus, longus, and brevis all activated. Useful for addressing adductor weakness and injury prevention.",
+      "sources": [
+        "extrapolated from adductor mechanics"
+      ]
+    },
+    {
+      "id": "standing_calf_raise_machine",
+      "displayName": "Standing Calf Raise (Machine)",
+      "searchTerms": [
+        "standing calf raise",
+        "calf raise machine",
+        "standing heel raise"
+      ],
+      "movementID": "calf_raise",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "gluteusMaximus": 0.1,
+        "erectorSpinae": 0.2,
+        "gluteusMedius": 0.15,
+        "gastrocnemius": 1.0,
+        "soleus": 0.78
+      },
+      "notes": "Extended knee position maximizes gastrocnemius stretch and activation. Research shows standing calf raise produces greater overall triceps surae hypertrophy than seated. Most effective for gastrocnemius development.",
+      "sources": [
+        "Maeo 2023",
+        "Reid 2012"
+      ]
+    },
+    {
+      "id": "standing_calf_raise_smith",
+      "displayName": "Standing Calf Raise (Smith Machine)",
+      "searchTerms": [
+        "smith calf raise",
+        "barbell calf raise",
+        "smith machine calf"
+      ],
+      "movementID": "calf_raise",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "smith_machine",
+      "muscleWeights": {
+        "gluteusMaximus": 0.1,
+        "erectorSpinae": 0.15,
+        "gluteusMedius": 0.1,
+        "gastrocnemius": 1.0,
+        "soleus": 0.78
+      },
+      "notes": "Smith machine provides stability for straight-leg calf work. Same muscle activation as dedicated machine. Requires block or step for range of motion.",
+      "sources": [
+        "extrapolated from calf raise research"
+      ]
+    },
+    {
+      "id": "standing_calf_raise_dumbbell",
+      "displayName": "Standing Calf Raise (Dumbbell)",
+      "searchTerms": [
+        "dumbbell calf raise",
+        "one leg calf raise",
+        "single leg calf raise"
+      ],
+      "movementID": "calf_raise",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "single_leg",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "adductors": 0.15,
+        "gluteusMedius": 0.25,
+        "gastrocnemius": 0.97,
+        "forearms": 0.3,
+        "soleus": 0.75
+      },
+      "notes": "Single-leg execution allows bodyweight plus dumbbell loading. Addresses bilateral asymmetries. Requires balance - can hold support for stability.",
+      "sources": [
+        "extrapolated from calf raise research"
+      ]
+    },
+    {
+      "id": "seated_calf_raise",
+      "displayName": "Seated Calf Raise",
+      "searchTerms": [
+        "seated calf raise",
+        "bent knee calf raise",
+        "soleus raise"
+      ],
+      "movementID": "calf_raise",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "gastrocnemius": 0.23,
+        "soleus": 0.95
+      },
+      "notes": "Bent knee position places gastrocnemius in active insufficiency, isolating soleus. Research shows equal soleus hypertrophy to standing but minimal gastrocnemius growth. Important for complete calf development.",
+      "sources": [
+        "Maeo 2023",
+        "Reid 2012",
+        "Signorile 2002"
+      ]
+    },
+    {
+      "id": "leg_press_calf_raise",
+      "displayName": "Leg Press Calf Raise",
+      "searchTerms": [
+        "leg press calf",
+        "calf press",
+        "45 degree calf raise"
+      ],
+      "movementID": "calf_raise",
+      "dimensions": {
+        "angle": "incline_45",
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "gluteusMaximus": 0.1,
+        "quadricepsFemoris": 0.1,
+        "gastrocnemius": 0.95,
+        "soleus": 0.72
+      },
+      "notes": "Hip flexion creates hamstring-gastrocnemius interaction, maintaining tension. Similar activation to standing calf raise with slightly different feel. Allows heavy loading.",
+      "sources": [
+        "Nunes 2020"
+      ]
+    },
+    {
+      "id": "donkey_calf_raise",
+      "displayName": "Donkey Calf Raise",
+      "searchTerms": [
+        "donkey calf raise",
+        "bent over calf raise",
+        "donkey heel raise"
+      ],
+      "movementID": "calf_raise",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "gluteusMaximus": 0.15,
+        "hamstringsBicepsFemoris": 0.25,
+        "hamstringsSemimembranosus": 0.25,
+        "erectorSpinae": 0.3,
+        "gluteusMedius": 0.1,
+        "gastrocnemius": 1.0,
+        "soleus": 0.75
+      },
+      "notes": "Hip flexion with straight knees stretches gastrocnemius over both joints simultaneously. Classic bodybuilding exercise. Maximizes gastrocnemius stretch.",
+      "sources": [
+        "Boeckh-Behrens 2000"
+      ]
+    },
+    {
+      "id": "back_extension_45_degree",
+      "displayName": "45Â° Back Extension / Hyperextension",
+      "searchTerms": [
+        "back extension",
+        "hyperextension",
+        "45 degree back raise",
+        "roman chair"
+      ],
+      "movementID": "hip_thrust",
+      "dimensions": {
+        "angle": "incline_45",
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "gluteusMaximus": 0.75,
+        "adductors": 0.2,
+        "hamstringsSemimembranosus": 0.68,
+        "hamstringsBicepsFemoris": 0.72,
+        "obliquesExternal": 0.15,
+        "obliquesInternal": 0.15,
+        "erectorSpinae": 0.88,
+        "gluteusMedius": 0.25,
+        "rectusAbdominis": 0.15
+      },
+      "notes": "Hip extension focused movement despite name. Can emphasize glutes by squeezing at top or spinal erectors with slight lumbar flexion/extension. Pad position affects muscle emphasis.",
+      "sources": [
+        "extrapolated from hip extension research"
+      ]
+    },
+    {
+      "id": "reverse_hyperextension",
+      "displayName": "Reverse Hyperextension",
+      "searchTerms": [
+        "reverse hyper",
+        "reverse back extension",
+        "glute back raise"
+      ],
+      "movementID": "hip_thrust",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "gluteusMaximus": 0.9,
+        "adductors": 0.25,
+        "hamstringsSemimembranosus": 0.72,
+        "hamstringsBicepsFemoris": 0.75,
+        "obliquesExternal": 0.2,
+        "obliquesInternal": 0.2,
+        "erectorSpinae": 0.6,
+        "gluteusMedius": 0.35,
+        "rectusAbdominis": 0.25
+      },
+      "notes": "Legs move while torso stays fixed. Provides spinal decompression effect. Greater glute emphasis than traditional back extension. Excellent for posterior chain development.",
+      "sources": [
+        "extrapolated from hip extension research"
+      ]
+    },
+    {
+      "id": "good_morning_barbell",
+      "displayName": "Good Morning (Barbell)",
+      "searchTerms": [
+        "good morning",
+        "barbell good morning",
+        "hip hinge morning"
+      ],
+      "movementID": "hip_hinge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "hamstringsBicepsFemoris": 0.8,
+        "hamstringsSemimembranosus": 0.75,
+        "erectorSpinae": 0.9,
+        "gluteusMaximus": 0.65
+      },
+      "notes": "Hip hinge with barbell on back. High erector spinae demand due to long moment arm. Hamstring activation similar to RDL. Requires careful load progression.",
+      "sources": [
+        "McAllister 2014",
+        "Zebis 2013"
+      ]
+    },
+    {
+      "id": "pistol_squat",
+      "displayName": "Pistol Squat",
+      "searchTerms": [
+        "pistol squat",
+        "single leg squat",
+        "one leg squat"
+      ],
+      "movementID": "squat",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "single_leg",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.88,
+        "gluteusMaximus": 0.7,
+        "gluteusMedius": 0.75,
+        "hamstringsBicepsFemoris": 0.3,
+        "hamstringsSemimembranosus": 0.25,
+        "adductors": 0.35
+      },
+      "notes": "Advanced single-leg squat requiring full depth. High gluteus medius demand for stability. Rectus femoris highly activated as hip flexor for non-stance leg.",
+      "sources": [
+        "Kim 2022",
+        "McCurdy 2010"
+      ]
+    },
+    {
+      "id": "belt_squat",
+      "displayName": "Belt Squat",
+      "searchTerms": [
+        "belt squat",
+        "hip belt squat",
+        "lever belt squat"
+      ],
+      "movementID": "squat",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.82,
+        "gluteusMaximus": 0.65,
+        "gluteusMedius": 0.35,
+        "adductors": 0.4,
+        "hamstringsBicepsFemoris": 0.25,
+        "hamstringsSemimembranosus": 0.25
+      },
+      "notes": "Load applied at hips eliminates spinal compression. Pure lower body exercise - no erector spinae demand. Excellent for high-volume leg training or those with back issues.",
+      "sources": [
+        "extrapolated from squat mechanics"
+      ]
+    },
+    {
+      "id": "landmine_squat",
+      "displayName": "Landmine Squat",
+      "searchTerms": [
+        "landmine squat",
+        "angled barbell squat",
+        "landmine goblet squat"
+      ],
+      "movementID": "squat",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.8,
+        "gluteusMaximus": 0.6,
+        "gluteusMedius": 0.35,
+        "adductors": 0.35,
+        "deltoidAnterior": 0.25,
+        "erectorSpinae": 0.35
+      },
+      "notes": "Angled barbell path creates natural front-loaded position. Allows deep squat with upright torso. Good progression between goblet and barbell front squat.",
+      "sources": [
+        "extrapolated from front-loaded squat mechanics"
+      ]
+    },
+    {
+      "id": "stability_ball_leg_curl",
+      "displayName": "Stability Ball Leg Curl",
+      "searchTerms": [
+        "swiss ball leg curl",
+        "ball hamstring curl",
+        "physioball curl"
+      ],
+      "movementID": "leg_curl",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "stability_ball",
+      "muscleWeights": {
+        "hamstringsBicepsFemoris": 0.75,
+        "hamstringsSemimembranosus": 0.7,
+        "gluteusMaximus": 0.55,
+        "erectorSpinae": 0.3
+      },
+      "notes": "Combines hip extension and knee flexion with instability challenge. Lower intensity than machine curl but includes hip extension component. Good for home/travel workouts.",
+      "sources": [
+        "Ortiz 2010",
+        "Holcomb 2007"
+      ]
+    },
+    {
+      "id": "sliding_leg_curl",
+      "displayName": "Sliding Leg Curl",
+      "searchTerms": [
+        "slide leg curl",
+        "slider hamstring curl",
+        "floor leg curl"
+      ],
+      "movementID": "leg_curl",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "hamstringsBicepsFemoris": 0.85,
+        "hamstringsSemimembranosus": 0.8,
+        "gluteusMaximus": 0.5,
+        "erectorSpinae": 0.25
+      },
+      "notes": "Supine position with feet on sliders. Progressive exercise from bridge position. High-intensity classification in EMG research. Excellent minimal-equipment hamstring exercise.",
+      "sources": [
+        "Zebis 2013"
+      ]
+    },
+    {
+      "id": "kettlebell_swing",
+      "displayName": "Kettlebell Swing",
+      "searchTerms": [
+        "kb swing",
+        "kettlebell swing",
+        "Russian swing",
+        "hip hinge swing"
+      ],
+      "movementID": "hip_hinge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "kettlebell",
+      "muscleWeights": {
+        "gluteusMaximus": 0.75,
+        "hamstringsBicepsFemoris": 0.5,
+        "hamstringsSemimembranosus": 0.55,
+        "erectorSpinae": 0.6,
+        "latissimusDorsi": 0.3,
+        "deltoidAnterior": 0.25
+      },
+      "notes": "Ballistic hip hinge. Research shows higher semitendinosus than biceps femoris activation. Power development for hip extensors. Low-intensity EMG classification but high metabolic demand.",
+      "sources": [
+        "Zebis 2012",
+        "McGill 2012"
+      ]
+    },
+    {
+      "id": "cable_pull_through",
+      "displayName": "Cable Pull-Through",
+      "searchTerms": [
+        "pull through",
+        "cable hip hinge",
+        "cable glute pull"
+      ],
+      "movementID": "hip_hinge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "gluteusMaximus": 0.8,
+        "hamstringsBicepsFemoris": 0.55,
+        "hamstringsSemimembranosus": 0.5,
+        "erectorSpinae": 0.4
+      },
+      "notes": "Cable hip hinge with continuous tension. Horizontal force vector similar to hip thrust at lockout. Good hip hinge teaching tool and glute builder.",
+      "sources": [
+        "extrapolated from hip hinge mechanics"
+      ]
+    },
+    {
+      "id": "leg_press_single_leg",
+      "displayName": "Single-Leg Leg Press",
+      "searchTerms": [
+        "unilateral leg press",
+        "one leg press",
+        "single leg press"
+      ],
+      "movementID": "leg_press",
+      "dimensions": {
+        "angle": "incline_45",
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "single_leg",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.8,
+        "gluteusMaximus": 0.55,
+        "gluteusMedius": 0.4,
+        "adductors": 0.35,
+        "hamstringsBicepsFemoris": 0.2,
+        "hamstringsSemimembranosus": 0.2
+      },
+      "notes": "Unilateral leg press addresses strength asymmetries. Increased stabilization demand compared to bilateral. Can use heavier relative loads than free-weight unilateral exercises.",
+      "sources": [
+        "extrapolated from leg press research"
+      ]
+    },
+    {
+      "id": "wall_sit",
+      "displayName": "Wall Sit",
+      "searchTerms": [
+        "wall squat",
+        "wall sit hold",
+        "isometric squat"
+      ],
+      "movementID": "squat",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.68,
+        "gluteusMaximus": 0.3
+      },
+      "notes": "Isometric quad exercise. Back support eliminates spinal loading. Endurance-focused training. Thigh parallel position provides highest quadriceps activation.",
+      "sources": [
+        "extrapolated from isometric squat research"
+      ]
+    },
+    {
+      "id": "split_squat_dumbbell",
+      "displayName": "Split Squat (Dumbbell)",
+      "searchTerms": [
+        "split squat",
+        "static split squat",
+        "DB split squat"
+      ],
+      "movementID": "lunge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "staggered",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.75,
+        "gluteusMaximus": 0.65,
+        "gluteusMedius": 0.45,
+        "hamstringsBicepsFemoris": 0.3,
+        "hamstringsSemimembranosus": 0.25,
+        "adductors": 0.3
+      },
+      "notes": "Basic staggered stance squat pattern. Less hip moment demand than Bulgarian split squat. Good precursor to more advanced split stance exercises.",
+      "sources": [
+        "Mausehund 2019"
+      ]
+    },
+    {
+      "id": "curtsy_lunge",
+      "displayName": "Curtsy Lunge",
+      "searchTerms": [
+        "curtsy lunge",
+        "crossover lunge",
+        "rear crossover lunge"
+      ],
+      "movementID": "lunge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "staggered",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "gluteusMaximus": 0.8,
+        "gluteusMedius": 0.75,
+        "quadricepsFemoris": 0.6,
+        "adductors": 0.5,
+        "hamstringsBicepsFemoris": 0.35,
+        "hamstringsSemimembranosus": 0.3
+      },
+      "notes": "Cross-body step increases gluteus medius demand and adductor stretch. Multi-planar movement pattern. Increased hip stability challenge.",
+      "sources": [
+        "extrapolated from lunge biomechanics"
+      ]
+    },
+    {
+      "id": "barbell_back_squat_wide_stance",
+      "displayName": "Barbell Back Squat (Wide Stance)",
+      "searchTerms": [
+        "wide stance squat",
+        "sumo squat",
+        "powerlifting stance squat"
+      ],
+      "movementID": "squat",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "wide",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.72,
+        "gluteusMaximus": 0.9,
+        "gluteusMedius": 0.45,
+        "hamstringsBicepsFemoris": 0.35,
+        "hamstringsSemimembranosus": 0.35,
+        "adductors": 0.65,
+        "erectorSpinae": 0.55,
+        "gastrocnemius": 0.2,
+        "soleus": 0.15,
+        "rectusAbdominis": 0.25,
+        "obliquesInternal": 0.2,
+        "obliquesExternal": 0.2
+      },
+      "notes": "Wide stance (>1.5x shoulder width) increases glute max by 18-60% and adductor activation significantly. Allows greater hip external rotation and depth.",
+      "sources": [
+        "Paoli 2009",
+        "McCaw 1999",
+        "Escamilla 2001"
+      ]
+    },
+    {
+      "id": "kettlebell_goblet_squat",
+      "displayName": "Kettlebell Goblet Squat",
+      "searchTerms": [
+        "kb goblet squat",
+        "kettlebell squat",
+        "goblet squat kettlebell"
+      ],
+      "movementID": "squat",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "standard",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "kettlebell",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.65,
+        "gluteusMaximus": 0.6,
+        "gluteusMedius": 0.3,
+        "hamstringsBicepsFemoris": 0.2,
+        "hamstringsSemimembranosus": 0.2,
+        "adductors": 0.4,
+        "erectorSpinae": 0.35,
+        "forearms": 0.3,
+        "rectusAbdominis": 0.4,
+        "obliquesInternal": 0.25,
+        "obliquesExternal": 0.25
+      },
+      "notes": "Kettlebell handle position increases forearm/grip demands compared to dumbbell version. Excellent for warm-ups and technique work.",
+      "sources": [
+        "Escamilla 2001"
+      ]
+    },
+    {
+      "id": "leg_press_standard",
+      "displayName": "Leg Press",
+      "searchTerms": [
+        "leg press",
+        "45 degree leg press",
+        "machine leg press"
+      ],
+      "movementID": "leg_press",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "standard",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.72,
+        "gluteusMaximus": 0.45,
+        "gluteusMedius": 0.15,
+        "hamstringsBicepsFemoris": 0.25,
+        "hamstringsSemimembranosus": 0.25,
+        "adductors": 0.35,
+        "gastrocnemius": 0.2,
+        "soleus": 0.15,
+        "erectorSpinae": 0.05
+      },
+      "notes": "Standard foot position (mid-platform, shoulder-width). Squats generate greater quad and hamstring activation, but leg press allows safe high-volume training. Peak quad activation at 90Â° knee flexion.",
+      "sources": [
+        "Escamilla 2001",
+        "Da Silva 2008"
+      ]
+    },
+    {
+      "id": "leg_press_high_feet",
+      "displayName": "Leg Press (High Foot Placement)",
+      "searchTerms": [
+        "leg press high feet",
+        "glute leg press",
+        "leg press high position"
+      ],
+      "movementID": "leg_press",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "standard",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.57,
+        "gluteusMaximus": 0.65,
+        "gluteusMedius": 0.2,
+        "hamstringsBicepsFemoris": 0.35,
+        "hamstringsSemimembranosus": 0.35,
+        "adductors": 0.4,
+        "gastrocnemius": 0.2,
+        "soleus": 0.15,
+        "erectorSpinae": 0.05
+      },
+      "notes": "High foot position shifts emphasis to hip extension, significantly increasing gluteus maximus activation while reducing knee flexion demands.",
+      "sources": [
+        "Da Silva 2008",
+        "Escamilla 2001"
+      ]
+    },
+    {
+      "id": "leg_press_low_feet",
+      "displayName": "Leg Press (Low Foot Placement)",
+      "searchTerms": [
+        "leg press low feet",
+        "quad leg press",
+        "leg press low position"
+      ],
+      "movementID": "leg_press",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "standard",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.85,
+        "gluteusMaximus": 0.35,
+        "gluteusMedius": 0.15,
+        "hamstringsBicepsFemoris": 0.2,
+        "hamstringsSemimembranosus": 0.2,
+        "adductors": 0.3,
+        "gastrocnemius": 0.25,
+        "soleus": 0.2,
+        "erectorSpinae": 0.05
+      },
+      "notes": "Low foot position emphasizes rectus femoris and vastus lateralis with greater knee extension demands. Maximum quad stimulus from leg press.",
+      "sources": [
+        "Da Silva 2008",
+        "Escamilla 2001"
+      ]
+    },
+    {
+      "id": "leg_press_wide_stance",
+      "displayName": "Leg Press (Wide Stance)",
+      "searchTerms": [
+        "leg press wide",
+        "wide stance leg press",
+        "sumo leg press"
+      ],
+      "movementID": "leg_press",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "wide",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.68,
+        "gluteusMaximus": 0.55,
+        "gluteusMedius": 0.25,
+        "hamstringsBicepsFemoris": 0.35,
+        "hamstringsSemimembranosus": 0.35,
+        "adductors": 0.55,
+        "gastrocnemius": 0.2,
+        "soleus": 0.15,
+        "erectorSpinae": 0.05
+      },
+      "notes": "Wide stance increases hamstring and adductor activation without significantly affecting quadriceps. Good for inner thigh emphasis.",
+      "sources": [
+        "Escamilla 2001"
+      ]
+    },
+    {
+      "id": "good_morning",
+      "displayName": "Good Morning",
+      "searchTerms": [
+        "good morning",
+        "barbell good morning",
+        "gm"
+      ],
+      "movementID": "hip_hinge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "standard",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "erectorSpinae": 0.95,
+        "hamstringsBicepsFemoris": 0.65,
+        "hamstringsSemimembranosus": 0.7,
+        "gluteusMaximus": 0.55,
+        "gluteusMedius": 0.25,
+        "adductors": 0.25,
+        "quadricepsFemoris": 0.1,
+        "rectusAbdominis": 0.3,
+        "obliquesInternal": 0.25,
+        "obliquesExternal": 0.25
+      },
+      "notes": "Lumbar erector spinae reaches 142-158% MVICâ€”primarily a back exercise despite hamstring stretch. Greater stretch-mediated hamstring stimulus than lying curls. Use moderate loads.",
+      "sources": [
+        "Vigotsky 2015",
+        "McAllister 2014"
+      ]
+    },
+    {
+      "id": "glute_bridge_weighted",
+      "displayName": "Weighted Glute Bridge",
+      "searchTerms": [
+        "weighted glute bridge",
+        "barbell glute bridge",
+        "dumbbell glute bridge"
+      ],
+      "movementID": "hip_thrust",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "standard",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "gluteusMaximus": 0.85,
+        "hamstringsBicepsFemoris": 0.5,
+        "hamstringsSemimembranosus": 0.5,
+        "gluteusMedius": 0.35,
+        "adductors": 0.4,
+        "quadricepsFemoris": 0.28,
+        "erectorSpinae": 0.25
+      },
+      "notes": "Adding load approaches hip thrust effectiveness. Floor contact provides stable spine position. Can use barbell, dumbbell, or plate for loading.",
+      "sources": [
+        "Contreras 2015"
+      ]
+    },
+    {
+      "id": "walking_lunge",
+      "displayName": "Walking Lunge",
+      "searchTerms": [
+        "walking lunge",
+        "walking lunges",
+        "forward walking lunge"
+      ],
+      "movementID": "lunge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "staggered",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.73,
+        "gluteusMaximus": 0.75,
+        "gluteusMedius": 0.55,
+        "hamstringsBicepsFemoris": 0.5,
+        "hamstringsSemimembranosus": 0.5,
+        "adductors": 0.45,
+        "erectorSpinae": 0.45,
+        "gastrocnemius": 0.3,
+        "soleus": 0.25,
+        "rectusAbdominis": 0.3,
+        "obliquesInternal": 0.35,
+        "obliquesExternal": 0.35
+      },
+      "notes": "54-58% MVIC gluteus maximus. Dynamic movement increases metabolic demand vs stationary. Forward lean increases glute/posterior chain emphasis. Excellent for athletic development.",
+      "sources": [
+        "Krause Neto 2020",
+        "Muyor 2020"
+      ]
+    },
+    {
+      "id": "reverse_lunge",
+      "displayName": "Reverse Lunge",
+      "searchTerms": [
+        "reverse lunge",
+        "backward lunge",
+        "step back lunge"
+      ],
+      "movementID": "lunge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "staggered",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.62,
+        "gluteusMaximus": 0.8,
+        "gluteusMedius": 0.55,
+        "hamstringsBicepsFemoris": 0.55,
+        "hamstringsSemimembranosus": 0.55,
+        "adductors": 0.45,
+        "erectorSpinae": 0.4,
+        "gastrocnemius": 0.25,
+        "soleus": 0.2,
+        "obliquesInternal": 0.3,
+        "obliquesExternal": 0.3
+      },
+      "notes": "Greater glute and posterior chain emphasis than forward lunge. Reduced knee stress as front shin stays more vertical. Better for hip-dominant pattern training.",
+      "sources": [
+        "Muyor 2020",
+        "Stastny 2015"
+      ]
+    },
+    {
+      "id": "barbell_reverse_lunge",
+      "displayName": "Barbell Reverse Lunge",
+      "searchTerms": [
+        "barbell reverse lunge",
+        "bb reverse lunge",
+        "back rack lunge"
+      ],
+      "movementID": "lunge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "staggered",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.68,
+        "gluteusMaximus": 0.85,
+        "gluteusMedius": 0.55,
+        "hamstringsBicepsFemoris": 0.55,
+        "hamstringsSemimembranosus": 0.55,
+        "adductors": 0.5,
+        "erectorSpinae": 0.55,
+        "gastrocnemius": 0.25,
+        "soleus": 0.2,
+        "rectusAbdominis": 0.35,
+        "obliquesInternal": 0.35,
+        "obliquesExternal": 0.35
+      },
+      "notes": "Barbell allows heavier loading than dumbbells. Back rack position increases erector spinae demands. Front rack version shifts to quad emphasis.",
+      "sources": [
+        "Muyor 2020",
+        "Stastny 2015"
+      ]
+    },
+    {
+      "id": "stationary_split_squat",
+      "displayName": "Split Squat",
+      "searchTerms": [
+        "split squat",
+        "stationary lunge",
+        "static lunge"
+      ],
+      "movementID": "lunge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "staggered",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.7,
+        "gluteusMaximus": 0.75,
+        "gluteusMedius": 0.5,
+        "hamstringsBicepsFemoris": 0.45,
+        "hamstringsSemimembranosus": 0.45,
+        "adductors": 0.45,
+        "erectorSpinae": 0.35,
+        "gastrocnemius": 0.25,
+        "soleus": 0.2,
+        "obliquesInternal": 0.3,
+        "obliquesExternal": 0.3
+      },
+      "notes": "70% MVIC gluteus maximusâ€”classified as 'very high' activation. Stationary position allows focus on technique. Lower metabolic demand than walking lunges.",
+      "sources": [
+        "Krause Neto 2020",
+        "McCurdy 2010"
+      ]
+    },
+    {
+      "id": "bulgarian_split_squat",
+      "displayName": "Bulgarian Split Squat",
+      "searchTerms": [
+        "bulgarian split squat",
+        "rear foot elevated split squat",
+        "rfess",
+        "bss"
+      ],
+      "movementID": "lunge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "staggered",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.72,
+        "gluteusMaximus": 0.9,
+        "gluteusMedius": 0.7,
+        "hamstringsBicepsFemoris": 0.6,
+        "hamstringsSemimembranosus": 0.6,
+        "adductors": 0.55,
+        "erectorSpinae": 0.45,
+        "gastrocnemius": 0.3,
+        "soleus": 0.25,
+        "rectusAbdominis": 0.35,
+        "obliquesInternal": 0.4,
+        "obliquesExternal": 0.4
+      },
+      "notes": "Significantly higher gluteus medius and hamstring activation than bilateral squats. Hip-dominant unilateral exercise. Rear foot elevation increases hip ROM and stretch at depth. Trunk flexion increases glute/hamstring emphasis.",
+      "sources": [
+        "McCurdy 2010",
+        "McCurdy 2021",
+        "Williams 2021"
+      ]
+    },
+    {
+      "id": "barbell_bulgarian_split_squat",
+      "displayName": "Barbell Bulgarian Split Squat",
+      "searchTerms": [
+        "barbell bulgarian",
+        "bb bss",
+        "barbell rfess"
+      ],
+      "movementID": "lunge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "staggered",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.78,
+        "gluteusMaximus": 0.9,
+        "gluteusMedius": 0.7,
+        "hamstringsBicepsFemoris": 0.6,
+        "hamstringsSemimembranosus": 0.6,
+        "adductors": 0.55,
+        "erectorSpinae": 0.6,
+        "gastrocnemius": 0.3,
+        "soleus": 0.25,
+        "rectusAbdominis": 0.4,
+        "obliquesInternal": 0.45,
+        "obliquesExternal": 0.45
+      },
+      "notes": "Barbell allows heavier loading. Increased erector spinae and core demands vs dumbbell version. Back rack position standard; front rack shifts quad emphasis.",
+      "sources": [
+        "McCurdy 2010",
+        "McCurdy 2021"
+      ]
+    },
+    {
+      "id": "step_up",
+      "displayName": "Step-Up",
+      "searchTerms": [
+        "step up",
+        "box step up",
+        "dumbbell step up"
+      ],
+      "movementID": "lunge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "single_leg",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "dumbbell",
+      "muscleWeights": {
+        "gluteusMaximus": 0.95,
+        "quadricepsFemoris": 0.8,
+        "gluteusMedius": 0.55,
+        "hamstringsBicepsFemoris": 0.4,
+        "hamstringsSemimembranosus": 0.4,
+        "adductors": 0.45,
+        "erectorSpinae": 0.35,
+        "gastrocnemius": 0.35,
+        "soleus": 0.3,
+        "obliquesInternal": 0.3,
+        "obliquesExternal": 0.3
+      },
+      "notes": "Highest gluteus maximus activation of tested exercises at 169% MVIC (Krause Neto 2020). Stretched position under load. Concentric-dominant. Higher box = greater glute activation.",
+      "sources": [
+        "Krause Neto 2020",
+        "Neto 2020",
+        "Distefano 2009"
+      ]
+    },
+    {
+      "id": "barbell_step_up",
+      "displayName": "Barbell Step-Up",
+      "searchTerms": [
+        "barbell step up",
+        "bb step up",
+        "weighted step up"
+      ],
+      "movementID": "lunge",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "single_leg",
+        "laterality": "unilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "gluteusMaximus": 0.95,
+        "quadricepsFemoris": 0.8,
+        "gluteusMedius": 0.55,
+        "hamstringsBicepsFemoris": 0.45,
+        "hamstringsSemimembranosus": 0.45,
+        "adductors": 0.5,
+        "erectorSpinae": 0.5,
+        "gastrocnemius": 0.35,
+        "soleus": 0.3,
+        "rectusAbdominis": 0.35,
+        "obliquesInternal": 0.35,
+        "obliquesExternal": 0.35
+      },
+      "notes": "Barbell loading allows heavier weights but requires more balance. Increased erector spinae and core demands. Maintain controlled descent.",
+      "sources": [
+        "Krause Neto 2020",
+        "Neto 2020"
+      ]
+    },
+    {
+      "id": "leg_extension",
+      "displayName": "Leg Extension",
+      "searchTerms": [
+        "leg extension",
+        "quad extension",
+        "knee extension machine"
+      ],
+      "movementID": "leg_extension",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.85,
+        "adductors": 0.1
+      },
+      "notes": "Maximum quad isolation. Rectus femoris activation limited due to hip-flexed (seated) position. Peak activation at 90Â° knee flexion, decreases toward extension. Emphasize stretched/initial ROM for hypertrophy (Pedrosa 2022).",
+      "sources": [
+        "Signorile 2014",
+        "Pedrosa 2022"
+      ]
+    },
+    {
+      "id": "leg_extension_single_leg",
+      "displayName": "Single-Leg Leg Extension",
+      "searchTerms": [
+        "single leg extension",
+        "unilateral leg extension",
+        "one leg extension"
+      ],
+      "movementID": "leg_extension",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "unilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "quadricepsFemoris": 0.85,
+        "adductors": 0.15,
+        "obliquesInternal": 0.15,
+        "obliquesExternal": 0.15
+      },
+      "notes": "Addresses bilateral quad imbalances. Slight increase in stabilizer demands. Same ROM principles applyâ€”emphasize stretched position for hypertrophy.",
+      "sources": [
+        "Signorile 2014",
+        "Pedrosa 2022"
+      ]
+    },
+    {
+      "id": "side_lying_hip_abduction",
+      "displayName": "Side-Lying Hip Abduction",
+      "searchTerms": [
+        "side lying abduction",
+        "clamshell",
+        "lying hip abduction"
+      ],
+      "movementID": "hip_abduction",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "unilateral"
+      },
+      "equipmentID": "bodyweight",
+      "muscleWeights": {
+        "gluteusMedius": 0.9,
+        "gluteusMaximus": 0.35,
+        "erectorSpinae": 0.1,
+        "obliquesInternal": 0.15,
+        "obliquesExternal": 0.15
+      },
+      "notes": "81% MVIC gluteus mediusâ€”highest of therapeutic exercises. Internal rotation of hip during movement increases activation further. Excellent for rehabilitation and glute med activation.",
+      "sources": [
+        "Distefano 2009",
+        "Boren 2011"
+      ]
+    },
+    {
+      "id": "back_extension_horizontal",
+      "displayName": "Back Extension (Horizontal/GHD)",
+      "searchTerms": [
+        "ghd back extension",
+        "horizontal back extension",
+        "glute ham developer"
+      ],
+      "movementID": "back_extension",
+      "dimensions": {
+        "angle": "horizontal",
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": null,
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "erectorSpinae": 0.9,
+        "gluteusMaximus": 0.85,
+        "hamstringsBicepsFemoris": 0.65,
+        "hamstringsSemimembranosus": 0.65,
+        "gluteusMedius": 0.3,
+        "adductors": 0.2,
+        "rectusAbdominis": 0.2,
+        "obliquesInternal": 0.2,
+        "obliquesExternal": 0.2
+      },
+      "notes": "More challenging than 45Â° version with peak torque in upper portion. Lower hamstring activation due to knee position on GHD. Greater emphasis on glutes and erectors.",
+      "sources": [
+        "Andersen 2021",
+        "Cuthbert 2021"
+      ]
+    }
+  ]
+}

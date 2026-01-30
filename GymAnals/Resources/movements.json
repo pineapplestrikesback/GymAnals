@@ -51,7 +51,7 @@
       "defaultDescription": "Horizontal pushing pattern. Includes bench press, push-up, and machine chest press variations.",
       "notes": "Default assumes flat angle, standard grip. Incline shifts to upper pec; decline to lower pec.",
       "sources": [
-        "Rodr\u00c3\u00adguez-Ridao 2020",
+        "Rodríguez-Ridao 2020",
         "Lauver 2016",
         "Barnett 1995",
         "Saeterbakken 2017"
@@ -701,7 +701,7 @@
       "notes": "Conventional = more erector. Sumo = more quads/adductors. Trap bar = more quad-dominant.",
       "sources": [
         "Escamilla 2002",
-        "Mart\u00c3\u00adn-Fuentes 2020",
+        "Martín-Fuentes 2020",
         "Lee 2018"
       ]
     },
@@ -825,7 +825,7 @@
         "adductors": 0.25
       },
       "defaultDescription": "Spinal extension and hip extension on bench.",
-      "notes": "45\u00b0 is easier. Horizontal (GHD) is more challenging.",
+      "notes": "45° is easier. Horizontal (GHD) is more challenging.",
       "sources": [
         "Andersen 2021",
         "Contreras 2013",
@@ -951,7 +951,7 @@
         "adductors": 1.0
       },
       "defaultDescription": "Hip adduction isolating adductor group.",
-      "notes": "0-45\u00b0 hip flexion optimal for magnus/longus.",
+      "notes": "0-45° hip flexion optimal for magnus/longus.",
       "sources": [
         "PMID 22814446",
         "PMID 23945760"

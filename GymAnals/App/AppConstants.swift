@@ -16,4 +16,12 @@ enum AppConstants {
     // Weight increments for stepper controls
     static let weightIncrementKg: Double = 1.0
     static let weightIncrementLbs: Double = 2.5  // Matches standard plate availability
+
+    // Workout set value bounds
+    enum SetLimits {
+        static let maxWeight: Double = 999
+        static let maxReps: Int = 999
+        static let maxDuration: TimeInterval = 86400  // 24 hours
+        static let maxDistance: Double = 9999
+    }
 }
