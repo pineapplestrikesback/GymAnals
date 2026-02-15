@@ -7516,6 +7516,174 @@
         "Ellestad 2024",
         "McGill 2009"
       ]
+    },
+    {
+      "id": "cable_lat_prayer",
+      "displayName": "Lat Prayer",
+      "searchTerms": [
+        "lat prayer",
+        "cable lat prayer",
+        "kneeling cable pullover",
+        "kneeling lat pulldown",
+        "cable prayer"
+      ],
+      "movementID": "pullover",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "neutral",
+        "stance": "kneeling",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "latissimusDorsi": 1.0,
+        "teresMajor": 0.85,
+        "tricepsLongHead": 0.55,
+        "deltoidPosterior": 0.45,
+        "pectoralisMajorLower": 0.4,
+        "rectusAbdominis": 0.35,
+        "serratusAnterior": 0.25,
+        "trapeziusLower": 0.25,
+        "forearms": 0.2,
+        "rhomboids": 0.2,
+        "erectorSpinae": 0.2,
+        "tricepsMedialHead": 0.2,
+        "tricepsLateralHead": 0.2,
+        "rotatorCuff": 0.2,
+        "obliquesExternal": 0.2,
+        "pectoralisMajorUpper": 0.15,
+        "deltoidAnterior": 0.15,
+        "obliquesInternal": 0.15,
+        "trapeziusMiddle": 0.15,
+        "gluteusMaximus": 0.15,
+        "bicepsBrachii": 0.1,
+        "bicepsBrachialis": 0.1,
+        "deltoidLateral": 0.1,
+        "trapeziusUpper": 0.1,
+        "quadricepsFemoris": 0.1
+      },
+      "notes": "Kneeling cable pullover with body lean — forward on eccentric, backward on concentric — to accommodate the lat strength curve. Arms straight throughout. Superior lat isolation vs dumbbell pullover (which is pec-dominant). Kneeling position increases core demand.",
+      "sources": [
+        "Marchetti et al. 2022",
+        "Washif et al. 2024",
+        "Ackland et al. 2008",
+        "Campos & da Silva 2022",
+        "Henselmans n.d."
+      ]
+    },
+    {
+      "id": "barbell_upright_row",
+      "displayName": "Upright Row (Barbell)",
+      "searchTerms": [
+        "upright row",
+        "barbell upright row",
+        "bb upright row",
+        "standing upright row"
+      ],
+      "movementID": "lateral_raise",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "deltoidLateral": 0.85,
+        "trapeziusUpper": 0.75,
+        "deltoidAnterior": 0.45,
+        "bicepsBrachii": 0.45,
+        "forearms": 0.35,
+        "trapeziusMiddle": 0.35,
+        "bicepsBrachialis": 0.3,
+        "rotatorCuff": 0.3,
+        "serratusAnterior": 0.2,
+        "deltoidPosterior": 0.2,
+        "rhomboids": 0.15,
+        "erectorSpinae": 0.15,
+        "pectoralisMajorUpper": 0.1,
+        "trapeziusLower": 0.1,
+        "rectusAbdominis": 0.1
+      },
+      "notes": "Compound shoulder abduction + scapular elevation. 73% MVIC lateral deltoid (Sweeney/ACE 2014). Wider grip increases deltoid/trap activation, narrower increases biceps. Stop at nipple height to reduce impingement risk.",
+      "sources": [
+        "McAllister et al. 2013",
+        "Sweeney/ACE 2014"
+      ]
+    },
+    {
+      "id": "ez_bar_upright_row",
+      "displayName": "Upright Row (EZ-Bar)",
+      "searchTerms": [
+        "ez bar upright row",
+        "ez upright row",
+        "curl bar upright row"
+      ],
+      "movementID": "lateral_raise",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "neutral_to_pronated",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "ez_bar",
+      "muscleWeights": {
+        "deltoidLateral": 0.85,
+        "trapeziusUpper": 0.75,
+        "deltoidAnterior": 0.45,
+        "bicepsBrachii": 0.4,
+        "forearms": 0.4,
+        "trapeziusMiddle": 0.35,
+        "bicepsBrachialis": 0.3,
+        "rotatorCuff": 0.3,
+        "serratusAnterior": 0.2,
+        "deltoidPosterior": 0.2,
+        "rhomboids": 0.15,
+        "erectorSpinae": 0.15,
+        "pectoralisMajorUpper": 0.1,
+        "trapeziusLower": 0.1,
+        "rectusAbdominis": 0.1
+      },
+      "notes": "Same movement as barbell upright row. Angled EZ grip (~15-30° semi-pronation) reduces wrist strain. Slightly shifts load from biceps to brachioradialis/forearms. Shoulder/trap recruitment unchanged (Marcolin et al. 2018).",
+      "sources": [
+        "McAllister et al. 2013",
+        "Sweeney/ACE 2014",
+        "Marcolin et al. 2018"
+      ]
+    },
+    {
+      "id": "calf_extension_machine_straight_leg",
+      "displayName": "Calf Extension (Machine, Straight Leg)",
+      "searchTerms": [
+        "calf extension",
+        "straight leg calf raise",
+        "machine calf extension",
+        "leg press calf extension",
+        "knee extended calf raise"
+      ],
+      "movementID": "calf_raise",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "gastrocnemius": 1.0,
+        "soleus": 0.6
+      },
+      "notes": "Extended knees keep gastrocnemius at optimal length — primary mover (up to 81.5% of plantar flexion torque per Albracht & Arampatzis). Opposite of seated calf raise where bent knees shift load to soleus. Standing calf raise produces 12.4% gastroc hypertrophy vs 1.7% seated (Kinoshita 2023).",
+      "sources": [
+        "Signorile et al. 2002",
+        "Kinoshita et al. 2023",
+        "Albracht & Arampatzis 2006",
+        "Pekala et al. 2024"
+      ]
     }
   ]
 }
