@@ -1132,7 +1132,7 @@
         "Cogley 2005",
         "Kowalski 2022"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "incline_push_up",
@@ -1168,7 +1168,7 @@
         "Kowalski 2022",
         "Suprak 2011"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "decline_push_up",
@@ -1203,7 +1203,7 @@
         "Trebs 2010",
         "MSU Thesis"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "diamond_push_up",
@@ -1239,7 +1239,7 @@
         "Cogley 2005",
         "Boehler 2011"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "barbell_wide_grip_bench_press",
@@ -1608,7 +1608,7 @@
         "McKenzie 2022",
         "ACE study"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "push_up_wide",
@@ -1642,7 +1642,7 @@
       "sources": [
         "Cogley 2005"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "barbell_back_squat_high_bar",
@@ -2035,7 +2035,7 @@
       "sources": [
         "extrapolated from quad mechanics"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "barbell_conventional_deadlift",
@@ -2425,7 +2425,7 @@
       "sources": [
         "extrapolated from hip thrust research"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "glute_bridge",
@@ -2459,7 +2459,7 @@
       "sources": [
         "Contreras 2011"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "machine_hip_extension",
@@ -2888,7 +2888,7 @@
         "Hegyi 2019",
         "Opar 2012"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "glute_ham_raise",
@@ -3337,7 +3337,7 @@
         "Kim 2022",
         "McCurdy 2010"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "belt_squat",
@@ -3462,7 +3462,7 @@
       "sources": [
         "Zebis 2013"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "kettlebell_swing",
@@ -3586,7 +3586,7 @@
       "sources": [
         "extrapolated from isometric squat research"
       ],
-      "exerciseTypeRaw": 4
+      "exerciseTypeRaw": "duration"
     },
     {
       "id": "split_squat_dumbbell",
@@ -4344,7 +4344,7 @@
         "Distefano 2009",
         "Boren 2011"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "back_extension_horizontal",
@@ -4419,7 +4419,7 @@
         "Andersen et al. 2014",
         "Dickie et al. 2017"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "pull_up_standard_grip",
@@ -4457,7 +4457,7 @@
         "Youdas et al. 2010 J Strength Cond Res 24(12):3404-3414",
         "Edelburg 2017 UWL"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "chin_up",
@@ -4495,7 +4495,7 @@
         "Youdas et al. 2010 J Strength Cond Res",
         "Doma et al. 2013 Sports Biomechanics"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "pull_up_neutral_grip",
@@ -4531,7 +4531,7 @@
       "sources": [
         "Dickie et al. 2017 J Electromyogr Kinesiol 32:30-36"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "lat_pulldown_wide_grip",
@@ -5283,7 +5283,7 @@
         "Fenwick et al. 2009 J Strength Cond Res 23(2):350-358",
         "Edelburg 2018"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "dumbbell_pullover",
@@ -7442,7 +7442,7 @@
         "Escamilla 2006",
         "Marchetti 2011"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "cable_crunch",
@@ -7532,7 +7532,7 @@
         "Escamilla 2006",
         "ACE 2001"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "decline_sit_up",
@@ -7562,7 +7562,7 @@
       "sources": [
         "Escamilla 2006"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "hanging_leg_raise",
@@ -7593,7 +7593,7 @@
         "Escamilla 2006",
         "ACE 2001"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "captain_chair_leg_raise",
@@ -7654,7 +7654,7 @@
         "Escamilla 2006",
         "Marchetti 2011"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "hanging_knee_raise",
@@ -7684,7 +7684,7 @@
       "sources": [
         "Escamilla 2006"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "cable_woodchop_high_to_low",
@@ -7775,7 +7775,7 @@
       "sources": [
         "Workman 2008"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "pallof_press",
@@ -7837,7 +7837,7 @@
       "sources": [
         "Escamilla 2010"
       ],
-      "exerciseTypeRaw": 4
+      "exerciseTypeRaw": "duration"
     },
     {
       "id": "side_plank",
@@ -7869,7 +7869,7 @@
         "JOSPM 2020",
         "Escamilla 2010"
       ],
-      "exerciseTypeRaw": 4
+      "exerciseTypeRaw": "duration"
     },
     {
       "id": "ab_wheel_rollout",
@@ -7902,7 +7902,7 @@
         "Escamilla 2006",
         "Escamilla 2010"
       ],
-      "exerciseTypeRaw": 1
+      "exerciseTypeRaw": "bodyweight_reps"
     },
     {
       "id": "wrist_curl",
@@ -7988,6 +7988,177 @@
       "sources": [
         "Ellestad 2024",
         "McGill 2009"
+      ],
+      "exerciseTypeRaw": "weight_reps"
+    },
+    {
+      "id": "cable_lat_prayer",
+      "displayName": "Lat Prayer",
+      "searchTerms": [
+        "lat prayer",
+        "cable lat prayer",
+        "standing cable pullover",
+        "standing lat pulldown",
+        "cable prayer"
+      ],
+      "movementID": "pullover",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "neutral",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "cable",
+      "muscleWeights": {
+        "latissimusDorsi": 1.0,
+        "teresMajor": 0.85,
+        "tricepsLongHead": 0.55,
+        "deltoidPosterior": 0.45,
+        "pectoralisMajorLower": 0.4,
+        "rectusAbdominis": 0.35,
+        "serratusAnterior": 0.25,
+        "trapeziusLower": 0.25,
+        "forearms": 0.2,
+        "rhomboids": 0.2,
+        "erectorSpinae": 0.2,
+        "tricepsMedialHead": 0.2,
+        "tricepsLateralHead": 0.2,
+        "rotatorCuff": 0.2,
+        "obliquesExternal": 0.2,
+        "pectoralisMajorUpper": 0.15,
+        "deltoidAnterior": 0.15,
+        "obliquesInternal": 0.15,
+        "trapeziusMiddle": 0.15,
+        "gluteusMaximus": 0.15
+      },
+      "popularity": "common",
+      "notes": "Standing cable pullover with body lean — forward on eccentric, backward on concentric — to accommodate the lat strength curve. Arms straight throughout. Superior lat isolation vs dumbbell pullover (which is pec-dominant).",
+      "sources": [
+        "Marchetti et al. 2022",
+        "Washif et al. 2024",
+        "Ackland et al. 2008",
+        "Campos & da Silva 2022",
+        "Henselmans n.d."
+      ],
+      "exerciseTypeRaw": "weight_reps"
+    },
+    {
+      "id": "barbell_upright_row",
+      "displayName": "Upright Row (Barbell)",
+      "searchTerms": [
+        "upright row",
+        "barbell upright row",
+        "bb upright row",
+        "standing upright row"
+      ],
+      "movementID": "lateral_raise",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "pronated",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "barbell",
+      "muscleWeights": {
+        "deltoidLateral": 0.85,
+        "trapeziusUpper": 0.75,
+        "deltoidAnterior": 0.45,
+        "bicepsBrachii": 0.45,
+        "forearms": 0.35,
+        "trapeziusMiddle": 0.35,
+        "bicepsBrachialis": 0.3,
+        "rotatorCuff": 0.3,
+        "serratusAnterior": 0.2,
+        "deltoidPosterior": 0.2,
+        "rhomboids": 0.15,
+        "erectorSpinae": 0.15,
+        "pectoralisMajorUpper": 0.1,
+        "trapeziusLower": 0.1,
+        "rectusAbdominis": 0.1
+      },
+      "popularity": "common",
+      "notes": "Compound shoulder abduction + scapular elevation. 73% MVIC lateral deltoid (Sweeney/ACE 2014). Wider grip increases deltoid/trap activation, narrower increases biceps. Stop at nipple height to reduce impingement risk.",
+      "sources": [
+        "McAllister et al. 2013",
+        "Sweeney/ACE 2014"
+      ],
+      "exerciseTypeRaw": "weight_reps"
+    },
+    {
+      "id": "ez_bar_upright_row",
+      "displayName": "Upright Row (EZ-Bar)",
+      "searchTerms": [
+        "ez bar upright row",
+        "ez upright row",
+        "curl bar upright row"
+      ],
+      "movementID": "lateral_raise",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": "standard",
+        "gripOrientation": "neutral_to_pronated",
+        "stance": "standing",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "ez_bar",
+      "muscleWeights": {
+        "deltoidLateral": 0.85,
+        "trapeziusUpper": 0.75,
+        "deltoidAnterior": 0.45,
+        "bicepsBrachii": 0.4,
+        "forearms": 0.4,
+        "trapeziusMiddle": 0.35,
+        "bicepsBrachialis": 0.3,
+        "rotatorCuff": 0.3,
+        "serratusAnterior": 0.2,
+        "deltoidPosterior": 0.2,
+        "rhomboids": 0.15,
+        "erectorSpinae": 0.15,
+        "pectoralisMajorUpper": 0.1,
+        "trapeziusLower": 0.1,
+        "rectusAbdominis": 0.1
+      },
+      "popularity": "common",
+      "notes": "Same movement as barbell upright row. Angled EZ grip (~15-30° semi-pronation) reduces wrist strain. Slightly shifts load from biceps to brachioradialis/forearms. Shoulder/trap recruitment unchanged (Marcolin et al. 2018).",
+      "sources": [
+        "McAllister et al. 2013",
+        "Sweeney/ACE 2014",
+        "Marcolin et al. 2018"
+      ],
+      "exerciseTypeRaw": "weight_reps"
+    },
+    {
+      "id": "calf_extension_machine_straight_leg",
+      "displayName": "Calf Extension (Machine, Straight Leg)",
+      "searchTerms": [
+        "calf extension",
+        "straight leg calf raise",
+        "machine calf extension",
+        "leg press calf extension",
+        "knee extended calf raise"
+      ],
+      "movementID": "calf_raise",
+      "dimensions": {
+        "angle": null,
+        "gripWidth": null,
+        "gripOrientation": null,
+        "stance": "conventional",
+        "laterality": "bilateral"
+      },
+      "equipmentID": "machine",
+      "muscleWeights": {
+        "gastrocnemius": 1.0,
+        "soleus": 0.6
+      },
+      "popularity": "common",
+      "notes": "Extended knees keep gastrocnemius at optimal length — primary mover (up to 81.5% of plantar flexion torque per Albracht & Arampatzis). Opposite of seated calf raise where bent knees shift load to soleus. Standing calf raise produces 12.4% gastroc hypertrophy vs 1.7% seated (Kinoshita 2023).",
+      "sources": [
+        "Signorile et al. 2002",
+        "Kinoshita et al. 2023",
+        "Albracht & Arampatzis 2006",
+        "Pekala et al. 2024"
       ],
       "exerciseTypeRaw": "weight_reps"
     }

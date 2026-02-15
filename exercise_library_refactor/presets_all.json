@@ -7523,8 +7523,8 @@
       "searchTerms": [
         "lat prayer",
         "cable lat prayer",
-        "kneeling cable pullover",
-        "kneeling lat pulldown",
+        "standing cable pullover",
+        "standing lat pulldown",
         "cable prayer"
       ],
       "movementID": "pullover",
@@ -7532,7 +7532,7 @@
         "angle": null,
         "gripWidth": "standard",
         "gripOrientation": "neutral",
-        "stance": "kneeling",
+        "stance": "standing",
         "laterality": "bilateral"
       },
       "equipmentID": "cable",
@@ -7556,14 +7556,9 @@
         "deltoidAnterior": 0.15,
         "obliquesInternal": 0.15,
         "trapeziusMiddle": 0.15,
-        "gluteusMaximus": 0.15,
-        "bicepsBrachii": 0.1,
-        "bicepsBrachialis": 0.1,
-        "deltoidLateral": 0.1,
-        "trapeziusUpper": 0.1,
-        "quadricepsFemoris": 0.1
+        "gluteusMaximus": 0.15
       },
-      "notes": "Kneeling cable pullover with body lean — forward on eccentric, backward on concentric — to accommodate the lat strength curve. Arms straight throughout. Superior lat isolation vs dumbbell pullover (which is pec-dominant). Kneeling position increases core demand.",
+      "notes": "Standing cable pullover with body lean — forward on eccentric, backward on concentric — to accommodate the lat strength curve. Arms straight throughout. Superior lat isolation vs dumbbell pullover (which is pec-dominant).",
       "sources": [
         "Marchetti et al. 2022",
         "Washif et al. 2024",
