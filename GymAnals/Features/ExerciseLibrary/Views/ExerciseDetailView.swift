@@ -15,6 +15,7 @@ struct ExerciseDetailView: View {
 
     @State private var showingMuscleEditor = false
     @State private var showingEditSheet = false
+    @State private var muscleWeightVM: MuscleWeightViewModel?
 
     /// Groups weight history by gym for branch display
     private var gymBranches: [(gym: Gym, entryCount: Int)] {
@@ -82,6 +83,7 @@ struct ExerciseDetailView: View {
             Section {
                 if !exercise.isBuiltIn {
                     Button {
+                        muscleWeightVM = MuscleWeightViewModel(exercise: exercise, startInEditMode: true)
                         showingMuscleEditor = true
                     } label: {
                         HStack {
@@ -202,8 +204,10 @@ struct ExerciseDetailView: View {
             }
         }
         .sheet(isPresented: $showingMuscleEditor) {
-            NavigationStack {
-                MuscleWeightEditorView(viewModel: MuscleWeightViewModel(exercise: exercise), startInEditMode: true)
+            if let muscleVM = muscleWeightVM {
+                NavigationStack {
+                    MuscleWeightEditorView(viewModel: muscleVM)
+                }
             }
         }
         .sheet(isPresented: $showingEditSheet) {

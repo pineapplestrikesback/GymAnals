@@ -14,6 +14,7 @@ struct ExerciseCreationWizard: View {
     @Environment(\.dismiss) private var dismiss
 
     @State private var viewModel = ExerciseCreationViewModel()
+    @State private var muscleWeightVM: MuscleWeightViewModel?
 
     var body: some View {
         NavigationStack {
@@ -49,12 +50,15 @@ struct ExerciseCreationWizard: View {
                         ExerciseTypeStepView(viewModel: viewModel)
                     case 4:
                         // Final step: create and show muscle editor
-                        if let exercise = viewModel.createdExercise {
-                            MuscleWeightEditorView(viewModel: MuscleWeightViewModel(exercise: exercise), startInEditMode: true)
+                        if let muscleVM = muscleWeightVM {
+                            MuscleWeightEditorView(viewModel: muscleVM)
                         } else {
                             ProgressView("Creating exercise...")
                                 .onAppear {
-                                    _ = viewModel.createExercise(context: modelContext)
+                                    let exercise = viewModel.createExercise(context: modelContext)
+                                    if exercise != nil {
+                                        muscleWeightVM = MuscleWeightViewModel(exercise: exercise, startInEditMode: true)
+                                    }
                                 }
                         }
                     default:

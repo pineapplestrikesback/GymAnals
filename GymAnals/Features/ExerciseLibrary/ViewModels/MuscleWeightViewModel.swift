@@ -18,8 +18,9 @@ final class MuscleWeightViewModel {
     private var originalWeights: [Muscle: Double] = [:]
     private let exercise: Exercise?
 
-    init(exercise: Exercise?) {
+    init(exercise: Exercise?, startInEditMode: Bool = false) {
         self.exercise = exercise
+        self.isEditing = startInEditMode
         loadWeights()
     }
 
