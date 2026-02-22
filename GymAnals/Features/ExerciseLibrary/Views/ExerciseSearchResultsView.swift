@@ -14,11 +14,11 @@ struct ExerciseSearchResultsView: View {
     @Query private var exercises: [Exercise]
 
     private let searchText: String
-    private let muscleGroup: MuscleGroup?
+    private let filter: ExerciseFilter
 
-    init(searchText: String, muscleGroup: MuscleGroup?) {
+    init(searchText: String, filter: ExerciseFilter) {
         self.searchText = searchText
-        self.muscleGroup = muscleGroup
+        self.filter = filter
 
         // SwiftData predicates have limited support for complex expressions
         // Fetch all exercises, apply muscle group filter and search in-memory
@@ -26,15 +26,18 @@ struct ExerciseSearchResultsView: View {
         _exercises = Query()
     }
 
-    /// Exercises filtered by muscle group, search text, and sorted (applied in-memory)
+    /// Exercises filtered by exercise filter, search text, and sorted (applied in-memory)
     private var filteredExercises: [Exercise] {
         var results = Array(exercises)
 
-        // Apply muscle group filter in-memory
-        if let muscleGroup {
-            results = results.filter { exercise in
-                exercise.primaryMuscleGroup == muscleGroup
-            }
+        // Apply exercise filter in-memory
+        switch filter {
+        case .all:
+            break // No filtering needed
+        case .custom:
+            results = results.filter { !$0.isBuiltIn }
+        case .muscleGroup(let muscleGroup):
+            results = results.filter { $0.primaryMuscleGroup == muscleGroup }
         }
 
         // Apply search filter (includes searchTerms array for in-memory matching)

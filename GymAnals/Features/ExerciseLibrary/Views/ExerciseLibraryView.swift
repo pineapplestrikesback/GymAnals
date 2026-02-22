@@ -16,7 +16,7 @@ struct ExerciseLibraryView: View {
     var body: some View {
         VStack(spacing: 0) {
             // Muscle group filter tabs
-            MuscleGroupFilterTabs(selectedGroup: $viewModel.selectedMuscleGroup)
+            MuscleGroupFilterTabs(selectedFilter: $viewModel.selectedFilter)
                 .padding(.vertical, 8)
 
             Divider()
@@ -24,7 +24,7 @@ struct ExerciseLibraryView: View {
             // Results view with debounced search
             ExerciseSearchResultsView(
                 searchText: viewModel.debouncedSearchText,
-                muscleGroup: viewModel.selectedMuscleGroup
+                filter: viewModel.selectedFilter
             )
         }
         .navigationTitle("Exercises")

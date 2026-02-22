@@ -158,9 +158,20 @@ struct ExerciseDetailView: View {
                 }
             } else {
                 Section {
-                    Label("Custom Exercise", systemImage: "person.fill")
-                        .foregroundStyle(.secondary)
-                        .font(.subheadline)
+                    HStack {
+                        Label("Custom Exercise", systemImage: "person.fill")
+                            .font(.subheadline)
+                        Spacer()
+                        Text("Custom")
+                            .font(.caption.weight(.semibold))
+                            .foregroundStyle(.white)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 4)
+                            .background(
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color.blue)
+                            )
+                    }
                 }
             }
 
