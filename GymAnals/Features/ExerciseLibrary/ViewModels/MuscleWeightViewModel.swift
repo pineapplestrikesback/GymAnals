@@ -12,16 +12,57 @@ import SwiftData
 @Observable
 final class MuscleWeightViewModel {
     var weights: [Muscle: Double] = [:]
-    var isEditing: Bool = false
+    var isEditing: Bool = false {
+        didSet {
+            if isEditing && !oldValue {
+                // Capture stable display order when entering edit mode
+                frozenDisplayOrder = computeSortedAssigned()
+            }
+        }
+    }
     var hasChanges: Bool = false
+
+    /// Frozen display order used during editing to prevent reordering mid-drag.
+    /// Set when entering edit mode; cleared when exiting.
+    private(set) var frozenDisplayOrder: [Muscle] = []
 
     private var originalWeights: [Muscle: Double] = [:]
     private let exercise: Exercise?
 
     init(exercise: Exercise?, startInEditMode: Bool = false) {
         self.exercise = exercise
-        self.isEditing = startInEditMode
         loadWeights()
+        if startInEditMode {
+            // Capture order before setting isEditing so didSet logic works
+            self.frozenDisplayOrder = computeSortedAssigned()
+            self.isEditing = true
+        }
+    }
+
+    /// Returns assigned muscles sorted by weight descending.
+    private func computeSortedAssigned() -> [Muscle] {
+        weights.filter { $0.value > 0 }
+            .sorted { $0.value > $1.value }
+            .map(\.key)
+    }
+
+    /// The list of assigned muscles to display in the "Targeted Muscles" section.
+    /// During editing, uses frozen order (adding newly-assigned muscles at the end).
+    /// When not editing, returns live sorted order.
+    var assignedMusclesForDisplay: [Muscle] {
+        if isEditing {
+            let currentlyAssigned = Set(weights.filter { $0.value > 0 }.map(\.key))
+            // Start with frozen order, filtering out muscles that were zeroed out
+            var result = frozenDisplayOrder.filter { currentlyAssigned.contains($0) }
+            // Append any newly-assigned muscles not in the frozen order
+            let frozenSet = Set(frozenDisplayOrder)
+            let newlyAssigned = currentlyAssigned.subtracting(frozenSet)
+                .sorted { ($0.displayName) < ($1.displayName) }
+            result.append(contentsOf: newlyAssigned)
+            return result
+        } else {
+            return computeSortedAssigned()
+        }
     }
 
     private func loadWeights() {
@@ -52,12 +93,14 @@ final class MuscleWeightViewModel {
         try? context.save()
         originalWeights = weights
         hasChanges = false
+        frozenDisplayOrder = []
         isEditing = false
     }
 
     func discardChanges() {
         weights = originalWeights
         hasChanges = false
+        frozenDisplayOrder = []
         isEditing = false
     }
 

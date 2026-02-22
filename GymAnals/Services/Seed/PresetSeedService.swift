@@ -25,10 +25,17 @@ final class PresetSeedService {
         }
 
         // Load JSON from bundle
-        guard let url = Bundle.main.url(forResource: "presets_all", withExtension: "json"),
-              let data = try? Data(contentsOf: url),
-              let seedData = try? JSONDecoder().decode(PresetSeedData.self, from: data) else {
-            print("PresetSeedService: Failed to load presets_all.json from bundle")
+        guard let url = Bundle.main.url(forResource: "presets_all", withExtension: "json") else {
+            print("PresetSeedService: presets_all.json not found in bundle")
+            return
+        }
+
+        let seedData: PresetSeedData
+        do {
+            let data = try Data(contentsOf: url)
+            seedData = try JSONDecoder().decode(PresetSeedData.self, from: data)
+        } catch {
+            print("PresetSeedService: Failed to decode presets_all.json - \(error)")
             return
         }
 

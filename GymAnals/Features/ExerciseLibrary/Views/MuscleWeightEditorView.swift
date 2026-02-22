@@ -17,10 +17,10 @@ struct MuscleWeightEditorView: View {
     var body: some View {
         List {
             // Assigned muscles section (muscles with weight > 0)
-            let assigned = viewModel.weights.filter { $0.value > 0 }.sorted { $0.value > $1.value }
+            let assigned = viewModel.assignedMusclesForDisplay
             if !assigned.isEmpty {
                 Section("Targeted Muscles") {
-                    ForEach(assigned, id: \.key) { muscle, _ in
+                    ForEach(assigned, id: \.self) { muscle in
                         MuscleSlider(
                             muscle: muscle,
                             value: binding(for: muscle),
